@@ -72,9 +72,10 @@ const posts = files.map((file) => {
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
+  <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <main>
-    <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a></p>
+    <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
     <h1 class="decrypt">${escapeHtml(meta.title)}</h1>
     <p class="date">${escapeHtml(meta.date)}</p>
     ${htmlBody}
@@ -167,7 +168,7 @@ const getTimeline = async () => {
 };
 
 const timelineRows = (await getTimeline())
-  .map((entry) => `<li><span class="date">${escapeHtml(entry.date)}</span> <a href="${escapeHtml(entry.url)}">${escapeHtml(entry.title)}</a> - ${escapeHtml(entry.desc)}</li>`)
+  .map((entry, idx) => `<li class="timeline-node" data-node="${idx}" data-title="${escapeHtml(entry.title)}"><span class="date">${escapeHtml(entry.date)}</span> <a href="${escapeHtml(entry.url)}">${escapeHtml(entry.title)}</a> - ${escapeHtml(entry.desc)}</li>`)
   .join("\n");
 
 const indexHtml = `<!doctype html>
@@ -181,13 +182,17 @@ const indexHtml = `<!doctype html>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
+  <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <main>
     <h1 class="decrypt">blog.aday.net.au</h1>
     <p>New posts are generated from markdown files committed to this repository.</p>
-    <p><a href="https://aday.net.au">return to aday.net.au</a></p>
+    <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
     <section>
       <h2>Presence timeline</h2>
+      <div class="timeline-stage">
+        <canvas id="timelineGraph" width="960" height="320" aria-hidden="true"></canvas>
+      </div>
       <ul class="post-list timeline">
         ${timelineRows}
       </ul>
