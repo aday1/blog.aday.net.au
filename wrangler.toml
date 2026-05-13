@@ -1,0 +1,14 @@
+override_existing_dns_record = true
+name = "blog-aday-net-au"
+main = "src/index.js"
+compatibility_date = "2026-05-14"
+account_id = "98b823762cb6be14fb4fb00c935fadf1"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[[routes]]
+pattern = "blog.aday.net.au"
+custom_domain = true
