@@ -1,36 +1,129 @@
+:root {
+  --bg: #071224;
+  --ink: #a7ff95;
+  --line: #35507a;
+  --muted: #86a8d1;
+}
+
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 2rem;
-  background: #070911;
-  color: #dce8ff;
+  background: radial-gradient(circle at 50% -20%, #1f3b67 0%, #0b1730 48%, #071224 100%);
+  color: var(--ink);
   font-family: "Consolas", "Courier New", monospace;
+  cursor: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.64;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.35) 50%);
+  background-size: 100% 4px;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.09;
+  background-image: repeating-radial-gradient(circle at 50% 50%, #fff 0 1px, transparent 1px 2px);
+  background-size: 2px 2px;
+  animation: grain 0.13s infinite;
 }
 
 main {
-  max-width: 860px;
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  background: rgba(8, 16, 30, 0.83);
+  box-shadow: 0 0 0 1px rgba(100, 170, 255, 0.16), 0 20px 70px rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+}
+
+body.boot-seq main {
+  animation: tvOn 760ms cubic-bezier(0.2, 0.72, 0.1, 1), flicker 1200ms steps(1, end);
 }
 
 h1 {
   margin-top: 0;
-  color: #9ce9ff;
+  color: #bbff9f;
+  text-shadow: 0 0 8px rgba(159, 255, 130, 0.6);
 }
 
 a {
-  color: #8ac2ff;
+  color: #a9ff9c;
+  cursor: none;
 }
 
 .post-list {
   list-style: none;
-  margin: 2rem 0 0;
+  margin: 1.5rem 0 0;
   padding: 0;
 }
 
 .post-list li {
-  border-top: 1px solid #22334f;
+  border-top: 1px solid #244264;
   padding: 1rem 0;
 }
 
 .date {
-  color: #8fa3c7;
+  color: var(--muted);
+}
+
+p { color: #c7ffe1; }
+
+.retro-cursor {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #a4ff93;
+  box-shadow: 0 0 10px rgba(164, 255, 147, 0.8), inset 0 0 6px rgba(164, 255, 147, 0.45);
+  background: rgba(12, 30, 12, 0.12);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.retro-cursor::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 4px;
+  height: 4px;
+  background: #a4ff93;
+}
+
+@media (hover: none), (pointer: coarse) {
+  body, a { cursor: auto; }
+  .retro-cursor { display: none; }
+}
+
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  33% { transform: translate(0.18%, -0.1%); }
+  66% { transform: translate(-0.14%, 0.09%); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes tvOn {
+  0% { transform: scale(1, 0.01); filter: brightness(3.2) contrast(2.5); opacity: 0.1; }
+  50% { transform: scale(1, 0.03); filter: brightness(4.1) contrast(3); opacity: 1; }
+  65% { transform: scale(1, 0.92); filter: brightness(2.2) contrast(1.8); }
+  100% { transform: scale(1, 1); filter: brightness(1) contrast(1); opacity: 1; }
+}
+
+@keyframes flicker {
+  0%, 10%, 30%, 60%, 100% { opacity: 1; }
+  16%, 22%, 45%, 66% { opacity: 0.84; }
 }

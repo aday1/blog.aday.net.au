@@ -32,11 +32,12 @@ const mdToHtml = (md) =>
     .join("\n");
 
 const parsePost = (raw) => {
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const normalized = raw.replaceAll("\r\n", "\n");
+  const match = normalized.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   if (!match) {
     return {
       meta: { title: "Untitled", date: "1970-01-01", summary: "" },
-      body: raw
+      body: normalized
     };
   }
   const [, frontMatter, body] = match;
@@ -69,13 +70,16 @@ const posts = files.map((file) => {
   <title>${escapeHtml(meta.title)} // blog.aday.net.au</title>
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="boot-seq">
+  <div class="noise" aria-hidden="true"></div>
   <main>
     <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a></p>
     <h1>${escapeHtml(meta.title)}</h1>
     <p class="date">${escapeHtml(meta.date)}</p>
     ${htmlBody}
   </main>
+  <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
+  <script src="/app.js"></script>
 </body>
 </html>
 `;
@@ -104,7 +108,8 @@ const indexHtml = `<!doctype html>
   <meta name="description" content="Commit-driven blog for aday">
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="boot-seq">
+  <div class="noise" aria-hidden="true"></div>
   <main>
     <h1>blog.aday.net.au</h1>
     <p>New posts are generated from markdown files committed to this repository.</p>
@@ -113,6 +118,8 @@ const indexHtml = `<!doctype html>
       ${listHtml}
     </ul>
   </main>
+  <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
+  <script src="/app.js"></script>
 </body>
 </html>
 `;
