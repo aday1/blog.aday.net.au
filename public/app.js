@@ -37,6 +37,18 @@
     setTimeout(() => scramble(node, text), 220 + i * 140);
   });
 
+  if (window.anime) {
+    const headers = [...document.querySelectorAll("h1, h2, h3")];
+    window.anime({
+      targets: headers,
+      translateY: [12, 0],
+      opacity: [0, 1],
+      duration: 880,
+      delay: window.anime.stagger(65, { start: 100 }),
+      easing: "easeOutExpo"
+    });
+  }
+
   const initBgShader = () => {
     if (!bgShader) return null;
     const gl = bgShader.getContext("webgl", { antialias: false, alpha: true });
