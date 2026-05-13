@@ -101,11 +101,38 @@ const listHtml = posts
   .join("\n");
 
 const getTimeline = async () => {
+  const clanEvents = [
+    {
+      date: "1992-01-01",
+      title: "Clan Analogue founded",
+      desc: "Australian underground electronic music and arts collective begins",
+      url: "https://www.clananalogue.org/about/a-brief-history/"
+    },
+    {
+      date: "2022-01-01",
+      title: "30 Years of Clan Analogue",
+      desc: "Collective anniversary milestone and event cycle",
+      url: "https://www.clananalogue.org/featured/30-years-of-clan-analogue-in-2022/"
+    },
+    {
+      date: "2025-01-01",
+      title: "Clan Analogue events and FM showcases",
+      desc: "Recent featured events and releases listed on official site",
+      url: "http://clananalogue.org/"
+    },
+    {
+      date: "2026-01-01",
+      title: "Aday artist bio on Clan Analogue",
+      desc: "Artist profile and collective context",
+      url: "https://www.clananalogue.org/artists/aday/"
+    }
+  ];
+
   try {
     const response = await fetch("https://api.github.com/users/aday1/repos?per_page=100&sort=updated");
     if (!response.ok) throw new Error("timeline fetch failed");
     const repos = await response.json();
-    const top = repos
+    const repoTimeline = repos
       .filter((repo) => !repo.fork)
       .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
       .slice(-14)
@@ -115,13 +142,14 @@ const getTimeline = async () => {
         desc: repo.description || "repo milestone",
         url: repo.html_url
       }));
-    return top;
+    return [...clanEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   } catch {
     return [
       { date: "2012-06-09", title: "GitHub profile started", desc: "Public coding presence begins", url: "https://github.com/aday1" },
       { date: "2013-11-10", title: "Legend of Syntax", desc: "Scene visual entry", url: "https://demozoo.org/graphics/94286/" },
       { date: "2024-01-01", title: "2 Nights at Syntax", desc: "Animation comp milestone", url: "https://demozoo.org/productions/359782/" },
-      { date: "2026-05-14", title: "blog.aday.net.au online", desc: "Commit-driven publishing pipeline", url: "https://blog.aday.net.au" }
+      { date: "2026-05-14", title: "blog.aday.net.au online", desc: "Commit-driven publishing pipeline", url: "https://blog.aday.net.au" },
+      ...clanEvents
     ];
   }
 };
