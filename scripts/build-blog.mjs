@@ -121,10 +121,22 @@ const getTimeline = async () => {
       url: "http://clananalogue.org/"
     },
     {
+      date: "2025-05-17",
+      title: "Clan Analogue at Sleepless Footscray",
+      desc: "33rd birthday event listing and live electronic sets",
+      url: "https://www.clananalogue.org/events/clan-analogue-goes-bananas-at-sleepless-footscray/"
+    },
+    {
       date: "2026-01-01",
       title: "Aday artist bio on Clan Analogue",
       desc: "Artist profile and collective context",
       url: "https://www.clananalogue.org/artists/aday/"
+    },
+    {
+      date: "2019-06-01",
+      title: "Demobus : Busdemo",
+      desc: "1st at Flashback 2019 (pouet scene archive listing)",
+      url: "https://m.pouet.net/groups.php?which=12461"
     }
   ];
 
