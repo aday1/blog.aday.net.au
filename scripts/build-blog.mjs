@@ -68,13 +68,14 @@ const posts = files.map((file) => {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(meta.title)} // blog.aday.net.au</title>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
   <div class="noise" aria-hidden="true"></div>
   <main>
     <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a></p>
-    <h1>${escapeHtml(meta.title)}</h1>
+    <h1 class="decrypt">${escapeHtml(meta.title)}</h1>
     <p class="date">${escapeHtml(meta.date)}</p>
     ${htmlBody}
   </main>
@@ -99,6 +100,36 @@ const listHtml = posts
   )
   .join("\n");
 
+const getTimeline = async () => {
+  try {
+    const response = await fetch("https://api.github.com/users/aday1/repos?per_page=100&sort=updated");
+    if (!response.ok) throw new Error("timeline fetch failed");
+    const repos = await response.json();
+    const top = repos
+      .filter((repo) => !repo.fork)
+      .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
+      .slice(-14)
+      .map((repo) => ({
+        date: (repo.created_at || "1970-01-01").slice(0, 10),
+        title: repo.name,
+        desc: repo.description || "repo milestone",
+        url: repo.html_url
+      }));
+    return top;
+  } catch {
+    return [
+      { date: "2012-06-09", title: "GitHub profile started", desc: "Public coding presence begins", url: "https://github.com/aday1" },
+      { date: "2013-11-10", title: "Legend of Syntax", desc: "Scene visual entry", url: "https://demozoo.org/graphics/94286/" },
+      { date: "2024-01-01", title: "2 Nights at Syntax", desc: "Animation comp milestone", url: "https://demozoo.org/productions/359782/" },
+      { date: "2026-05-14", title: "blog.aday.net.au online", desc: "Commit-driven publishing pipeline", url: "https://blog.aday.net.au" }
+    ];
+  }
+};
+
+const timelineRows = (await getTimeline())
+  .map((entry) => `<li><span class="date">${escapeHtml(entry.date)}</span> <a href="${escapeHtml(entry.url)}">${escapeHtml(entry.title)}</a> - ${escapeHtml(entry.desc)}</li>`)
+  .join("\n");
+
 const indexHtml = `<!doctype html>
 <html lang="en">
 <head>
@@ -106,17 +137,27 @@ const indexHtml = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>blog.aday.net.au</title>
   <meta name="description" content="Commit-driven blog for aday">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
   <div class="noise" aria-hidden="true"></div>
   <main>
-    <h1>blog.aday.net.au</h1>
+    <h1 class="decrypt">blog.aday.net.au</h1>
     <p>New posts are generated from markdown files committed to this repository.</p>
     <p><a href="https://aday.net.au">return to aday.net.au</a></p>
+    <section>
+      <h2>Presence timeline</h2>
+      <ul class="post-list timeline">
+        ${timelineRows}
+      </ul>
+    </section>
+    <section>
+      <h2>Posts</h2>
     <ul class="post-list">
       ${listHtml}
     </ul>
+    </section>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
   <script src="/app.js"></script>

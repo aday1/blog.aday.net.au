@@ -60,6 +60,11 @@ h1 {
   text-shadow: 0 0 8px rgba(159, 255, 130, 0.6);
 }
 
+h2 {
+  margin: 1.5rem 0 0.6rem;
+  color: #b7d9ff;
+}
+
 a {
   color: #a9ff9c;
   cursor: none;
@@ -74,6 +79,10 @@ a {
 .post-list li {
   border-top: 1px solid #244264;
   padding: 1rem 0;
+}
+
+.timeline li a {
+  font-weight: bold;
 }
 
 .date {
@@ -107,6 +116,16 @@ p { color: #c7ffe1; }
 @media (hover: none), (pointer: coarse) {
   body, a { cursor: auto; }
   .retro-cursor { display: none; }
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem 0.7rem;
+  }
+
+  main {
+    padding: 0.8rem;
+  }
 }
 
 @keyframes grain {
