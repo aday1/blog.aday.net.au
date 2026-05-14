@@ -3,18 +3,12 @@
   const cursor = document.getElementById("retroCursor");
   const bgShader = document.getElementById("blogBgShader");
   const timelineGraph = document.getElementById("timelineGraph");
+  const blogNodeMap = document.getElementById("blogNodeMap");
   const blogYtFrame = document.getElementById("blogYtFrame");
   const blogYtSelector = document.getElementById("blogYtSelector");
   const blogYtRandom = document.getElementById("blogYtRandom");
   const statusList = document.getElementById("systemStatusList");
   const pageTransition = document.getElementById("pageTransition");
-  let bgCycleIndex = 0;
-  const bgCyclePalette = [
-    { a: "#1f3b67", b: "#0b1730", c: "#071224" },
-    { a: "#3a2f6a", b: "#141c3a", c: "#080f20" },
-    { a: "#1d4e5b", b: "#10253b", c: "#070f1e" },
-    { a: "#5a3048", b: "#221634", c: "#0a0d1b" }
-  ];
 
   const finishBoot = () => body.classList.remove("boot-seq");
   const hideTransition = () => pageTransition?.classList.add("hidden");
@@ -135,84 +129,7 @@
 
   waitForAnime(() => animateHeaders());
 
-  const initBgShader = () => {
-    if (!bgShader) return null;
-    const gl = bgShader.getContext("webgl", { antialias: false, alpha: true });
-    if (!gl) return null;
-
-    const vs = `
-      attribute vec2 aPos;
-      void main(){ gl_Position = vec4(aPos,0.0,1.0); }
-    `;
-    const fs = `
-      precision mediump float;
-      uniform vec2 uRes;
-      uniform float uTime;
-      float h(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7))) * 43758.5453); }
-      float n(vec2 p){
-        vec2 i=floor(p), f=fract(p), u=f*f*(3.0-2.0*f);
-        return mix(mix(h(i),h(i+vec2(1,0)),u.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),u.x),u.y);
-      }
-      void main(){
-        vec2 uv = gl_FragCoord.xy / uRes.xy;
-        vec2 p = uv*2.0-1.0;
-        p.x *= uRes.x/uRes.y;
-        float t = uTime * 0.25;
-        float m = n(uv*9.0 + vec2(t*0.5, -t*0.4));
-        float sig = sin((uv.x+uv.y+t)*18.0)*0.5+0.5;
-        float speck = n(uv * vec2(340.0, 220.0) + vec2(t * 45.0, t * 30.0));
-        float pulse = step(0.985, fract(uv.y * 6.5 + t * 1.2)) * 0.22;
-        vec3 col = vec3(0.02,0.08,0.19);
-        col += vec3(0.02,0.20,0.42)*m;
-        col += vec3(0.16,0.05,0.28)*sig*0.45;
-        col += vec3(0.09,0.11,0.14) * speck * 0.22;
-        col += vec3(pulse, pulse * 0.6, pulse * 0.9);
-        col *= smoothstep(1.25, 0.15, length(p));
-        gl_FragColor = vec4(col, 0.82);
-      }
-    `;
-    const compile = (type, source) => {
-      const shader = gl.createShader(type);
-      gl.shaderSource(shader, source);
-      gl.compileShader(shader);
-      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) return null;
-      return shader;
-    };
-    const v = compile(gl.VERTEX_SHADER, vs);
-    const f = compile(gl.FRAGMENT_SHADER, fs);
-    if (!v || !f) return null;
-    const program = gl.createProgram();
-    gl.attachShader(program, v);
-    gl.attachShader(program, f);
-    gl.linkProgram(program);
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return null;
-    const buffer = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
-    return { gl, program, aPos: gl.getAttribLocation(program, "aPos"), uRes: gl.getUniformLocation(program, "uRes"), uTime: gl.getUniformLocation(program, "uTime"), buffer };
-  };
-
-  const shader = initBgShader();
-  const renderBg = (t) => {
-    if (!shader || !bgShader) return;
-    const { gl, program, aPos, uRes, uTime, buffer } = shader;
-    const ratio = window.devicePixelRatio || 1;
-    const w = Math.max(1, Math.floor(window.innerWidth * ratio));
-    const h = Math.max(1, Math.floor(window.innerHeight * ratio));
-    if (bgShader.width !== w || bgShader.height !== h) {
-      bgShader.width = w;
-      bgShader.height = h;
-    }
-    gl.viewport(0, 0, w, h);
-    gl.useProgram(program);
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-    gl.enableVertexAttribArray(aPos);
-    gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
-    gl.uniform2f(uRes, w, h);
-    gl.uniform1f(uTime, t * 0.001);
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
-    requestAnimationFrame(renderBg);
-  };
+  if (bgShader) bgShader.style.display = "none";
 
   const runTimelineGraph = () => {
     if (!timelineGraph) return;
@@ -220,8 +137,35 @@
     if (!ctx) return;
     const labels = [...document.querySelectorAll(".timeline-node")];
     if (!labels.length) return;
+    const entries = labels.map((el, idx) => {
+      const rawDate = (el.querySelector(".date")?.textContent || "").trim();
+      const title = (el.dataset.title || el.textContent || `node-${idx}`).trim();
+      const date = new Date(rawDate);
+      return {
+        idx,
+        title,
+        rawDate,
+        ts: Number.isFinite(date.getTime()) ? date.getTime() : Date.now()
+      };
+    });
+    const minTs = Math.min(...entries.map((e) => e.ts));
+    const maxTs = Math.max(...entries.map((e) => e.ts));
+    const range = Math.max(1, maxTs - minTs);
+    let isVisible = true;
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((rows) => {
+        rows.forEach((row) => {
+          isVisible = row.isIntersecting;
+        });
+      }, { threshold: 0.08 });
+      observer.observe(timelineGraph);
+    }
 
     const animate = (time) => {
+      if (document.hidden || !isVisible) {
+        requestAnimationFrame(animate);
+        return;
+      }
       const ratio = window.devicePixelRatio || 1;
       const rect = timelineGraph.getBoundingClientRect();
       timelineGraph.width = Math.max(1, Math.floor(rect.width * ratio));
@@ -230,15 +174,41 @@
       const w = rect.width;
       const h = rect.height;
       const t = time * 0.001;
+      const padX = 34;
+      const axisY = h * 0.68;
+      const laneTop = h * 0.2;
       ctx.clearRect(0, 0, w, h);
 
-      const points = labels.map((_, i) => ({
-        x: 24 + (w - 48) * (i / Math.max(1, labels.length - 1)),
-        y: 44 + (Math.sin(t * 1.4 + i * 0.6) * 18) + ((i % 2) * 70)
-      }));
-
-      ctx.strokeStyle = "rgba(120,210,255,0.42)";
+      ctx.strokeStyle = "rgba(90, 166, 255, 0.45)";
       ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(padX, axisY);
+      ctx.lineTo(w - padX, axisY);
+      ctx.stroke();
+
+      const years = [...new Set(entries.map((item) => new Date(item.ts).getUTCFullYear()))].sort((a, b) => a - b);
+      years.forEach((year) => {
+        const yrTs = Date.UTC(year, 0, 1);
+        const x = padX + ((yrTs - minTs) / range) * (w - padX * 2);
+        ctx.strokeStyle = "rgba(134, 198, 255, 0.22)";
+        ctx.beginPath();
+        ctx.moveTo(x, laneTop);
+        ctx.lineTo(x, axisY + 18);
+        ctx.stroke();
+        ctx.fillStyle = "rgba(168, 228, 255, 0.76)";
+        ctx.font = "10px Consolas, monospace";
+        ctx.fillText(String(year), x - 14, axisY + 30);
+      });
+
+      const points = entries.map((item, i) => {
+        const x = padX + ((item.ts - minTs) / range) * (w - padX * 2);
+        const lane = (i % 3);
+        const y = laneTop + lane * 34 + Math.sin(t * 1.2 + i * 0.7) * 3;
+        return { ...item, x, y };
+      });
+
+      ctx.strokeStyle = "rgba(118, 205, 255, 0.35)";
+      ctx.lineWidth = 1;
       for (let i = 0; i < points.length - 1; i++) {
         ctx.beginPath();
         ctx.moveTo(points[i].x, points[i].y);
@@ -247,17 +217,156 @@
       }
 
       points.forEach((p, i) => {
-        const pulse = 4 + 2 * (0.5 + 0.5 * Math.sin(t * 2.2 + i));
-        ctx.fillStyle = "rgba(160,255,145,0.92)";
+        const pulse = 3.4 + 2.1 * (0.5 + 0.5 * Math.sin(t * 2.1 + i));
+        ctx.strokeStyle = "rgba(145, 255, 166, 0.72)";
+        ctx.fillStyle = "rgba(145, 255, 166, 0.24)";
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, pulse + 2.2, 0, Math.PI * 2);
+        ctx.fill();
         ctx.beginPath();
         ctx.arc(p.x, p.y, pulse, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(169, 255, 176, 0.94)";
         ctx.fill();
-        const title = labels[i]?.dataset?.title || "";
-        if (title) {
-          ctx.fillStyle = "rgba(188,235,255,0.86)";
-          ctx.font = "10px Consolas, monospace";
-          ctx.fillText(title.slice(0, 26), p.x + 7, p.y - 7);
-        }
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y + pulse);
+        ctx.lineTo(p.x, axisY);
+        ctx.strokeStyle = "rgba(145, 255, 166, 0.28)";
+        ctx.stroke();
+      });
+
+      const sweepX = padX + ((t * 90) % (w - padX * 2));
+      ctx.strokeStyle = "rgba(172, 250, 255, 0.18)";
+      ctx.beginPath();
+      ctx.moveTo(sweepX, laneTop - 8);
+      ctx.lineTo(sweepX, axisY + 10);
+      ctx.stroke();
+
+      requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
+  };
+
+  const runBlogNodeMap = () => {
+    if (!blogNodeMap) return;
+    const ctx = blogNodeMap.getContext("2d");
+    if (!ctx) return;
+    const linkRows = [...document.querySelectorAll(".node-links li[data-node-id][data-url]")];
+    if (!linkRows.length) return;
+    const nodeDefs = [
+      { id: "blog-home", x: 0.5, y: 0.2, c: "#9eff89" },
+      { id: "aday-main", x: 0.2, y: 0.35, c: "#9ed1ff" },
+      { id: "demozoo-artifacts", x: 0.8, y: 0.35, c: "#a9f8ff" },
+      { id: "weeklybeats-xref", x: 0.22, y: 0.62, c: "#9fffbf" },
+      { id: "post-vimeo-index", x: 0.43, y: 0.62, c: "#b5d8ff" },
+      { id: "post-media-deck", x: 0.57, y: 0.62, c: "#b5d8ff" },
+      { id: "post-boot", x: 0.72, y: 0.62, c: "#b5d8ff" },
+      { id: "repo-blog", x: 0.5, y: 0.84, c: "#ffd38e" }
+    ];
+    const edges = [
+      ["blog-home", "aday-main"],
+      ["blog-home", "demozoo-artifacts"],
+      ["blog-home", "weeklybeats-xref"],
+      ["blog-home", "post-vimeo-index"],
+      ["blog-home", "post-media-deck"],
+      ["blog-home", "post-boot"],
+      ["post-vimeo-index", "demozoo-artifacts"],
+      ["post-media-deck", "weeklybeats-xref"],
+      ["post-boot", "repo-blog"],
+      ["blog-home", "repo-blog"]
+    ];
+    const linkById = new Map(linkRows.map((row) => [row.dataset.nodeId, row]));
+    let hoverId = "";
+    let isVisible = true;
+    let nodeCache = [];
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((rows) => {
+        rows.forEach((row) => {
+          isVisible = row.isIntersecting;
+        });
+      }, { threshold: 0.08 });
+      observer.observe(blogNodeMap);
+    }
+
+    const pickNode = (x, y) => {
+      return nodeCache.find((node) => {
+        const dx = x - node.px;
+        const dy = y - node.py;
+        return (dx * dx + dy * dy) <= (node.r + 7) * (node.r + 7);
+      }) || null;
+    };
+
+    const pointerPos = (event) => {
+      const rect = blogNodeMap.getBoundingClientRect();
+      return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+    };
+
+    blogNodeMap.addEventListener("mousemove", (event) => {
+      const p = pointerPos(event);
+      const node = pickNode(p.x, p.y);
+      hoverId = node?.id || "";
+      blogNodeMap.style.cursor = node ? "pointer" : "none";
+    });
+    blogNodeMap.addEventListener("mouseleave", () => {
+      hoverId = "";
+      blogNodeMap.style.cursor = "none";
+    });
+    blogNodeMap.addEventListener("click", (event) => {
+      const p = pointerPos(event);
+      const node = pickNode(p.x, p.y);
+      if (!node) return;
+      const row = linkById.get(node.id);
+      const url = row?.dataset?.url;
+      if (url) window.open(url, "_blank", "noopener,noreferrer");
+    });
+
+    const animate = (time) => {
+      if (document.hidden || !isVisible) {
+        requestAnimationFrame(animate);
+        return;
+      }
+      const ratio = window.devicePixelRatio || 1;
+      const rect = blogNodeMap.getBoundingClientRect();
+      blogNodeMap.width = Math.max(1, Math.floor(rect.width * ratio));
+      blogNodeMap.height = Math.max(1, Math.floor(rect.height * ratio));
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      const w = rect.width;
+      const h = rect.height;
+      const t = time * 0.001;
+      ctx.clearRect(0, 0, w, h);
+
+      nodeCache = nodeDefs.map((n, i) => ({
+        ...n,
+        r: 5.5 + ((i + 1) % 3),
+        px: n.x * w + Math.sin(t * 0.9 + i) * 6,
+        py: n.y * h + Math.cos(t * 1.1 + i * 0.5) * 4
+      }));
+      const byId = new Map(nodeCache.map((n) => [n.id, n]));
+
+      edges.forEach(([a, b], i) => {
+        const na = byId.get(a);
+        const nb = byId.get(b);
+        if (!na || !nb) return;
+        const pulse = 0.2 + 0.24 * (0.5 + 0.5 * Math.sin(t * 2.0 + i));
+        ctx.strokeStyle = `rgba(120, 206, 255, ${pulse.toFixed(3)})`;
+        ctx.lineWidth = 1.1;
+        ctx.beginPath();
+        ctx.moveTo(na.px, na.py);
+        ctx.lineTo(nb.px, nb.py);
+        ctx.stroke();
+      });
+
+      nodeCache.forEach((n) => {
+        const hovered = hoverId === n.id;
+        ctx.fillStyle = n.c;
+        ctx.beginPath();
+        ctx.arc(n.px, n.py, n.r + (hovered ? 1.5 : 0), 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = "rgba(156, 255, 176, 0.34)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(n.px, n.py, n.r + 6 + Math.sin(t * 1.6 + n.r) * 1.8, 0, Math.PI * 2);
+        ctx.stroke();
       });
 
       requestAnimationFrame(animate);
@@ -282,15 +391,6 @@
     });
   };
 
-  const cycleBackgroundPalette = () => {
-    const swatch = bgCyclePalette[bgCycleIndex % bgCyclePalette.length];
-    bgCycleIndex += 1;
-    if (!swatch) return;
-    body.style.setProperty("--bg-cycle-a", swatch.a);
-    body.style.setProperty("--bg-cycle-b", swatch.b);
-    body.style.setProperty("--bg-cycle-c", swatch.c);
-  };
-
   const scheduleFrameRandomizer = () => {
     const roll = () => {
       randomizeFrameGeneration();
@@ -300,12 +400,10 @@
     roll();
   };
 
-  if (shader) requestAnimationFrame(renderBg);
   randomizeFrameGeneration();
-  cycleBackgroundPalette();
   scheduleFrameRandomizer();
-  setInterval(cycleBackgroundPalette, 9100);
   runTimelineGraph();
+  runBlogNodeMap();
 
   if (blogYtFrame) {
     const sources = [

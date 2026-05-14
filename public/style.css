@@ -1,11 +1,8 @@
 :root {
-  --bg: #071224;
-  --ink: #a7ff95;
-  --line: #35507a;
-  --muted: #86a8d1;
-  --bg-cycle-a: #1f3b67;
-  --bg-cycle-b: #0b1730;
-  --bg-cycle-c: #071224;
+  --bg: #050a12;
+  --ink: #b7ff9f;
+  --line: #3f638f;
+  --muted: #91b6dd;
 }
 
 * { box-sizing: border-box; }
@@ -13,11 +10,13 @@
 body {
   margin: 0;
   padding: 2rem;
-  background: radial-gradient(circle at 50% -20%, var(--bg-cycle-a) 0%, var(--bg-cycle-b) 48%, var(--bg-cycle-c) 100%);
+  background:
+    radial-gradient(circle at 15% -8%, rgba(88, 166, 255, 0.2), transparent 42%),
+    radial-gradient(circle at 84% 120%, rgba(125, 255, 144, 0.12), transparent 38%),
+    linear-gradient(180deg, #090f1c 0%, #050a12 100%);
   color: var(--ink);
   font-family: "Consolas", "Courier New", monospace;
   cursor: none;
-  transition: background 1400ms ease;
 }
 
 .page-transition {
@@ -77,14 +76,7 @@ body {
 }
 
 .bg-shader {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.6;
-  animation: shaderTintCycle 26s ease-in-out infinite;
+  display: none;
 }
 
 body::before {
@@ -127,8 +119,8 @@ main {
   margin: 0 auto;
   padding: 1rem 1.2rem;
   border: 1px solid var(--line);
-  background: rgba(8, 16, 30, 0.83);
-  box-shadow: 0 0 0 1px rgba(100, 170, 255, 0.16), 0 20px 70px rgba(0, 0, 0, 0.5);
+  background: rgba(6, 12, 22, 0.9);
+  box-shadow: 0 0 0 1px rgba(112, 188, 255, 0.18), 0 20px 70px rgba(0, 0, 0, 0.56);
   transform-origin: center;
   animation: shellHuePulse 10.2s ease-in-out infinite;
   overflow: hidden;
@@ -141,19 +133,20 @@ main::before {
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(circle at 14% 16%, rgba(112, 198, 255, 0.08), transparent 36%),
-    radial-gradient(circle at 84% 14%, rgba(191, 104, 255, 0.08), transparent 34%);
-  animation: shellAuroraSweep 17s ease-in-out infinite;
+    radial-gradient(circle at 14% 16%, rgba(112, 198, 255, 0.09), transparent 36%),
+    radial-gradient(circle at 84% 14%, rgba(141, 255, 171, 0.07), transparent 34%);
 }
 
 main section {
   border: 1px solid #314f74;
-  background: rgba(8, 16, 30, 0.76);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(109, 178, 255, 0.08), transparent 45%),
+    linear-gradient(180deg, rgba(9, 17, 31, 0.84), rgba(5, 11, 22, 0.9));
   padding: 0.75rem 0.75rem 0.8rem;
   margin: 0.9rem 0 0;
   position: relative;
   isolation: isolate;
-  animation: panelDrift 13s ease-in-out infinite;
+  animation: panelDrift 18s ease-in-out infinite;
   transition: box-shadow 220ms ease, border-color 220ms ease;
 }
 
@@ -171,10 +164,23 @@ main section::before {
   z-index: 0;
   background:
     repeating-linear-gradient(90deg, rgba(128, 198, 255, 0.84) 0 var(--edge-len, 14px), transparent var(--edge-len, 14px) calc(var(--edge-len, 14px) + var(--edge-gap, 8px))),
-    repeating-linear-gradient(0deg, rgba(128, 198, 255, 0.84) 0 var(--edge-len, 14px), transparent var(--edge-len, 14px) calc(var(--edge-len, 14px) + var(--edge-gap, 8px)));
+    repeating-linear-gradient(0deg, rgba(128, 198, 255, 0.84) 0 var(--edge-len, 14px), transparent var(--edge-len, 14px) calc(var(--edge-len, 14px) + var(--edge-gap, 8px))),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 4px);
   background-position: 0 0, 0 0;
   clip-path: polygon(var(--edge-cut, 10px) 0, calc(100% - var(--edge-cut, 10px)) 0, 100% var(--edge-cut, 10px), 100% calc(100% - var(--edge-cut, 10px)), calc(100% - var(--edge-cut, 10px)) 100%, var(--edge-cut, 10px) 100%, 0 calc(100% - var(--edge-cut, 10px)), 0 var(--edge-cut, 10px));
   animation: edgeFlow var(--edge-drift, 9s) linear infinite;
+}
+
+main section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.22) 50%);
+  background-size: 100% 4px;
+  opacity: 0.44;
 }
 
 main section > * {
@@ -305,6 +311,20 @@ a {
   border: 1px solid #2f4c72;
   background: rgba(6, 14, 26, 0.86);
   min-height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.32) 50%);
+  background-size: 100% 4px;
+  opacity: 0.5;
 }
 
 #timelineGraph {
@@ -312,6 +332,29 @@ a {
   height: 100%;
   min-height: 180px;
   display: block;
+  position: relative;
+  z-index: 0;
+}
+
+.node-map-stage {
+  min-height: 260px;
+}
+
+#blogNodeMap {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+.node-links li {
+  border-top-color: #2e5578;
+}
+
+.node-links li:hover {
+  background: rgba(96, 184, 255, 0.08);
 }
 
 .blog-yt-frame {
@@ -433,38 +476,43 @@ p { color: #c7ffe1; }
 
 .retro-cursor {
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 1px solid rgba(166, 255, 149, 0.95);
-  border-radius: 50%;
-  box-shadow: 0 0 11px rgba(164, 255, 147, 0.78), inset 0 0 7px rgba(164, 255, 147, 0.34);
-  background: radial-gradient(circle at center, rgba(166, 255, 149, 0.2) 0 34%, rgba(8, 21, 8, 0.05) 35% 100%);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(164, 255, 147, 0.78);
+  background: rgba(7, 16, 10, 0.2);
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
+  animation: blogCursorPulse 1.2s ease-in-out infinite;
 }
 
 .retro-cursor::before {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: 3px;
   background:
     linear-gradient(rgba(164, 255, 147, 0.9), rgba(164, 255, 147, 0.9)) center / 1px 100% no-repeat,
     linear-gradient(rgba(164, 255, 147, 0.9), rgba(164, 255, 147, 0.9)) center / 100% 1px no-repeat;
-  opacity: 0.78;
+  opacity: 0.9;
 }
 
 .retro-cursor::after {
   content: "";
   position: absolute;
-  left: -3px;
-  top: -2px;
-  width: 10px;
-  height: 14px;
-  clip-path: polygon(0 0, 0 100%, 32% 74%, 54% 100%, 72% 90%, 50% 66%, 100% 66%);
-  background: rgba(212, 240, 255, 0.95);
-  box-shadow: 0 0 7px rgba(132, 206, 255, 0.55);
+  left: -6px;
+  top: -6px;
+  width: 30px;
+  height: 30px;
+  border: 1px dashed rgba(170, 246, 255, 0.46);
+  border-radius: 50%;
+}
+
+@keyframes blogCursorPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.95; }
+  50% { transform: translate(-50%, -50%) scale(1.08); opacity: 0.8; }
 }
 
 @media (hover: none), (pointer: coarse) {

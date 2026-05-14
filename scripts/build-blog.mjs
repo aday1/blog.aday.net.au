@@ -129,12 +129,6 @@ const getTimeline = async () => {
       url: "http://clananalogue.org/"
     },
     {
-      date: "2025-05-17",
-      title: "Clan Analogue at Sleepless Footscray",
-      desc: "33rd birthday event listing and live electronic sets",
-      url: "https://www.clananalogue.org/events/clan-analogue-goes-bananas-at-sleepless-footscray/"
-    },
-    {
       date: "2025-10-07",
       title: "MacroVerse at Melbourne Fringe",
       desc: "Reductionist with live visuals by Aday at Abbotsford Convent experimental art program",
