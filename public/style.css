@@ -818,7 +818,9 @@ body.boot-seq main {
 body:not(.boot-seq) main {
   opacity: 1;
   visibility: visible;
-  animation: blogShellReveal 940ms cubic-bezier(0.16, 0.82, 0.16, 1) both;
+  animation:
+    blogShellReveal 760ms cubic-bezier(0.16, 0.82, 0.16, 1) both,
+    blogCrtStretch 11.8s ease-in-out 0.85s infinite;
 }
 
 .page-transition {
@@ -905,4 +907,103 @@ body:not(.boot-seq) main {
   42% { opacity: 0.92; filter: brightness(1.65) contrast(1.2); transform: scale(1, 0.2); }
   76% { opacity: 1; filter: brightness(1.18) contrast(1.08); transform: scale(1.01, 0.95); }
   100% { opacity: 1; filter: brightness(1) contrast(1); transform: scale(1); }
+}
+
+/* Readable CRT refinement inspired by distortion demos, but reduced for legibility */
+body {
+  line-height: 1.52;
+  text-shadow: none;
+}
+
+body::before {
+  opacity: 0.34;
+  background-size: 100% 3px;
+}
+
+.noise {
+  opacity: 0.1;
+}
+
+main {
+  max-width: 980px;
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem 1.25rem;
+  border-color: #465469;
+  background: linear-gradient(180deg, rgba(29, 35, 43, 0.95), rgba(18, 22, 29, 0.97));
+  box-shadow:
+    0 0 0 1px rgba(110, 154, 203, 0.14),
+    0 22px 70px rgba(0, 0, 0, 0.6);
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(116, 208, 255, 0.06), rgba(0, 0, 0, 0) 54%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.2));
+  mix-blend-mode: screen;
+  animation: blogScanDrift 9.2s linear infinite;
+}
+
+main section {
+  border-color: #445166;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(114, 190, 255, 0.06), transparent 46%),
+    linear-gradient(180deg, rgba(42, 49, 58, 0.9), rgba(24, 28, 35, 0.95));
+}
+
+main section::after {
+  opacity: 0.2;
+}
+
+h1 {
+  color: #b6f4f4;
+  text-shadow: -1px 0 1px rgba(219, 116, 151, 0.28), 1px 0 1px rgba(65, 188, 188, 0.32);
+}
+
+h2, h3 {
+  color: #9deef0;
+}
+
+p, li, .date, .repo-meta, .service-explainer li {
+  color: #d1e5e9;
+}
+
+a {
+  color: #97f1f2;
+  text-decoration-thickness: 1px;
+}
+
+.timeline .timeline-node {
+  line-height: 1.45;
+  padding-right: 0.9rem;
+}
+
+.timeline .timeline-node a {
+  color: #adf7f7;
+}
+
+@keyframes blogCrtStretch {
+  0%, 100% {
+    transform: perspective(1500px) rotateX(0.28deg) scaleX(1.001) scaleY(1);
+  }
+  25% {
+    transform: perspective(1500px) rotateX(0.38deg) scaleX(0.999) scaleY(1.006);
+  }
+  50% {
+    transform: perspective(1500px) rotateX(0.24deg) scaleX(1.002) scaleY(0.997);
+  }
+  75% {
+    transform: perspective(1500px) rotateX(0.34deg) scaleX(0.998) scaleY(1.004);
+  }
+}
+
+@keyframes blogScanDrift {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 10px, 0 0; }
 }
