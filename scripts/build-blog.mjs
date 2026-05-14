@@ -128,6 +128,12 @@ const getTimeline = async () => {
       url: "https://www.clananalogue.org/events/clan-analogue-goes-bananas-at-sleepless-footscray/"
     },
     {
+      date: "2025-10-07",
+      title: "MacroVerse at Melbourne Fringe",
+      desc: "Reductionist with live visuals by Aday at Abbotsford Convent experimental art program",
+      url: "https://www.melbournefringe.com.au/whats-on/events/macroverse"
+    },
+    {
       date: "2026-01-01",
       title: "Aday artist bio on Clan Analogue",
       desc: "Artist profile and collective context",
