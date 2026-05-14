@@ -173,6 +173,40 @@ const getTimeline = async () => {
       url: "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats"
     }
   ];
+  const musicEvents = [
+    {
+      date: "2012-01-01",
+      title: "SoundCloud profile signal",
+      desc: "Primary streaming node for tracks, playlists, and sketches",
+      url: "https://soundcloud.com/adaynetau"
+    },
+    {
+      date: "2025-01-01",
+      title: "Bandcamp collection profile",
+      desc: "Bandcamp collection node with electronic/chiptune references",
+      url: "https://bandcamp.com/aday_net_au"
+    },
+    {
+      date: "2026-01-19",
+      title: "MacroVerse nominated for Fringe Award",
+      desc: "External write-up documenting MacroVerse nomination context",
+      url: "https://nickewilson.net/2026/01/19/macroverse-nominated-for-fringe-award/"
+    },
+    {
+      date: "2026-05-14",
+      title: "Friends webring expanded",
+      desc: "Clan Analogue, Aisjam, Nick E Wilson, lysdexic audio, and Syntax Party nodes linked",
+      url: "https://aday.net.au"
+    }
+  ];
+  const platformEvents = [
+    {
+      date: "2026-05-14",
+      title: "SoundCloud and Bandcamp deck online",
+      desc: "Rapid-play embeds and profile links added to aday.net.au media panel",
+      url: "https://aday.net.au"
+    }
+  ];
 
   try {
     const response = await fetch("https://api.github.com/users/aday1/repos?per_page=100&sort=updated");
@@ -181,14 +215,14 @@ const getTimeline = async () => {
     const repoTimeline = repos
       .filter((repo) => !repo.fork)
       .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
-      .slice(-14)
+      .slice(-20)
       .map((repo) => ({
         date: (repo.created_at || "1970-01-01").slice(0, 10),
         title: repo.name,
         desc: repo.description || "repo milestone",
         url: repo.html_url
       }));
-    return [...clanEvents, ...youtubeEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
+    return [...clanEvents, ...youtubeEvents, ...musicEvents, ...platformEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   } catch {
     return [
       { date: "2012-06-09", title: "GitHub profile started", desc: "Public coding presence begins", url: "https://github.com/aday1" },
@@ -196,13 +230,21 @@ const getTimeline = async () => {
       { date: "2024-01-01", title: "2 Nights at Syntax", desc: "Animation comp milestone", url: "https://demozoo.org/productions/359782/" },
       { date: "2026-05-14", title: "blog.aday.net.au online", desc: "Commit-driven publishing pipeline", url: "https://blog.aday.net.au" },
       ...clanEvents,
-      ...youtubeEvents
+      ...youtubeEvents,
+      ...musicEvents,
+      ...platformEvents
     ];
   }
 };
 
-const timelineRows = (await getTimeline())
+const timelineEntries = await getTimeline();
+const timelineRows = timelineEntries
   .map((entry, idx) => `<li class="timeline-node" data-node="${idx}" data-title="${escapeHtml(entry.title)}"><span class="date">${escapeHtml(entry.date)}</span> <a href="${escapeHtml(entry.url)}">${escapeHtml(entry.title)}</a> - ${escapeHtml(entry.desc)}</li>`)
+  .join("\n");
+const timeLogRows = [...timelineEntries]
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .slice(0, 12)
+  .map((entry) => `<li><span class="date">${escapeHtml(entry.date)}</span> ${escapeHtml(entry.title)} // <a href="${escapeHtml(entry.url)}">open</a></li>`)
   .join("\n");
 
 const indexHtml = `<!doctype html>
@@ -266,6 +308,12 @@ const indexHtml = `<!doctype html>
       </div>
       <ul class="post-list timeline">
         ${timelineRows}
+      </ul>
+    </section>
+    <section>
+      <h2>Time log</h2>
+      <ul class="post-list">
+        ${timeLogRows}
       </ul>
     </section>
     <section>
