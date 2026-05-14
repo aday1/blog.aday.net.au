@@ -207,6 +207,20 @@ const getTimeline = async () => {
       url: "https://aday.net.au"
     }
   ];
+  const videoEvents = [
+    {
+      date: "2012-01-01",
+      title: "Onlinedoof archive clip",
+      desc: "Vimeo archive node",
+      url: "https://vimeo.com/35409288"
+    },
+    {
+      date: "2014-01-01",
+      title: "Binaural Percolator",
+      desc: "MindFlex EEG via Processing output test",
+      url: "https://vimeo.com/84038041"
+    }
+  ];
 
   try {
     const response = await fetch("https://api.github.com/users/aday1/repos?per_page=100&sort=updated");
@@ -222,7 +236,7 @@ const getTimeline = async () => {
         desc: repo.description || "repo milestone",
         url: repo.html_url
       }));
-    return [...clanEvents, ...youtubeEvents, ...musicEvents, ...platformEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
+    return [...clanEvents, ...youtubeEvents, ...musicEvents, ...platformEvents, ...videoEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   } catch {
     return [
       { date: "2012-06-09", title: "GitHub profile started", desc: "Public coding presence begins", url: "https://github.com/aday1" },
@@ -232,7 +246,8 @@ const getTimeline = async () => {
       ...clanEvents,
       ...youtubeEvents,
       ...musicEvents,
-      ...platformEvents
+      ...platformEvents,
+      ...videoEvents
     ];
   }
 };
@@ -314,6 +329,13 @@ const indexHtml = `<!doctype html>
       <h2>Time log</h2>
       <ul class="post-list">
         ${timeLogRows}
+      </ul>
+    </section>
+    <section>
+      <h2>Video index</h2>
+      <ul class="post-list">
+        <li><span class="date">2012-01-01</span> <a href="https://vimeo.com/35409288">Onlinedoof archive clip</a></li>
+        <li><span class="date">2014-01-01</span> <a href="https://vimeo.com/84038041">Binaural Percolator (MindFlex EEG via Processing output test)</a></li>
       </ul>
     </section>
     <section>
