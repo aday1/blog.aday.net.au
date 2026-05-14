@@ -61,12 +61,7 @@
     img.dataset.fallbackReady = "1";
   };
 
-  if (cursor) {
-    window.addEventListener("mousemove", (event) => {
-      cursor.style.left = `${event.clientX}px`;
-      cursor.style.top = `${event.clientY}px`;
-    });
-  }
+  if (cursor) cursor.style.display = "none";
 
   document.querySelectorAll("img").forEach((img) => {
     armGenericImageFallback(img);
