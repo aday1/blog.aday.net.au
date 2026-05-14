@@ -3,10 +3,19 @@
   const cursor = document.getElementById("retroCursor");
   const bgShader = document.getElementById("blogBgShader");
   const timelineGraph = document.getElementById("timelineGraph");
+  const blogYtFrame = document.getElementById("blogYtFrame");
+  const blogYtSelector = document.getElementById("blogYtSelector");
+  const blogYtRandom = document.getElementById("blogYtRandom");
+  const statusList = document.getElementById("systemStatusList");
+  const pageTransition = document.getElementById("pageTransition");
 
   const finishBoot = () => body.classList.remove("boot-seq");
-  window.addEventListener("load", () => setTimeout(finishBoot, 820));
+  window.addEventListener("load", () => {
+    setTimeout(finishBoot, 820);
+    setTimeout(() => pageTransition?.classList.add("hidden"), 440);
+  });
   setTimeout(finishBoot, 1200);
+  setTimeout(() => pageTransition?.classList.add("hidden"), 1400);
 
   if (cursor) {
     window.addEventListener("mousemove", (event) => {
@@ -162,6 +171,12 @@
         ctx.beginPath();
         ctx.arc(p.x, p.y, pulse, 0, Math.PI * 2);
         ctx.fill();
+        const title = labels[i]?.dataset?.title || "";
+        if (title) {
+          ctx.fillStyle = "rgba(188,235,255,0.86)";
+          ctx.font = "10px Consolas, monospace";
+          ctx.fillText(title.slice(0, 26), p.x + 7, p.y - 7);
+        }
       });
 
       requestAnimationFrame(animate);
@@ -171,4 +186,48 @@
 
   if (shader) requestAnimationFrame(renderBg);
   runTimelineGraph();
+
+  if (blogYtFrame) {
+    const sources = [
+      "https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1",
+      "https://www.youtube-nocookie.com/embed?listType=user_uploads&list=Aday",
+      "https://www.youtube-nocookie.com/embed?listType=search&list=aday+macroverse+visual",
+      "https://www.youtube-nocookie.com/embed?listType=search&list=aday+chiptune+live"
+    ];
+    blogYtSelector?.addEventListener("change", () => {
+      blogYtFrame.src = blogYtSelector.value;
+    });
+
+    blogYtRandom?.addEventListener("click", () => {
+      const src = sources[Math.floor(Math.random() * sources.length)];
+      blogYtFrame.src = src;
+      if (blogYtSelector) blogYtSelector.value = src;
+    });
+
+    setInterval(() => {
+      if (!document.hidden) {
+        blogYtFrame.src = sources[Math.floor(Math.random() * sources.length)];
+      }
+    }, 18000);
+  }
+
+  if (statusList) {
+    const rows = [...statusList.querySelectorAll("li[data-url]")];
+    const updateStatus = async (row) => {
+      const url = row.getAttribute("data-url");
+      const tag = row.querySelector(".status-tag");
+      if (!url || !tag) return;
+      tag.textContent = "checking";
+      tag.className = "status-tag status-checking";
+      try {
+        await fetch(url, { method: "HEAD", mode: "no-cors" });
+        tag.textContent = "online";
+        tag.className = "status-tag status-online";
+      } catch {
+        tag.textContent = "unknown";
+        tag.className = "status-tag status-unknown";
+      }
+    };
+    rows.forEach((row, idx) => setTimeout(() => updateStatus(row), 260 * idx));
+  }
 })();

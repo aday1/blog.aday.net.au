@@ -72,6 +72,9 @@ const posts = files.map((file) => {
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
+  <div id="pageTransition" class="page-transition" aria-hidden="true">
+    <div class="page-transition-inner">loading timeline...</div>
+  </div>
   <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <main>
@@ -79,6 +82,10 @@ const posts = files.map((file) => {
     <h1 class="decrypt">${escapeHtml(meta.title)}</h1>
     <p class="date">${escapeHtml(meta.date)}</p>
     ${htmlBody}
+    <footer class="blog-footer">
+      <div class="footer-wave" aria-hidden="true"></div>
+      <p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a></p>
+    </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
   <script src="/app.js"></script>
@@ -146,6 +153,26 @@ const getTimeline = async () => {
       url: "https://m.pouet.net/groups.php?which=12461"
     }
   ];
+  const youtubeEvents = [
+    {
+      date: "2013-01-01",
+      title: "YouTube channel active",
+      desc: "Channel timeline begins (public stats source)",
+      url: "https://www.youtube.com/@aday1"
+    },
+    {
+      date: "2025-10-31",
+      title: "YouTube activity snapshot",
+      desc: "Public tracker notes view movement for channel videos",
+      url: "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats"
+    },
+    {
+      date: "2026-04-16",
+      title: "YouTube stats check-in",
+      desc: "Latest indexed view delta recorded in public analytics mirror",
+      url: "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats"
+    }
+  ];
 
   try {
     const response = await fetch("https://api.github.com/users/aday1/repos?per_page=100&sort=updated");
@@ -161,14 +188,15 @@ const getTimeline = async () => {
         desc: repo.description || "repo milestone",
         url: repo.html_url
       }));
-    return [...clanEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
+    return [...clanEvents, ...youtubeEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   } catch {
     return [
       { date: "2012-06-09", title: "GitHub profile started", desc: "Public coding presence begins", url: "https://github.com/aday1" },
       { date: "2013-11-10", title: "Legend of Syntax", desc: "Scene visual entry", url: "https://demozoo.org/graphics/94286/" },
       { date: "2024-01-01", title: "2 Nights at Syntax", desc: "Animation comp milestone", url: "https://demozoo.org/productions/359782/" },
       { date: "2026-05-14", title: "blog.aday.net.au online", desc: "Commit-driven publishing pipeline", url: "https://blog.aday.net.au" },
-      ...clanEvents
+      ...clanEvents,
+      ...youtubeEvents
     ];
   }
 };
@@ -188,12 +216,49 @@ const indexHtml = `<!doctype html>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
+  <div id="pageTransition" class="page-transition" aria-hidden="true">
+    <div class="page-transition-inner">loading timeline...</div>
+  </div>
   <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <main>
     <h1 class="decrypt">blog.aday.net.au</h1>
     <p>New posts are generated from markdown files committed to this repository.</p>
     <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+    <section>
+      <h2>YouTube feed node</h2>
+      <div class="timeline-stage yt-stage">
+        <iframe
+          id="blogYtFrame"
+          class="blog-yt-frame"
+          title="Aday YouTube feed"
+          src="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="yt-tools">
+        <label for="blogYtSelector">Channel selector</label>
+        <select id="blogYtSelector">
+          <option value="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1">uploads stream</option>
+          <option value="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=Aday">legacy user stream</option>
+          <option value="https://www.youtube-nocookie.com/embed?listType=search&list=aday+chiptune+live">search feed</option>
+        </select>
+        <button id="blogYtRandom" type="button">randomizer</button>
+      </div>
+      <p class="date">Channel selector and randomizer modes are active here for rapid browsing.</p>
+    </section>
+    <section>
+      <h2>Systems status</h2>
+      <ul id="systemStatusList" class="post-list status-list">
+        <li data-url="https://aday.net.au">aday.net.au <span class="status-tag">pending</span></li>
+        <li data-url="https://blog.aday.net.au">blog.aday.net.au <span class="status-tag">pending</span></li>
+        <li data-url="https://macroverse.aday.net.au">macroverse.aday.net.au <span class="status-tag">pending</span></li>
+        <li data-url="https://artbastard.aday.net.au">artbastard.aday.net.au <span class="status-tag">pending</span></li>
+      </ul>
+      <p class="date">Monitoring scaffold in place, fill out more services later.</p>
+    </section>
     <section>
       <h2>Presence timeline</h2>
       <div class="timeline-stage">
@@ -209,6 +274,10 @@ const indexHtml = `<!doctype html>
       ${listHtml}
     </ul>
     </section>
+    <footer class="blog-footer">
+      <div class="footer-wave" aria-hidden="true"></div>
+      <p>blog.aday.net.au signal output // route: <a href="https://aday.net.au">aday.net.au</a></p>
+    </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
   <script src="/app.js"></script>
