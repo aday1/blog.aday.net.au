@@ -22,7 +22,7 @@
   <div class="noise" aria-hidden="true"></div>
   <main>
     <h1 class="decrypt typed">blog.aday.net.au</h1>
-    <p class="typed">Syndicated feed of web presence, repository milestones, releases, and timeline artifacts.</p>
+    <p class="typed">Syndicated feed of web presence, repository milestones, releases, and timeline dev logs.</p>
     <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://github.com/aday1" target="_blank" rel="noopener noreferrer">github profile</a> | <a href="https://mastodon.social/@aday_net_au" target="_blank" rel="me noopener noreferrer">mastodon</a></p>
     <section>
       <h2>YouTube feed node</h2>
@@ -31,7 +31,7 @@
           id="blogYtFrame"
           class="blog-yt-frame"
           title="Aday YouTube feed"
-          src="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1"
+          src="https://www.youtube-nocookie.com/embed/videoseries?list=UUIAFCgAIIABAjGuoBogfmAQ&rel=0"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
@@ -40,32 +40,43 @@
       <div class="yt-tools">
         <label for="blogYtSelector">Channel selector</label>
         <select id="blogYtSelector">
-          <option value="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1">uploads stream</option>
-          <option value="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=Aday">legacy user stream</option>
-          <option value="https://www.youtube-nocookie.com/embed?listType=search&list=aday+chiptune+live">search feed</option>
+          <option value="https://www.youtube-nocookie.com/embed/videoseries?list=UUIAFCgAIIABAjGuoBogfmAQ&rel=0">Aday uploads stream</option>
+          <option value="https://www.youtube-nocookie.com/embed/videoseries?list=UU7t6b5NpEJGq71jPu8DqBVW&rel=0">Clan Analogue uploads</option>
+          <option value="https://www.youtube-nocookie.com/embed/videoseries?list=UU1_w2-bcOXGXzxS79c2qnqA&rel=0">Aisjam uploads</option>
         </select>
         <button id="blogYtRandom" type="button">randomizer</button>
       </div>
       <p class="date">Live channel feed with selector and randomizer.</p>
     </section>
     <section>
-      <h2>Artifact source ingest</h2>
-      <ul id="systemStatusList" class="post-list status-list">
-        <li><span>github</span><span class="status-tag status-online">19</span></li>
-<li><span>weeklybeats</span><span class="status-tag status-online">11</span></li>
-<li><span>demozoo</span><span class="status-tag status-online">5</span></li>
-<li><span>youtube</span><span class="status-tag status-online">3</span></li>
-<li><span>clan</span><span class="status-tag status-online">3</span></li>
-<li><span>vimeo</span><span class="status-tag status-online">2</span></li>
-<li><span>soundcloud</span><span class="status-tag status-online">1</span></li>
-<li><span>codepen</span><span class="status-tag status-online">1</span></li>
-<li><span>scene</span><span class="status-tag status-online">1</span></li>
-<li><span>bandcamp</span><span class="status-tag status-online">1</span></li>
-<li><span>events</span><span class="status-tag status-online">1</span></li>
-<li><span>press</span><span class="status-tag status-online">1</span></li>
-<li><span>platform</span><span class="status-tag status-online">1</span></li>
-      </ul>
-      <p class="date">Generated from curated nodes + YouTube feed + WeeklyBeats manifest + GitHub repository timeline.</p>
+      <h2>WeeklyBeats syndication</h2>
+      <div class="syndication-grid">
+        <article class="syndication-card">
+          <h3>Profile + stream</h3>
+          <ul class="post-list compact-list">
+            <li><a href="https://weeklybeats.com/aday" target="_blank" rel="noopener noreferrer">weeklybeats.com/aday</a> // profile hub</li>
+            <li><a href="https://weeklybeats.com/music/aday" target="_blank" rel="noopener noreferrer">weeklybeats.com/music/aday</a> // full track stream</li>
+            <li><a href="https://weeklybeats.com/aday/music/cubic-waveform" target="_blank" rel="noopener noreferrer">Cubic Waveform</a> // recent highlighted upload</li>
+          </ul>
+        </article>
+        <article class="syndication-card">
+          <h3>2026 run</h3>
+          <ul class="post-list compact-list">
+            <li><a href="https://weeklybeats.com/aday/music/untitled-granular" target="_blank" rel="noopener noreferrer">Untitled Organic Granular</a> // weekly slot</li>
+            <li><a href="https://weeklybeats.com/aday/music/late-calibration-test-late-submission" target="_blank" rel="noopener noreferrer">Late Calibration Test</a> // late weekly submission</li>
+            <li><a href="https://weeklybeats.com/music/aday" target="_blank" rel="noopener noreferrer">2026 index page</a> // rolling archive</li>
+          </ul>
+        </article>
+        <article class="syndication-card">
+          <h3>Syndication routing</h3>
+          <ul class="post-list compact-list">
+            <li><a href="https://aday.net.au/media.html" target="_blank" rel="noopener noreferrer">aday.net.au/media.html</a> // mirrored media references</li>
+            <li><a href="https://soundcloud.com/adaynetau" target="_blank" rel="noopener noreferrer">soundcloud.com/adaynetau</a> // adjacent audio node</li>
+            <li><a href="https://blog.aday.net.au" target="_blank" rel="noopener noreferrer">blog.aday.net.au</a> // timeline ingest + dev logs</li>
+          </ul>
+        </article>
+      </div>
+      <p class="date">WeeklyBeats links are grouped as a multi-column syndication rail for faster navigation.</p>
     </section>
     <section>
       <h2>Presence timeline</h2>
@@ -119,18 +130,20 @@
 <li class="timeline-node source-github" data-source="github" data-node="43" data-title="blog-aday-net-au"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/blog-aday-net-au">blog-aday-net-au</a> - Placeholder for blog.aday.net.au</li>
 <li class="timeline-node source-github" data-source="github" data-node="44" data-title="breakcore-com-au"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/breakcore-com-au">breakcore-com-au</a> - Placeholder for breakcore.com.au</li>
 <li class="timeline-node source-github" data-source="github" data-node="45" data-title="breakcore-forums-placeholder"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/breakcore-forums-placeholder">breakcore-forums-placeholder</a> - Placeholder for beta.breakcore.com.au</li>
-<li class="timeline-node source-github" data-source="github" data-node="46" data-title="macroverse.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/macroverse.aday.net.au">macroverse.aday.net.au</a> - Macroverse web deploy, docker, pages, and CI</li>
-<li class="timeline-node source-github" data-source="github" data-node="47" data-title="artbastard.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/artbastard.aday.net.au">artbastard.aday.net.au</a> - ArtBastard web deploy, docker, pages, and CI</li>
-<li class="timeline-node source-github" data-source="github" data-node="48" data-title="blog.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/blog.aday.net.au">blog.aday.net.au</a> - repo milestone</li>
-<li class="timeline-node source-platform" data-source="platform" data-node="49" data-title="SoundCloud and Bandcamp deck online"><span class="date">2026-05-14</span> <span class="source-chip">platform</span> <a href="https://aday.net.au">SoundCloud and Bandcamp deck online</a> - Rapid-play embeds and profile links added to aday.net.au media panel</li>
+<li class="timeline-node source-github" data-source="github" data-node="46" data-title="Macroverse dev log // TLS host naming update"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/macroverse.aday.net.au/commit/43669d6">Macroverse dev log // TLS host naming update</a> - commit 43669d6: Use single-level test/private hostnames for Cloudflare TLS coverage.</li>
+<li class="timeline-node source-github" data-source="github" data-node="47" data-title="ArtBastard dev log // DMX bridge plan"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/artbastard.aday.net.au/commit/fb9d401">ArtBastard dev log // DMX bridge plan</a> - commit fb9d401: Define DMX bridge decision, criteria, and spike plan.</li>
+<li class="timeline-node source-github" data-source="github" data-node="48" data-title="Macroverse dev log // showcase labeling"><span class="date">2026-05-14</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/macroverse.aday.net.au/commit/af3f4fd">Macroverse dev log // showcase labeling</a> - commit af3f4fd: Label Macroverse page as a GitHub showcase.</li>
+<li class="timeline-node source-github" data-source="github" data-node="49" data-title="ArtBastard dev log // showcase landing page"><span class="date">2026-05-14</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/artbastard.aday.net.au/commit/7761adc">ArtBastard dev log // showcase landing page</a> - commit 7761adc: Create a dedicated ArtBastard GitHub showcase landing page.</li>
+<li class="timeline-node source-github" data-source="github" data-node="50" data-title="blog.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/blog.aday.net.au">blog.aday.net.au</a> - repo milestone</li>
+<li class="timeline-node source-platform" data-source="platform" data-node="51" data-title="SoundCloud and Bandcamp deck online"><span class="date">2026-05-14</span> <span class="source-chip">platform</span> <a href="https://aday.net.au">SoundCloud and Bandcamp deck online</a> - Rapid-play embeds and profile links added to aday.net.au media panel</li>
       </ul>
     </section>
     <section>
       <h2>Recent ingest log</h2>
       <ul class="post-list">
         <li><span class="date">2026-05-14</span> <span class="source-chip">platform</span> SoundCloud and Bandcamp deck online // <a href="https://aday.net.au">open</a></li>
-<li><span class="date">2026-05-13</span> <span class="source-chip">github</span> macroverse.aday.net.au // <a href="https://github.com/aday1/macroverse.aday.net.au">open</a></li>
-<li><span class="date">2026-05-13</span> <span class="source-chip">github</span> artbastard.aday.net.au // <a href="https://github.com/aday1/artbastard.aday.net.au">open</a></li>
+<li><span class="date">2026-05-14</span> <span class="source-chip">devlog</span> ArtBastard dev log // showcase landing page // <a href="https://github.com/aday1/artbastard.aday.net.au/commit/7761adc">open commit</a></li>
+<li><span class="date">2026-05-14</span> <span class="source-chip">devlog</span> Macroverse dev log // showcase labeling // <a href="https://github.com/aday1/macroverse.aday.net.au/commit/af3f4fd">open commit</a></li>
 <li><span class="date">2026-05-13</span> <span class="source-chip">github</span> blog.aday.net.au // <a href="https://github.com/aday1/blog.aday.net.au">open</a></li>
 <li><span class="date">2026-05-09</span> <span class="source-chip">github</span> aday-net-au // <a href="https://github.com/aday1/aday-net-au">open</a></li>
 <li><span class="date">2026-05-09</span> <span class="source-chip">github</span> keys-aday-net-au // <a href="https://github.com/aday1/keys-aday-net-au">open</a></li>

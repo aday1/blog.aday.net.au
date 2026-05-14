@@ -988,6 +988,40 @@ a {
   color: #adf7f7;
 }
 
+.syndication-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 0.5rem;
+}
+
+.syndication-card {
+  border: 1px solid rgba(86, 113, 146, 0.72);
+  border-radius: 10px;
+  padding: 0.55rem 0.62rem 0.6rem;
+  background: linear-gradient(180deg, rgba(42, 52, 65, 0.92), rgba(25, 31, 40, 0.94));
+}
+
+.syndication-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+}
+
+.compact-list {
+  margin: 0;
+}
+
+.compact-list li {
+  padding: 0.45rem 0;
+  border-top: 1px solid rgba(78, 104, 136, 0.56);
+  font-size: 0.84rem;
+}
+
+.compact-list li:first-child {
+  border-top: 0;
+}
+
 @keyframes blogCrtStretch {
   0%, 100% {
     transform: perspective(1500px) rotateX(0.28deg) scaleX(1.001) scaleY(1);
@@ -1078,6 +1112,48 @@ main section::after {
 .source-chip {
   background: linear-gradient(180deg, #86e5f2, #5ac6da 62%, #41adc8);
   border-color: rgba(48, 82, 100, 0.86);
+}
+
+.category-chip {
+  display: inline-block;
+  margin: 0 0.45rem 0 0;
+  padding: 0.06rem 0.4rem;
+  border: 1px solid rgba(54, 74, 96, 0.9);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f0f8ff;
+  text-shadow: none;
+  background: linear-gradient(180deg, #4f627d, #3d4d64);
+}
+
+.category-chip.cat-audio {
+  background: linear-gradient(180deg, #7ad39a, #4ea86f);
+  border-color: rgba(48, 102, 66, 0.9);
+  color: #08150d;
+}
+
+.category-chip.cat-video,
+.category-chip.cat-visual {
+  background: linear-gradient(180deg, #79c4ef, #4d94c8);
+  border-color: rgba(48, 82, 120, 0.9);
+  color: #081522;
+}
+
+.category-chip.cat-code,
+.category-chip.cat-devlog {
+  background: linear-gradient(180deg, #c39bff, #8f67d8);
+  border-color: rgba(92, 62, 136, 0.9);
+  color: #120b1f;
+}
+
+.category-chip.cat-platform,
+.category-chip.cat-community,
+.category-chip.cat-press {
+  background: linear-gradient(180deg, #f2c88a, #c79a57);
+  border-color: rgba(115, 82, 45, 0.92);
+  color: #241507;
 }
 
 .status-tag {

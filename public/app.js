@@ -7,7 +7,6 @@
   const blogYtFrame = document.getElementById("blogYtFrame");
   const blogYtSelector = document.getElementById("blogYtSelector");
   const blogYtRandom = document.getElementById("blogYtRandom");
-  const statusList = document.getElementById("systemStatusList");
   const pageTransition = document.getElementById("pageTransition");
 
   const finishBoot = () => body.classList.remove("boot-seq");
@@ -281,6 +280,50 @@
     requestAnimationFrame(animate);
   };
 
+  const applyTimelineCategories = () => {
+    const sourceToCategory = {
+      soundcloud: "audio",
+      weeklybeats: "audio",
+      bandcamp: "audio",
+      youtube: "video",
+      vimeo: "video",
+      demozoo: "visual",
+      scene: "visual",
+      codepen: "code",
+      github: "code",
+      platform: "platform",
+      clan: "community",
+      events: "community",
+      press: "press",
+      devlog: "devlog"
+    };
+    const labelByCategory = {
+      audio: "AUDIO",
+      video: "VIDEO",
+      visual: "VISUAL",
+      code: "CODE",
+      platform: "PLATFORM",
+      community: "COMMUNITY",
+      press: "PRESS",
+      devlog: "DEVLOG"
+    };
+    document.querySelectorAll(".timeline-node").forEach((node) => {
+      if (node.querySelector(".category-chip")) return;
+      const source = (node.dataset.source || "").toLowerCase();
+      const category = sourceToCategory[source] || "signal";
+      const chip = document.createElement("span");
+      chip.className = `category-chip cat-${category}`;
+      chip.textContent = labelByCategory[category] || "SIGNAL";
+      const sourceChip = node.querySelector(".source-chip");
+      if (sourceChip) {
+        sourceChip.insertAdjacentElement("afterend", chip);
+      } else {
+        const dateNode = node.querySelector(".date");
+        if (dateNode) dateNode.insertAdjacentElement("afterend", chip);
+      }
+    });
+  };
+
   const runBlogNodeMap = () => {
     if (!blogNodeMap) return;
     const ctx = blogNodeMap.getContext("2d");
@@ -442,10 +485,9 @@
 
   if (blogYtFrame) {
     const sources = [
-      "https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1",
-      "https://www.youtube-nocookie.com/embed?listType=user_uploads&list=Aday",
-      "https://www.youtube-nocookie.com/embed?listType=search&list=aday+macroverse+visual",
-      "https://www.youtube-nocookie.com/embed?listType=search&list=aday+chiptune+live"
+      "https://www.youtube-nocookie.com/embed/videoseries?list=UUIAFCgAIIABAjGuoBogfmAQ&rel=0",
+      "https://www.youtube-nocookie.com/embed/videoseries?list=UU7t6b5NpEJGq71jPu8DqBVW&rel=0",
+      "https://www.youtube-nocookie.com/embed/videoseries?list=UU1_w2-bcOXGXzxS79c2qnqA&rel=0"
     ];
     blogYtSelector?.addEventListener("change", () => {
       blogYtFrame.src = blogYtSelector.value;
@@ -464,23 +506,5 @@
     }, 18000);
   }
 
-  if (statusList) {
-    const rows = [...statusList.querySelectorAll("li[data-url]")];
-    const updateStatus = async (row) => {
-      const url = row.getAttribute("data-url");
-      const tag = row.querySelector(".status-tag");
-      if (!url || !tag) return;
-      tag.textContent = "checking";
-      tag.className = "status-tag status-checking";
-      try {
-        await fetch(url, { method: "HEAD", mode: "no-cors" });
-        tag.textContent = "online";
-        tag.className = "status-tag status-online";
-      } catch {
-        tag.textContent = "unknown";
-        tag.className = "status-tag status-unknown";
-      }
-    };
-    rows.forEach((row, idx) => setTimeout(() => updateStatus(row), 260 * idx));
-  }
+  applyTimelineCategories();
 })();
