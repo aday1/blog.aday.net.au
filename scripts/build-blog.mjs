@@ -190,6 +190,56 @@ const getTimeline = async () => {
       url: "https://nickewilson.net/2026/01/19/macroverse-nominated-for-fringe-award/"
     }
   ];
+  const weeklybeatsEvents = [
+    {
+      date: "2012-01-01",
+      title: "WeeklyBeats profile active",
+      desc: "Aday profile index with annual release filters",
+      url: "https://weeklybeats.com/aday"
+    },
+    {
+      date: "2014-02-09",
+      title: "EpochJam (PixiTracker)",
+      desc: "Heatwave-era PixiTracker jam with native video output",
+      url: "https://weeklybeats.com/aday/music/epochjam-pixitracker"
+    },
+    {
+      date: "2016-01-31",
+      title: "Desktop\\pixitracker_1bit\\2016-02-01 09-44.piximod",
+      desc: "1bit PixiTracker pass with post FX in Audacity",
+      url: "https://weeklybeats.com/aday/music/cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod"
+    },
+    {
+      date: "2020-01-12",
+      title: "Anxious Goth Rabbit",
+      desc: "4-hour session where happy rabbit intent turned goth",
+      url: "https://weeklybeats.com/aday/music/anxious-goth-rabbit-2"
+    },
+    {
+      date: "2024-07-07",
+      title: "Doomsday data",
+      desc: "2024 release note: throw down and see what sticks",
+      url: "https://weeklybeats.com/aday/music/doomsday-data"
+    },
+    {
+      date: "2026-01-04",
+      title: "Cubic Waveform",
+      desc: "WeeklyBeats 2026 week 1 upload",
+      url: "https://weeklybeats.com/music/aday"
+    },
+    {
+      date: "2026-01-11",
+      title: "Untitled Organic Granular Experiment #1768089600",
+      desc: "WeeklyBeats 2026 week 2 upload",
+      url: "https://weeklybeats.com/music/aday"
+    },
+    {
+      date: "2026-01-12",
+      title: "Late Calibration Test",
+      desc: "WeeklyBeats 2026 week 3 late submission",
+      url: "https://weeklybeats.com/music/aday"
+    }
+  ];
   const demozooEvents = [
     {
       date: "2012-11-01",
@@ -259,7 +309,7 @@ const getTimeline = async () => {
         desc: repo.description || "repo milestone",
         url: repo.html_url
       }));
-    return [...clanEvents, ...youtubeEvents, ...musicEvents, ...demozooEvents, ...platformEvents, ...videoEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
+    return [...clanEvents, ...youtubeEvents, ...musicEvents, ...weeklybeatsEvents, ...demozooEvents, ...platformEvents, ...videoEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   } catch {
     return [
       { date: "2012-06-09", title: "GitHub profile started", desc: "Public coding presence begins", url: "https://github.com/aday1" },
@@ -269,6 +319,7 @@ const getTimeline = async () => {
       ...clanEvents,
       ...youtubeEvents,
       ...musicEvents,
+      ...weeklybeatsEvents,
       ...demozooEvents,
       ...platformEvents,
       ...videoEvents
@@ -370,6 +421,18 @@ const indexHtml = `<!doctype html>
       <ul class="post-list">
         <li><span class="date">2012-01-01</span> <a href="https://vimeo.com/35409288">Onlinedoof archive clip</a></li>
         <li><span class="date">2014-01-01</span> <a href="https://vimeo.com/84038041">Binaural Percolator (MindFlex EEG via Processing output test)</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>WeeklyBeats cross reference</h2>
+      <p>Catalog sync from WeeklyBeats profile and track pages. Year filters: 2026, 2024, 2022, 2020, 2018, 2016, 2014, 2012.</p>
+      <ul class="post-list">
+        <li><span class="date">Profile</span> <a href="https://weeklybeats.com/aday">weeklybeats.com/aday</a> // Reaper + Renoise + Reaktor listed as preferred tools</li>
+        <li><span class="date">2026</span> <a href="https://weeklybeats.com/music/aday">Cubic Waveform / Untitled Organic Granular Experiment #1768089600 / Late Calibration Test</a></li>
+        <li><span class="date">2024</span> <a href="https://weeklybeats.com/aday/music/doomsday-data">Doomsday data</a> // "throw down and see what sticks"</li>
+        <li><span class="date">2020</span> <a href="https://weeklybeats.com/aday/music/anxious-goth-rabbit-2">Anxious Goth Rabbit</a> // rabbit turned goth</li>
+        <li><span class="date">2016</span> <a href="https://weeklybeats.com/aday/music/cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod">Desktop\\pixitracker_1bit\\2016-02-01 09-44.piximod</a></li>
+        <li><span class="date">2014</span> <a href="https://weeklybeats.com/aday/music/epochjam-pixitracker">EpochJam (PixiTracker)</a> // native PixiTracker video output</li>
       </ul>
     </section>
     <section>
