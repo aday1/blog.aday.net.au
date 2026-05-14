@@ -18,7 +18,11 @@ jobs:
           node-version: 20
       - name: Build static blog
         run: node ./scripts/build-blog.mjs
+      - name: Skip notice when token is missing
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN == '' }}
+        run: echo "CLOUDFLARE_API_TOKEN is not configured. Skipping Cloudflare deploy."
       - name: Deploy via Wrangler
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
         uses: cloudflare/wrangler-action@v3
         with:
           wranglerVersion: "4"
