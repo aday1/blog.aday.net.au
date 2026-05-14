@@ -12,18 +12,30 @@
 
   const finishBoot = () => body.classList.remove("boot-seq");
   const hideTransition = () => pageTransition?.classList.add("hidden");
+  const CUTON_BOOT_MS = 2350;
+  const CUTON_HIDE_MS = 2950;
+  let cutOnScheduled = false;
+  const runCutOnSequence = (forceImmediate = false) => {
+    if (forceImmediate) {
+      finishBoot();
+      hideTransition();
+      cutOnScheduled = true;
+      return;
+    }
+    if (cutOnScheduled) return;
+    cutOnScheduled = true;
+    setTimeout(finishBoot, CUTON_BOOT_MS);
+    setTimeout(hideTransition, CUTON_HIDE_MS);
+  };
   document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(hideTransition, 1500);
+    runCutOnSequence();
   });
   window.addEventListener("load", () => {
-    setTimeout(finishBoot, 800);
-    setTimeout(hideTransition, 900);
+    runCutOnSequence();
   });
-  window.addEventListener("pageshow", () => {
-    setTimeout(hideTransition, 120);
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) runCutOnSequence(true);
   });
-  setTimeout(finishBoot, 3600);
-  setTimeout(hideTransition, 3800);
 
   const svgPreviewFallback = (title) => {
     const safe = (title || "signal").slice(0, 38);

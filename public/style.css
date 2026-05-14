@@ -806,3 +806,103 @@ p, .service-explainer li, .date {
   from, to { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* Slow rounded CRT power-on override */
+body.boot-seq main {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.985);
+  animation: none !important;
+}
+
+body:not(.boot-seq) main {
+  opacity: 1;
+  visibility: visible;
+  animation: blogShellReveal 940ms cubic-bezier(0.16, 0.82, 0.16, 1) both;
+}
+
+.page-transition {
+  transition: opacity 760ms ease;
+  background: radial-gradient(circle at 50% 48%, rgba(15, 36, 70, 0.98), rgba(2, 6, 11, 1));
+  animation: none;
+}
+
+.page-transition::after {
+  left: 50%;
+  right: auto;
+  top: 50%;
+  width: min(86vw, 960px);
+  aspect-ratio: 4 / 3;
+  height: auto;
+  transform: translate(-50%, -50%);
+  border-radius: 50% 50% 48% 48% / 58% 58% 42% 42%;
+  border: 1px solid rgba(162, 222, 255, 0.48);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(120, 205, 255, 0.4), rgba(88, 132, 255, 0.12) 48%, rgba(0, 0, 0, 0) 76%),
+    radial-gradient(circle at 50% 44%, rgba(172, 255, 236, 0.18), rgba(0, 0, 0, 0) 62%);
+  box-shadow:
+    inset 0 0 84px rgba(154, 223, 255, 0.24),
+    0 0 130px rgba(116, 174, 255, 0.2);
+  animation: blogCutOnCrtBloom 3.05s cubic-bezier(0.14, 0.74, 0.18, 1) forwards;
+}
+
+.page-transition-inner {
+  display: block;
+  width: min(86vw, 960px);
+  height: min(64vh, 700px);
+}
+
+.page-transition-inner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(72vw, 800px);
+  height: 4px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(186, 238, 255, 0), rgba(186, 238, 255, 1), rgba(186, 238, 255, 0));
+  box-shadow: 0 0 24px rgba(186, 238, 255, 0.9), 0 0 56px rgba(128, 200, 255, 0.7);
+  animation: blogCutOnScanline 2.2s cubic-bezier(0.2, 0.82, 0.14, 1) forwards;
+}
+
+.page-transition-inner::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(82vw, 900px);
+  aspect-ratio: 4 / 3;
+  transform: translate(-50%, -50%);
+  border-radius: 50% 50% 48% 48% / 58% 58% 42% 42%;
+  border: 1px solid rgba(164, 226, 255, 0.32);
+  opacity: 0;
+  animation: blogCutOnRoundHalo 2.85s ease-out forwards;
+}
+
+@keyframes blogCutOnScanline {
+  0% { opacity: 0.2; transform: translate(-50%, -50%) scaleX(0.03) scaleY(0.05); }
+  32% { opacity: 1; transform: translate(-50%, -50%) scaleX(0.92) scaleY(0.08); }
+  60% { opacity: 0.9; transform: translate(-50%, -50%) scaleX(1) scaleY(0.42); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scaleX(1.04) scaleY(1); }
+}
+
+@keyframes blogCutOnCrtBloom {
+  0% { opacity: 0.18; filter: blur(0.6px) brightness(1.6); transform: translate(-50%, -50%) scale(0.74, 0.04); }
+  34% { opacity: 0.96; filter: blur(0) brightness(1.28); transform: translate(-50%, -50%) scale(1, 0.16); }
+  64% { opacity: 0.9; filter: blur(0) brightness(1.1); transform: translate(-50%, -50%) scale(1.02, 0.86); }
+  100% { opacity: 0.18; filter: blur(0.15px) brightness(1); transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes blogCutOnRoundHalo {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.18); }
+  28% { opacity: 0.88; transform: translate(-50%, -50%) scale(0.76); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+@keyframes blogShellReveal {
+  0% { opacity: 0; filter: brightness(2.6) contrast(1.35); transform: scale(1, 0.02); }
+  42% { opacity: 0.92; filter: brightness(1.65) contrast(1.2); transform: scale(1, 0.2); }
+  76% { opacity: 1; filter: brightness(1.18) contrast(1.08); transform: scale(1.01, 0.95); }
+  100% { opacity: 1; filter: brightness(1) contrast(1); transform: scale(1); }
+}
