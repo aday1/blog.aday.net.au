@@ -11,11 +11,11 @@
 
   const finishBoot = () => body.classList.remove("boot-seq");
   window.addEventListener("load", () => {
-    setTimeout(finishBoot, 820);
-    setTimeout(() => pageTransition?.classList.add("hidden"), 440);
+    setTimeout(finishBoot, 1100);
+    setTimeout(() => pageTransition?.classList.add("hidden"), 1300);
   });
-  setTimeout(finishBoot, 1200);
-  setTimeout(() => pageTransition?.classList.add("hidden"), 1400);
+  setTimeout(finishBoot, 6500);
+  setTimeout(() => pageTransition?.classList.add("hidden"), 6800);
 
   if (cursor) {
     window.addEventListener("mousemove", (event) => {
@@ -106,9 +106,13 @@
         float t = uTime * 0.25;
         float m = n(uv*9.0 + vec2(t*0.5, -t*0.4));
         float sig = sin((uv.x+uv.y+t)*18.0)*0.5+0.5;
+        float speck = n(uv * vec2(340.0, 220.0) + vec2(t * 45.0, t * 30.0));
+        float pulse = step(0.985, fract(uv.y * 6.5 + t * 1.2)) * 0.22;
         vec3 col = vec3(0.02,0.08,0.19);
         col += vec3(0.02,0.20,0.42)*m;
         col += vec3(0.16,0.05,0.28)*sig*0.45;
+        col += vec3(0.09,0.11,0.14) * speck * 0.22;
+        col += vec3(pulse, pulse * 0.6, pulse * 0.9);
         col *= smoothstep(1.25, 0.15, length(p));
         gl_FragColor = vec4(col, 0.82);
       }

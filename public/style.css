@@ -22,11 +22,35 @@ body {
   z-index: 10000;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle at 50% 50%, rgba(27, 57, 101, 0.95), rgba(6, 11, 20, 0.98));
+  background: radial-gradient(circle at 50% 50%, rgba(20, 48, 92, 0.98), rgba(2, 5, 9, 1));
   color: #abffd0;
-  letter-spacing: 0.09em;
-  text-transform: lowercase;
   transition: opacity 420ms ease;
+  overflow: hidden;
+}
+
+.page-transition::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    repeating-linear-gradient(0deg, rgba(160, 225, 255, 0.12) 0 1px, transparent 1px 4px),
+    repeating-radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 3px);
+  opacity: 0.5;
+  animation: cutOnNoise 190ms steps(2, end) infinite;
+}
+
+.page-transition::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%) scaleX(0.08);
+  transform-origin: center;
+  background: linear-gradient(90deg, transparent, rgba(202, 247, 255, 0.95), transparent);
+  box-shadow: 0 0 18px rgba(166, 240, 255, 0.88), 0 0 45px rgba(90, 184, 255, 0.56);
+  animation: cutOnLineExpand 780ms cubic-bezier(0.12, 0.72, 0.1, 1) forwards;
 }
 
 .page-transition.hidden {
@@ -35,8 +59,33 @@ body {
 }
 
 .page-transition-inner {
-  border: 1px solid #4e75a4;
-  padding: 10px 14px;
+  position: relative;
+  width: min(440px, 70vw);
+  height: 120px;
+  border: 1px solid rgba(101, 154, 214, 0.54);
+  background: rgba(5, 12, 24, 0.45);
+  box-shadow: inset 0 0 24px rgba(111, 185, 255, 0.14), 0 0 22px rgba(130, 196, 255, 0.32);
+}
+
+.cuton-label {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  color: #aefea2;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  font-size: 0.82rem;
+}
+
+.cuton-line {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, transparent, rgba(186, 244, 255, 0.92), transparent);
+  animation: cutOnBloom 880ms ease-out forwards;
 }
 
 .bg-shader {
@@ -65,10 +114,21 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.09;
+  opacity: 0.2;
   background-image: repeating-radial-gradient(circle at 50% 50%, #fff 0 1px, transparent 1px 2px);
   background-size: 2px 2px;
-  animation: grain 0.13s infinite;
+  animation: grain 0.1s infinite;
+}
+
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(160, 238, 255, 0.04) 0 2px, transparent 2px 6px);
+  opacity: 0.45;
+  animation: staticSweep 620ms steps(4, end) infinite;
 }
 
 main {
@@ -159,6 +219,7 @@ a {
   z-index: 2;
   background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.34) 50%);
   background-size: 100% 4px;
+  animation: crtStaticRoll 1.9s steps(3, end) infinite;
 }
 
 .timeline-stage::after {
@@ -250,24 +311,38 @@ p { color: #c7ffe1; }
 
 .retro-cursor {
   position: fixed;
-  width: 14px;
-  height: 14px;
-  border: 2px solid #a4ff93;
-  box-shadow: 0 0 10px rgba(164, 255, 147, 0.8), inset 0 0 6px rgba(164, 255, 147, 0.45);
-  background: rgba(12, 30, 12, 0.12);
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(166, 255, 149, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 0 11px rgba(164, 255, 147, 0.78), inset 0 0 7px rgba(164, 255, 147, 0.34);
+  background: radial-gradient(circle at center, rgba(166, 255, 149, 0.2) 0 34%, rgba(8, 21, 8, 0.05) 35% 100%);
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+.retro-cursor::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  background:
+    linear-gradient(rgba(164, 255, 147, 0.9), rgba(164, 255, 147, 0.9)) center / 1px 100% no-repeat,
+    linear-gradient(rgba(164, 255, 147, 0.9), rgba(164, 255, 147, 0.9)) center / 100% 1px no-repeat;
+  opacity: 0.78;
 }
 
 .retro-cursor::after {
   content: "";
   position: absolute;
-  left: 3px;
-  top: 3px;
-  width: 4px;
-  height: 4px;
-  background: #a4ff93;
+  left: -3px;
+  top: -2px;
+  width: 10px;
+  height: 14px;
+  clip-path: polygon(0 0, 0 100%, 32% 74%, 54% 100%, 72% 90%, 50% 66%, 100% 66%);
+  background: rgba(212, 240, 255, 0.95);
+  box-shadow: 0 0 7px rgba(132, 206, 255, 0.55);
 }
 
 @media (hover: none), (pointer: coarse) {
@@ -285,6 +360,29 @@ p { color: #c7ffe1; }
   main {
     padding: 0.8rem;
   }
+
+  .page-transition-inner {
+    width: min(92vw, 420px);
+    height: 96px;
+  }
+
+  .cuton-label {
+    font-size: 0.72rem;
+  }
+
+  .timeline-stage {
+    min-height: 150px;
+  }
+
+  .blog-yt-frame {
+    min-height: 210px;
+  }
+
+  .status-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
 }
 
 @keyframes grain {
@@ -292,6 +390,47 @@ p { color: #c7ffe1; }
   33% { transform: translate(0.18%, -0.1%); }
   66% { transform: translate(-0.14%, 0.09%); }
   100% { transform: translate(0, 0); }
+}
+
+@keyframes staticSweep {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1%, 0.2%); }
+  50% { transform: translate(0.8%, -0.4%); }
+  75% { transform: translate(-0.5%, 0.4%); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes cutOnNoise {
+  0% { transform: translate(0, 0); opacity: 0.32; }
+  50% { transform: translate(-2%, 1%); opacity: 0.62; }
+  100% { transform: translate(1.5%, -1%); opacity: 0.38; }
+}
+
+@keyframes cutOnLineExpand {
+  0% { transform: translateY(-50%) scaleX(0.08); opacity: 1; }
+  58% { transform: translateY(-50%) scaleX(1); opacity: 1; }
+  100% { transform: translateY(-50%) scaleX(1); opacity: 0.35; }
+}
+
+@keyframes cutOnBloom {
+  0% { opacity: 0; filter: blur(2px); }
+  35% { opacity: 1; filter: blur(0); }
+  100% { opacity: 0.2; filter: blur(0.8px); }
+}
+
+@keyframes crtStaticRoll {
+  0%, 100% {
+    background-position: 0 0;
+    opacity: 0.92;
+  }
+  45% {
+    background-position: 0 6px;
+    opacity: 1;
+  }
+  70% {
+    background-position: 0 -8px;
+    opacity: 0.86;
+  }
 }
 
 @keyframes tvOn {
