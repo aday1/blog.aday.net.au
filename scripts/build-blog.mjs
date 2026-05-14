@@ -68,13 +68,16 @@ const posts = files.map((file) => {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(meta.title)} // blog.aday.net.au</title>
+  <meta name="theme-color" content="#071224">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
-      <span class="cuton-label">crt cut-on</span>
+      <span class="cuton-label" aria-hidden="true"></span>
       <span class="cuton-line"></span>
     </div>
   </div>
@@ -344,13 +347,16 @@ const indexHtml = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>blog.aday.net.au</title>
   <meta name="description" content="Commit-driven blog for aday">
+  <meta name="theme-color" content="#071224">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="boot-seq">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
-      <span class="cuton-label">crt cut-on</span>
+      <span class="cuton-label" aria-hidden="true"></span>
       <span class="cuton-line"></span>
     </div>
   </div>
@@ -360,6 +366,45 @@ const indexHtml = `<!doctype html>
     <h1 class="decrypt">blog.aday.net.au</h1>
     <p>New posts are generated from markdown files committed to this repository.</p>
     <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads on aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+    <section>
+      <h2 class="headliner-title">
+        <img class="headliner-badge" src="https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png" alt="glitch signal icon" data-fallbacks="https://raw.githubusercontent.com/aday1/error-diffusion/master/public/assets/max-patch-1.png|https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg">
+        Live AV and Stage Tools
+      </h2>
+      <p>Active browser tools mirrored from aday.net.au for live AV work, DMX control, and projector sets.</p>
+      <div class="headliner-grid">
+        <article class="headliner-card">
+          <img class="headliner-bg" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse cue art" data-repo="aday1/macroverse.aday.net.au">
+          <div class="headliner-head">
+            <img class="service-icon" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse icon" data-repo="aday1/macroverse.aday.net.au">
+            <h3>Macroverse</h3>
+          </div>
+          <p>Live GLSL visual performance stack.</p>
+          <ul class="service-explainer">
+            <li><span>role</span> realtime browser shader engine for VJ and projection scenes</li>
+            <li><span>use</span> launch visual sets and route show-state cues live</li>
+            <li><span>signal</span> best for events, galleries, and audiovisual performance nights</li>
+          </ul>
+          <a href="https://macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">open macroverse.aday.net.au</a><br>
+          <a href="https://github.com/aday1/macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">open source repo</a>
+        </article>
+        <article class="headliner-card">
+          <img class="headliner-bg" src="https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png" alt="ArtBastard cue art" data-repo="aday1/artbastard.aday.net.au">
+          <div class="headliner-head">
+            <img class="service-icon" src="https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png" alt="ArtBastard icon" data-repo="aday1/artbastard.aday.net.au">
+            <h3>ArtBastard</h3>
+          </div>
+          <p>Live browser DMX/OSC/MIDI control stack.</p>
+          <ul class="service-explainer">
+            <li><span>role</span> lighting and control middleware for OSC, MIDI, DMX and Art-Net</li>
+            <li><span>use</span> trigger scenes, map cues, and sync performance hardware</li>
+            <li><span>signal</span> best for stage rigs, hybrid shows, and live control ops</li>
+          </ul>
+          <a href="https://artbastard.aday.net.au" target="_blank" rel="noopener noreferrer">open artbastard.aday.net.au</a><br>
+          <a href="https://github.com/aday1/artbastard.aday.net.au" target="_blank" rel="noopener noreferrer">open source repo</a>
+        </article>
+      </div>
+    </section>
     <section>
       <h2>YouTube feed node</h2>
       <div class="timeline-stage yt-stage">

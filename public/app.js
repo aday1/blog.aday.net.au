@@ -8,14 +8,64 @@
   const blogYtRandom = document.getElementById("blogYtRandom");
   const statusList = document.getElementById("systemStatusList");
   const pageTransition = document.getElementById("pageTransition");
+  let bgCycleIndex = 0;
+  const bgCyclePalette = [
+    { a: "#1f3b67", b: "#0b1730", c: "#071224" },
+    { a: "#3a2f6a", b: "#141c3a", c: "#080f20" },
+    { a: "#1d4e5b", b: "#10253b", c: "#070f1e" },
+    { a: "#5a3048", b: "#221634", c: "#0a0d1b" }
+  ];
 
   const finishBoot = () => body.classList.remove("boot-seq");
-  window.addEventListener("load", () => {
-    setTimeout(finishBoot, 1100);
-    setTimeout(() => pageTransition?.classList.add("hidden"), 1300);
+  const hideTransition = () => pageTransition?.classList.add("hidden");
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(hideTransition, 1500);
   });
-  setTimeout(finishBoot, 6500);
-  setTimeout(() => pageTransition?.classList.add("hidden"), 6800);
+  window.addEventListener("load", () => {
+    setTimeout(finishBoot, 800);
+    setTimeout(hideTransition, 900);
+  });
+  window.addEventListener("pageshow", () => {
+    setTimeout(hideTransition, 120);
+  });
+  setTimeout(finishBoot, 3600);
+  setTimeout(hideTransition, 3800);
+
+  const svgPreviewFallback = (title) => {
+    const safe = (title || "signal").slice(0, 38);
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='#071224'/><stop offset='100%' stop-color='#17375a'/></linearGradient></defs><rect width='1200' height='630' fill='url(#g)'/><rect x='32' y='32' width='1136' height='566' fill='none' stroke='#62a8df' stroke-width='4'/><text x='70' y='320' fill='#bde7ff' font-family='Consolas, monospace' font-size='42'>${safe}</text><text x='70' y='366' fill='#95f69f' font-family='Consolas, monospace' font-size='24'>fallback signal render</text></svg>`;
+    return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+  };
+
+  const parseRepoData = (value) => {
+    const parts = (value || "").split("/");
+    if (parts.length !== 2) return null;
+    return { owner: parts[0], repo: parts[1] };
+  };
+
+  const armGenericImageFallback = (img) => {
+    if (!img || img.dataset.fallbackReady === "1") return;
+    const explicit = (img.dataset.fallbacks || "")
+      .split("|")
+      .map((item) => item.trim())
+      .filter(Boolean);
+    const repoData = parseRepoData(img.dataset.repo || "");
+    const repoCandidates = repoData ? [
+      `https://raw.githubusercontent.com/${repoData.owner}/${repoData.repo}/main/preview.png`,
+      `https://raw.githubusercontent.com/${repoData.owner}/${repoData.repo}/master/preview.png`,
+      `https://raw.githubusercontent.com/${repoData.owner}/${repoData.repo}/main/screenshot.png`,
+      `https://raw.githubusercontent.com/${repoData.owner}/${repoData.repo}/main/docs/preview.png`
+    ] : [];
+    const candidates = [...explicit, ...repoCandidates, svgPreviewFallback(img.alt || "image")];
+    if (!candidates.length) return;
+    let idx = 0;
+    img.addEventListener("error", () => {
+      if (idx >= candidates.length) return;
+      img.src = candidates[idx];
+      idx += 1;
+    });
+    img.dataset.fallbackReady = "1";
+  };
 
   if (cursor) {
     window.addEventListener("mousemove", (event) => {
@@ -23,6 +73,10 @@
       cursor.style.top = `${event.clientY}px`;
     });
   }
+
+  document.querySelectorAll("img").forEach((img) => {
+    armGenericImageFallback(img);
+  });
 
   const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%";
   const scramble = (el, target) => {
@@ -211,7 +265,46 @@
     requestAnimationFrame(animate);
   };
 
+  const randomizeFrameGeneration = () => {
+    document.querySelectorAll("main section, .timeline-stage, .post-list li").forEach((node) => {
+      const edgeLen = 8 + Math.floor(Math.random() * 18);
+      const edgeGap = 5 + Math.floor(Math.random() * 14);
+      const edgeCut = 7 + Math.floor(Math.random() * 12);
+      const edgeAlpha = (0.28 + Math.random() * 0.32).toFixed(2);
+      const edgeShift = 14 + Math.floor(Math.random() * 24);
+      const edgeDrift = (6 + Math.random() * 7).toFixed(2);
+      node.style.setProperty("--edge-len", `${edgeLen}px`);
+      node.style.setProperty("--edge-gap", `${edgeGap}px`);
+      node.style.setProperty("--edge-cut", `${edgeCut}px`);
+      node.style.setProperty("--edge-alpha", edgeAlpha);
+      node.style.setProperty("--edge-shift", `${edgeShift}px`);
+      node.style.setProperty("--edge-drift", `${edgeDrift}s`);
+    });
+  };
+
+  const cycleBackgroundPalette = () => {
+    const swatch = bgCyclePalette[bgCycleIndex % bgCyclePalette.length];
+    bgCycleIndex += 1;
+    if (!swatch) return;
+    body.style.setProperty("--bg-cycle-a", swatch.a);
+    body.style.setProperty("--bg-cycle-b", swatch.b);
+    body.style.setProperty("--bg-cycle-c", swatch.c);
+  };
+
+  const scheduleFrameRandomizer = () => {
+    const roll = () => {
+      randomizeFrameGeneration();
+      const next = 5200 + Math.floor(Math.random() * 6200);
+      setTimeout(roll, next);
+    };
+    roll();
+  };
+
   if (shader) requestAnimationFrame(renderBg);
+  randomizeFrameGeneration();
+  cycleBackgroundPalette();
+  scheduleFrameRandomizer();
+  setInterval(cycleBackgroundPalette, 9100);
   runTimelineGraph();
 
   if (blogYtFrame) {
