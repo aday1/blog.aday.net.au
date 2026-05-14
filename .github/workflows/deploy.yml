@@ -28,4 +28,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           wranglerVersion: "4"
+          command: deploy --override-existing-dns-record
           apiToken: ${{ env.CF_API_TOKEN }}

@@ -1,4 +1,3 @@
-override_existing_dns_record = true
 name = "blog-aday-net-au"
 main = "src/index.js"
 compatibility_date = "2026-05-14"
