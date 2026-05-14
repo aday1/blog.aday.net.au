@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>blog.aday.net.au</title>
   <meta name="description" content="Commit-driven blog for aday">
-  <meta name="theme-color" content="#071224">
+  <meta name="theme-color" content="#1b1b1b">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
@@ -21,20 +21,20 @@
   <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <main>
-    <h1 class="decrypt">blog.aday.net.au</h1>
-    <p>New posts are generated from markdown files committed to this repository.</p>
+    <h1 class="decrypt typed">blog.aday.net.au</h1>
+    <p class="typed">Artifact timeline and generated posts from automated source scraping.</p>
     <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads on aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
     <section>
       <h2 class="headliner-title">
-        <img class="headliner-badge" src="/assets/card-system-tree.jpg" alt="glitch signal icon" data-fallbacks="/assets/card-radar-core.jpg|/assets/card-dmx-console.jpg">
+        <img class="headliner-badge" src="https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png" alt="glitch signal icon" data-fallbacks="https://raw.githubusercontent.com/aday1/error-diffusion/master/public/assets/max-patch-1.png|https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg">
         Live AV and Stage Tools
       </h2>
       <p>Active browser tools mirrored from aday.net.au for live AV work, DMX control, and projector sets.</p>
       <div class="headliner-grid">
         <article class="headliner-card">
-          <img class="headliner-bg" src="/assets/card-radar-core.jpg" alt="Macroverse cue art" data-fallbacks="/assets/card-radar-core.jpg|/assets/card-system-tree.jpg">
+          <img class="headliner-bg" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse cue art" data-repo="aday1/macroverse.aday.net.au">
           <div class="headliner-head">
-            <img class="service-icon" src="/assets/card-radar-core.jpg" alt="Macroverse icon" data-fallbacks="/assets/card-radar-core.jpg|/assets/card-system-tree.jpg">
+            <img class="service-icon" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse icon" data-repo="aday1/macroverse.aday.net.au">
             <h3>Macroverse</h3>
           </div>
           <p>Live GLSL visual performance stack.</p>
@@ -47,9 +47,9 @@
           <a href="https://github.com/aday1/macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">open source repo</a>
         </article>
         <article class="headliner-card">
-          <img class="headliner-bg" src="/assets/card-dmx-console.jpg" alt="ArtBastard cue art" data-fallbacks="/assets/card-dmx-console.jpg|/assets/card-radar-core.jpg">
+          <img class="headliner-bg" src="https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png" alt="ArtBastard cue art" data-repo="aday1/artbastard.aday.net.au">
           <div class="headliner-head">
-            <img class="service-icon" src="/assets/card-dmx-console.jpg" alt="ArtBastard icon" data-fallbacks="/assets/card-dmx-console.jpg|/assets/card-radar-core.jpg">
+            <img class="service-icon" src="https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png" alt="ArtBastard icon" data-repo="aday1/artbastard.aday.net.au">
             <h3>ArtBastard</h3>
           </div>
           <p>Live browser DMX/OSC/MIDI control stack.</p>
@@ -85,34 +85,26 @@
         </select>
         <button id="blogYtRandom" type="button">randomizer</button>
       </div>
-      <p class="date">Channel selector and randomizer modes are active here for rapid browsing.</p>
+      <p class="date">Live channel feed with selector and randomizer.</p>
     </section>
     <section>
-      <h2>Systems status</h2>
+      <h2>Artifact source ingest</h2>
       <ul id="systemStatusList" class="post-list status-list">
-        <li data-url="https://aday.net.au">aday.net.au <span class="status-tag">pending</span></li>
-        <li data-url="https://blog.aday.net.au">blog.aday.net.au <span class="status-tag">pending</span></li>
-        <li data-url="https://macroverse.aday.net.au">macroverse.aday.net.au <span class="status-tag">pending</span></li>
-        <li data-url="https://artbastard.aday.net.au">artbastard.aday.net.au <span class="status-tag">pending</span></li>
+        <li><span>github</span><span class="status-tag status-online">19</span></li>
+<li><span>weeklybeats</span><span class="status-tag status-online">11</span></li>
+<li><span>demozoo</span><span class="status-tag status-online">5</span></li>
+<li><span>youtube</span><span class="status-tag status-online">3</span></li>
+<li><span>clan</span><span class="status-tag status-online">3</span></li>
+<li><span>vimeo</span><span class="status-tag status-online">2</span></li>
+<li><span>soundcloud</span><span class="status-tag status-online">1</span></li>
+<li><span>codepen</span><span class="status-tag status-online">1</span></li>
+<li><span>scene</span><span class="status-tag status-online">1</span></li>
+<li><span>bandcamp</span><span class="status-tag status-online">1</span></li>
+<li><span>events</span><span class="status-tag status-online">1</span></li>
+<li><span>press</span><span class="status-tag status-online">1</span></li>
+<li><span>platform</span><span class="status-tag status-online">1</span></li>
       </ul>
-      <p class="date">Monitoring scaffold in place, fill out more services later.</p>
-    </section>
-    <section>
-      <h2>Blog Artifact Node Map</h2>
-      <div class="timeline-stage node-map-stage">
-        <canvas id="blogNodeMap" width="960" height="360" aria-label="blog node map"></canvas>
-      </div>
-      <ul class="post-list node-links">
-        <li data-node-id="blog-home" data-url="https://blog.aday.net.au"><span class="date">core</span> <a href="https://blog.aday.net.au">blog.aday.net.au</a> // front index</li>
-        <li data-node-id="aday-main" data-url="https://aday.net.au"><span class="date">core</span> <a href="https://aday.net.au">aday.net.au</a> // primary portal</li>
-        <li data-node-id="demozoo-artifacts" data-url="https://aday.net.au/#demozoo-uploads"><span class="date">artifact</span> <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads section</a> // scene media artifacts</li>
-        <li data-node-id="weeklybeats-xref" data-url="https://weeklybeats.com/aday"><span class="date">music</span> <a href="https://weeklybeats.com/aday">WeeklyBeats profile</a> // track archive cross-reference</li>
-        <li data-node-id="post-vimeo-index" data-url="/posts/2026-05-14-vimeo-index.html"><span class="date">post</span> <a href="/posts/2026-05-14-vimeo-index.html">Vimeo Index Added</a> // archive feed node</li>
-        <li data-node-id="post-media-deck" data-url="/posts/2026-05-14-media-deck-and-timelog.html"><span class="date">post</span> <a href="/posts/2026-05-14-media-deck-and-timelog.html">Media Deck and Time Log</a> // media/log update</li>
-        <li data-node-id="post-boot" data-url="/posts/2026-05-14-boot.html"><span class="date">post</span> <a href="/posts/2026-05-14-boot.html">Boot Sequence</a> // pipeline boot post</li>
-        <li data-node-id="repo-blog" data-url="https://github.com/aday1/blog.aday.net.au"><span class="date">repo</span> <a href="https://github.com/aday1/blog.aday.net.au">blog.aday.net.au repo</a> // source and automation</li>
-      </ul>
-      <p class="date">Click nodes or links to jump to connected artifacts.</p>
+      <p class="date">Generated from curated nodes + YouTube feed + WeeklyBeats manifest + GitHub repository timeline.</p>
     </section>
     <section>
       <h2>Presence timeline</h2>
@@ -120,52 +112,75 @@
         <canvas id="timelineGraph" width="960" height="320" aria-hidden="true"></canvas>
       </div>
       <ul class="post-list timeline">
-        <li class="timeline-node" data-node="0" data-title="SoundCloud profile signal"><span class="date">2012-01-01</span> <a href="https://soundcloud.com/adaynetau">SoundCloud profile signal</a> - Primary streaming node for tracks, playlists, and sketches</li>
-<li class="timeline-node" data-node="1" data-title="WeeklyBeats profile active"><span class="date">2012-01-01</span> <a href="https://weeklybeats.com/aday">WeeklyBeats profile active</a> - Aday profile index with annual release filters</li>
-<li class="timeline-node" data-node="2" data-title="Onlinedoof archive clip"><span class="date">2012-01-01</span> <a href="https://vimeo.com/35409288">Onlinedoof archive clip</a> - Vimeo archive node</li>
-<li class="timeline-node" data-node="3" data-title="RPi-Sequenced NES"><span class="date">2012-11-01</span> <a href="https://demozoo.org/productions/94050/">RPi-Sequenced NES</a> - Demozoo upload node</li>
-<li class="timeline-node" data-node="4" data-title="YouTube channel active"><span class="date">2013-01-01</span> <a href="https://www.youtube.com/@aday1">YouTube channel active</a> - Channel timeline begins (public stats source)</li>
-<li class="timeline-node" data-node="5" data-title="Binaural Percolator"><span class="date">2014-01-01</span> <a href="https://vimeo.com/84038041">Binaural Percolator</a> - MindFlex EEG via Processing output test</li>
-<li class="timeline-node" data-node="6" data-title="EpochJam (PixiTracker)"><span class="date">2014-02-09</span> <a href="https://weeklybeats.com/aday/music/epochjam-pixitracker">EpochJam (PixiTracker)</a> - Heatwave-era PixiTracker jam with native video output</li>
-<li class="timeline-node" data-node="7" data-title="Arduino-LED-INT"><span class="date">2015-06-19</span> <a href="https://github.com/aday1/Arduino-LED-INT">Arduino-LED-INT</a> - INT Reference</li>
-<li class="timeline-node" data-node="8" data-title="Float-Reference"><span class="date">2015-06-19</span> <a href="https://github.com/aday1/Float-Reference">Float-Reference</a> - Float Reference</li>
-<li class="timeline-node" data-node="9" data-title="Desktop\pixitracker_1bit\2016-02-01 09-44.piximod"><span class="date">2016-01-31</span> <a href="https://weeklybeats.com/aday/music/cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod">Desktop\pixitracker_1bit\2016-02-01 09-44.piximod</a> - 1bit PixiTracker pass with post FX in Audacity</li>
-<li class="timeline-node" data-node="10" data-title="64:20 Blaze It"><span class="date">2018-11-01</span> <a href="https://demozoo.org/graphics/195944/">64:20 Blaze It</a> - Demozoo graphics upload</li>
-<li class="timeline-node" data-node="11" data-title="Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-"><span class="date">2019-01-12</span> <a href="https://github.com/aday1/Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-">Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-</a> - Australian BBQ Bash - Colab Track with AisJam (hope we finish this)</li>
-<li class="timeline-node" data-node="12" data-title="Demobus : Busdemo"><span class="date">2019-06-01</span> <a href="https://m.pouet.net/groups.php?which=12461">Demobus : Busdemo</a> - 1st at Flashback 2019 (pouet scene archive listing)</li>
-<li class="timeline-node" data-node="13" data-title="Demobus from the Sky"><span class="date">2019-06-01</span> <a href="https://demozoo.org/graphics/204829/">Demobus from the Sky</a> - Demozoo photo upload</li>
-<li class="timeline-node" data-node="14" data-title="error-diffusion"><span class="date">2019-07-03</span> <a href="https://github.com/aday1/error-diffusion">error-diffusion</a> - 𝖊𝖗𝖗𝖔𝖗 𝖉𝖎𝖋𝖋𝖚𝖘𝖎𝖔𝖓</li>
-<li class="timeline-node" data-node="15" data-title="Dreamurium-Weeklybeats2020W1"><span class="date">2020-01-05</span> <a href="https://github.com/aday1/Dreamurium-Weeklybeats2020W1">Dreamurium-Weeklybeats2020W1</a> - Week1 of Weeklybeats 2020</li>
-<li class="timeline-node" data-node="16" data-title="Anxious Goth Rabbit"><span class="date">2020-01-12</span> <a href="https://weeklybeats.com/aday/music/anxious-goth-rabbit-2">Anxious Goth Rabbit</a> - 4-hour session where happy rabbit intent turned goth</li>
-<li class="timeline-node" data-node="17" data-title="30 Years of Clan Analogue"><span class="date">2022-01-01</span> <a href="https://www.clananalogue.org/featured/30-years-of-clan-analogue-in-2022/">30 Years of Clan Analogue</a> - Collective anniversary milestone and event cycle</li>
-<li class="timeline-node" data-node="18" data-title="Doomsday data"><span class="date">2024-07-07</span> <a href="https://weeklybeats.com/aday/music/doomsday-data">Doomsday data</a> - 2024 release note: throw down and see what sticks</li>
-<li class="timeline-node" data-node="19" data-title="2 Nights At Syntax"><span class="date">2024-10-01</span> <a href="https://demozoo.org/productions/359782/">2 Nights At Syntax</a> - Demozoo production entry</li>
-<li class="timeline-node" data-node="20" data-title="Clan Analogue events and FM showcases"><span class="date">2025-01-01</span> <a href="http://clananalogue.org/">Clan Analogue events and FM showcases</a> - Recent featured events and releases listed on official site</li>
-<li class="timeline-node" data-node="21" data-title="Bandcamp collection profile"><span class="date">2025-01-01</span> <a href="https://bandcamp.com/aday_net_au">Bandcamp collection profile</a> - Bandcamp collection node with electronic/chiptune references</li>
-<li class="timeline-node" data-node="22" data-title="qr-zipper"><span class="date">2025-04-22</span> <a href="https://github.com/aday1/qr-zipper">qr-zipper</a> - repo milestone</li>
-<li class="timeline-node" data-node="24" data-title="ArtBastard-DMX512"><span class="date">2025-05-22</span> <a href="https://github.com/aday1/ArtBastard-DMX512">ArtBastard-DMX512</a> - ArtBastard - OSC/MIDI/DMX/ARTNET Wrangler</li>
-<li class="timeline-node" data-node="25" data-title="MacroVerse at Melbourne Fringe"><span class="date">2025-10-07</span> <a href="https://www.melbournefringe.com.au/whats-on/events/macroverse">MacroVerse at Melbourne Fringe</a> - Reductionist with live visuals by Aday at Abbotsford Convent experimental art program</li>
-<li class="timeline-node" data-node="26" data-title="YouTube activity snapshot"><span class="date">2025-10-31</span> <a href="https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats">YouTube activity snapshot</a> - Public tracker notes view movement for channel videos</li>
-<li class="timeline-node" data-node="27" data-title="Orbital Syntax"><span class="date">2025-11-01</span> <a href="https://demozoo.org/graphics/380235/">Orbital Syntax</a> - Demozoo photo entry</li>
-<li class="timeline-node" data-node="28" data-title="Aday artist bio on Clan Analogue"><span class="date">2026-01-01</span> <a href="https://www.clananalogue.org/artists/aday/">Aday artist bio on Clan Analogue</a> - Artist profile and collective context</li>
-<li class="timeline-node" data-node="29" data-title="Cubic Waveform"><span class="date">2026-01-04</span> <a href="https://weeklybeats.com/music/aday">Cubic Waveform</a> - WeeklyBeats 2026 week 1 upload</li>
-<li class="timeline-node" data-node="30" data-title="Untitled Organic Granular Experiment #1768089600"><span class="date">2026-01-11</span> <a href="https://weeklybeats.com/music/aday">Untitled Organic Granular Experiment #1768089600</a> - WeeklyBeats 2026 week 2 upload</li>
-<li class="timeline-node" data-node="31" data-title="Late Calibration Test"><span class="date">2026-01-12</span> <a href="https://weeklybeats.com/music/aday">Late Calibration Test</a> - WeeklyBeats 2026 week 3 late submission</li>
-<li class="timeline-node" data-node="32" data-title="MacroVerse nominated for Fringe Award"><span class="date">2026-01-19</span> <a href="https://nickewilson.net/2026/01/19/macroverse-nominated-for-fringe-award/">MacroVerse nominated for Fringe Award</a> - External write-up documenting MacroVerse nomination context</li>
-<li class="timeline-node" data-node="33" data-title="ZealPalace"><span class="date">2026-03-12</span> <a href="https://github.com/aday1/ZealPalace">ZealPalace</a> - A weird Raspberry PI MMUD RPG IRC Server Stack with a 3.5 LCD TFT Screen - RPG System, World simulation, Ollama personas, fun toy</li>
-<li class="timeline-node" data-node="34" data-title="Cidewinder"><span class="date">2026-03-17</span> <a href="https://github.com/aday1/Cidewinder">Cidewinder</a> - A roaming gocrypt workflow</li>
-<li class="timeline-node" data-node="35" data-title="MoveMusicSaveEditor"><span class="date">2026-04-02</span> <a href="https://github.com/aday1/MoveMusicSaveEditor">MoveMusicSaveEditor</a> - A vibe coded save editing tool in python to edit Move Music Save files and spawn a bunch of controllers to dance too</li>
-<li class="timeline-node" data-node="36" data-title="The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack"><span class="date">2026-04-07</span> <a href="https://github.com/aday1/The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack">The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack</a> - DAW MCP Survival pack - for mass sedding and envelope tweaking</li>
-<li class="timeline-node" data-node="37" data-title="YouTube stats check-in"><span class="date">2026-04-16</span> <a href="https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats">YouTube stats check-in</a> - Latest indexed view delta recorded in public analytics mirror</li>
-<li class="timeline-node" data-node="38" data-title="aday-net-au"><span class="date">2026-05-09</span> <a href="https://github.com/aday1/aday-net-au">aday-net-au</a> - Placeholder for aday.net.au</li>
-<li class="timeline-node" data-node="39" data-title="keys-aday-net-au"><span class="date">2026-05-09</span> <a href="https://github.com/aday1/keys-aday-net-au">keys-aday-net-au</a> - Placeholder for keys.aday.net.au</li>
-<li class="timeline-node" data-node="40" data-title="blog-aday-net-au"><span class="date">2026-05-09</span> <a href="https://github.com/aday1/blog-aday-net-au">blog-aday-net-au</a> - Placeholder for blog.aday.net.au</li>
-<li class="timeline-node" data-node="41" data-title="breakcore-com-au"><span class="date">2026-05-09</span> <a href="https://github.com/aday1/breakcore-com-au">breakcore-com-au</a> - Placeholder for breakcore.com.au</li>
-<li class="timeline-node" data-node="42" data-title="breakcore-forums-placeholder"><span class="date">2026-05-09</span> <a href="https://github.com/aday1/breakcore-forums-placeholder">breakcore-forums-placeholder</a> - Placeholder for beta.breakcore.com.au</li>
-<li class="timeline-node" data-node="43" data-title="macroverse.aday.net.au"><span class="date">2026-05-13</span> <a href="https://github.com/aday1/macroverse.aday.net.au">macroverse.aday.net.au</a> - Macroverse web deploy, docker, pages, and CI</li>
-<li class="timeline-node" data-node="44" data-title="artbastard.aday.net.au"><span class="date">2026-05-13</span> <a href="https://github.com/aday1/artbastard.aday.net.au">artbastard.aday.net.au</a> - ArtBastard web deploy, docker, pages, and CI</li>
-<li class="timeline-node" data-node="45" data-title="blog.aday.net.au"><span class="date">2026-05-13</span> <a href="https://github.com/aday1/blog.aday.net.au">blog.aday.net.au</a> - repo milestone</li>
-<li class="timeline-node" data-node="46" data-title="SoundCloud and Bandcamp deck online"><span class="date">2026-05-14</span> <a href="https://aday.net.au">SoundCloud and Bandcamp deck online</a> - Rapid-play embeds and profile links added to aday.net.au media panel</li>
+        <li class="timeline-node source-soundcloud" data-source="soundcloud" data-node="0" data-title="SoundCloud profile signal"><span class="date">2012-01-01</span> <span class="source-chip">soundcloud</span> <a href="https://soundcloud.com/adaynetau">SoundCloud profile signal</a> - Primary streaming node for tracks, playlists, and sketches</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="1" data-title="WeeklyBeats profile active"><span class="date">2012-01-01</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday">WeeklyBeats profile active</a> - Aday profile index with annual release filters</li>
+<li class="timeline-node source-vimeo" data-source="vimeo" data-node="2" data-title="Onlinedoof archive clip"><span class="date">2012-01-01</span> <span class="source-chip">vimeo</span> <a href="https://vimeo.com/35409288">Onlinedoof archive clip</a> - Vimeo archive node</li>
+<li class="timeline-node source-demozoo" data-source="demozoo" data-node="3" data-title="RPi-Sequenced NES"><span class="date">2012-11-01</span> <span class="source-chip">demozoo</span> <a href="https://demozoo.org/productions/94050/">RPi-Sequenced NES</a> - Demozoo upload node</li>
+<li class="timeline-node source-youtube" data-source="youtube" data-node="4" data-title="YouTube channel active"><span class="date">2013-01-01</span> <span class="source-chip">youtube</span> <a href="https://www.youtube.com/@aday1">YouTube channel active</a> - Channel timeline begins (public stats source)</li>
+<li class="timeline-node source-vimeo" data-source="vimeo" data-node="5" data-title="Binaural Percolator"><span class="date">2014-01-01</span> <span class="source-chip">vimeo</span> <a href="https://vimeo.com/84038041">Binaural Percolator</a> - MindFlex EEG via Processing output test</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="6" data-title="EpochJam (PixiTracker)"><span class="date">2014-02-03</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday/music/epochjam-pixitracker">EpochJam (PixiTracker)</a> - With &gt;40 degree days and an on going heatwave in Melbourne, and needing a new pair of headphones (I think I've lost my good ones) - I've decided to go with a nuclear option. So here's a PixiTracker jam track! Cool application by Alexander Zolotov (A.K.A Nightradio) from warmplace.ru Check it -- http://www.warmplace.ru/soft/pixitracker/ Also available on Android (most nightradio software run on multiple platforms) (may run on your toaster!) Yep, Built this simple track in about 2 hours. No post FX on this one, just a simple native jam... because nuclear, because weeklybeats. The video output is also native from the PixiTracker software. / no post fx. Link to piximod file Next week is a colab with Hungee Funk ... My first Weeklybeats Colab for the year! - exciting</li>
+<li class="timeline-node source-github" data-source="github" data-node="7" data-title="Arduino-LED-INT"><span class="date">2015-06-19</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/Arduino-LED-INT">Arduino-LED-INT</a> - INT Reference</li>
+<li class="timeline-node source-github" data-source="github" data-node="8" data-title="Float-Reference"><span class="date">2015-06-19</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/Float-Reference">Float-Reference</a> - Float Reference</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="9" data-title="Desktop\pixitracker_1bit\2016-02-01 09-44.piximod"><span class="date">2016-01-25</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday/music/cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod">Desktop\pixitracker_1bit\2016-02-01 09-44.piximod</a> - *shrugs* Post FX in audacity Should have started earlier but it's been a busy week.. Sus out http://www.warmplace.ru/soft/pixitracker/ (I used 1bit)</li>
+<li class="timeline-node source-codepen" data-source="codepen" data-node="10" data-title="CodePen sketches"><span class="date">2018-01-01</span> <span class="source-chip">codepen</span> <a href="https://codepen.io/aday_net_au/">CodePen sketches</a> - CodePen prototypes and visual interaction experiments</li>
+<li class="timeline-node source-demozoo" data-source="demozoo" data-node="11" data-title="64:20 Blaze It"><span class="date">2018-11-01</span> <span class="source-chip">demozoo</span> <a href="https://demozoo.org/graphics/195944/">64:20 Blaze It</a> - Demozoo graphics upload</li>
+<li class="timeline-node source-github" data-source="github" data-node="12" data-title="Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-"><span class="date">2019-01-12</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-">Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-</a> - Australian BBQ Bash - Colab Track with AisJam (hope we finish this)</li>
+<li class="timeline-node source-scene" data-source="scene" data-node="13" data-title="Demobus : Busdemo"><span class="date">2019-06-01</span> <span class="source-chip">scene</span> <a href="https://m.pouet.net/groups.php?which=12461">Demobus : Busdemo</a> - 1st at Flashback 2019 (pouet scene archive listing)</li>
+<li class="timeline-node source-demozoo" data-source="demozoo" data-node="14" data-title="Demobus from the Sky"><span class="date">2019-06-01</span> <span class="source-chip">demozoo</span> <a href="https://demozoo.org/graphics/204829/">Demobus from the Sky</a> - Demozoo photo upload</li>
+<li class="timeline-node source-github" data-source="github" data-node="15" data-title="error-diffusion"><span class="date">2019-07-03</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/error-diffusion">error-diffusion</a> - 𝖊𝖗𝖗𝖔𝖗 𝖉𝖎𝖋𝖋𝖚𝖘𝖎𝖔𝖓</li>
+<li class="timeline-node source-github" data-source="github" data-node="16" data-title="Dreamurium-Weeklybeats2020W1"><span class="date">2020-01-05</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/Dreamurium-Weeklybeats2020W1">Dreamurium-Weeklybeats2020W1</a> - Week1 of Weeklybeats 2020</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="17" data-title="Anxious Goth Rabbit"><span class="date">2020-01-06</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday/music/anxious-goth-rabbit-2">Anxious Goth Rabbit</a> - About 4-hours worth of time spent on it. Was kinda going for a happy-derpy rabbit but then got frustrated, and the rabbit turned goth.</li>
+<li class="timeline-node source-clan" data-source="clan" data-node="18" data-title="30 Years of Clan Analogue"><span class="date">2022-01-01</span> <span class="source-chip">clan</span> <a href="https://www.clananalogue.org/featured/30-years-of-clan-analogue-in-2022/">30 Years of Clan Analogue</a> - Collective anniversary milestone and event cycle</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="19" data-title="Doomsday data"><span class="date">2024-07-01</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday/music/doomsday-data">Doomsday data</a> - Let’s try this again I’ll just throw down and see what sticks</li>
+<li class="timeline-node source-demozoo" data-source="demozoo" data-node="20" data-title="2 Nights At Syntax"><span class="date">2024-10-01</span> <span class="source-chip">demozoo</span> <a href="https://demozoo.org/productions/359782/">2 Nights At Syntax</a> - Demozoo production entry</li>
+<li class="timeline-node source-clan" data-source="clan" data-node="21" data-title="Clan Analogue events and FM showcases"><span class="date">2025-01-01</span> <span class="source-chip">clan</span> <a href="http://clananalogue.org/">Clan Analogue events and FM showcases</a> - Recent featured events and releases listed on official site</li>
+<li class="timeline-node source-bandcamp" data-source="bandcamp" data-node="22" data-title="Bandcamp collection profile"><span class="date">2025-01-01</span> <span class="source-chip">bandcamp</span> <a href="https://bandcamp.com/aday_net_au">Bandcamp collection profile</a> - Bandcamp collection node with electronic/chiptune references</li>
+<li class="timeline-node source-github" data-source="github" data-node="23" data-title="qr-zipper"><span class="date">2025-04-22</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/qr-zipper">qr-zipper</a> - repo milestone</li>
+<li class="timeline-node source-github" data-source="github" data-node="24" data-title="ArtBastard-DMX512"><span class="date">2025-05-22</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/ArtBastard-DMX512">ArtBastard-DMX512</a> - ArtBastard - OSC/MIDI/DMX/ARTNET Wrangler</li>
+<li class="timeline-node source-events" data-source="events" data-node="25" data-title="MacroVerse at Melbourne Fringe"><span class="date">2025-10-07</span> <span class="source-chip">events</span> <a href="https://www.melbournefringe.com.au/whats-on/events/macroverse">MacroVerse at Melbourne Fringe</a> - Reductionist with live visuals by Aday at Abbotsford Convent experimental art program</li>
+<li class="timeline-node source-youtube" data-source="youtube" data-node="26" data-title="YouTube activity snapshot"><span class="date">2025-10-31</span> <span class="source-chip">youtube</span> <a href="https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats">YouTube activity snapshot</a> - Public tracker notes view movement for channel videos</li>
+<li class="timeline-node source-demozoo" data-source="demozoo" data-node="27" data-title="Orbital Syntax"><span class="date">2025-11-01</span> <span class="source-chip">demozoo</span> <a href="https://demozoo.org/graphics/380235/">Orbital Syntax</a> - Demozoo photo entry</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="28" data-title="Cubic Waveform"><span class="date">2025-12-29</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday/music/cubic-waveform">Cubic Waveform</a> - Audio stems from a mess around with Mazetools Mutant, The Video from The Melbourne NYE Laser and Fireworks show from GLT's youtube capture, remixed into resolume and wire and me spending the weekend trying to get my computer to do AV stuff again after being dormant for too long....</li>
+<li class="timeline-node source-clan" data-source="clan" data-node="29" data-title="Aday artist bio on Clan Analogue"><span class="date">2026-01-01</span> <span class="source-chip">clan</span> <a href="https://www.clananalogue.org/artists/aday/">Aday artist bio on Clan Analogue</a> - Artist profile and collective context</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="30" data-title="Cubic Waveform"><span class="date">2026-01-04</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/music/aday">Cubic Waveform</a> - WeeklyBeats 2026 week 1 upload</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="31" data-title="Untitled Organic Granular Experiment #1768089600"><span class="date">2026-01-05</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday/music/untitled-granular">Untitled Organic Granular Experiment #1768089600</a> - Love a good organ sample... Didn't do a weeklyvid this week though, Kinda left it to the last minute So this is just having a jam before bed, the night before deadline ... classic Something to help me sleep</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="32" data-title="Untitled Organic Granular Experiment #1768089600"><span class="date">2026-01-11</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/music/aday">Untitled Organic Granular Experiment #1768089600</a> - WeeklyBeats 2026 week 2 upload</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="33" data-title="Late Calibration Test"><span class="date">2026-01-12</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/music/aday">Late Calibration Test</a> - WeeklyBeats 2026 week 3 late submission</li>
+<li class="timeline-node source-press" data-source="press" data-node="34" data-title="MacroVerse nominated for Fringe Award"><span class="date">2026-01-19</span> <span class="source-chip">press</span> <a href="https://nickewilson.net/2026/01/19/macroverse-nominated-for-fringe-award/">MacroVerse nominated for Fringe Award</a> - External write-up documenting MacroVerse nomination context</li>
+<li class="timeline-node source-weeklybeats" data-source="weeklybeats" data-node="35" data-title="Late Calibration Test (Late Submission)"><span class="date">2026-01-19</span> <span class="source-chip">weeklybeats</span> <a href="https://weeklybeats.com/aday/music/late-calibration-test-late-submission">Late Calibration Test (Late Submission)</a> - Sorry, It's late but.... (Disclaimer, I used a late upload link because I missed the deadline.... too much overtime, were only human) It's me reinstalling computers, replacing disks etc It's only a minute, so personally i consider this a warm up track for those weeks where my time is overwealmed..... See you in week 4 for yet another time-stretched-goal I hope to do Weeklyvids at least once a month, but one track a week ...</li>
+<li class="timeline-node source-github" data-source="github" data-node="36" data-title="ZealPalace"><span class="date">2026-03-12</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/ZealPalace">ZealPalace</a> - A weird Raspberry PI MMUD RPG IRC Server Stack with a 3.5 LCD TFT Screen - RPG System, World simulation, Ollama personas, fun toy</li>
+<li class="timeline-node source-github" data-source="github" data-node="37" data-title="Cidewinder"><span class="date">2026-03-17</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/Cidewinder">Cidewinder</a> - A roaming gocrypt workflow</li>
+<li class="timeline-node source-github" data-source="github" data-node="38" data-title="MoveMusicSaveEditor"><span class="date">2026-04-02</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/MoveMusicSaveEditor">MoveMusicSaveEditor</a> - A vibe coded save editing tool in python to edit Move Music Save files and spawn a bunch of controllers to dance too</li>
+<li class="timeline-node source-github" data-source="github" data-node="39" data-title="The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack"><span class="date">2026-04-07</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack">The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack</a> - DAW MCP Survival pack - for mass sedding and envelope tweaking</li>
+<li class="timeline-node source-youtube" data-source="youtube" data-node="40" data-title="YouTube stats check-in"><span class="date">2026-04-16</span> <span class="source-chip">youtube</span> <a href="https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats">YouTube stats check-in</a> - Latest indexed view delta recorded in public analytics mirror</li>
+<li class="timeline-node source-github" data-source="github" data-node="41" data-title="aday-net-au"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/aday-net-au">aday-net-au</a> - Placeholder for aday.net.au</li>
+<li class="timeline-node source-github" data-source="github" data-node="42" data-title="keys-aday-net-au"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/keys-aday-net-au">keys-aday-net-au</a> - Placeholder for keys.aday.net.au</li>
+<li class="timeline-node source-github" data-source="github" data-node="43" data-title="blog-aday-net-au"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/blog-aday-net-au">blog-aday-net-au</a> - Placeholder for blog.aday.net.au</li>
+<li class="timeline-node source-github" data-source="github" data-node="44" data-title="breakcore-com-au"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/breakcore-com-au">breakcore-com-au</a> - Placeholder for breakcore.com.au</li>
+<li class="timeline-node source-github" data-source="github" data-node="45" data-title="breakcore-forums-placeholder"><span class="date">2026-05-09</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/breakcore-forums-placeholder">breakcore-forums-placeholder</a> - Placeholder for beta.breakcore.com.au</li>
+<li class="timeline-node source-github" data-source="github" data-node="46" data-title="macroverse.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/macroverse.aday.net.au">macroverse.aday.net.au</a> - Macroverse web deploy, docker, pages, and CI</li>
+<li class="timeline-node source-github" data-source="github" data-node="47" data-title="artbastard.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/artbastard.aday.net.au">artbastard.aday.net.au</a> - ArtBastard web deploy, docker, pages, and CI</li>
+<li class="timeline-node source-github" data-source="github" data-node="48" data-title="blog.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/blog.aday.net.au">blog.aday.net.au</a> - repo milestone</li>
+<li class="timeline-node source-platform" data-source="platform" data-node="49" data-title="SoundCloud and Bandcamp deck online"><span class="date">2026-05-14</span> <span class="source-chip">platform</span> <a href="https://aday.net.au">SoundCloud and Bandcamp deck online</a> - Rapid-play embeds and profile links added to aday.net.au media panel</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Recent ingest log</h2>
+      <ul class="post-list">
+        <li><span class="date">2026-05-14</span> <span class="source-chip">platform</span> SoundCloud and Bandcamp deck online // <a href="https://aday.net.au">open</a></li>
+<li><span class="date">2026-05-13</span> <span class="source-chip">github</span> macroverse.aday.net.au // <a href="https://github.com/aday1/macroverse.aday.net.au">open</a></li>
+<li><span class="date">2026-05-13</span> <span class="source-chip">github</span> artbastard.aday.net.au // <a href="https://github.com/aday1/artbastard.aday.net.au">open</a></li>
+<li><span class="date">2026-05-13</span> <span class="source-chip">github</span> blog.aday.net.au // <a href="https://github.com/aday1/blog.aday.net.au">open</a></li>
+<li><span class="date">2026-05-09</span> <span class="source-chip">github</span> aday-net-au // <a href="https://github.com/aday1/aday-net-au">open</a></li>
+<li><span class="date">2026-05-09</span> <span class="source-chip">github</span> keys-aday-net-au // <a href="https://github.com/aday1/keys-aday-net-au">open</a></li>
+<li><span class="date">2026-05-09</span> <span class="source-chip">github</span> blog-aday-net-au // <a href="https://github.com/aday1/blog-aday-net-au">open</a></li>
+<li><span class="date">2026-05-09</span> <span class="source-chip">github</span> breakcore-com-au // <a href="https://github.com/aday1/breakcore-com-au">open</a></li>
+<li><span class="date">2026-05-09</span> <span class="source-chip">github</span> breakcore-forums-placeholder // <a href="https://github.com/aday1/breakcore-forums-placeholder">open</a></li>
+<li><span class="date">2026-04-16</span> <span class="source-chip">youtube</span> YouTube stats check-in // <a href="https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats">open</a></li>
+<li><span class="date">2026-04-07</span> <span class="source-chip">github</span> The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack // <a href="https://github.com/aday1/The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack">open</a></li>
+<li><span class="date">2026-04-02</span> <span class="source-chip">github</span> MoveMusicSaveEditor // <a href="https://github.com/aday1/MoveMusicSaveEditor">open</a></li>
+<li><span class="date">2026-03-17</span> <span class="source-chip">github</span> Cidewinder // <a href="https://github.com/aday1/Cidewinder">open</a></li>
+<li><span class="date">2026-03-12</span> <span class="source-chip">github</span> ZealPalace // <a href="https://github.com/aday1/ZealPalace">open</a></li>
       </ul>
     </section>
     <section>

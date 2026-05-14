@@ -1,0 +1,356 @@
+{
+  "generated_at": "2026-05-14T10:01:39.046Z",
+  "count": 50,
+  "entries": [
+    {
+      "date": "2012-01-01",
+      "title": "SoundCloud profile signal",
+      "desc": "Primary streaming node for tracks, playlists, and sketches",
+      "url": "https://soundcloud.com/adaynetau",
+      "source": "soundcloud"
+    },
+    {
+      "date": "2012-01-01",
+      "title": "WeeklyBeats profile active",
+      "desc": "Aday profile index with annual release filters",
+      "url": "https://weeklybeats.com/aday",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2012-01-01",
+      "title": "Onlinedoof archive clip",
+      "desc": "Vimeo archive node",
+      "url": "https://vimeo.com/35409288",
+      "source": "vimeo"
+    },
+    {
+      "date": "2012-11-01",
+      "title": "RPi-Sequenced NES",
+      "desc": "Demozoo upload node",
+      "url": "https://demozoo.org/productions/94050/",
+      "source": "demozoo"
+    },
+    {
+      "date": "2013-01-01",
+      "title": "YouTube channel active",
+      "desc": "Channel timeline begins (public stats source)",
+      "url": "https://www.youtube.com/@aday1",
+      "source": "youtube"
+    },
+    {
+      "date": "2014-01-01",
+      "title": "Binaural Percolator",
+      "desc": "MindFlex EEG via Processing output test",
+      "url": "https://vimeo.com/84038041",
+      "source": "vimeo"
+    },
+    {
+      "date": "2014-02-03",
+      "title": "EpochJam (PixiTracker)",
+      "desc": "With >40 degree days and an on going heatwave in Melbourne, and needing a new pair of headphones (I think I've lost my good ones) - I've decided to go with a nuclear option. So here's a PixiTracker jam track! Cool application by Alexander Zolotov (A.K.A Nightradio) from warmplace.ru Check it -- http://www.warmplace.ru/soft/pixitracker/ Also available on Android (most nightradio software run on multiple platforms) (may run on your toaster!) Yep, Built this simple track in about 2 hours. No post FX on this one, just a simple native jam... because nuclear, because weeklybeats. The video output is also native from the PixiTracker software. / no post fx. Link to piximod file Next week is a colab with Hungee Funk ... My first Weeklybeats Colab for the year! - exciting",
+      "url": "https://weeklybeats.com/aday/music/epochjam-pixitracker",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2015-06-19",
+      "title": "Arduino-LED-INT",
+      "desc": "INT Reference",
+      "url": "https://github.com/aday1/Arduino-LED-INT",
+      "source": "github"
+    },
+    {
+      "date": "2015-06-19",
+      "title": "Float-Reference",
+      "desc": "Float Reference",
+      "url": "https://github.com/aday1/Float-Reference",
+      "source": "github"
+    },
+    {
+      "date": "2016-01-25",
+      "title": "Desktop\\pixitracker_1bit\\2016-02-01 09-44.piximod",
+      "desc": "*shrugs* Post FX in audacity Should have started earlier but it's been a busy week.. Sus out http://www.warmplace.ru/soft/pixitracker/ (I used 1bit)",
+      "url": "https://weeklybeats.com/aday/music/cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2018-01-01",
+      "title": "CodePen sketches",
+      "desc": "CodePen prototypes and visual interaction experiments",
+      "url": "https://codepen.io/aday_net_au/",
+      "source": "codepen"
+    },
+    {
+      "date": "2018-11-01",
+      "title": "64:20 Blaze It",
+      "desc": "Demozoo graphics upload",
+      "url": "https://demozoo.org/graphics/195944/",
+      "source": "demozoo"
+    },
+    {
+      "date": "2019-01-12",
+      "title": "Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-",
+      "desc": "Australian BBQ Bash - Colab Track with AisJam (hope we finish this)",
+      "url": "https://github.com/aday1/Aisjam-V-Aday-Chiptune_Australian-BBQ-Bash-",
+      "source": "github"
+    },
+    {
+      "date": "2019-06-01",
+      "title": "Demobus : Busdemo",
+      "desc": "1st at Flashback 2019 (pouet scene archive listing)",
+      "url": "https://m.pouet.net/groups.php?which=12461",
+      "source": "scene"
+    },
+    {
+      "date": "2019-06-01",
+      "title": "Demobus from the Sky",
+      "desc": "Demozoo photo upload",
+      "url": "https://demozoo.org/graphics/204829/",
+      "source": "demozoo"
+    },
+    {
+      "date": "2019-07-03",
+      "title": "error-diffusion",
+      "desc": "𝖊𝖗𝖗𝖔𝖗 𝖉𝖎𝖋𝖋𝖚𝖘𝖎𝖔𝖓",
+      "url": "https://github.com/aday1/error-diffusion",
+      "source": "github"
+    },
+    {
+      "date": "2020-01-05",
+      "title": "Dreamurium-Weeklybeats2020W1",
+      "desc": "Week1 of Weeklybeats 2020",
+      "url": "https://github.com/aday1/Dreamurium-Weeklybeats2020W1",
+      "source": "github"
+    },
+    {
+      "date": "2020-01-06",
+      "title": "Anxious Goth Rabbit",
+      "desc": "About 4-hours worth of time spent on it. Was kinda going for a happy-derpy rabbit but then got frustrated, and the rabbit turned goth.",
+      "url": "https://weeklybeats.com/aday/music/anxious-goth-rabbit-2",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2022-01-01",
+      "title": "30 Years of Clan Analogue",
+      "desc": "Collective anniversary milestone and event cycle",
+      "url": "https://www.clananalogue.org/featured/30-years-of-clan-analogue-in-2022/",
+      "source": "clan"
+    },
+    {
+      "date": "2024-07-01",
+      "title": "Doomsday data",
+      "desc": "Let’s try this again I’ll just throw down and see what sticks",
+      "url": "https://weeklybeats.com/aday/music/doomsday-data",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2024-10-01",
+      "title": "2 Nights At Syntax",
+      "desc": "Demozoo production entry",
+      "url": "https://demozoo.org/productions/359782/",
+      "source": "demozoo"
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Clan Analogue events and FM showcases",
+      "desc": "Recent featured events and releases listed on official site",
+      "url": "http://clananalogue.org/",
+      "source": "clan"
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Bandcamp collection profile",
+      "desc": "Bandcamp collection node with electronic/chiptune references",
+      "url": "https://bandcamp.com/aday_net_au",
+      "source": "bandcamp"
+    },
+    {
+      "date": "2025-04-22",
+      "title": "qr-zipper",
+      "desc": "repo milestone",
+      "url": "https://github.com/aday1/qr-zipper",
+      "source": "github"
+    },
+    {
+      "date": "2025-05-22",
+      "title": "ArtBastard-DMX512",
+      "desc": "ArtBastard - OSC/MIDI/DMX/ARTNET Wrangler",
+      "url": "https://github.com/aday1/ArtBastard-DMX512",
+      "source": "github"
+    },
+    {
+      "date": "2025-10-07",
+      "title": "MacroVerse at Melbourne Fringe",
+      "desc": "Reductionist with live visuals by Aday at Abbotsford Convent experimental art program",
+      "url": "https://www.melbournefringe.com.au/whats-on/events/macroverse",
+      "source": "events"
+    },
+    {
+      "date": "2025-10-31",
+      "title": "YouTube activity snapshot",
+      "desc": "Public tracker notes view movement for channel videos",
+      "url": "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
+      "source": "youtube"
+    },
+    {
+      "date": "2025-11-01",
+      "title": "Orbital Syntax",
+      "desc": "Demozoo photo entry",
+      "url": "https://demozoo.org/graphics/380235/",
+      "source": "demozoo"
+    },
+    {
+      "date": "2025-12-29",
+      "title": "Cubic Waveform",
+      "desc": "Audio stems from a mess around with Mazetools Mutant, The Video from The Melbourne NYE Laser and Fireworks show from GLT's youtube capture, remixed into resolume and wire and me spending the weekend trying to get my computer to do AV stuff again after being dormant for too long....",
+      "url": "https://weeklybeats.com/aday/music/cubic-waveform",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2026-01-01",
+      "title": "Aday artist bio on Clan Analogue",
+      "desc": "Artist profile and collective context",
+      "url": "https://www.clananalogue.org/artists/aday/",
+      "source": "clan"
+    },
+    {
+      "date": "2026-01-04",
+      "title": "Cubic Waveform",
+      "desc": "WeeklyBeats 2026 week 1 upload",
+      "url": "https://weeklybeats.com/music/aday",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2026-01-05",
+      "title": "Untitled Organic Granular Experiment #1768089600",
+      "desc": "Love a good organ sample... Didn't do a weeklyvid this week though, Kinda left it to the last minute So this is just having a jam before bed, the night before deadline ... classic Something to help me sleep",
+      "url": "https://weeklybeats.com/aday/music/untitled-granular",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2026-01-11",
+      "title": "Untitled Organic Granular Experiment #1768089600",
+      "desc": "WeeklyBeats 2026 week 2 upload",
+      "url": "https://weeklybeats.com/music/aday",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2026-01-12",
+      "title": "Late Calibration Test",
+      "desc": "WeeklyBeats 2026 week 3 late submission",
+      "url": "https://weeklybeats.com/music/aday",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2026-01-19",
+      "title": "MacroVerse nominated for Fringe Award",
+      "desc": "External write-up documenting MacroVerse nomination context",
+      "url": "https://nickewilson.net/2026/01/19/macroverse-nominated-for-fringe-award/",
+      "source": "press"
+    },
+    {
+      "date": "2026-01-19",
+      "title": "Late Calibration Test (Late Submission)",
+      "desc": "Sorry, It's late but.... (Disclaimer, I used a late upload link because I missed the deadline.... too much overtime, were only human) It's me reinstalling computers, replacing disks etc It's only a minute, so personally i consider this a warm up track for those weeks where my time is overwealmed..... See you in week 4 for yet another time-stretched-goal I hope to do Weeklyvids at least once a month, but one track a week ...",
+      "url": "https://weeklybeats.com/aday/music/late-calibration-test-late-submission",
+      "source": "weeklybeats"
+    },
+    {
+      "date": "2026-03-12",
+      "title": "ZealPalace",
+      "desc": "A weird Raspberry PI MMUD RPG IRC Server Stack with a 3.5 LCD TFT Screen - RPG System, World simulation, Ollama personas, fun toy",
+      "url": "https://github.com/aday1/ZealPalace",
+      "source": "github"
+    },
+    {
+      "date": "2026-03-17",
+      "title": "Cidewinder",
+      "desc": "A roaming gocrypt workflow",
+      "url": "https://github.com/aday1/Cidewinder",
+      "source": "github"
+    },
+    {
+      "date": "2026-04-02",
+      "title": "MoveMusicSaveEditor",
+      "desc": "A vibe coded save editing tool in python to edit Move Music Save files and spawn a bunch of controllers to dance too",
+      "url": "https://github.com/aday1/MoveMusicSaveEditor",
+      "source": "github"
+    },
+    {
+      "date": "2026-04-07",
+      "title": "The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack",
+      "desc": "DAW MCP Survival pack - for mass sedding and envelope tweaking",
+      "url": "https://github.com/aday1/The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack",
+      "source": "github"
+    },
+    {
+      "date": "2026-04-16",
+      "title": "YouTube stats check-in",
+      "desc": "Latest indexed view delta recorded in public analytics mirror",
+      "url": "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-05-09",
+      "title": "aday-net-au",
+      "desc": "Placeholder for aday.net.au",
+      "url": "https://github.com/aday1/aday-net-au",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-09",
+      "title": "keys-aday-net-au",
+      "desc": "Placeholder for keys.aday.net.au",
+      "url": "https://github.com/aday1/keys-aday-net-au",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-09",
+      "title": "blog-aday-net-au",
+      "desc": "Placeholder for blog.aday.net.au",
+      "url": "https://github.com/aday1/blog-aday-net-au",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-09",
+      "title": "breakcore-com-au",
+      "desc": "Placeholder for breakcore.com.au",
+      "url": "https://github.com/aday1/breakcore-com-au",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-09",
+      "title": "breakcore-forums-placeholder",
+      "desc": "Placeholder for beta.breakcore.com.au",
+      "url": "https://github.com/aday1/breakcore-forums-placeholder",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "macroverse.aday.net.au",
+      "desc": "Macroverse web deploy, docker, pages, and CI",
+      "url": "https://github.com/aday1/macroverse.aday.net.au",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "artbastard.aday.net.au",
+      "desc": "ArtBastard web deploy, docker, pages, and CI",
+      "url": "https://github.com/aday1/artbastard.aday.net.au",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "blog.aday.net.au",
+      "desc": "repo milestone",
+      "url": "https://github.com/aday1/blog.aday.net.au",
+      "source": "github"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "SoundCloud and Bandcamp deck online",
+      "desc": "Rapid-play embeds and profile links added to aday.net.au media panel",
+      "url": "https://aday.net.au",
+      "source": "platform"
+    }
+  ]
+}

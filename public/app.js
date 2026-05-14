@@ -129,6 +129,34 @@
 
   waitForAnime(() => animateHeaders());
 
+  const typeInNodes = () => {
+    const prefersReducedMotion = !!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (prefersReducedMotion) return;
+    const nodes = [...document.querySelectorAll(".typed:not(.decrypt)")];
+    nodes.forEach((node, idx) => {
+      const fullText = (node.textContent || "").trim();
+      if (!fullText || node.dataset.typedReady === "1") return;
+      node.dataset.typedReady = "1";
+      node.textContent = "";
+      let charIdx = 0;
+      const caret = document.createElement("span");
+      caret.className = "typing-caret";
+      node.appendChild(caret);
+      const tick = () => {
+        if (charIdx >= fullText.length) {
+          caret.remove();
+          return;
+        }
+        const next = document.createTextNode(fullText[charIdx]);
+        node.insertBefore(next, caret);
+        charIdx += 1;
+        setTimeout(tick, 12 + Math.floor(Math.random() * 20));
+      };
+      setTimeout(tick, 140 + idx * 120);
+    });
+  };
+  typeInNodes();
+
   if (bgShader) bgShader.style.display = "none";
 
   const runTimelineGraph = () => {
