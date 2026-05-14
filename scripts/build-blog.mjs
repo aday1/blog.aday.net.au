@@ -111,12 +111,6 @@ const listHtml = posts
 const getTimeline = async () => {
   const clanEvents = [
     {
-      date: "1992-01-01",
-      title: "Clan Analogue founded",
-      desc: "Australian underground electronic music and arts collective begins",
-      url: "https://www.clananalogue.org/about/a-brief-history/"
-    },
-    {
       date: "2022-01-01",
       title: "30 Years of Clan Analogue",
       desc: "Collective anniversary milestone and event cycle",
@@ -191,12 +185,38 @@ const getTimeline = async () => {
       title: "MacroVerse nominated for Fringe Award",
       desc: "External write-up documenting MacroVerse nomination context",
       url: "https://nickewilson.net/2026/01/19/macroverse-nominated-for-fringe-award/"
+    }
+  ];
+  const demozooEvents = [
+    {
+      date: "2012-11-01",
+      title: "RPi-Sequenced NES",
+      desc: "Demozoo upload node",
+      url: "https://demozoo.org/productions/94050/"
     },
     {
-      date: "2026-05-14",
-      title: "Friends webring expanded",
-      desc: "Clan Analogue, Aisjam, Nick E Wilson, lysdexic audio, and Syntax Party nodes linked",
-      url: "https://aday.net.au"
+      date: "2018-11-01",
+      title: "64:20 Blaze It",
+      desc: "Demozoo graphics upload",
+      url: "https://demozoo.org/graphics/195944/"
+    },
+    {
+      date: "2019-06-01",
+      title: "Demobus from the Sky",
+      desc: "Demozoo photo upload",
+      url: "https://demozoo.org/graphics/204829/"
+    },
+    {
+      date: "2024-10-01",
+      title: "2 Nights At Syntax",
+      desc: "Demozoo production entry",
+      url: "https://demozoo.org/productions/359782/"
+    },
+    {
+      date: "2025-11-01",
+      title: "Orbital Syntax",
+      desc: "Demozoo photo entry",
+      url: "https://demozoo.org/graphics/380235/"
     }
   ];
   const platformEvents = [
@@ -236,7 +256,7 @@ const getTimeline = async () => {
         desc: repo.description || "repo milestone",
         url: repo.html_url
       }));
-    return [...clanEvents, ...youtubeEvents, ...musicEvents, ...platformEvents, ...videoEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
+    return [...clanEvents, ...youtubeEvents, ...musicEvents, ...demozooEvents, ...platformEvents, ...videoEvents, ...repoTimeline].sort((a, b) => new Date(a.date) - new Date(b.date));
   } catch {
     return [
       { date: "2012-06-09", title: "GitHub profile started", desc: "Public coding presence begins", url: "https://github.com/aday1" },
@@ -246,6 +266,7 @@ const getTimeline = async () => {
       ...clanEvents,
       ...youtubeEvents,
       ...musicEvents,
+      ...demozooEvents,
       ...platformEvents,
       ...videoEvents
     ];
@@ -281,7 +302,7 @@ const indexHtml = `<!doctype html>
   <main>
     <h1 class="decrypt">blog.aday.net.au</h1>
     <p>New posts are generated from markdown files committed to this repository.</p>
-    <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+    <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads on aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
     <section>
       <h2>YouTube feed node</h2>
       <div class="timeline-stage yt-stage">
@@ -315,6 +336,13 @@ const indexHtml = `<!doctype html>
         <li data-url="https://artbastard.aday.net.au">artbastard.aday.net.au <span class="status-tag">pending</span></li>
       </ul>
       <p class="date">Monitoring scaffold in place, fill out more services later.</p>
+    </section>
+    <section>
+      <h2>Demozoo uploads linkback</h2>
+      <ul class="post-list">
+        <li><span class="date">Live</span> <a href="https://aday.net.au/#demozoo-uploads">Open Demozoo Uploads section on aday.net.au</a></li>
+        <li><span class="date">Archive</span> <a href="https://demozoo.org/sceners/28006/">Open Aday Demozoo profile</a></li>
+      </ul>
     </section>
     <section>
       <h2>Presence timeline</h2>

@@ -46,8 +46,10 @@
     setTimeout(() => scramble(node, text), 220 + i * 140);
   });
 
-  if (window.anime) {
+  const animateHeaders = () => {
+    if (!window.anime) return false;
     const headers = [...document.querySelectorAll("h1, h2, h3")];
+    if (!headers.length) return false;
     window.anime({
       targets: headers,
       translateY: [12, 0],
@@ -56,7 +58,28 @@
       delay: window.anime.stagger(65, { start: 100 }),
       easing: "easeOutExpo"
     });
-  }
+    return true;
+  };
+
+  const waitForAnime = (onReady) => {
+    if (typeof onReady !== "function") return;
+    if (window.anime) {
+      onReady();
+      return;
+    }
+    let attempts = 0;
+    const timer = setInterval(() => {
+      attempts += 1;
+      if (window.anime) {
+        clearInterval(timer);
+        onReady();
+      } else if (attempts >= 30) {
+        clearInterval(timer);
+      }
+    }, 120);
+  };
+
+  waitForAnime(() => animateHeaders());
 
   const initBgShader = () => {
     if (!bgShader) return null;
