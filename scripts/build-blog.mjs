@@ -400,7 +400,7 @@ const getTimeline = async () => {
     {
       date: "2025-10-07",
       title: "MacroVerse at Melbourne Fringe",
-      desc: "Reductionist with live visuals by Aday at Abbotsford Convent experimental art program",
+      desc: "Live sonic/visual universe narrative: Reductionist (micro-instruments) + Aday (projection improv), Clan Analogue, Abbotsford Convent; free exhibition 12-4pm, 7pm performances",
       url: "https://www.melbournefringe.com.au/whats-on/events/macroverse",
       source: "events"
     },
@@ -760,13 +760,15 @@ const indexHtml = `<!doctype html>
             <img class="service-icon" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse icon" data-repo="aday1/macroverse.aday.net.au">
             <h3>Macroverse</h3>
           </div>
-          <p>Live GLSL visual performance stack.</p>
+          <p>Live GLSL visual performance stack; grew out of MacroVerse at Melbourne Fringe (Reductionist + Aday, Abbotsford Convent).</p>
           <ul class="service-explainer">
             <li><span>role</span> realtime browser shader engine for VJ and projection scenes</li>
             <li><span>use</span> launch visual sets and route show-state cues live</li>
-            <li><span>signal</span> best for events, galleries, and audiovisual performance nights</li>
+            <li><span>signal</span> testament to the Fringe show; best for events, galleries, and AV performance nights</li>
+            <li><span>origin</span> <a href="https://www.melbournefringe.com.au/whats-on/events/macroverse" target="_blank" rel="noopener noreferrer">Melbourne Fringe MacroVerse</a></li>
           </ul>
           <a href="https://macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">open macroverse.aday.net.au</a><br>
+          <a href="https://macroverse.aday.net.au/about.html" target="_blank" rel="noopener noreferrer">about MacroVerse</a><br>
           <a href="https://github.com/aday1/macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">open source repo</a>
         </article>
         <article class="headliner-card">
