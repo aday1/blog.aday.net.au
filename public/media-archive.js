@@ -7,6 +7,9 @@
     return "https://weeklybeats.com/images/wb2026-social.jpg";
   };
 
+  const ytEmbedUrl = (videoId) =>
+    `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`;
+
   const escapeHtml = (value) =>
     String(value || "")
       .replaceAll("&", "&amp;")
@@ -14,41 +17,105 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;");
 
-  const wireYoutubeCatalog = (section, frameId, nowPlayingId, searchInputId) => {
-    const ytSection = section || document.getElementById("mediaYtSection") || document.getElementById("blogYtSection");
-    const ytFrame = document.getElementById(frameId || "mediaYtFrame") || document.getElementById("blogYtFrame");
-    const ytNowPlaying = document.getElementById(nowPlayingId || "mediaYtNowPlaying") || document.getElementById("blogYtNowPlaying");
-    const ytSearch = searchInputId ? document.getElementById(searchInputId) : document.getElementById("mediaYtSearch") || document.getElementById("blogYtSearch");
-    const ytChannelFilter = document.getElementById("mediaYtChannelFilter") || document.getElementById("blogYtChannelFilter");
+  const truncate = (text, max = 140) => {
+    const t = String(text || "").trim();
+    if (t.length <= max) return t;
+    return `${t.slice(0, max - 3)}...`;
+  };
 
-    if (!ytSection || !ytFrame) return;
+  const pauseOtherYoutube = (section, activeCard) => {
+    section.querySelectorAll(".yt-video-card.is-playing").forEach((card) => {
+      if (card === activeCard) return;
+      card.classList.remove("is-playing");
+      const player = card.querySelector(".yt-inline-player");
+      const frame = card.querySelector(".yt-inline-frame");
+      player?.setAttribute("hidden", "");
+      if (frame) {
+        frame.removeAttribute("src");
+        frame.dataset.loadedId = "";
+      }
+      card.querySelector(".yt-video-pick")?.setAttribute("aria-expanded", "false");
+    });
+  };
+
+  const pauseOtherWeeklybeats = (root, activeAudio) => {
+    root.querySelectorAll(".wb-inline-audio").forEach((audio) => {
+      if (audio !== activeAudio) audio.pause();
+    });
+  };
+
+  const wireYoutubeCatalog = (section, _frameId, _nowPlayingId, searchInputId) => {
+    const ytSection = section || document.getElementById("mediaYtSection") || document.getElementById("blogYtSection");
+    const ytSearch = searchInputId
+      ? document.getElementById(searchInputId)
+      : document.getElementById("mediaYtSearch") ||
+        document.getElementById("blogYtSearch") ||
+        document.getElementById("blogYtSectionSearch");
+    const ytChannelFilter =
+      document.getElementById("mediaYtChannelFilter") ||
+      document.getElementById("blogYtChannelFilter") ||
+      document.getElementById("blogYtSectionChannel");
+
+    if (!ytSection) return;
 
     const tabs = [...ytSection.querySelectorAll(".yt-cat-tab")];
     const panels = [...ytSection.querySelectorAll(".yt-cat-panel")];
-    const picks = [...ytSection.querySelectorAll(".yt-video-pick")];
+    const cards = () => [...ytSection.querySelectorAll(".yt-video-card")];
 
-    const loadVideo = (videoId, title) => {
-      if (!videoId) return;
-      const embed = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`;
-      if (ytFrame.dataset.loadedId !== videoId) {
-        ytFrame.src = embed;
-        ytFrame.dataset.loadedId = videoId;
+    const toggleCard = (card) => {
+      const pick = card.querySelector(".yt-video-pick");
+      const player = card.querySelector(".yt-inline-player");
+      const frame = card.querySelector(".yt-inline-frame");
+      const videoId = pick?.dataset.videoId || "";
+      if (!videoId || !player || !frame) return;
+
+      const willOpen = !card.classList.contains("is-playing");
+      pauseOtherYoutube(ytSection, willOpen ? card : null);
+
+      if (!willOpen) {
+        card.classList.remove("is-playing");
+        player.setAttribute("hidden", "");
+        frame.removeAttribute("src");
+        frame.dataset.loadedId = "";
+        pick.setAttribute("aria-expanded", "false");
+        return;
       }
-      if (ytNowPlaying && title) ytNowPlaying.textContent = title;
-      picks.forEach((btn) => {
-        btn.classList.toggle("is-active", btn.dataset.videoId === videoId);
+
+      card.classList.add("is-playing");
+      pick.classList.add("is-active");
+      pick.setAttribute("aria-expanded", "true");
+      player.removeAttribute("hidden");
+      if (frame.dataset.loadedId !== videoId) {
+        frame.src = ytEmbedUrl(videoId);
+        frame.dataset.loadedId = videoId;
+      }
+
+      cards().forEach((c) => {
+        if (c === card) return;
+        c.querySelector(".yt-video-pick")?.classList.remove("is-active");
       });
     };
 
     const applySearch = () => {
       const q = (ytSearch?.value || "").trim().toLowerCase();
       const channel = ytChannelFilter?.value || "all";
-      picks.forEach((btn) => {
-        const title = (btn.dataset.videoTitle || btn.textContent || "").toLowerCase();
-        const handle = (btn.dataset.channelHandle || "").toLowerCase();
+      cards().forEach((card) => {
+        const pick = card.querySelector(".yt-video-pick");
+        const title = (pick?.dataset.videoTitle || pick?.textContent || "").toLowerCase();
+        const handle = (pick?.dataset.channelHandle || "").toLowerCase();
         const channelPass = channel === "all" || handle.includes(channel.replace("@", ""));
         const textPass = !q || title.includes(q);
-        btn.closest("li")?.classList.toggle("yt-pick-hidden", !(channelPass && textPass));
+        const show = channelPass && textPass;
+        card.classList.toggle("yt-pick-hidden", !show);
+        if (!show && card.classList.contains("is-playing")) {
+          card.classList.remove("is-playing");
+          card.querySelector(".yt-inline-player")?.setAttribute("hidden", "");
+          const frame = card.querySelector(".yt-inline-frame");
+          if (frame) {
+            frame.removeAttribute("src");
+            frame.dataset.loadedId = "";
+          }
+        }
       });
     };
 
@@ -63,6 +130,7 @@
         panel.classList.toggle("is-active", on);
         panel.hidden = !on;
       });
+      pauseOtherYoutube(ytSection, null);
       applySearch();
     };
 
@@ -70,23 +138,19 @@
       tab.addEventListener("click", () => showSection(tab.dataset.ytSection || ""));
     });
 
-    picks.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        loadVideo(btn.dataset.videoId || "", btn.dataset.videoTitle || btn.textContent || "");
+    cards().forEach((card) => {
+      const pick = card.querySelector(".yt-video-pick");
+      if (!pick) return;
+      pick.setAttribute("aria-expanded", "false");
+      pick.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        toggleCard(card);
       });
     });
 
     ytSearch?.addEventListener("input", applySearch);
     ytChannelFilter?.addEventListener("change", applySearch);
-
-    const defaultPick =
-      picks.find((btn) => btn.closest(".yt-cat-panel.is-active") && !btn.closest("li")?.classList.contains("yt-pick-hidden")) ||
-      picks.find((btn) => !btn.closest("li")?.classList.contains("yt-pick-hidden")) ||
-      picks[0];
-
-    if (defaultPick) {
-      loadVideo(defaultPick.dataset.videoId || "", defaultPick.dataset.videoTitle || "");
-    }
+    applySearch();
   };
 
   const initWeeklybeatsArchive = async (options = {}) => {
@@ -94,9 +158,6 @@
     if (!root) return;
 
     const listEl = root.querySelector(".wb-track-list");
-    const audioEl = root.querySelector(".wb-audio-player");
-    const iframeEl = root.querySelector(".wb-embed-frame");
-    const metaEl = root.querySelector(".wb-track-meta");
     const searchEl = root.querySelector(".wb-search");
     const yearEl = root.querySelector(".wb-year-filter");
     const weekEl = root.querySelector(".wb-week-filter");
@@ -129,27 +190,44 @@
       return copy;
     };
 
-    const playTrack = (track) => {
-      if (!track) return;
-      const title = track.title || track.slug || "WeeklyBeats track";
-      if (metaEl) {
-        metaEl.textContent = track.description || "No description.";
-      }
-      if (audioEl && track.audio_url) {
-        audioEl.hidden = false;
-        audioEl.src = track.audio_url;
-        if (iframeEl) iframeEl.hidden = true;
-        audioEl.play().catch(() => {});
-        return;
-      }
-      if (iframeEl && track.embed_url) {
-        iframeEl.hidden = false;
-        iframeEl.src = track.embed_url;
-        if (audioEl) {
-          audioEl.hidden = true;
-          audioEl.removeAttribute("src");
-        }
-      }
+    const renderTrackCard = (track) => {
+      const bannerSrc = track.banner_url || wbYearBanner(track.year);
+      const img = bannerSrc
+        ? `<img class="wb-track-banner" src="${escapeHtml(bannerSrc)}" alt="WeeklyBeats ${escapeHtml(String(track.year || ""))} banner" loading="lazy" decoding="async">`
+        : `<span class="wb-track-banner wb-track-thumb--empty" aria-hidden="true"></span>`;
+      const audio = track.audio_url
+        ? `<audio class="wb-inline-audio" controls preload="none" src="${escapeHtml(track.audio_url)}"></audio>`
+        : `<p class="wb-inline-missing">No direct audio URL — <a href="${escapeHtml(track.url || "#")}" target="_blank" rel="noopener noreferrer">open on WeeklyBeats</a></p>`;
+      const desc = track.description ? `<p class="wb-track-card-desc">${escapeHtml(truncate(track.description))}</p>` : "";
+      return `<li class="wb-track-card" data-slug="${escapeHtml(track.slug)}">
+        <article class="wb-track-card-inner">
+          ${img}
+          <div class="wb-track-card-body">
+            <p class="wb-track-card-head">
+              <strong class="wb-track-card-title">${escapeHtml(track.title)}</strong>
+              <span class="wb-track-pick-meta">${escapeHtml(String(track.year || "?"))} / W${escapeHtml(String(track.week || "?"))}</span>
+            </p>
+            ${audio}
+            ${desc}
+            <p class="wb-track-card-links"><a href="${escapeHtml(track.url || "#")}" target="_blank" rel="noopener noreferrer">weeklybeats page</a></p>
+          </div>
+        </article>
+      </li>`;
+    };
+
+    const wirePlayers = () => {
+      listEl.querySelectorAll(".wb-inline-audio").forEach((audio) => {
+        audio.addEventListener("play", () => {
+          pauseOtherWeeklybeats(root, audio);
+          audio.closest(".wb-track-card")?.classList.add("is-playing");
+          listEl.querySelectorAll(".wb-track-card").forEach((card) => {
+            if (!card.contains(audio)) card.classList.remove("is-playing");
+          });
+        });
+        audio.addEventListener("pause", () => {
+          if (audio.paused) audio.closest(".wb-track-card")?.classList.remove("is-playing");
+        });
+      });
     };
 
     const render = () => {
@@ -167,32 +245,8 @@
       );
 
       if (countEl) countEl.textContent = `${filtered.length} track(s)`;
-
-      listEl.innerHTML = filtered
-        .map((track) => {
-          const bannerSrc = track.banner_url || wbYearBanner(track.year);
-          const img = bannerSrc
-            ? `<img class="wb-track-banner" src="${escapeHtml(bannerSrc)}" alt="WeeklyBeats ${escapeHtml(String(track.year || ""))} banner" loading="lazy" decoding="async">`
-            : `<span class="wb-track-banner wb-track-thumb--empty" aria-hidden="true"></span>`;
-          return `<li><button type="button" class="wb-track-pick" data-slug="${escapeHtml(track.slug)}">
-            ${img}
-            <span class="wb-track-pick-text"><strong>${escapeHtml(track.title)}</strong>
-            <span class="wb-track-pick-meta">${escapeHtml(String(track.year || "?"))} / W${escapeHtml(String(track.week || "?"))}</span></span>
-          </button></li>`;
-        })
-        .join("");
-
-      listEl.querySelectorAll(".wb-track-pick").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const slug = btn.dataset.slug;
-          const track = filtered.find((t) => t.slug === slug);
-          listEl.querySelectorAll(".wb-track-pick").forEach((b) => b.classList.toggle("is-active", b === btn));
-          playTrack(track);
-        });
-      });
-
-      const first = filtered[0];
-      if (first) playTrack(first);
+      listEl.innerHTML = filtered.map(renderTrackCard).join("") || `<li class="wb-empty">No tracks match filters.</li>`;
+      wirePlayers();
     };
 
     if (yearEl) {

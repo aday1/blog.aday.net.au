@@ -214,3 +214,142 @@ body.vfx-off.cuton-settled .timeline-entry-visual {
     border-bottom: 1px solid rgba(118, 200, 255, 0.15);
   }
 }
+
+/* Inline media players on archive cards */
+.yt-video-card {
+  border-bottom: 1px solid rgba(53, 86, 127, 0.45);
+}
+
+.yt-video-card .yt-video-pick {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 0.65rem;
+  align-items: center;
+  border-bottom: none;
+}
+
+.yt-pick-play-hint {
+  font-size: 0.72rem;
+  color: rgba(168, 255, 153, 0.65);
+  text-transform: lowercase;
+}
+
+.yt-video-card.is-playing .yt-pick-play-hint {
+  color: #d4a024;
+}
+
+.yt-inline-player {
+  padding: 0 0.35rem 0.5rem;
+}
+
+.yt-inline-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 220px;
+  border: 0;
+  display: block;
+  background: #04070f;
+  border-radius: 2px;
+}
+
+.yt-cat-panel {
+  max-height: min(72vh, 720px);
+}
+
+.yt-pick-hidden {
+  display: none;
+}
+
+.yt-inline-hint {
+  margin: 0.45rem 0 0.2rem;
+}
+
+.wb-track-list--inline {
+  max-height: min(78vh, 820px);
+  overflow: auto;
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(42, 74, 104, 0.85);
+  background: rgba(4, 10, 20, 0.72);
+}
+
+.wb-track-card {
+  list-style: none;
+  margin: 0;
+}
+
+.wb-track-card-inner {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0;
+  border: 1px solid rgba(118, 200, 255, 0.22);
+  background: rgba(6, 12, 22, 0.88);
+  overflow: hidden;
+}
+
+.wb-track-card.is-playing .wb-track-card-inner {
+  border-color: rgba(212, 160, 36, 0.55);
+  box-shadow: 0 0 10px rgba(212, 160, 36, 0.18);
+}
+
+.wb-track-card .wb-track-banner {
+  width: 100px;
+  min-height: 72px;
+  border-right: 1px solid rgba(118, 200, 255, 0.15);
+}
+
+.wb-track-card-body {
+  padding: 0.45rem 0.55rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.wb-track-card-head {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  align-items: baseline;
+}
+
+.wb-track-card-title {
+  font-size: 0.9rem;
+}
+
+.wb-inline-audio {
+  width: 100%;
+  height: 32px;
+  margin: 0;
+}
+
+.wb-track-card-desc {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: rgba(200, 230, 255, 0.78);
+}
+
+.wb-track-card-links {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.wb-inline-missing {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 640px) {
+  .wb-track-card-inner {
+    grid-template-columns: 1fr;
+  }
+  .wb-track-card .wb-track-banner {
+    width: 100%;
+    min-height: 52px;
+    border-right: none;
+    border-bottom: 1px solid rgba(118, 200, 255, 0.15);
+  }
+}

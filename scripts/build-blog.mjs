@@ -1038,7 +1038,16 @@ const renderYoutubeCatalogSection = (catalog, { sectionId = "blogYtSection", fra
       const items = s.videos
         .map(
           (v) =>
-            `<li><button type="button" class="yt-video-pick" data-video-id="${escapeHtml(v.id)}" data-video-title="${escapeHtml(v.title)}" data-channel-handle="${escapeHtml(v.channel_handle || "")}"><span class="yt-pick-title">${escapeHtml(v.title)}</span><span class="yt-pick-channel">${escapeHtml(v.channel_handle || "")}</span></button></li>`
+            `<li class="yt-video-card">
+  <button type="button" class="yt-video-pick" data-video-id="${escapeHtml(v.id)}" data-video-title="${escapeHtml(v.title)}" data-channel-handle="${escapeHtml(v.channel_handle || "")}">
+    <span class="yt-pick-title">${escapeHtml(v.title)}</span>
+    <span class="yt-pick-channel">${escapeHtml(v.channel_handle || "")}</span>
+    <span class="yt-pick-play-hint" aria-hidden="true">play inline</span>
+  </button>
+  <div class="yt-inline-player" hidden>
+    <iframe class="yt-inline-frame" title="${escapeHtml(v.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</li>`
         )
         .join("\n");
       return `<div class="yt-cat-panel${i === 0 ? " is-active" : ""}" data-yt-section-panel="${escapeHtml(s.id)}" role="tabpanel"${i === 0 ? "" : " hidden"}><ul class="yt-video-list">${items}</ul></div>`;
@@ -1057,19 +1066,7 @@ const renderYoutubeCatalogSection = (catalog, { sectionId = "blogYtSection", fra
       <div class="yt-cat-tabs" role="tablist" aria-label="YouTube categories">
         ${tabButtons}
       </div>
-      <div class="timeline-stage yt-stage yt-stage--calm">
-        <iframe
-          id="${frameId}"
-          class="blog-yt-frame"
-          title="Aday YouTube clip"
-          src=""
-          data-video-id="${escapeHtml(firstVideo?.id || "")}"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-        <p id="${nowPlayingId}" class="yt-now-playing">${firstVideo ? escapeHtml(firstVideo.title) : "Select a video"}</p>
-      </div>
+      <p class="date yt-inline-hint">Expand a row to play inline. Only one clip loads at a time.</p>
       <div class="yt-cat-panels">
         ${panels}
       </div>
@@ -1098,14 +1095,7 @@ const renderWeeklybeatsCatalogSection = (catalog, { sectionId = "blogWbSection" 
         </select>
         <span class="wb-track-count"></span>
       </div>
-      <div class="wb-archive-stage">
-        <ul class="wb-track-list"></ul>
-        <div class="wb-player-pane">
-          <audio class="wb-audio-player" controls preload="metadata"></audio>
-          <iframe class="wb-embed-frame" title="WeeklyBeats track" loading="lazy" hidden></iframe>
-          <p class="wb-track-meta">Select a track</p>
-        </div>
-      </div>
+      <ul class="wb-track-list wb-track-list--inline"></ul>
     </section>`;
 };
 

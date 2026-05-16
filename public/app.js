@@ -924,7 +924,7 @@
     });
     runBlogNodeMap();
     if (window.AdayMediaArchive) {
-      window.AdayMediaArchive.wireYoutubeCatalog(blogYtSection, "blogYtFrame", "blogYtNowPlaying");
+      window.AdayMediaArchive.wireYoutubeCatalog(blogYtSection, null, null, "blogYtSectionSearch");
       window.AdayMediaArchive.initWeeklybeatsArchive({
         rootId: "blogWbSection",
         dataUrl: "./data/weeklybeats_tracks.json"
