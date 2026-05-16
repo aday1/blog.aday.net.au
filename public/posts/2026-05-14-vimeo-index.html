@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/crt-cuton.css">
   <link rel="stylesheet" href="/blog-film.css">
   <link rel="stylesheet" href="/timeline-spread.css">
+  <link rel="stylesheet" href="/devlog.css">
 </head>
 <body class="boot-seq film-on">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
@@ -64,8 +65,9 @@
     </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
-  <script src="/app.js"></script>
+  <script src="/app.js" defer></script>
   <script src="/blog-film.js" defer></script>
+  <script type="module" src="/blog-vfx.js"></script>
   <div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
   <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
     <button type="button" id="deployMetaShowBtn" style="font:inherit;cursor:pointer;padding:4px 10px;border:1px solid #4cff8a;background:rgba(0,0,0,.88);color:#b8ffd1;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.45);">build info</button>

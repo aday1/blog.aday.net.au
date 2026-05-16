@@ -15,12 +15,24 @@
       "image": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png"
     },
     {
+      "includes": "github.com/aday1/macroverse.aday.net.au/commit",
+      "image": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png"
+    },
+    {
+      "includes": "github.com/aday1/artbastard.aday.net.au/commit",
+      "image": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png"
+    },
+    {
       "includes": "demozoo.org",
       "image": "https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg"
     },
     {
       "includes": "clananalogue.org/artists/aday",
       "image": "https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg"
+    },
+    {
+      "includes": "weeklybeats.com/aday/music",
+      "image": "https://weeklybeats.com/images/wb2026-social.jpg"
     },
     {
       "includes": "vimeo.com/10997832",

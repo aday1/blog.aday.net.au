@@ -1,5 +1,17 @@
 import fs from "node:fs";
 import path from "node:path";
+import {
+  writeYoutubeCatalog,
+  YOUTUBE_CHANNEL_URL,
+  YOUTUBE_HANDLE,
+  categorizeYoutubeTitle
+} from "./youtube-catalog.mjs";
+import { writeWeeklybeatsCatalog } from "./weeklybeats-catalog.mjs";
+import {
+  buildDevlogBundle,
+  devlogTimelineEntries,
+  renderDevlogSections
+} from "./devlog-ingest.mjs";
 
 const root = process.cwd();
 const postsDir = path.join(root, "posts");
@@ -17,6 +29,22 @@ if (!fs.existsSync(postsDir)) {
 fs.mkdirSync(outDir, { recursive: true });
 fs.mkdirSync(outPostsDir, { recursive: true });
 fs.mkdirSync(outDataDir, { recursive: true });
+
+const youtubeCatalogPath = path.join(outDataDir, "youtube-catalog.json");
+const blogWeeklybeatsPath = path.join(outDataDir, "weeklybeats_tracks.json");
+try {
+  await writeWeeklybeatsCatalog(adayWeeklybeatsPath, {
+    seedPath: adayWeeklybeatsPath,
+    enrich: process.env.WB_SKIP_ENRICH !== "1",
+    maxEnrich: Number(process.env.WB_ENRICH_MAX || 80)
+  });
+  if (fs.existsSync(adayWeeklybeatsPath)) {
+    fs.copyFileSync(adayWeeklybeatsPath, blogWeeklybeatsPath);
+  }
+} catch (err) {
+  console.warn("WeeklyBeats catalog build warning:", err.message);
+}
+writeYoutubeCatalog(youtubeCatalogPath);
 
 const escapeHtml = (value) =>
   value
@@ -130,8 +158,10 @@ const mdToHtml = (md) => {
 };
 
 const filmHeadLinks = `  <link rel="stylesheet" href="/blog-film.css">
-  <link rel="stylesheet" href="/timeline-spread.css">`;
-const filmBodyScripts = `  <script src="/blog-film.js" defer></script>`;
+  <link rel="stylesheet" href="/timeline-spread.css">
+  <link rel="stylesheet" href="/devlog.css">`;
+const filmBodyScripts = `  <script src="/blog-film.js" defer></script>
+  <script type="module" src="/blog-vfx.js"></script>`;
 
 const deployMetaHtml = `<div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
   <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
@@ -462,7 +492,7 @@ ${filmHeadLinks}
     </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
-  <script src="/app.js"></script>
+  <script src="/app.js" defer></script>
 ${filmBodyScripts}
   ${deployMetaHtml}
 </body>
@@ -524,8 +554,8 @@ const getTimeline = async () => {
     {
       date: "2013-01-01",
       title: "YouTube channel active",
-      desc: "Channel timeline begins (public stats source)",
-      url: "https://www.youtube.com/@aday1",
+      desc: "Channel timeline begins (@aday_net_au uploads)",
+      url: "https://www.youtube.com/@aday_net_au",
       source: "youtube"
     },
     {
@@ -691,11 +721,13 @@ const getTimeline = async () => {
       const json = JSON.parse(raw);
       const tracks = Array.isArray(json?.tracks) ? json.tracks : [];
       return tracks.map((track) => ({
-        date: yearWeekToDate(track.year, track.week),
+        date: track.posted_at || yearWeekToDate(track.year, track.week),
         title: track.title || track.slug || "WeeklyBeats track",
         desc: track.description || `WeeklyBeats ${track.year || ""} week ${track.week || ""}`.trim(),
         url: track.url || "https://weeklybeats.com/aday",
-        source: "weeklybeats"
+        source: "weeklybeats",
+        timeline_image: track.image_url || "",
+        category: `wb-${track.year || "unknown"}`
       }));
     } catch {
       return [];
@@ -710,7 +742,7 @@ const getTimeline = async () => {
       configuredChannelId ? `https://www.youtube.com/feeds/videos.xml?channel_id=${configuredChannelId}` : "",
       uploadPlaylistId ? `https://www.youtube.com/feeds/videos.xml?playlist_id=${uploadPlaylistId}` : "",
       configuredUser ? `https://www.youtube.com/feeds/videos.xml?user=${configuredUser}` : "",
-      "https://www.youtube.com/feeds/videos.xml?user=aday1"
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCdKgN2c92DhDON71FBwGq4g"
     ].filter(Boolean);
     for (const feedUrl of feedUrls) {
       try {
@@ -718,7 +750,7 @@ const getTimeline = async () => {
         if (!response.ok) continue;
         const text = await response.text();
         const entries = parseYoutubeFeedEntries(text);
-        if (entries.length) return entries.slice(0, 24);
+        if (entries.length) return entries;
       } catch {
         // try next feed url
       }
@@ -771,7 +803,33 @@ const getTimeline = async () => {
     }
   })();
 
-  const allEvents = [...curatedEvents, ...weeklybeatsScraped, ...youtubeFeedScraped, ...youtubeStatsFallback, ...githubRepoTimeline]
+  const youtubeCatalogTimeline = (() => {
+    try {
+      if (!fs.existsSync(youtubeCatalogPath)) return [];
+      const catalog = JSON.parse(fs.readFileSync(youtubeCatalogPath, "utf8"));
+      const videos = Array.isArray(catalog?.videos) ? catalog.videos : [];
+      return videos.map((video) => ({
+        date: video.upload_date || "2010-01-01",
+        title: video.title || video.id,
+        desc: `${categorizeYoutubeTitle(video.title, video.id)} // ${video.channel_handle || "YouTube"}`,
+        url: video.url || `https://www.youtube.com/watch?v=${video.id}`,
+        source: "youtube",
+        category: video.section || categorizeYoutubeTitle(video.title, video.id),
+        channel_handle: video.channel_handle || ""
+      }));
+    } catch {
+      return [];
+    }
+  })();
+
+  const allEvents = [
+    ...curatedEvents,
+    ...weeklybeatsScraped,
+    ...youtubeFeedScraped,
+    ...youtubeCatalogTimeline,
+    ...youtubeStatsFallback,
+    ...githubRepoTimeline
+  ]
     .map((entry) => ({
       ...entry,
       date: parseIsoDate(entry.date),
@@ -826,6 +884,9 @@ const truncateTimelineDesc = (text, max = 220) => {
 };
 
 const pickTimelineImage = (entry) => {
+  if (entry.timeline_image) {
+    return { url: entry.timeline_image, signature: false };
+  }
   const url = String(entry.url || "").toLowerCase();
   const title = String(entry.title || "").toLowerCase();
   const signature = timelineImages.signature || "/assets/timeline/aday-antialias-blackmage.png";
@@ -851,24 +912,32 @@ const pickTimelineImage = (entry) => {
   return null;
 };
 
-const renderTimelineNode = (entry, idx) => {
+const renderTimelineNode = (entry, idx, { isYearStart, year }) => {
   const source = slugifySource(entry.source || "artifact");
-  const year = entry.date.slice(0, 4);
   const picked = pickTimelineImage(entry);
   const sigClass = picked?.signature ? " is-signature" : "";
   const compactClass = picked?.url ? "" : " timeline-node--compact";
   const desc = truncateTimelineDesc(entry.desc);
+  const yearStartAttr = isYearStart ? ' data-year-start="true"' : "";
+  const storyTrainAttr = entry.storyTrain
+    ? ` data-story-train="${escapeHtml(entry.storyTrain)}"`
+    : "";
+  const categoryAttr = entry.category ? ` data-category="${escapeHtml(entry.category)}"` : "";
+  const yearLabel = isYearStart
+    ? `<span class="timeline-rail-year">${escapeHtml(year)}</span>`
+    : `<span class="timeline-rail-year timeline-rail-year--carry" aria-hidden="true"></span>`;
   const visualBlock = picked?.url
-    ? `<div class="timeline-entry-visual" style="--timeline-bg: url('${escapeHtml(picked.url)}')" aria-hidden="true"><span class="timeline-entry-year">${escapeHtml(year)}</span></div>`
+    ? `<div class="timeline-entry-visual" style="--timeline-bg: url('${escapeHtml(picked.url)}')" aria-hidden="true"></div>`
     : "";
 
-  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}${compactClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-title="${escapeHtml(entry.title)}">
+  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}${compactClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-year="${escapeHtml(year)}" data-title="${escapeHtml(entry.title)}"${yearStartAttr}${storyTrainAttr}${categoryAttr}>
+  ${yearLabel}
+  <span class="timeline-rail-marker" aria-hidden="true"></span>
   <article class="timeline-entry${picked?.url ? "" : " timeline-entry--compact"}">
     ${visualBlock}
     <div class="timeline-entry-body">
       <p class="timeline-entry-meta">
         <span class="date">${escapeHtml(entry.date)}</span>
-        <span class="timeline-year-pill">${escapeHtml(year)}</span>
         <span class="source-chip">${escapeHtml(source)}</span>
       </p>
       <h3 class="timeline-entry-title"><a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(entry.title)}</a></h3>
@@ -878,19 +947,43 @@ const renderTimelineNode = (entry, idx) => {
 </li>`;
 };
 
-const timelineEntries = await getTimeline();
+const devlogBundle = await buildDevlogBundle(root);
+fs.writeFileSync(
+  path.join(outDataDir, "devlog-bundle.json"),
+  JSON.stringify(devlogBundle, null, 2),
+  "utf8"
+);
+const devlogSectionsHtml = renderDevlogSections(devlogBundle);
+const devlogTimelineRaw = devlogTimelineEntries(devlogBundle).map((entry) => ({
+  ...entry,
+  source: slugifySource(entry.source || "devlog")
+}));
+
+const mergeTimelineEvents = (base, extra) => {
+  const dedupedMap = new Map();
+  [...base, ...extra].forEach((entry) => {
+    const key = `${entry.url}|${entry.title}`.toLowerCase();
+    const existing = dedupedMap.get(key);
+    if (!existing) {
+      dedupedMap.set(key, entry);
+      return;
+    }
+    const entryTs = new Date(entry.date).getTime();
+    const existingTs = new Date(existing.date).getTime();
+    if (entryTs < existingTs) dedupedMap.set(key, entry);
+  });
+  return [...dedupedMap.values()].sort((a, b) => new Date(a.date) - new Date(b.date));
+};
+
+const timelineEntries = mergeTimelineEvents(await getTimeline(), devlogTimelineRaw);
 const timelineNewestFirst = [...timelineEntries].sort((a, b) => new Date(b.date) - new Date(a.date));
 let timelineYearMarker = "";
 const timelineRows = timelineNewestFirst
-  .flatMap((entry, idx) => {
+  .map((entry, idx) => {
     const year = entry.date.slice(0, 4);
-    const parts = [];
-    if (year !== timelineYearMarker) {
-      timelineYearMarker = year;
-      parts.push(`<li class="timeline-year-divider" aria-hidden="true"><span>${escapeHtml(year)}</span></li>`);
-    }
-    parts.push(renderTimelineNode(entry, idx));
-    return parts;
+    const isYearStart = year !== timelineYearMarker;
+    if (isYearStart) timelineYearMarker = year;
+    return renderTimelineNode(entry, idx, { isYearStart, year });
   })
   .join("\n");
 const timeLogRows = [...timelineEntries]
@@ -898,16 +991,118 @@ const timeLogRows = [...timelineEntries]
   .slice(0, 14)
   .map((entry) => `<li><span class="date">${escapeHtml(entry.date)}</span> <span class="source-chip">${escapeHtml(entry.source || "artifact")}</span> ${escapeHtml(entry.title)} // <a href="${escapeHtml(entry.url)}">open</a></li>`)
   .join("\n");
-const sourceCounts = Object.entries(
-  timelineEntries.reduce((acc, item) => {
-    const key = slugifySource(item.source || "artifact");
-    acc[key] = (acc[key] || 0) + 1;
-    return acc;
-  }, {})
-)
-  .sort((a, b) => b[1] - a[1])
-  .map(([source, count]) => `<li><span>${escapeHtml(source)}</span><span class="status-tag status-online">${count}</span></li>`)
-  .join("\n");
+const youtubeCatalog = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(youtubeCatalogPath, "utf8"));
+  } catch {
+    return writeYoutubeCatalog(youtubeCatalogPath);
+  }
+})();
+
+let weeklybeatsCatalog = null;
+try {
+  weeklybeatsCatalog = JSON.parse(fs.readFileSync(adayWeeklybeatsPath, "utf8"));
+} catch {
+  weeklybeatsCatalog = { count: 0, tracks: [] };
+}
+
+const renderYoutubeCatalogSection = (catalog, { sectionId = "blogYtSection", frameId = "blogYtFrame", nowPlayingId = "blogYtNowPlaying" } = {}) => {
+  if (!catalog?.sections?.length) {
+    return `<section id="${sectionId}">
+      <h2>YouTube archive</h2>
+      <p class="date"><a href="${escapeHtml(YOUTUBE_CHANNEL_URL)}" target="_blank" rel="noopener noreferrer">${escapeHtml(YOUTUBE_HANDLE)}</a></p>
+    </section>`;
+  }
+
+  const activeSections = catalog.sections.filter((s) => s.count > 0);
+  const firstVideo = activeSections[0]?.videos?.[0];
+  const channelOptions = (catalog.channels || [])
+    .map((ch) => `<option value="${escapeHtml(ch.handle || "")}">${escapeHtml(ch.handle || ch.id)}</option>`)
+    .join("");
+  const tabButtons = activeSections
+    .map(
+      (s, i) =>
+        `<button type="button" class="yt-cat-tab${i === 0 ? " is-active" : ""}" data-yt-section="${escapeHtml(s.id)}" role="tab" aria-selected="${i === 0 ? "true" : "false"}">${escapeHtml(s.label)} <span class="yt-cat-count">${s.count}</span></button>`
+    )
+    .join("\n");
+  const panels = activeSections
+    .map((s, i) => {
+      const items = s.videos
+        .map(
+          (v) =>
+            `<li><button type="button" class="yt-video-pick" data-video-id="${escapeHtml(v.id)}" data-video-title="${escapeHtml(v.title)}" data-channel-handle="${escapeHtml(v.channel_handle || "")}"><span class="yt-pick-title">${escapeHtml(v.title)}</span><span class="yt-pick-channel">${escapeHtml(v.channel_handle || "")}</span></button></li>`
+        )
+        .join("\n");
+      return `<div class="yt-cat-panel${i === 0 ? " is-active" : ""}" data-yt-section-panel="${escapeHtml(s.id)}" role="tabpanel"${i === 0 ? "" : " hidden"}><ul class="yt-video-list">${items}</ul></div>`;
+    })
+    .join("\n");
+
+  return `<section id="${sectionId}" class="blog-yt-section media-yt-section">
+      <h2>YouTube archive</h2>
+      <p class="date">${escapeHtml(String(catalog.video_count || 0))} uploads — ${escapeHtml(YOUTUBE_HANDLE)}</p>
+      <div class="yt-archive-controls">
+        <label for="${sectionId}Search">Search</label>
+        <input id="${sectionId}Search" type="search" placeholder="filter titles..." />
+        <label for="${sectionId}Channel">Channel</label>
+        <select id="${sectionId}Channel"><option value="all">all channels</option>${channelOptions}</select>
+      </div>
+      <div class="yt-cat-tabs" role="tablist" aria-label="YouTube categories">
+        ${tabButtons}
+      </div>
+      <div class="timeline-stage yt-stage yt-stage--calm">
+        <iframe
+          id="${frameId}"
+          class="blog-yt-frame"
+          title="Aday YouTube clip"
+          src=""
+          data-video-id="${escapeHtml(firstVideo?.id || "")}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <p id="${nowPlayingId}" class="yt-now-playing">${firstVideo ? escapeHtml(firstVideo.title) : "Select a video"}</p>
+      </div>
+      <div class="yt-cat-panels">
+        ${panels}
+      </div>
+    </section>`;
+};
+
+const renderWeeklybeatsCatalogSection = (catalog, { sectionId = "blogWbSection" } = {}) => {
+  const count = catalog?.count || catalog?.tracks?.length || 0;
+  return `<section id="${sectionId}" class="blog-wb-section media-wb-section">
+      <h2>WeeklyBeats archive</h2>
+      <p class="date"><a href="https://weeklybeats.com/music/aday" target="_blank" rel="noopener noreferrer">weeklybeats.com/music/aday</a> — ${escapeHtml(String(count))} tracks indexed</p>
+      <div class="wb-archive-controls">
+        <label for="${sectionId}Search">Search</label>
+        <input class="wb-search" id="${sectionId}Search" type="search" placeholder="title or description..." />
+        <label for="${sectionId}Year">Year</label>
+        <select class="wb-year-filter" id="${sectionId}Year"><option value="all">all years</option></select>
+        <label for="${sectionId}Week">Week</label>
+        <select class="wb-week-filter" id="${sectionId}Week"><option value="all">all weeks</option></select>
+        <label for="${sectionId}Sort">Sort</label>
+        <select class="wb-sort" id="${sectionId}Sort">
+          <option value="year-desc">year desc</option>
+          <option value="year-asc">year asc</option>
+          <option value="week-desc">week desc</option>
+          <option value="week-asc">week asc</option>
+          <option value="title-asc">title asc</option>
+        </select>
+        <span class="wb-track-count"></span>
+      </div>
+      <div class="wb-archive-stage">
+        <ul class="wb-track-list"></ul>
+        <div class="wb-player-pane">
+          <audio class="wb-audio-player" controls preload="metadata"></audio>
+          <iframe class="wb-embed-frame" title="WeeklyBeats track" loading="lazy" hidden></iframe>
+          <p class="wb-track-meta">Select a track</p>
+        </div>
+      </div>
+    </section>`;
+};
+
+const youtubeSectionHtml = renderYoutubeCatalogSection(youtubeCatalog);
+const weeklybeatsSectionHtml = renderWeeklybeatsCatalogSection(weeklybeatsCatalog);
 
 const indexHtml = `<!doctype html>
 <html lang="en">
@@ -935,87 +1130,28 @@ ${filmHeadLinks}
   <div class="noise" aria-hidden="true"></div>
   <main>
     <h1 class="decrypt typed">blog.aday.net.au</h1>
-    <p class="typed">Artifact timeline and generated posts from automated source scraping.</p>
+    <p class="typed">Story trains: git dev logs, YouTube archive, and one master presence timeline.</p>
     <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads on aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
-    <section>
-      <h2 class="headliner-title">
-        <img class="headliner-badge" src="https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png" alt="glitch signal icon" data-fallbacks="https://raw.githubusercontent.com/aday1/error-diffusion/master/public/assets/max-patch-1.png|https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg">
-        Live AV and Stage Tools
-      </h2>
-      <p>Active browser tools mirrored from aday.net.au for live AV work, DMX control, and projector sets.</p>
-      <div class="headliner-grid">
-        <article class="headliner-card">
-          <img class="headliner-bg" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse cue art" data-repo="aday1/macroverse.aday.net.au">
-          <div class="headliner-head">
-            <img class="service-icon" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse icon" data-repo="aday1/macroverse.aday.net.au">
-            <h3>Macroverse</h3>
-          </div>
-          <p>Live GLSL visual performance stack; grew out of MacroVerse at Melbourne Fringe (Reductionist + Aday, Abbotsford Convent).</p>
-          <ul class="service-explainer">
-            <li><span>role</span> realtime browser shader engine for VJ and projection scenes</li>
-            <li><span>use</span> launch visual sets and route show-state cues live</li>
-            <li><span>signal</span> testament to the Fringe show; best for events, galleries, and AV performance nights</li>
-            <li><span>origin</span> <a href="https://www.melbournefringe.com.au/whats-on/events/macroverse" target="_blank" rel="noopener noreferrer">Melbourne Fringe MacroVerse</a></li>
-          </ul>
-          <a href="https://macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">open macroverse.aday.net.au</a><br>
-          <a href="https://macroverse.aday.net.au/about.html" target="_blank" rel="noopener noreferrer">about MacroVerse</a><br>
-          <a href="https://github.com/aday1/macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">open source repo</a>
-        </article>
-        <article class="headliner-card">
-          <img class="headliner-bg" src="https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png" alt="ArtBastard cue art" data-repo="aday1/artbastard.aday.net.au">
-          <div class="headliner-head">
-            <img class="service-icon" src="https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png" alt="ArtBastard icon" data-repo="aday1/artbastard.aday.net.au">
-            <h3>ArtBastard</h3>
-          </div>
-          <p>Live browser DMX/OSC/MIDI control stack.</p>
-          <ul class="service-explainer">
-            <li><span>role</span> lighting and control middleware for OSC, MIDI, DMX and Art-Net</li>
-            <li><span>use</span> trigger scenes, map cues, and sync performance hardware</li>
-            <li><span>signal</span> best for stage rigs, hybrid shows, and live control ops</li>
-          </ul>
-          <a href="https://artbastard.aday.net.au" target="_blank" rel="noopener noreferrer">open artbastard.aday.net.au</a><br>
-          <a href="https://github.com/aday1/artbastard.aday.net.au" target="_blank" rel="noopener noreferrer">open source repo</a>
-        </article>
-      </div>
-    </section>
-    <section>
-      <h2>YouTube feed node</h2>
-      <div class="timeline-stage yt-stage">
-        <iframe
-          id="blogYtFrame"
-          class="blog-yt-frame"
-          title="Aday YouTube feed"
-          src="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div class="yt-tools">
-        <label for="blogYtSelector">Channel selector</label>
-        <select id="blogYtSelector">
-          <option value="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=aday1">uploads stream</option>
-          <option value="https://www.youtube-nocookie.com/embed?listType=user_uploads&list=Aday">legacy user stream</option>
-          <option value="https://www.youtube-nocookie.com/embed?listType=search&list=aday+chiptune+live">search feed</option>
-        </select>
-        <button id="blogYtRandom" type="button">randomizer</button>
-      </div>
-      <p class="date">Live channel feed with selector and randomizer.</p>
-    </section>
-    <section>
-      <h2>Artifact source ingest</h2>
-      <ul id="systemStatusList" class="post-list status-list">
-        ${sourceCounts}
-      </ul>
-      <p class="date">Generated from curated nodes + YouTube feed + WeeklyBeats manifest + GitHub repository timeline.</p>
-    </section>
-    <section>
+    ${devlogSectionsHtml}
+    <p class="date"><a href="#blogYtSection">YouTube archive</a> | <a href="#blogWbSection">WeeklyBeats archive</a> | <a href="#presenceTimeline">Master timeline</a></p>
+    ${youtubeSectionHtml}
+    ${weeklybeatsSectionHtml}
+    <section class="presence-timeline" id="presenceTimeline">
       <h2>Presence timeline</h2>
-      <p class="date">Newest first. Hero images only on matched milestones.</p>
-      <div class="timeline-stage">
-        <canvas id="timelineGraph" width="960" height="320" aria-hidden="true"></canvas>
+      <p class="date">Newest first. Years on the left rail; hero cards use full-bleed art. Graph: scroll to zoom, drag to pan, double-click reset.</p>
+      <div class="timeline-graph-wrap">
+        <ul class="timeline-lane-legend" aria-label="Timeline lanes">
+          <li><span class="lane-swatch lane-audio"></span>Audio</li>
+          <li><span class="lane-swatch lane-video"></span>Video</li>
+          <li><span class="lane-swatch lane-scene"></span>Scene</li>
+          <li><span class="lane-swatch lane-code"></span>Code</li>
+          <li><span class="lane-swatch lane-signal"></span>Signal</li>
+        </ul>
+        <div class="timeline-stage timeline-stage--calm">
+          <canvas id="timelineGraph" width="960" height="240" aria-label="Presence timeline density map"></canvas>
+        </div>
       </div>
-      <ul class="post-list timeline">
+      <ul class="post-list timeline timeline-rail-layout" id="presenceTimelineList">
         ${timelineRows}
       </ul>
     </section>
@@ -1037,7 +1173,8 @@ ${filmHeadLinks}
     </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
-  <script src="/app.js"></script>
+  <script src="/media-archive.js" defer></script>
+  <script src="/app.js" defer></script>
 ${filmBodyScripts}
   ${deployMetaHtml}
 </body>

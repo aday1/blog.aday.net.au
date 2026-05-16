@@ -98,6 +98,24 @@ body {
 
 .bg-shader {
   display: none;
+  pointer-events: none;
+}
+
+body.vfx-on .noise {
+  opacity: 0.26;
+}
+
+body.vfx-on::before {
+  opacity: 0.72;
+}
+
+body.vfx-off .noise,
+body.vfx-off::before {
+  opacity: inherit;
+}
+
+main > h1.decrypt {
+  position: relative;
 }
 
 body::before {
@@ -190,6 +208,11 @@ main section::before {
   background-position: 0 0, 0 0;
   clip-path: polygon(var(--edge-cut, 10px) 0, calc(100% - var(--edge-cut, 10px)) 0, 100% var(--edge-cut, 10px), 100% calc(100% - var(--edge-cut, 10px)), calc(100% - var(--edge-cut, 10px)) 100%, var(--edge-cut, 10px) 100%, 0 calc(100% - var(--edge-cut, 10px)), 0 var(--edge-cut, 10px));
   animation: edgeFlow var(--edge-drift, 9s) linear infinite;
+}
+
+main section.presence-timeline::before {
+  animation: none;
+  opacity: 0.16;
 }
 
 main section::after {
@@ -384,8 +407,25 @@ a {
   border: 0;
   display: block;
   background: #04070f;
-  filter: contrast(1.12) saturate(1.08);
-  animation: blogYtChromatic 8.4s steps(1, end) infinite;
+  filter: contrast(1.06) saturate(1.04);
+}
+
+.yt-stage--calm .blog-yt-frame {
+  animation: none;
+}
+
+.timeline-stage--calm::before,
+.timeline-stage--calm::after,
+.yt-stage--calm::before,
+.yt-stage--calm::after {
+  animation: none !important;
+  opacity: 0.32;
+}
+
+.presence-timeline .timeline-stage {
+  min-height: 200px;
+  border-color: rgba(72, 110, 150, 0.65);
+  background: linear-gradient(180deg, rgba(6, 14, 26, 0.92), rgba(10, 18, 30, 0.88));
 }
 
 .timeline-stage {
@@ -393,7 +433,7 @@ a {
   overflow: hidden;
 }
 
-.timeline-stage::before {
+.timeline-stage:not(.timeline-stage--calm)::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -404,7 +444,7 @@ a {
   animation: crtStaticRoll 1.9s steps(3, end) infinite;
 }
 
-.timeline-stage::after {
+.timeline-stage:not(.timeline-stage--calm)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -417,8 +457,166 @@ a {
   animation: crtColorDrift 28s ease-in-out infinite;
 }
 
-.yt-stage {
+.yt-stage:not(.yt-stage--calm) {
   animation: blogYtJitter 7.8s steps(1, end) infinite;
+}
+
+.blog-yt-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 720px;
+}
+
+.yt-cat-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.75rem 0 0.55rem;
+}
+
+.yt-cat-tab {
+  background: #091426;
+  border: 1px solid #35567f;
+  color: #baf8d0;
+  font-family: inherit;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.55rem;
+  cursor: inherit;
+}
+
+.yt-cat-tab.is-active {
+  border-color: #7fd4ff;
+  color: #e8fbff;
+  box-shadow: 0 0 0 1px rgba(127, 212, 255, 0.35);
+}
+
+.yt-cat-count {
+  opacity: 0.72;
+  margin-left: 0.2rem;
+}
+
+.yt-now-playing {
+  margin: 0.45rem 0 0;
+  color: #a8ff99;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.yt-cat-panels {
+  margin-top: 0.65rem;
+}
+
+.yt-cat-panel {
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid #2a4a6d;
+  background: rgba(4, 12, 24, 0.72);
+  padding: 0.35rem 0.5rem;
+}
+
+.yt-video-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.yt-video-pick {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(53, 86, 127, 0.45);
+  color: #c7ffe1;
+  font-family: inherit;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  padding: 0.42rem 0.2rem;
+  cursor: inherit;
+}
+
+.yt-video-pick:hover,
+.yt-video-pick.is-active {
+  color: #e8fbff;
+  background: rgba(96, 184, 255, 0.1);
+}
+
+.yt-video-pick.is-active {
+  border-left: 2px solid #7fd4ff;
+  padding-left: 0.35rem;
+}
+
+.yt-archive-controls,
+.wb-archive-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: end;
+  margin: 10px 0;
+}
+
+.yt-pick-channel {
+  display: block;
+  font-size: 0.72rem;
+  color: #7eb8e8;
+}
+
+.yt-pick-hidden {
+  display: none;
+}
+
+.blog-wb-section .wb-archive-stage {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(280px, 1.2fr);
+  gap: 12px;
+}
+
+.wb-track-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 420px;
+  overflow: auto;
+  border: 1px solid #2a4a68;
+}
+
+.wb-track-pick {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  padding: 8px;
+  border: 0;
+  border-bottom: 1px solid #1c3348;
+  background: rgba(4, 12, 22, 0.85);
+  color: #d8f4ff;
+  cursor: pointer;
+}
+
+.wb-track-pick.is-active {
+  background: rgba(64, 140, 200, 0.22);
+}
+
+.wb-track-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.post-list.timeline {
+  content-visibility: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-yt-frame,
+  .yt-stage,
+  .timeline-stage::before,
+  .timeline-stage::after {
+    animation: none !important;
+  }
+
+  main section {
+    animation: none !important;
+  }
 }
 
 .date {

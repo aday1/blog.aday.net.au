@@ -13,5 +13,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Install yt-dlp
+        run: sudo apt-get update && sudo apt-get install -y yt-dlp
+
       - name: Build static blog
+        env:
+          WB_SKIP_ENRICH: "1"
         run: node ./scripts/build-blog.mjs

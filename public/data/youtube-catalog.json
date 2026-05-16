@@ -1,0 +1,1131 @@
+{
+  "generated_at": "2026-05-16T12:34:08.034Z",
+  "channels": [
+    {
+      "id": "aday_net_au",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "handle": "@aday_net_au",
+      "channel_url": "https://www.youtube.com/@aday_net_au/videos",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "aday1",
+      "handle": "@aday1",
+      "channel_url": "https://www.youtube.com/@aday1/videos",
+      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
+      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
+    }
+  ],
+  "channel_url": "https://www.youtube.com/@aday_net_au/videos | https://www.youtube.com/@aday1/videos",
+  "video_count": 51,
+  "sections": [
+    {
+      "id": "drone",
+      "label": "Drone / FPV",
+      "count": 17,
+      "videos": [
+        {
+          "id": "dIVZA1-AjwI",
+          "title": "Noojee Trestle Bridge vs CetusPro [FPV]",
+          "duration": 235,
+          "url": "https://www.youtube.com/watch?v=dIVZA1-AjwI",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "PiYwKYyEgFc",
+          "title": "FPV at Werribee Mansions - 37.93537737615491,144.6700105488422",
+          "duration": 425,
+          "url": "https://www.youtube.com/watch?v=PiYwKYyEgFc",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "koMAxGRychQ",
+          "title": "FPV -37.72293089740226, 144.81983120590834",
+          "duration": 74,
+          "url": "https://www.youtube.com/watch?v=koMAxGRychQ",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "d7HQthWB-so",
+          "title": "Found FPV Footage from the DVR! [8/22]",
+          "duration": 320,
+          "url": "https://www.youtube.com/watch?v=d7HQthWB-so",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "LBvqUfVGfcE",
+          "title": "GPS Failsafe (Successful Rescue!) :D",
+          "duration": 49,
+          "url": "https://www.youtube.com/watch?v=LBvqUfVGfcE",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "bwqCQLygh0k",
+          "title": "[Ragnarok] GPS Rescue Testflight #1",
+          "duration": 379,
+          "url": "https://www.youtube.com/watch?v=bwqCQLygh0k",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "uU6xH-aNlbo",
+          "title": "Maiden Flight - Axis Flying Air Force Pro (octa!)",
+          "duration": 510,
+          "url": "https://www.youtube.com/watch?v=uU6xH-aNlbo",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "P3uXksskaNY",
+          "title": "Chasing Wings! - DJIG0000",
+          "duration": 243,
+          "url": "https://www.youtube.com/watch?v=P3uXksskaNY",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "82oTClkXmls",
+          "title": "FPV Out West Ft. Kayboku + BMX Rover",
+          "duration": 423,
+          "url": "https://www.youtube.com/watch?v=82oTClkXmls",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "3P2zB3rgaOE",
+          "title": "-37.777239,144.859237 FPV",
+          "duration": 242,
+          "url": "https://www.youtube.com/watch?v=3P2zB3rgaOE",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "IKricvhCqP0",
+          "title": "PicnicFPV ft Amy",
+          "duration": 462,
+          "url": "https://www.youtube.com/watch?v=IKricvhCqP0",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "KkdTGQacTWE",
+          "title": "Parangular [FPV]",
+          "duration": 274,
+          "url": "https://www.youtube.com/watch?v=KkdTGQacTWE",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "YdeO3BFDeGs",
+          "title": "FPV Pipedream",
+          "duration": 388,
+          "url": "https://www.youtube.com/watch?v=YdeO3BFDeGs",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "yz8RhXUpnzE",
+          "title": "FPV DVR footage with Falcore and Interceptor",
+          "duration": 1072,
+          "url": "https://www.youtube.com/watch?v=yz8RhXUpnzE",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "V7SmMC60SmM",
+          "title": "Falcore, the Tiny Hawk 2 - FPV cyberpunk pilot FPV practice",
+          "duration": 528,
+          "url": "https://www.youtube.com/watch?v=V7SmMC60SmM",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "Qj0lXpJcohY",
+          "title": "Day 1 - Maiden Flights with Falcore",
+          "duration": 629,
+          "url": "https://www.youtube.com/watch?v=Qj0lXpJcohY",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        },
+        {
+          "id": "p0zdAifH4Zs",
+          "title": "[Excerpt from PreJam] Drone Lockdown Stream with WiLL-i-ROMS",
+          "duration": 362,
+          "url": "https://www.youtube.com/watch?v=p0zdAifH4Zs",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "drone"
+        }
+      ]
+    },
+    {
+      "id": "demoparty",
+      "label": "Demoparty / Scene",
+      "count": 8,
+      "videos": [
+        {
+          "id": "Qfu7KYKZq4M",
+          "title": "DEMOSCENE Panel | Recorded at SIGGRAPH ASIA 2019 [1080p]",
+          "duration": 6252,
+          "url": "https://www.youtube.com/watch?v=Qfu7KYKZq4M",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        },
+        {
+          "id": "6lyFyNdVLPU",
+          "title": "Retrovertigo and Plexy   Killing off Pop   Squaresounds 2013 OPEN MIC",
+          "duration": 283,
+          "url": "https://www.youtube.com/watch?v=6lyFyNdVLPU",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        },
+        {
+          "id": "ouJxdyGYJLM",
+          "title": "Duck and Chicken   Squaresounds 2013 OPEN MIC",
+          "duration": 492,
+          "url": "https://www.youtube.com/watch?v=ouJxdyGYJLM",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        },
+        {
+          "id": "kf_qd_guqWU",
+          "title": "Biko   Squaresounds 2013 OPEN MIC",
+          "duration": 429,
+          "url": "https://www.youtube.com/watch?v=kf_qd_guqWU",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        },
+        {
+          "id": "_oY4iMoXocs",
+          "title": "Alex Lane   Squaresounds 2013 OPEN MIC",
+          "duration": 304,
+          "url": "https://www.youtube.com/watch?v=_oY4iMoXocs",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        },
+        {
+          "id": "4-r34FQq2VM",
+          "title": "Les Incoiffables   Squaresounds 2013 OPEN MIC",
+          "duration": 455,
+          "url": "https://www.youtube.com/watch?v=4-r34FQq2VM",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        },
+        {
+          "id": "-qTaREgl-ZU",
+          "title": "Calavera   Squaresounds 2013 OPEN MIC",
+          "duration": 443,
+          "url": "https://www.youtube.com/watch?v=-qTaREgl-ZU",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        },
+        {
+          "id": "JWRmdKvVS5U",
+          "title": "Augmented Reality FPV | WILD Demo @ Switch On Demoscene",
+          "duration": 71,
+          "url": "https://www.youtube.com/watch?v=JWRmdKvVS5U",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "demoparty"
+        }
+      ]
+    },
+    {
+      "id": "live-av",
+      "label": "Live AV / VJ",
+      "count": 11,
+      "videos": [
+        {
+          "id": "-uJ3h9dziAo",
+          "title": "Calavera live at interupt festival 2026",
+          "duration": 27,
+          "url": "https://www.youtube.com/watch?v=-uJ3h9dziAo",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "6z2vR4jrpEM",
+          "title": "Mixed Reality VR JAM [Move Music + Drum Computer] \\ 12Dec22",
+          "duration": 240,
+          "url": "https://www.youtube.com/watch?v=6z2vR4jrpEM",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "H6sJ4Ujk8jg",
+          "title": "Short clip from Clan Analogues: MicroVirtuosity",
+          "duration": 60,
+          "url": "https://www.youtube.com/watch?v=H6sJ4Ujk8jg",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "HayxD-O0hLo",
+          "title": "MoveMusic beta - VR MIDI Control GLSL Shader Camera Test",
+          "duration": 39,
+          "url": "https://www.youtube.com/watch?v=HayxD-O0hLo",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "E0kRS2WfUc8",
+          "title": "Liquid Faction 2022 - Sorenfyl  @ Bar 303",
+          "duration": 3147,
+          "url": "https://www.youtube.com/watch?v=E0kRS2WfUc8",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "_r3JFq23iy4",
+          "title": "Tom Hall : Lysdexic vs aday @ HorseBazaar",
+          "duration": 161,
+          "url": "https://www.youtube.com/watch?v=_r3JFq23iy4",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "BVWcU0sjHMw",
+          "title": "3l3c7r0n1c4 mu51c - 63m1n1/5ub574nc3",
+          "duration": 313,
+          "url": "https://www.youtube.com/watch?v=BVWcU0sjHMw",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "czmnjaFOuvo",
+          "title": "Twitch VJ Test - Track: \"Lets Love Lain - Aday\"",
+          "duration": 483,
+          "url": "https://www.youtube.com/watch?v=czmnjaFOuvo",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "S4LyeXOeTpc",
+          "title": "Achronic Projections (Projection Mapping Test)",
+          "duration": 204,
+          "url": "https://www.youtube.com/watch?v=S4LyeXOeTpc",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "yx54I3O7XQM",
+          "title": "Nuclear Shader Test",
+          "duration": 161,
+          "url": "https://www.youtube.com/watch?v=yx54I3O7XQM",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        },
+        {
+          "id": "ZiVYT23rvz0",
+          "title": "Komputer Problems (Live Take)",
+          "duration": 433,
+          "url": "https://www.youtube.com/watch?v=ZiVYT23rvz0",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "live-av"
+        }
+      ]
+    },
+    {
+      "id": "weeklybeats",
+      "label": "WeeklyBeats / Chiptune",
+      "count": 8,
+      "videos": [
+        {
+          "id": "LbwmJNDr5LM",
+          "title": "WB26-W01 - Cubic Waveform",
+          "duration": 343,
+          "url": "https://www.youtube.com/watch?v=LbwmJNDr5LM",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        },
+        {
+          "id": "bDQonlMXwhg",
+          "title": "Shoutouts to gesceap (weeklybeats #05 2022)",
+          "duration": 138,
+          "url": "https://www.youtube.com/watch?v=bDQonlMXwhg",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        },
+        {
+          "id": "pFDjgMN_vow",
+          "title": "IOS JAM for Weeklybeats2022 - Week3",
+          "duration": 285,
+          "url": "https://www.youtube.com/watch?v=pFDjgMN_vow",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        },
+        {
+          "id": "bUvDrm3iCH0",
+          "title": "Aday \\ 2022 Weeklybeats - Week2 [PlinkBeats]",
+          "duration": 256,
+          "url": "https://www.youtube.com/watch?v=bUvDrm3iCH0",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        },
+        {
+          "id": "0DAAadvnH_4",
+          "title": "The Dreamurium - aday [Weeklybeats 2020 - Week1]",
+          "duration": 257,
+          "url": "https://www.youtube.com/watch?v=0DAAadvnH_4",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        },
+        {
+          "id": "APLkQcoBrnc",
+          "title": "The Daw(Pocalypse) Exposition #Weeklybeats 2016 Week5",
+          "duration": 357,
+          "url": "https://www.youtube.com/watch?v=APLkQcoBrnc",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        },
+        {
+          "id": "Bz1QO2YoDps",
+          "title": "Maenads K Hole #Weeklybeats [2016]",
+          "duration": 205,
+          "url": "https://www.youtube.com/watch?v=Bz1QO2YoDps",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        },
+        {
+          "id": "p67agG4LneQ",
+          "title": "Triangle Proliferation [Weeklybeats/Demoscene track]",
+          "duration": 229,
+          "url": "https://www.youtube.com/watch?v=p67agG4LneQ",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "weeklybeats"
+        }
+      ]
+    },
+    {
+      "id": "archive",
+      "label": "Archive / Other",
+      "count": 7,
+      "videos": [
+        {
+          "id": "2vEEz7kvcuY",
+          "title": "Cafe Ga Dong Duong - No. 116 Rail Crossing (Vietnam/Hanoi)",
+          "duration": 79,
+          "url": "https://www.youtube.com/watch?v=2vEEz7kvcuY",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "archive"
+        },
+        {
+          "id": "QkGJDC_wi4o",
+          "title": "20160127 145804",
+          "duration": 451,
+          "url": "https://www.youtube.com/watch?v=QkGJDC_wi4o",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "archive"
+        },
+        {
+          "id": "SPI4tgezh7E",
+          "title": "The Winning Edge Seminar (90s Australian Business Seminar - VHS Rip)",
+          "duration": 10091,
+          "url": "https://www.youtube.com/watch?v=SPI4tgezh7E",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "archive"
+        },
+        {
+          "id": "LLZgYa9I8bI",
+          "title": "18/10/2020 - A walk in the park",
+          "duration": 425,
+          "url": "https://www.youtube.com/watch?v=LLZgYa9I8bI",
+          "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+          "channel_handle": "@aday_net_au",
+          "channel_key": "aday_net_au",
+          "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
+          "section": "archive"
+        },
+        {
+          "id": "dH7O4fNh6dM",
+          "title": "Apa yang Terjadi jika Lautan Mengungkap Rahasianya?",
+          "duration": 531,
+          "url": "https://www.youtube.com/watch?v=dH7O4fNh6dM",
+          "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
+          "channel_handle": "@aday1",
+          "channel_key": "aday1",
+          "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg",
+          "section": "archive"
+        },
+        {
+          "id": "Knp5z3xNkQw",
+          "title": "Jika Kamu Dapat Memecahkan 15 Teka-teki, Kamu Lebih Pintar dari Sherlock",
+          "duration": 326,
+          "url": "https://www.youtube.com/watch?v=Knp5z3xNkQw",
+          "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
+          "channel_handle": "@aday1",
+          "channel_key": "aday1",
+          "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg",
+          "section": "archive"
+        },
+        {
+          "id": "AzvLZjdvSw0",
+          "title": "10 Fakta Unik di Seluruh Dunia - Tahukah Kamu | SISI CAHAYA",
+          "duration": 54,
+          "url": "https://www.youtube.com/watch?v=AzvLZjdvSw0",
+          "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
+          "channel_handle": "@aday1",
+          "channel_key": "aday1",
+          "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg",
+          "section": "archive"
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "id": "-uJ3h9dziAo",
+      "title": "Calavera live at interupt festival 2026",
+      "duration": 27,
+      "url": "https://www.youtube.com/watch?v=-uJ3h9dziAo",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "LbwmJNDr5LM",
+      "title": "WB26-W01 - Cubic Waveform",
+      "duration": 343,
+      "url": "https://www.youtube.com/watch?v=LbwmJNDr5LM",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "dIVZA1-AjwI",
+      "title": "Noojee Trestle Bridge vs CetusPro [FPV]",
+      "duration": 235,
+      "url": "https://www.youtube.com/watch?v=dIVZA1-AjwI",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "2vEEz7kvcuY",
+      "title": "Cafe Ga Dong Duong - No. 116 Rail Crossing (Vietnam/Hanoi)",
+      "duration": 79,
+      "url": "https://www.youtube.com/watch?v=2vEEz7kvcuY",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "PiYwKYyEgFc",
+      "title": "FPV at Werribee Mansions - 37.93537737615491,144.6700105488422",
+      "duration": 425,
+      "url": "https://www.youtube.com/watch?v=PiYwKYyEgFc",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "koMAxGRychQ",
+      "title": "FPV -37.72293089740226, 144.81983120590834",
+      "duration": 74,
+      "url": "https://www.youtube.com/watch?v=koMAxGRychQ",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "6z2vR4jrpEM",
+      "title": "Mixed Reality VR JAM [Move Music + Drum Computer] \\ 12Dec22",
+      "duration": 240,
+      "url": "https://www.youtube.com/watch?v=6z2vR4jrpEM",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "d7HQthWB-so",
+      "title": "Found FPV Footage from the DVR! [8/22]",
+      "duration": 320,
+      "url": "https://www.youtube.com/watch?v=d7HQthWB-so",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "H6sJ4Ujk8jg",
+      "title": "Short clip from Clan Analogues: MicroVirtuosity",
+      "duration": 60,
+      "url": "https://www.youtube.com/watch?v=H6sJ4Ujk8jg",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "HayxD-O0hLo",
+      "title": "MoveMusic beta - VR MIDI Control GLSL Shader Camera Test",
+      "duration": 39,
+      "url": "https://www.youtube.com/watch?v=HayxD-O0hLo",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "LBvqUfVGfcE",
+      "title": "GPS Failsafe (Successful Rescue!) :D",
+      "duration": 49,
+      "url": "https://www.youtube.com/watch?v=LBvqUfVGfcE",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "E0kRS2WfUc8",
+      "title": "Liquid Faction 2022 - Sorenfyl  @ Bar 303",
+      "duration": 3147,
+      "url": "https://www.youtube.com/watch?v=E0kRS2WfUc8",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "bwqCQLygh0k",
+      "title": "[Ragnarok] GPS Rescue Testflight #1",
+      "duration": 379,
+      "url": "https://www.youtube.com/watch?v=bwqCQLygh0k",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "bDQonlMXwhg",
+      "title": "Shoutouts to gesceap (weeklybeats #05 2022)",
+      "duration": 138,
+      "url": "https://www.youtube.com/watch?v=bDQonlMXwhg",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "uU6xH-aNlbo",
+      "title": "Maiden Flight - Axis Flying Air Force Pro (octa!)",
+      "duration": 510,
+      "url": "https://www.youtube.com/watch?v=uU6xH-aNlbo",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "pFDjgMN_vow",
+      "title": "IOS JAM for Weeklybeats2022 - Week3",
+      "duration": 285,
+      "url": "https://www.youtube.com/watch?v=pFDjgMN_vow",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "bUvDrm3iCH0",
+      "title": "Aday \\ 2022 Weeklybeats - Week2 [PlinkBeats]",
+      "duration": 256,
+      "url": "https://www.youtube.com/watch?v=bUvDrm3iCH0",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "P3uXksskaNY",
+      "title": "Chasing Wings! - DJIG0000",
+      "duration": 243,
+      "url": "https://www.youtube.com/watch?v=P3uXksskaNY",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "QkGJDC_wi4o",
+      "title": "20160127 145804",
+      "duration": 451,
+      "url": "https://www.youtube.com/watch?v=QkGJDC_wi4o",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "82oTClkXmls",
+      "title": "FPV Out West Ft. Kayboku + BMX Rover",
+      "duration": 423,
+      "url": "https://www.youtube.com/watch?v=82oTClkXmls",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "SPI4tgezh7E",
+      "title": "The Winning Edge Seminar (90s Australian Business Seminar - VHS Rip)",
+      "duration": 10091,
+      "url": "https://www.youtube.com/watch?v=SPI4tgezh7E",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "3P2zB3rgaOE",
+      "title": "-37.777239,144.859237 FPV",
+      "duration": 242,
+      "url": "https://www.youtube.com/watch?v=3P2zB3rgaOE",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "IKricvhCqP0",
+      "title": "PicnicFPV ft Amy",
+      "duration": 462,
+      "url": "https://www.youtube.com/watch?v=IKricvhCqP0",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "LLZgYa9I8bI",
+      "title": "18/10/2020 - A walk in the park",
+      "duration": 425,
+      "url": "https://www.youtube.com/watch?v=LLZgYa9I8bI",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "KkdTGQacTWE",
+      "title": "Parangular [FPV]",
+      "duration": 274,
+      "url": "https://www.youtube.com/watch?v=KkdTGQacTWE",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "YdeO3BFDeGs",
+      "title": "FPV Pipedream",
+      "duration": 388,
+      "url": "https://www.youtube.com/watch?v=YdeO3BFDeGs",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "yz8RhXUpnzE",
+      "title": "FPV DVR footage with Falcore and Interceptor",
+      "duration": 1072,
+      "url": "https://www.youtube.com/watch?v=yz8RhXUpnzE",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "V7SmMC60SmM",
+      "title": "Falcore, the Tiny Hawk 2 - FPV cyberpunk pilot FPV practice",
+      "duration": 528,
+      "url": "https://www.youtube.com/watch?v=V7SmMC60SmM",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "Qj0lXpJcohY",
+      "title": "Day 1 - Maiden Flights with Falcore",
+      "duration": 629,
+      "url": "https://www.youtube.com/watch?v=Qj0lXpJcohY",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "p0zdAifH4Zs",
+      "title": "[Excerpt from PreJam] Drone Lockdown Stream with WiLL-i-ROMS",
+      "duration": 362,
+      "url": "https://www.youtube.com/watch?v=p0zdAifH4Zs",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "0DAAadvnH_4",
+      "title": "The Dreamurium - aday [Weeklybeats 2020 - Week1]",
+      "duration": 257,
+      "url": "https://www.youtube.com/watch?v=0DAAadvnH_4",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "Qfu7KYKZq4M",
+      "title": "DEMOSCENE Panel | Recorded at SIGGRAPH ASIA 2019 [1080p]",
+      "duration": 6252,
+      "url": "https://www.youtube.com/watch?v=Qfu7KYKZq4M",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "_r3JFq23iy4",
+      "title": "Tom Hall : Lysdexic vs aday @ HorseBazaar",
+      "duration": 161,
+      "url": "https://www.youtube.com/watch?v=_r3JFq23iy4",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "BVWcU0sjHMw",
+      "title": "3l3c7r0n1c4 mu51c - 63m1n1/5ub574nc3",
+      "duration": 313,
+      "url": "https://www.youtube.com/watch?v=BVWcU0sjHMw",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "czmnjaFOuvo",
+      "title": "Twitch VJ Test - Track: \"Lets Love Lain - Aday\"",
+      "duration": 483,
+      "url": "https://www.youtube.com/watch?v=czmnjaFOuvo",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "S4LyeXOeTpc",
+      "title": "Achronic Projections (Projection Mapping Test)",
+      "duration": 204,
+      "url": "https://www.youtube.com/watch?v=S4LyeXOeTpc",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "yx54I3O7XQM",
+      "title": "Nuclear Shader Test",
+      "duration": 161,
+      "url": "https://www.youtube.com/watch?v=yx54I3O7XQM",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "APLkQcoBrnc",
+      "title": "The Daw(Pocalypse) Exposition #Weeklybeats 2016 Week5",
+      "duration": 357,
+      "url": "https://www.youtube.com/watch?v=APLkQcoBrnc",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "6lyFyNdVLPU",
+      "title": "Retrovertigo and Plexy   Killing off Pop   Squaresounds 2013 OPEN MIC",
+      "duration": 283,
+      "url": "https://www.youtube.com/watch?v=6lyFyNdVLPU",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "ouJxdyGYJLM",
+      "title": "Duck and Chicken   Squaresounds 2013 OPEN MIC",
+      "duration": 492,
+      "url": "https://www.youtube.com/watch?v=ouJxdyGYJLM",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "kf_qd_guqWU",
+      "title": "Biko   Squaresounds 2013 OPEN MIC",
+      "duration": 429,
+      "url": "https://www.youtube.com/watch?v=kf_qd_guqWU",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "_oY4iMoXocs",
+      "title": "Alex Lane   Squaresounds 2013 OPEN MIC",
+      "duration": 304,
+      "url": "https://www.youtube.com/watch?v=_oY4iMoXocs",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "4-r34FQq2VM",
+      "title": "Les Incoiffables   Squaresounds 2013 OPEN MIC",
+      "duration": 455,
+      "url": "https://www.youtube.com/watch?v=4-r34FQq2VM",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "-qTaREgl-ZU",
+      "title": "Calavera   Squaresounds 2013 OPEN MIC",
+      "duration": 443,
+      "url": "https://www.youtube.com/watch?v=-qTaREgl-ZU",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "Bz1QO2YoDps",
+      "title": "Maenads K Hole #Weeklybeats [2016]",
+      "duration": 205,
+      "url": "https://www.youtube.com/watch?v=Bz1QO2YoDps",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "p67agG4LneQ",
+      "title": "Triangle Proliferation [Weeklybeats/Demoscene track]",
+      "duration": 229,
+      "url": "https://www.youtube.com/watch?v=p67agG4LneQ",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "JWRmdKvVS5U",
+      "title": "Augmented Reality FPV | WILD Demo @ Switch On Demoscene",
+      "duration": 71,
+      "url": "https://www.youtube.com/watch?v=JWRmdKvVS5U",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "ZiVYT23rvz0",
+      "title": "Komputer Problems (Live Take)",
+      "duration": 433,
+      "url": "https://www.youtube.com/watch?v=ZiVYT23rvz0",
+      "channel_id": "UCdKgN2c92DhDON71FBwGq4g",
+      "channel_handle": "@aday_net_au",
+      "channel_key": "aday_net_au",
+      "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
+    },
+    {
+      "id": "dH7O4fNh6dM",
+      "title": "Apa yang Terjadi jika Lautan Mengungkap Rahasianya?",
+      "duration": 531,
+      "url": "https://www.youtube.com/watch?v=dH7O4fNh6dM",
+      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
+      "channel_handle": "@aday1",
+      "channel_key": "aday1",
+      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
+    },
+    {
+      "id": "Knp5z3xNkQw",
+      "title": "Jika Kamu Dapat Memecahkan 15 Teka-teki, Kamu Lebih Pintar dari Sherlock",
+      "duration": 326,
+      "url": "https://www.youtube.com/watch?v=Knp5z3xNkQw",
+      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
+      "channel_handle": "@aday1",
+      "channel_key": "aday1",
+      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
+    },
+    {
+      "id": "AzvLZjdvSw0",
+      "title": "10 Fakta Unik di Seluruh Dunia - Tahukah Kamu | SISI CAHAYA",
+      "duration": 54,
+      "url": "https://www.youtube.com/watch?v=AzvLZjdvSw0",
+      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
+      "channel_handle": "@aday1",
+      "channel_key": "aday1",
+      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
+    }
+  ]
+}

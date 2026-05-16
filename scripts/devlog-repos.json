@@ -1,0 +1,38 @@
+{
+  "trains": [
+    {
+      "id": "macroverse",
+      "title": "Macroverse",
+      "tagline": "Browser shader engine born from MacroVerse at Melbourne Fringe — universe-scale visuals in the tab.",
+      "localPath": "../macroverse.aday.net.au",
+      "github": "aday1/macroverse.aday.net.au",
+      "liveUrl": "https://macroverse.aday.net.au",
+      "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
+      "timelineSource": "devlog-macroverse",
+      "maxCommits": 44
+    },
+    {
+      "id": "artbastard",
+      "title": "ArtBastard",
+      "tagline": "Le Créateur des Lumières and the secret society of Light Jockeys — DMX/OSC/MIDI wrangling as high art.",
+      "localPath": "../artbastard.aday.net.au",
+      "github": "aday1/artbastard.aday.net.au",
+      "liveUrl": "https://artbastard.aday.net.au",
+      "previewImage": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png",
+      "timelineSource": "devlog-artbastard",
+      "maxCommits": 120,
+      "loreFile": "DOCS/HISTORY.md"
+    }
+  ],
+  "optionalLocalRepos": [
+    {
+      "id": "artbastard-dmx512",
+      "title": "ArtBastard-DMX512",
+      "localPath": "../ArtBastard-DMX512",
+      "github": "aday1/ArtBastard-DMX512",
+      "parentTrain": "artbastard",
+      "timelineSource": "devlog-artbastard",
+      "maxCommits": 40
+    }
+  ]
+}

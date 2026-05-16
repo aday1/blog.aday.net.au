@@ -1,7 +1,466 @@
 {
-  "generated_at": "2026-05-16T10:42:33.830Z",
-  "count": 50,
+  "generated_at": "2026-05-16T12:34:10.603Z",
+  "count": 480,
   "entries": [
+    {
+      "date": "2010-01-01",
+      "title": "Calavera live at interupt festival 2026",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=-uJ3h9dziAo",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "WB26-W01 - Cubic Waveform",
+      "desc": "weeklybeats // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=LbwmJNDr5LM",
+      "source": "youtube",
+      "category": "weeklybeats",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Noojee Trestle Bridge vs CetusPro [FPV]",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=dIVZA1-AjwI",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Cafe Ga Dong Duong - No. 116 Rail Crossing (Vietnam/Hanoi)",
+      "desc": "archive // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=2vEEz7kvcuY",
+      "source": "youtube",
+      "category": "archive",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "FPV at Werribee Mansions - 37.93537737615491,144.6700105488422",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=PiYwKYyEgFc",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "FPV -37.72293089740226, 144.81983120590834",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=koMAxGRychQ",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Mixed Reality VR JAM [Move Music + Drum Computer] \\ 12Dec22",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=6z2vR4jrpEM",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Found FPV Footage from the DVR! [8/22]",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=d7HQthWB-so",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Short clip from Clan Analogues: MicroVirtuosity",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=H6sJ4Ujk8jg",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "MoveMusic beta - VR MIDI Control GLSL Shader Camera Test",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=HayxD-O0hLo",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "GPS Failsafe (Successful Rescue!) :D",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=LBvqUfVGfcE",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Liquid Faction 2022 - Sorenfyl  @ Bar 303",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=E0kRS2WfUc8",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "[Ragnarok] GPS Rescue Testflight #1",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=bwqCQLygh0k",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Shoutouts to gesceap (weeklybeats #05 2022)",
+      "desc": "weeklybeats // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=bDQonlMXwhg",
+      "source": "youtube",
+      "category": "weeklybeats",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Maiden Flight - Axis Flying Air Force Pro (octa!)",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=uU6xH-aNlbo",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "IOS JAM for Weeklybeats2022 - Week3",
+      "desc": "weeklybeats // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=pFDjgMN_vow",
+      "source": "youtube",
+      "category": "weeklybeats",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Aday \\ 2022 Weeklybeats - Week2 [PlinkBeats]",
+      "desc": "weeklybeats // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=bUvDrm3iCH0",
+      "source": "youtube",
+      "category": "weeklybeats",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Chasing Wings! - DJIG0000",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=P3uXksskaNY",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "20160127 145804",
+      "desc": "archive // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=QkGJDC_wi4o",
+      "source": "youtube",
+      "category": "archive",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "FPV Out West Ft. Kayboku + BMX Rover",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=82oTClkXmls",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "The Winning Edge Seminar (90s Australian Business Seminar - VHS Rip)",
+      "desc": "archive // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=SPI4tgezh7E",
+      "source": "youtube",
+      "category": "archive",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "-37.777239,144.859237 FPV",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=3P2zB3rgaOE",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "PicnicFPV ft Amy",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=IKricvhCqP0",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "18/10/2020 - A walk in the park",
+      "desc": "archive // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=LLZgYa9I8bI",
+      "source": "youtube",
+      "category": "archive",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Parangular [FPV]",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=KkdTGQacTWE",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "FPV Pipedream",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=YdeO3BFDeGs",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "FPV DVR footage with Falcore and Interceptor",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=yz8RhXUpnzE",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Falcore, the Tiny Hawk 2 - FPV cyberpunk pilot FPV practice",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=V7SmMC60SmM",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Day 1 - Maiden Flights with Falcore",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=Qj0lXpJcohY",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "[Excerpt from PreJam] Drone Lockdown Stream with WiLL-i-ROMS",
+      "desc": "drone // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=p0zdAifH4Zs",
+      "source": "youtube",
+      "category": "drone",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "The Dreamurium - aday [Weeklybeats 2020 - Week1]",
+      "desc": "weeklybeats // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=0DAAadvnH_4",
+      "source": "youtube",
+      "category": "weeklybeats",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "DEMOSCENE Panel | Recorded at SIGGRAPH ASIA 2019 [1080p]",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=Qfu7KYKZq4M",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Tom Hall : Lysdexic vs aday @ HorseBazaar",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=_r3JFq23iy4",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "3l3c7r0n1c4 mu51c - 63m1n1/5ub574nc3",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=BVWcU0sjHMw",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Twitch VJ Test - Track: \"Lets Love Lain - Aday\"",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=czmnjaFOuvo",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Achronic Projections (Projection Mapping Test)",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=S4LyeXOeTpc",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Nuclear Shader Test",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=yx54I3O7XQM",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "The Daw(Pocalypse) Exposition #Weeklybeats 2016 Week5",
+      "desc": "weeklybeats // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=APLkQcoBrnc",
+      "source": "youtube",
+      "category": "weeklybeats",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Retrovertigo and Plexy   Killing off Pop   Squaresounds 2013 OPEN MIC",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=6lyFyNdVLPU",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Duck and Chicken   Squaresounds 2013 OPEN MIC",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=ouJxdyGYJLM",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Biko   Squaresounds 2013 OPEN MIC",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=kf_qd_guqWU",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Alex Lane   Squaresounds 2013 OPEN MIC",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=_oY4iMoXocs",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Les Incoiffables   Squaresounds 2013 OPEN MIC",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=4-r34FQq2VM",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Calavera   Squaresounds 2013 OPEN MIC",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=-qTaREgl-ZU",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Maenads K Hole #Weeklybeats [2016]",
+      "desc": "weeklybeats // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=Bz1QO2YoDps",
+      "source": "youtube",
+      "category": "weeklybeats",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Triangle Proliferation [Weeklybeats/Demoscene track]",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=p67agG4LneQ",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Augmented Reality FPV | WILD Demo @ Switch On Demoscene",
+      "desc": "demoparty // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=JWRmdKvVS5U",
+      "source": "youtube",
+      "category": "demoparty",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Komputer Problems (Live Take)",
+      "desc": "live-av // @aday_net_au",
+      "url": "https://www.youtube.com/watch?v=ZiVYT23rvz0",
+      "source": "youtube",
+      "category": "live-av",
+      "channel_handle": "@aday_net_au"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Apa yang Terjadi jika Lautan Mengungkap Rahasianya?",
+      "desc": "archive // @aday1",
+      "url": "https://www.youtube.com/watch?v=dH7O4fNh6dM",
+      "source": "youtube",
+      "category": "archive",
+      "channel_handle": "@aday1"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "Jika Kamu Dapat Memecahkan 15 Teka-teki, Kamu Lebih Pintar dari Sherlock",
+      "desc": "archive // @aday1",
+      "url": "https://www.youtube.com/watch?v=Knp5z3xNkQw",
+      "source": "youtube",
+      "category": "archive",
+      "channel_handle": "@aday1"
+    },
+    {
+      "date": "2010-01-01",
+      "title": "10 Fakta Unik di Seluruh Dunia - Tahukah Kamu | SISI CAHAYA",
+      "desc": "archive // @aday1",
+      "url": "https://www.youtube.com/watch?v=AzvLZjdvSw0",
+      "source": "youtube",
+      "category": "archive",
+      "channel_handle": "@aday1"
+    },
     {
       "date": "2012-01-01",
       "title": "SoundCloud profile signal",
@@ -24,6 +483,150 @@
       "source": "vimeo"
     },
     {
+      "date": "2012-04-02",
+      "title": "Camping Space Bongos",
+      "desc": "WeeklyBeats 2012 week 14",
+      "url": "https://weeklybeats.com/aday/music/aday---camping-space-bongos",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-04-16",
+      "title": "Rendered for Headphones",
+      "desc": "WeeklyBeats 2012 week 16",
+      "url": "https://weeklybeats.com/aday/music/rendered-for-headphones",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-04-30",
+      "title": "Progressive-dirty-electrotrain!",
+      "desc": "WeeklyBeats 2012 week 18",
+      "url": "https://weeklybeats.com/aday/music/progressive-dirty-electrotrain!",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-06-04",
+      "title": "Musical Appfinity",
+      "desc": "WeeklyBeats 2012 week 23",
+      "url": "https://weeklybeats.com/aday/music/musical-appfinity-flashback2012-weekend",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-07-02",
+      "title": "6 month neurosis problem solver",
+      "desc": "WeeklyBeats 2012 week 27",
+      "url": "https://weeklybeats.com/aday/music/aday---6-month-neurosis-problem-solver---wb27-2012",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-07-09",
+      "title": "SynthAnteMeridiem synthesizer jam for brekky",
+      "desc": "WeeklyBeats 2012 week 28",
+      "url": "https://weeklybeats.com/aday/music/synthantemeridiem-synthesizer-jam-for-brekky",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-07-16",
+      "title": "2012am (arpeggiated sequencers and you)",
+      "desc": "WeeklyBeats 2012 week 29",
+      "url": "https://weeklybeats.com/aday/music/2012am-arpeggiated-sequencers--and-you",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-07-23",
+      "title": "Chillstep?",
+      "desc": "WeeklyBeats 2012 week 30",
+      "url": "https://weeklybeats.com/aday/music/chillstep",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-07-30",
+      "title": "Wake up and make BRKFast (LSDJ) vs (ESX)",
+      "desc": "WeeklyBeats 2012 week 31",
+      "url": "https://weeklybeats.com/aday/music/wake-up-and-make-brkfast-lsdj",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-08-06",
+      "title": "the fog - ambient noise attack",
+      "desc": "WeeklyBeats 2012 week 32",
+      "url": "https://weeklybeats.com/aday/music/the-fog---ambient-noise-attack",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-08-20",
+      "title": "2 Minute Korg-ESX Breakout Panic Attack Mode ENGAGED!",
+      "desc": "WeeklyBeats 2012 week 34",
+      "url": "https://weeklybeats.com/aday/music/made-in-5-minutes--korg-esx",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-08-27",
+      "title": "Sleep Dep Organ Sunrise",
+      "desc": "WeeklyBeats 2012 week 35",
+      "url": "https://weeklybeats.com/aday/music/sleep-dep-organ-sunrise",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-09-03",
+      "title": "Destructed Beats",
+      "desc": "WeeklyBeats 2012 week 36",
+      "url": "https://weeklybeats.com/aday/music/destructed-beats",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-09-10",
+      "title": "Virtual Analogue Beatroots",
+      "desc": "WeeklyBeats 2012 week 37",
+      "url": "https://weeklybeats.com/aday/music/virtual-analogue-beatroots",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-09-17",
+      "title": "steam is ruining my life",
+      "desc": "WeeklyBeats 2012 week 38",
+      "url": "https://weeklybeats.com/aday/music/steam-is-ruining-my-life",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-10-29",
+      "title": "Bells and Whistles",
+      "desc": "WeeklyBeats 2012 week 44",
+      "url": "https://weeklybeats.com/aday/music/bells-and-whistles",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
       "date": "2012-11-01",
       "title": "RPi-Sequenced NES",
       "desc": "Demozoo upload node",
@@ -31,11 +634,65 @@
       "source": "demozoo"
     },
     {
+      "date": "2012-11-05",
+      "title": "That's not a beat! That's a tribal spaceship...!",
+      "desc": "WeeklyBeats 2012 week 45",
+      "url": "https://weeklybeats.com/aday/music/thats-not-a-beat!-thats-a-spaceship!",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-11-12",
+      "title": "Syntax Obnoxiouscore",
+      "desc": "WeeklyBeats 2012 week 46",
+      "url": "https://weeklybeats.com/aday/music/syntax-obnoxiouscore",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-11-26",
+      "title": "RaspberryPI powered Simple MIDI Experiments",
+      "desc": "WeeklyBeats 2012 week 48",
+      "url": "https://weeklybeats.com/aday/music/raspberrypi-powered-simple-midi-experiments",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-12-03",
+      "title": "Advance Apocalyptic Australian",
+      "desc": "WeeklyBeats 2012 week 49",
+      "url": "https://weeklybeats.com/aday/music/advance-apocalyptic-australian",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
+      "date": "2012-12-24",
+      "title": "The Mission Objective",
+      "desc": "WeeklyBeats 2012 week 52",
+      "url": "https://weeklybeats.com/aday/music/the-mission-objective",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2012"
+    },
+    {
       "date": "2013-01-01",
       "title": "YouTube channel active",
-      "desc": "Channel timeline begins (public stats source)",
-      "url": "https://www.youtube.com/@aday1",
+      "desc": "Channel timeline begins (@aday_net_au uploads)",
+      "url": "https://www.youtube.com/@aday_net_au",
       "source": "youtube"
+    },
+    {
+      "date": "2013-12-30",
+      "title": "Electrichip",
+      "desc": "WeeklyBeats 2014 week 1",
+      "url": "https://weeklybeats.com/aday/music/electrichip",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
     },
     {
       "date": "2014-01-01",
@@ -45,11 +702,391 @@
       "source": "vimeo"
     },
     {
+      "date": "2014-01-06",
+      "title": "Binaural Percolator (binaural brainwave soundscape)",
+      "desc": "WeeklyBeats 2014 week 2",
+      "url": "https://weeklybeats.com/aday/music/binaural-percolator",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-01-13",
+      "title": "Demon Class Planet",
+      "desc": "WeeklyBeats 2014 week 3",
+      "url": "https://weeklybeats.com/aday/music/aday---demon-class-planet",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-01-20",
+      "title": "Shared Melody Iterations",
+      "desc": "WeeklyBeats 2014 week 4",
+      "url": "https://weeklybeats.com/aday/music/shared-melody-iterations",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-01-27",
+      "title": "dem duty cycles from studio hell (MidiNES)",
+      "desc": "WeeklyBeats 2014 week 5",
+      "url": "https://weeklybeats.com/aday/music/dem-duty-cycles-from-studio-hell-midines",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
       "date": "2014-02-03",
       "title": "EpochJam (PixiTracker)",
       "desc": "With >40 degree days and an on going heatwave in Melbourne, and needing a new pair of headphones (I think I've lost my good ones) - I've decided to go with a nuclear option. So here's a PixiTracker jam track! Cool application by Alexander Zolotov (A.K.A Nightradio) from warmplace.ru Check it -- http://www.warmplace.ru/soft/pixitracker/ Also available on Android (most nightradio software run on multiple platforms) (may run on your toaster!) Yep, Built this simple track in about 2 hours. No post FX on this one, just a simple native jam... because nuclear, because weeklybeats. The video output is also native from the PixiTracker software. / no post fx. Link to piximod file Next week is a colab with Hungee Funk ... My first Weeklybeats Colab for the year! - exciting",
       "url": "https://weeklybeats.com/aday/music/epochjam-pixitracker",
-      "source": "weeklybeats"
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-02-10",
+      "title": "modulate my demise (where's my immune system at)",
+      "desc": "WeeklyBeats 2014 week 7",
+      "url": "https://weeklybeats.com/aday/music/modulate-my-demise-wheres-my-immune-system-at",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-02-17",
+      "title": "Seedy Speedy Stemmy - (HungeeFunk v aday)",
+      "desc": "WeeklyBeats 2014 week 8",
+      "url": "https://weeklybeats.com/aday/music/dac-hungee-v-aday",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-02-24",
+      "title": "____This isn't music___ (texture explore)",
+      "desc": "WeeklyBeats 2014 week 9",
+      "url": "https://weeklybeats.com/aday/music/____-this-isnt-music-___-texture-explore",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-03-03",
+      "title": "Cheap Step Sequencer Transformation Scene",
+      "desc": "WeeklyBeats 2014 week 10",
+      "url": "https://weeklybeats.com/aday/music/step-sequencer-transformation-scene",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-03-10",
+      "title": "Out Of Hand (LSDJ/ESX/REAPER)",
+      "desc": "WeeklyBeats 2014 week 11",
+      "url": "https://weeklybeats.com/aday/music/out-of-hand-lsdj-esx-reaper",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-03-17",
+      "title": "scrutinize (LSDJ)",
+      "desc": "WeeklyBeats 2014 week 12",
+      "url": "https://weeklybeats.com/aday/music/scrutinize-lsdj",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-03-24",
+      "title": "#MISSING_LAPTOPCHARGER_CUZ_SQUARESOUNDS_HAPPEND!!",
+      "desc": "WeeklyBeats 2014 week 13",
+      "url": "https://weeklybeats.com/aday/music/cant_find_laptopchargercuz_squaresounds!",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-03-31",
+      "title": "Emobeats",
+      "desc": "WeeklyBeats 2014 week 14",
+      "url": "https://weeklybeats.com/aday/music/emobeats",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-04-07",
+      "title": "achronic projections (LSDJ) (A/V)",
+      "desc": "WeeklyBeats 2014 week 15",
+      "url": "https://weeklybeats.com/aday/music/achronic-projection",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-04-14",
+      "title": "Traffic Hiphop (Colab)",
+      "desc": "WeeklyBeats 2014 week 16",
+      "url": "https://weeklybeats.com/aday/music/traffic-hiphop-colab",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-04-21",
+      "title": "hell's deployment chorus",
+      "desc": "WeeklyBeats 2014 week 17",
+      "url": "https://weeklybeats.com/aday/music/hells-chorus-piano-demise",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-04-28",
+      "title": "Nitrobreak (NDS Nitrotracker)",
+      "desc": "WeeklyBeats 2014 week 18",
+      "url": "https://weeklybeats.com/aday/music/nitrobreak-nitrotracker",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-05-05",
+      "title": "Depressing Existential Farewell",
+      "desc": "WeeklyBeats 2014 week 19",
+      "url": "https://weeklybeats.com/aday/music/depressing-existential-farewell",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-05-12",
+      "title": "debugging my nightmare",
+      "desc": "WeeklyBeats 2014 week 20",
+      "url": "https://weeklybeats.com/aday/music/debugging-my-nightmare",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-05-19",
+      "title": "Missed my Alarm",
+      "desc": "WeeklyBeats 2014 week 21",
+      "url": "https://weeklybeats.com/aday/music/missed-my-alarm",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-05-26",
+      "title": "Nighttime Organ Dream Rave (SleepDep Mix!)",
+      "desc": "WeeklyBeats 2014 week 22",
+      "url": "https://weeklybeats.com/aday/music/nighttime-organ-dream-rave",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-06-02",
+      "title": "BackslashBackslashFailed",
+      "desc": "WeeklyBeats 2014 week 23",
+      "url": "https://weeklybeats.com/aday/music/backslashbackslash",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-06-09",
+      "title": "Exit Loop",
+      "desc": "WeeklyBeats 2014 week 24",
+      "url": "https://weeklybeats.com/aday/music/exit-loop",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-06-16",
+      "title": "Subjected to Drones all week.....",
+      "desc": "WeeklyBeats 2014 week 25",
+      "url": "https://weeklybeats.com/aday/music/subjected-to-drones-all-week",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-06-23",
+      "title": "Broken Dreams",
+      "desc": "WeeklyBeats 2014 week 26",
+      "url": "https://weeklybeats.com/aday/music/broken-dreams",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-06-30",
+      "title": "My first Fract OSC Track! [Raw Fract OSC]",
+      "desc": "WeeklyBeats 2014 week 27",
+      "url": "https://weeklybeats.com/aday/music/my-first-fract-osc-track!-[raw-fract-osc]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-07-07",
+      "title": "Lords of Grunge [Psytrance]",
+      "desc": "WeeklyBeats 2014 week 28",
+      "url": "https://weeklybeats.com/aday/music/lords-of-grunge-[psytrance]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-07-14",
+      "title": "LTC1799 Test (LSDJ) (LTC1799)",
+      "desc": "WeeklyBeats 2014 week 29",
+      "url": "https://weeklybeats.com/aday/music/ltc1799-test",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-07-21",
+      "title": "Dungeon Crawler (LSDJ)",
+      "desc": "WeeklyBeats 2014 week 30",
+      "url": "https://weeklybeats.com/aday/music/sinister-slumbers-lsdj",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-07-28",
+      "title": "Psychostimulant (LSDJ+Everything)",
+      "desc": "WeeklyBeats 2014 week 31",
+      "url": "https://weeklybeats.com/aday/music/psychostimulant",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-08-04",
+      "title": "gabberhatenoise (LSDJ+Renoise)",
+      "desc": "WeeklyBeats 2014 week 32",
+      "url": "https://weeklybeats.com/aday/music/gabberhatenoise-lsdjrenoise",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-08-11",
+      "title": "weeklyambience",
+      "desc": "WeeklyBeats 2014 week 33",
+      "url": "https://weeklybeats.com/aday/music/weeklyambience",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-08-18",
+      "title": "The-AfterLife-Raves-AfterParty",
+      "desc": "WeeklyBeats 2014 week 34",
+      "url": "https://weeklybeats.com/aday/music/week34---beatsurvivoroftheraptures",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-08-25",
+      "title": "ACCEPTED REALTY [accepted as Fract] ~ [FractOSC]",
+      "desc": "WeeklyBeats 2014 week 35",
+      "url": "https://weeklybeats.com/aday/music/accepted-reality",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-09-01",
+      "title": "Wyldrose [LSDJ]",
+      "desc": "WeeklyBeats 2014 week 36",
+      "url": "https://weeklybeats.com/aday/music/wyldrose-[lsdj]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-09-08",
+      "title": "Untitled Throwaway #? [Korg ESX vs LSDJ]",
+      "desc": "WeeklyBeats 2014 week 37",
+      "url": "https://weeklybeats.com/aday/music/weeklythrowawaytrack-915930-[esx-vs-lsdj]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-09-15",
+      "title": "lsdj track pulverized into tiny little bits",
+      "desc": "WeeklyBeats 2014 week 38",
+      "url": "https://weeklybeats.com/aday/music/lsdj-track-pulverized-into-tiny-little-bits",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-09-22",
+      "title": "Envelope Automation Abuse [LSDJ]",
+      "desc": "WeeklyBeats 2014 week 39",
+      "url": "https://weeklybeats.com/aday/music/automation-envelope-abuse-[lsdj]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-09-29",
+      "title": "GABBER DIVORSE PARTY - [Live Take]",
+      "desc": "WeeklyBeats 2014 week 40",
+      "url": "https://weeklybeats.com/aday/music/gabberdivorseparty-[skip-this-to-continue]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-10-06",
+      "title": "Surviving Breath (Pixitracker)",
+      "desc": "WeeklyBeats 2014 week 41",
+      "url": "https://weeklybeats.com/aday/music/surviving-breath-pixitracker",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-10-13",
+      "title": "Untitled - Nitrotracker vs ESX",
+      "desc": "WeeklyBeats 2014 week 42",
+      "url": "https://weeklybeats.com/aday/music/untitled---nitrotracker-vs-esx",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-10-20",
+      "title": "-.-",
+      "desc": "WeeklyBeats 2014 week 43",
+      "url": "https://weeklybeats.com/aday/music/---2",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
+    },
+    {
+      "date": "2014-11-03",
+      "title": "Schedule I",
+      "desc": "WeeklyBeats 2014 week 45",
+      "url": "https://weeklybeats.com/aday/music/schedule-i",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2014"
     },
     {
       "date": "2015-06-19",
@@ -66,11 +1103,463 @@
       "source": "github"
     },
     {
+      "date": "2016-01-04",
+      "title": "Triangle Proliferation",
+      "desc": "WeeklyBeats 2016 week 1",
+      "url": "https://weeklybeats.com/aday/music/triangle-proliferation",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-01-11",
+      "title": "Maenads K-Hole",
+      "desc": "WeeklyBeats 2016 week 2",
+      "url": "https://weeklybeats.com/aday/music/maenads-k-hole",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-01-18",
+      "title": "MidiMESS (MidiNES) [live]",
+      "desc": "WeeklyBeats 2016 week 3",
+      "url": "https://weeklybeats.com/aday/music/midimess-midines",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
       "date": "2016-01-25",
       "title": "Desktop\\pixitracker_1bit\\2016-02-01 09-44.piximod",
       "desc": "*shrugs* Post FX in audacity Should have started earlier but it's been a busy week.. Sus out http://www.warmplace.ru/soft/pixitracker/ (I used 1bit)",
       "url": "https://weeklybeats.com/aday/music/cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod",
-      "source": "weeklybeats"
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-02-01",
+      "title": "The Dawpocalypse Exposition",
+      "desc": "WeeklyBeats 2016 week 5",
+      "url": "https://weeklybeats.com/aday/music/[the-dawpocalypse-exposition]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-02-15",
+      "title": "PixiCommute",
+      "desc": "WeeklyBeats 2016 week 7",
+      "url": "https://weeklybeats.com/aday/music/weeklybeats-vs-a-busride",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-02-22",
+      "title": "AntiQualityChiptune",
+      "desc": "WeeklyBeats 2016 week 8",
+      "url": "https://weeklybeats.com/aday/music/antiquality-chiptune",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-02-29",
+      "title": "Chippy Doom (ft. Retrovertigo)",
+      "desc": "WeeklyBeats 2016 week 9",
+      "url": "https://weeklybeats.com/aday/music/chippy-doom-ft-retrovertigo",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-03-07",
+      "title": "...redact",
+      "desc": "WeeklyBeats 2016 week 10",
+      "url": "https://weeklybeats.com/aday/music/18212",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-03-14",
+      "title": "Week11/2016 is this uninspired quick LSDJ/ESX Jam",
+      "desc": "WeeklyBeats 2016 week 11",
+      "url": "https://weeklybeats.com/aday/music/week11-of-2016-was-a-lsdj-vs-esx-jam",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-03-21",
+      "title": "Nuclear Option",
+      "desc": "WeeklyBeats 2016 week 12",
+      "url": "https://weeklybeats.com/aday/music/nuclear-option",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-03-28",
+      "title": "Its a Techno beat + Paul Stretch then a Dubstep beat over it...",
+      "desc": "WeeklyBeats 2016 week 13",
+      "url": "https://weeklybeats.com/aday/music/do-they-know-its-techno-beat-paul-stretch-with-a-dubstep-beat-over-it",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-04-04",
+      "title": "Mr AntiSnooze Button & the HeavyMetalMentalRockout MidiNES Superblaster from earth.",
+      "desc": "WeeklyBeats 2016 week 14",
+      "url": "https://weeklybeats.com/aday/music/snooze-button-nesblast-heavymentalrockout",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-04-11",
+      "title": "Phat Dollops Derivative",
+      "desc": "WeeklyBeats 2016 week 15",
+      "url": "https://weeklybeats.com/aday/music/phat-dollops-derivative",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-04-18",
+      "title": "Lazy Trap Shovelware",
+      "desc": "WeeklyBeats 2016 week 16",
+      "url": "https://weeklybeats.com/aday/music/lazy-trap-shovelwares",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-04-25",
+      "title": "lame untitled bus trip drone",
+      "desc": "WeeklyBeats 2016 week 17",
+      "url": "https://weeklybeats.com/aday/music/lame-untitled-bus-trip-drone",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-05-02",
+      "title": "Dreampiano Jam (Itch.Io app)",
+      "desc": "WeeklyBeats 2016 week 18",
+      "url": "https://weeklybeats.com/aday/music/dreampiano-jam-itchio-app",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-05-09",
+      "title": "God should stop resting on the seventh day",
+      "desc": "WeeklyBeats 2016 week 19",
+      "url": "https://weeklybeats.com/aday/music/god-should-stop-resting-on-the-seventh-day",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-05-16",
+      "title": "char Riffs",
+      "desc": "WeeklyBeats 2016 week 20",
+      "url": "https://weeklybeats.com/aday/music/char-riffs[]-",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-05-23",
+      "title": "Sequence guy (video)",
+      "desc": "WeeklyBeats 2016 week 21",
+      "url": "https://weeklybeats.com/aday/music/sequence-guy-video",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-05-30",
+      "title": "Amen 666",
+      "desc": "WeeklyBeats 2016 week 22",
+      "url": "https://weeklybeats.com/aday/music/amen-666-[sonic-pi-livecoding]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-06-06",
+      "title": "Super Collider Function Flip Flop Heavy Weight Sinewave Apocalypse",
+      "desc": "WeeklyBeats 2016 week 23",
+      "url": "https://weeklybeats.com/aday/music/super-collider-function-flip-flop-heavy-weight-sinewave-apocalypse",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-06-13",
+      "title": "Filler edm generic waste of time",
+      "desc": "WeeklyBeats 2016 week 24",
+      "url": "https://weeklybeats.com/aday/music/filler-edm-generic-waste-of-time",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-06-20",
+      "title": "Bach Deluxe Fugue in Overdrive G Minus",
+      "desc": "WeeklyBeats 2016 week 25",
+      "url": "https://weeklybeats.com/aday/music/bach-deluxe-fugue-in-overdrive-g-minus",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-06-27",
+      "title": "uninspired i have to go now",
+      "desc": "WeeklyBeats 2016 week 26",
+      "url": "https://weeklybeats.com/aday/music/fail-at-naming-this-early-in-the-morning",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-07-04",
+      "title": "Successfully uploaded weekly seizures that caused the brain to stop working",
+      "desc": "WeeklyBeats 2016 week 27",
+      "url": "https://weeklybeats.com/aday/music/successfully-uploaded-weekly-seizures-that-caused-the-brain-to-stop-workingmp3",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-07-11",
+      "title": "Eternal Distortions",
+      "desc": "WeeklyBeats 2016 week 28",
+      "url": "https://weeklybeats.com/aday/music/eternal-distortions",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-07-18",
+      "title": "Weekly Breakcore Quota",
+      "desc": "WeeklyBeats 2016 week 29",
+      "url": "https://weeklybeats.com/aday/music/weekly-breakcore-quota",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-07-25",
+      "title": "YAYT (Yet Another Filler Track)",
+      "desc": "WeeklyBeats 2016 week 30",
+      "url": "https://weeklybeats.com/aday/music/yayt-yet-another-filler-track",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-08-01",
+      "title": "882016.mp3",
+      "desc": "WeeklyBeats 2016 week 31",
+      "url": "https://weeklybeats.com/aday/music/882016mp3",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-08-08",
+      "title": "%Submission Title%",
+      "desc": "WeeklyBeats 2016 week 32",
+      "url": "https://weeklybeats.com/aday/music/submission-title",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-08-15",
+      "title": "a minutes isolation",
+      "desc": "WeeklyBeats 2016 week 33",
+      "url": "https://weeklybeats.com/aday/music/a-minutes-isolation",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-08-22",
+      "title": "Anxiety + Renoise + MidiNES + ESX - Live Take",
+      "desc": "WeeklyBeats 2016 week 34",
+      "url": "https://weeklybeats.com/aday/music/anxiety--renoise--midines--esx---live-take",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-08-29",
+      "title": "Rock-steady-Reggae",
+      "desc": "WeeklyBeats 2016 week 35",
+      "url": "https://weeklybeats.com/aday/music/rock-steady-reggae",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-09-05",
+      "title": "insulation tape",
+      "desc": "WeeklyBeats 2016 week 36",
+      "url": "https://weeklybeats.com/aday/music/gaffer-tape",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-09-12",
+      "title": "TRANSFORMATIVE TFT NERO CRACKTRO",
+      "desc": "WeeklyBeats 2016 week 37",
+      "url": "https://weeklybeats.com/aday/music/transformative-tft-nero-cracktro",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-09-19",
+      "title": "HALPCORE",
+      "desc": "WeeklyBeats 2016 week 38",
+      "url": "https://weeklybeats.com/aday/music/halpcore",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-09-26",
+      "title": "Smashing a spaceship into a brickwall at sublightspeed",
+      "desc": "WeeklyBeats 2016 week 39",
+      "url": "https://weeklybeats.com/aday/music/smashing-a-spaceship-into-a-brickwall-at-sublightspeed",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-10-03",
+      "title": "amenBach-alpha",
+      "desc": "WeeklyBeats 2016 week 40",
+      "url": "https://weeklybeats.com/aday/music/amenbach-alpha",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-10-10",
+      "title": "Breaking News: Linn drums Samples played live from the future",
+      "desc": "WeeklyBeats 2016 week 41",
+      "url": "https://weeklybeats.com/aday/music/breaking-news-linn-drums-samples-played-live-from-the-future",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-10-17",
+      "title": "Emergency Techno Procedures",
+      "desc": "WeeklyBeats 2016 week 42",
+      "url": "https://weeklybeats.com/aday/music/emergency-techno-procedures",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-10-24",
+      "title": "Frequency Modulation Factory",
+      "desc": "WeeklyBeats 2016 week 43",
+      "url": "https://weeklybeats.com/aday/music/frequency-modulation-factory",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-10-31",
+      "title": "PaxityPaxPaxPaxxed [Korg-DS10]",
+      "desc": "WeeklyBeats 2016 week 44",
+      "url": "https://weeklybeats.com/aday/music/paxitypaxpaxpaxxed-[korg-ds10]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-11-07",
+      "title": "AmigaBachafieidSyntax",
+      "desc": "WeeklyBeats 2016 week 45",
+      "url": "https://weeklybeats.com/aday/music/amigabachafieidsyntax",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-11-14",
+      "title": "Maximilian and Toni Flex 420,VHS",
+      "desc": "WeeklyBeats 2016 week 46",
+      "url": "https://weeklybeats.com/aday/music/maximilian-and-toni-flex-420vhs",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-11-21",
+      "title": "deformed inertia",
+      "desc": "WeeklyBeats 2016 week 47",
+      "url": "https://weeklybeats.com/aday/music/deformed-inertia",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-11-28",
+      "title": "i'm outta milk, (mondays not good for me)",
+      "desc": "WeeklyBeats 2016 week 48",
+      "url": "https://weeklybeats.com/aday/music/im-outta-milk-mondays-not-good-for-me",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-12-05",
+      "title": "Hammond by a stretch",
+      "desc": "WeeklyBeats 2016 week 49",
+      "url": "https://weeklybeats.com/aday/music/hammond-by-a-stretch",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-12-12",
+      "title": "untitled Audiofile2.mp3",
+      "desc": "WeeklyBeats 2016 week 50",
+      "url": "https://weeklybeats.com/aday/music/untitled-audiofile2mp3",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-12-19",
+      "title": "Slained Vesper",
+      "desc": "WeeklyBeats 2016 week 51",
+      "url": "https://weeklybeats.com/aday/music/slainedbell",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
+    },
+    {
+      "date": "2016-12-26",
+      "title": "renagade.lsdj [co-op-remix]",
+      "desc": "WeeklyBeats 2016 week 52",
+      "url": "https://weeklybeats.com/aday/music/renagadelsdj-[co-op-remix]",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2016"
     },
     {
       "date": "2018-01-01",
@@ -80,11 +1569,245 @@
       "source": "codepen"
     },
     {
+      "date": "2018-01-01",
+      "title": "Dust off - WB01-2018",
+      "desc": "WeeklyBeats 2018 week 1",
+      "url": "https://weeklybeats.com/aday/music/dust-off---wb01-2018",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-01-08",
+      "title": "antialias - #2018E2_technotest2jam",
+      "desc": "WeeklyBeats 2018 week 2",
+      "url": "https://weeklybeats.com/aday/music/antialias---2018e2-technotest2",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-01-15",
+      "title": "Synth Meltdown",
+      "desc": "WeeklyBeats 2018 week 3",
+      "url": "https://weeklybeats.com/aday/music/synth-meltdown-3",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-01-22",
+      "title": "The Default Machine",
+      "desc": "WeeklyBeats 2018 week 4",
+      "url": "https://weeklybeats.com/aday/music/the-default-machine",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-01-29",
+      "title": "LeastLeasyLease-TimeRestriction-Mix",
+      "desc": "WeeklyBeats 2018 week 5",
+      "url": "https://weeklybeats.com/aday/music/leastleasylease-timerestriction-mix-2",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-02-05",
+      "title": "Unidirectional Interupts",
+      "desc": "WeeklyBeats 2018 week 6",
+      "url": "https://weeklybeats.com/aday/music/unidirectional-interupt",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-02-12",
+      "title": "to hell with it",
+      "desc": "WeeklyBeats 2018 week 7",
+      "url": "https://weeklybeats.com/aday/music/to-hell-with-it",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-02-19",
+      "title": "The Squaresounds OpenMic Experimental DIY Project track",
+      "desc": "WeeklyBeats 2018 week 8",
+      "url": "https://weeklybeats.com/aday/music/the-squaresounds-openmic-experimental-diy-project-track",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-02-26",
+      "title": "Nonstick Pan [AntiAlias] Unlive Mix",
+      "desc": "WeeklyBeats 2018 week 9",
+      "url": "https://weeklybeats.com/aday/music/week9-nonstickpan-antialias-unlive-remix",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-03-05",
+      "title": "InscectaWinner.mp3",
+      "desc": "WeeklyBeats 2018 week 10",
+      "url": "https://weeklybeats.com/aday/music/inscectawinnermp3-2",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-03-12",
+      "title": "Dawn of a dismal imaginary place",
+      "desc": "WeeklyBeats 2018 week 11",
+      "url": "https://weeklybeats.com/aday/music/dawn-of-a-dismal-imaginary-place",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-03-19",
+      "title": "Made about 11 minutes ago",
+      "desc": "WeeklyBeats 2018 week 12",
+      "url": "https://weeklybeats.com/aday/music/made-about-11-minutes-ago",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-04-02",
+      "title": "Reaktor Block jam",
+      "desc": "WeeklyBeats 2018 week 14",
+      "url": "https://weeklybeats.com/aday/music/reaktor-block-jam",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-05-14",
+      "title": "Electronic Drama (aday vs SnuggyMan) Jam",
+      "desc": "WeeklyBeats 2018 week 20",
+      "url": "https://weeklybeats.com/aday/music/electronic-drama-aday-vs-snuggyman-jam",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-05-21",
+      "title": "Burrrgh Bleep Beep Brrrrugghhh Snare Snare Snnnns Hihat hi hat snare kickdrum snare snn snn break filter phaser buffer rince",
+      "desc": "WeeklyBeats 2018 week 21",
+      "url": "https://weeklybeats.com/aday/music/burrrgh-bleep-beep-brrrrugghhh-snare-snare-snnnns-hihat-hi-hat-snare-kickdrum-snare-snn-snn-break-filter-phaser-buffer-rince",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-06-11",
+      "title": "algorithm piano test #1",
+      "desc": "WeeklyBeats 2018 week 24",
+      "url": "https://weeklybeats.com/aday/music/algorithm-piano-test-1",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-07-09",
+      "title": "Algoraving MidiNES",
+      "desc": "WeeklyBeats 2018 week 28",
+      "url": "https://weeklybeats.com/aday/music/algoraving-midines",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-07-16",
+      "title": "Algoraving MidiNES #2 (ft ESX)",
+      "desc": "WeeklyBeats 2018 week 29",
+      "url": "https://weeklybeats.com/aday/music/algoraving-midines-2-vs-esx",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-07-30",
+      "title": "When the Universe screams back",
+      "desc": "WeeklyBeats 2018 week 31",
+      "url": "https://weeklybeats.com/aday/music/when-the-universe-screams-back",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-09-10",
+      "title": "Pressure Touch",
+      "desc": "WeeklyBeats 2018 week 37",
+      "url": "https://weeklybeats.com/aday/music/pressures-touch",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-09-17",
+      "title": "post processing algorithm",
+      "desc": "WeeklyBeats 2018 week 38",
+      "url": "https://weeklybeats.com/aday/music/post-processing-algorithm",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-10-01",
+      "title": "Nuclear Bitch",
+      "desc": "WeeklyBeats 2018 week 40",
+      "url": "https://weeklybeats.com/aday/music/nuclear-bitch",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-10-08",
+      "title": "Propper not techno",
+      "desc": "WeeklyBeats 2018 week 41",
+      "url": "https://weeklybeats.com/aday/music/propper-not-techno",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-10-15",
+      "title": "Bare minimum trap door",
+      "desc": "WeeklyBeats 2018 week 42",
+      "url": "https://weeklybeats.com/aday/music/bare-minimum-trap-door",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
       "date": "2018-11-01",
       "title": "64:20 Blaze It",
       "desc": "Demozoo graphics upload",
       "url": "https://demozoo.org/graphics/195944/",
       "source": "demozoo"
+    },
+    {
+      "date": "2018-11-26",
+      "title": "It'll do",
+      "desc": "WeeklyBeats 2018 week 48",
+      "url": "https://weeklybeats.com/aday/music/itll-do",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
+    },
+    {
+      "date": "2018-12-24",
+      "title": "Conceded",
+      "desc": "WeeklyBeats 2018 week 52",
+      "url": "https://weeklybeats.com/aday/music/conceded",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2018"
     },
     {
       "date": "2019-01-12",
@@ -115,6 +1838,15 @@
       "source": "github"
     },
     {
+      "date": "2019-12-30",
+      "title": "The Dreamurium",
+      "desc": "WeeklyBeats 2020 week 1",
+      "url": "https://weeklybeats.com/aday/music/the-dreamurium",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
       "date": "2020-01-05",
       "title": "Dreamurium-Weeklybeats2020W1",
       "desc": "Week1 of Weeklybeats 2020",
@@ -126,7 +1858,243 @@
       "title": "Anxious Goth Rabbit",
       "desc": "About 4-hours worth of time spent on it. Was kinda going for a happy-derpy rabbit but then got frustrated, and the rabbit turned goth.",
       "url": "https://weeklybeats.com/aday/music/anxious-goth-rabbit-2",
-      "source": "weeklybeats"
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-01-13",
+      "title": "Deluge",
+      "desc": "WeeklyBeats 2020 week 3",
+      "url": "https://weeklybeats.com/aday/music/deluge",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-01-20",
+      "title": "week-4-motivation-slump",
+      "desc": "WeeklyBeats 2020 week 4",
+      "url": "https://weeklybeats.com/aday/music/week-4-motivation-slump",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-01-27",
+      "title": "вечеринка",
+      "desc": "WeeklyBeats 2020 week 5",
+      "url": "https://weeklybeats.com/aday/music/vecherinka",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-02-03",
+      "title": "Ambient-ish Techno",
+      "desc": "WeeklyBeats 2020 week 6",
+      "url": "https://weeklybeats.com/aday/music/ambient-ish-techno-2",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-02-10",
+      "title": "Speedrun: That'll do Techno, That'll do",
+      "desc": "WeeklyBeats 2020 week 7",
+      "url": "https://weeklybeats.com/aday/music/speedrun-thatll-do-techno-thatll-do",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-02-17",
+      "title": "trisawpulsesin // ambient \\\\\\\\",
+      "desc": "WeeklyBeats 2020 week 8",
+      "url": "https://weeklybeats.com/aday/music/trisawpulsesin----ambient-",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-02-24",
+      "title": "Filler Techno Pi for Week9",
+      "desc": "WeeklyBeats 2020 week 9",
+      "url": "https://weeklybeats.com/aday/music/filler-techno-pi-for-week9",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-03-02",
+      "title": "The DooM BoX Acid Reactor Systems Online Portal - Now with Hyper Power",
+      "desc": "WeeklyBeats 2020 week 10",
+      "url": "https://weeklybeats.com/aday/music/the-doom-box-acid-reactor-systems-online-portal---now-with-hyper-power",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-03-09",
+      "title": "Dubpocalypse // Ambient //",
+      "desc": "WeeklyBeats 2020 week 11",
+      "url": "https://weeklybeats.com/aday/music/dubpocalypse----ambient---",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-03-16",
+      "title": "We are so done here",
+      "desc": "WeeklyBeats 2020 week 12",
+      "url": "https://weeklybeats.com/aday/music/we-are-so-done-here",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-03-23",
+      "title": "algorithmic destroyed asymptomatic garbage",
+      "desc": "WeeklyBeats 2020 week 13",
+      "url": "https://weeklybeats.com/aday/music/algorithmic-destroyed-asymptomatic-garbage",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-03-30",
+      "title": "Muddy Mix for Week 14",
+      "desc": "WeeklyBeats 2020 week 14",
+      "url": "https://weeklybeats.com/aday/music/muddy-mix-for-week-14",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-04-06",
+      "title": "Pulverized",
+      "desc": "WeeklyBeats 2020 week 15",
+      "url": "https://weeklybeats.com/aday/music/pulverized",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-04-13",
+      "title": "untitled 16",
+      "desc": "WeeklyBeats 2020 week 16",
+      "url": "https://weeklybeats.com/aday/music/untitled-16",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-05-04",
+      "title": "untitled algo",
+      "desc": "WeeklyBeats 2020 week 19",
+      "url": "https://weeklybeats.com/aday/music/untitled-algo",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-05-11",
+      "title": "[Excerpt from PreJam] Drone Lockdown Stream with WiLL-i-ROMS",
+      "desc": "WeeklyBeats 2020 week 20",
+      "url": "https://weeklybeats.com/aday/music/[excerpt-from-prejam]-drone-lockdown-stream-with-will-i-roms",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-05-18",
+      "title": "0PV4NAMGWECMQX1G9Q82",
+      "desc": "WeeklyBeats 2020 week 21",
+      "url": "https://weeklybeats.com/aday/music/0pv4namgwecmqx1g9q82",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-06-01",
+      "title": "Common Ligand",
+      "desc": "WeeklyBeats 2020 week 23",
+      "url": "https://weeklybeats.com/aday/music/common-ligand",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-06-08",
+      "title": "fm09cq.mid.wav",
+      "desc": "WeeklyBeats 2020 week 24",
+      "url": "https://weeklybeats.com/aday/music/fm09cqmidwav",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-06-15",
+      "title": "cargo.mid.reason",
+      "desc": "WeeklyBeats 2020 week 25",
+      "url": "https://weeklybeats.com/aday/music/cargomidreason",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-08-24",
+      "title": "Jamulus/Clan Analogue Twitch Stream with Will-I-ROMs - 29-08-2020",
+      "desc": "WeeklyBeats 2020 week 35",
+      "url": "https://weeklybeats.com/aday/music/clan-analogue-twitch-stream-29-08-2020",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-09-28",
+      "title": "FPV Pipedream",
+      "desc": "WeeklyBeats 2020 week 40",
+      "url": "https://weeklybeats.com/aday/music/fpv-pipedream",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-10-05",
+      "title": "Parangular",
+      "desc": "WeeklyBeats 2020 week 41",
+      "url": "https://weeklybeats.com/aday/music/week-41-concoction",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-10-19",
+      "title": "#JustGrooveboxThings",
+      "desc": "WeeklyBeats 2020 week 43",
+      "url": "https://weeklybeats.com/aday/music/justgrooveboxthings",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-10-26",
+      "title": "Sector 44",
+      "desc": "WeeklyBeats 2020 week 44",
+      "url": "https://weeklybeats.com/aday/music/sector-44",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
+    },
+    {
+      "date": "2020-11-30",
+      "title": "IOS DarkAmbient + SammichSID",
+      "desc": "WeeklyBeats 2020 week 49",
+      "url": "https://weeklybeats.com/aday/music/ios-darkambient--sammichsid",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2020"
     },
     {
       "date": "2022-01-01",
@@ -136,11 +2104,112 @@
       "source": "clan"
     },
     {
+      "date": "2022-01-03",
+      "title": "Plug the chips back in (WB01)",
+      "desc": "WeeklyBeats 2022 week 1",
+      "url": "https://weeklybeats.com/aday/music/plug-the-chips-back-in-wb01-2",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-01-10",
+      "title": "PlinkBeats (WB02)",
+      "desc": "WeeklyBeats 2022 week 2",
+      "url": "https://weeklybeats.com/aday/music/plinkbeats-wb02",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-01-17",
+      "title": "IOS Jam for Week3 (IOSThings012022)",
+      "desc": "WeeklyBeats 2022 week 3",
+      "url": "https://weeklybeats.com/aday/music/ios-jam-for-week3-iosthings012022",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-01-24",
+      "title": "Untold Destruction Week 4 Filler",
+      "desc": "WeeklyBeats 2022 week 4",
+      "url": "https://weeklybeats.com/aday/music/untold-destruction-week-4-filler",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-01-31",
+      "title": "shoutouts to gesceap",
+      "desc": "WeeklyBeats 2022 week 5",
+      "url": "https://weeklybeats.com/aday/music/shoutouts-to-gesceap",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-02-07",
+      "title": "filler 6 2022",
+      "desc": "WeeklyBeats 2022 week 6",
+      "url": "https://weeklybeats.com/aday/music/filler-6-2022",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-04-04",
+      "title": "GEN",
+      "desc": "WeeklyBeats 2022 week 14",
+      "url": "https://weeklybeats.com/aday/music/gen",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-07-11",
+      "title": "SpaceTribe-17072022-Week28",
+      "desc": "WeeklyBeats 2022 week 28",
+      "url": "https://weeklybeats.com/aday/music/spacetribe-17072022-week28",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-08-01",
+      "title": "Did you not receive my Memo?",
+      "desc": "WeeklyBeats 2022 week 31",
+      "url": "https://weeklybeats.com/aday/music/did-you-not-receive-my-memo",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-08-15",
+      "title": "ChaosDragon",
+      "desc": "WeeklyBeats 2022 week 33",
+      "url": "https://weeklybeats.com/aday/music/chaosdragon",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
+      "date": "2022-12-05",
+      "title": "VR MIDI Jam Capture 12-12-2022",
+      "desc": "WeeklyBeats 2022 week 49",
+      "url": "https://weeklybeats.com/aday/music/vr-midi-jam-capture-12-12-2022",
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2022"
+    },
+    {
       "date": "2024-07-01",
       "title": "Doomsday data",
       "desc": "Let’s try this again I’ll just throw down and see what sticks",
       "url": "https://weeklybeats.com/aday/music/doomsday-data",
-      "source": "weeklybeats"
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2024"
     },
     {
       "date": "2024-10-01",
@@ -162,6 +2231,13 @@
       "desc": "Bandcamp collection node with electronic/chiptune references",
       "url": "https://bandcamp.com/aday_net_au",
       "source": "bandcamp"
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Just ctrix things",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/QCSfLzHGPSQ",
+      "source": "youtube"
     },
     {
       "date": "2025-04-22",
@@ -199,11 +2275,143 @@
       "source": "demozoo"
     },
     {
+      "date": "2025-12-24",
+      "title": "Reset markers",
+      "desc": "Camembert-fueled clarity at 3 AM: Reset markers. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/61bb03324406bb0553d565f211cb7987e8713f7e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "61bb03324406"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Factory Reset FIX",
+      "desc": "ArtBastard, bastard of art, avance: Factory Reset FIX. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/d6153aaa11ccd5df6d872b219702647849bb157e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "d6153aaa11cc"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "start.ps1 reset didnt work..",
+      "desc": "Camembert-fueled clarity at 3 AM: start.ps1 reset didnt work... Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6fc3485f3662fa9739868cd2ffbf410ef3607510",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "6fc3485f3662"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "ArtBastard 5.1.2 - Current and Stable (for real tho)",
+      "desc": "Encore une gifle à la médiocrité lumineuse: ArtBastard 5.1.2 - Current and Stable (for real tho). Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c70953321a29f1e63785abe154c9468449ca7912",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c70953321a29"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Release 5.1.2",
+      "desc": "ArtBastard, bastard of art, avance: Release 5.1.2. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9527765330e9eb2b8a6e16285f3f4b287dbb13f3",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "9527765330e9"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Improve console logging and error handling in MIDI message processing",
+      "desc": "Protocole photonique mis à jour: Improve console logging and error handling in MIDI message processing. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c8d88ebb94ddab89f33c90fe74b403be8ccbd8d4",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "c8d88ebb94dd"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Add console logging for MIDI message events in connectMidiInput function",
+      "desc": "Art-Net whisper in the catacombs: Add console logging for MIDI message events in connectMidiInput function. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/78463d408531bb986efdc6e2bdbd275db258f0b6",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "78463d408531"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Add MIDI device auto-connect configuration to startup scripts",
+      "desc": "Art-Net whisper in the catacombs: Add MIDI device auto-connect configuration to startup scripts. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e7d26ea4f4f749fe527da50a85b61c4a7b000f46",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "e7d26ea4f4f7"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Enhance MIDI connection error handling and user guidance",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Enhance MIDI connection error handling and user guidance. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/649f465518ecd99e5259362c429749b711fd62f7",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "649f465518ec"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Implement MIDI interface connection management and error handling",
+      "desc": "Protocole photonique mis à jour: Implement MIDI interface connection management and error handling. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/47fd5de7206d6cd1edcbe233e830b49ab941d741",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "47fd5de7206d"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Add filtering functionality to MIDI and OSC monitors",
+      "desc": "Protocole photonique mis à jour: Add filtering functionality to MIDI and OSC monitors. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/7ede8e9c60f33f038ab1649e8d00989a8168ba19",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "7ede8e9c60f3"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "Enhance MIDI and OSC handling with direct message processing and throttling. Implement low-latency MIDI message handling in MidiDmxProcessor, add server MIDI interface updates in MidiOscSetup, and optimize OSC message processing in OscMonitor. Introduce message throttling in useGlobalBrowserMidi to reduce lag and improve performance.",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Enhance MIDI and OSC handling with direct message processing and throttling. Implement low-latency MIDI message handling in MidiDmxProcessor, add server MIDI interface updates in MidiOscSetup, and optimize OSC message processing in OscMonitor. Introduce message throttling in useGlobalBrowserMidi to reduce lag and improve performance.. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f71a6e374cedb1bfc5b0f31957491c3f2313b00e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "f71a6e374ced"
+    },
+    {
+      "date": "2025-12-24",
+      "title": "MIDI issues",
+      "desc": "Protocole photonique mis à jour: MIDI issues. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/324d2a0a55a2caedce5515018bb8d990127b9655",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "324d2a0a55a2"
+    },
+    {
       "date": "2025-12-29",
       "title": "Cubic Waveform",
       "desc": "Audio stems from a mess around with Mazetools Mutant, The Video from The Melbourne NYE Laser and Fireworks show from GLT's youtube capture, remixed into resolume and wire and me spending the weekend trying to get my computer to do AV stuff again after being dormant for too long....",
       "url": "https://weeklybeats.com/aday/music/cubic-waveform",
-      "source": "weeklybeats"
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2026"
     },
     {
       "date": "2026-01-01",
@@ -224,7 +2432,9 @@
       "title": "Untitled Organic Granular Experiment #1768089600",
       "desc": "Love a good organ sample... Didn't do a weeklyvid this week though, Kinda left it to the last minute So this is just having a jam before bed, the night before deadline ... classic Something to help me sleep",
       "url": "https://weeklybeats.com/aday/music/untitled-granular",
-      "source": "weeklybeats"
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2026"
     },
     {
       "date": "2026-01-11",
@@ -252,7 +2462,917 @@
       "title": "Late Calibration Test (Late Submission)",
       "desc": "Sorry, It's late but.... (Disclaimer, I used a late upload link because I missed the deadline.... too much overtime, were only human) It's me reinstalling computers, replacing disks etc It's only a minute, so personally i consider this a warm up track for those weeks where my time is overwealmed..... See you in week 4 for yet another time-stretched-goal I hope to do Weeklyvids at least once a month, but one track a week ...",
       "url": "https://weeklybeats.com/aday/music/late-calibration-test-late-submission",
-      "source": "weeklybeats"
+      "source": "weeklybeats",
+      "timeline_image": "",
+      "category": "wb-2026"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add consolidated demo evidence workflow scripts",
+      "desc": "Le beret vole; les serveurs obéissent: Add consolidated demo evidence workflow scripts. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a1b5c2af0472ac9298a77595a7bf57b059a4b0eb",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "a1b5c2af0472"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Update Vite configuration for framer-motion and optimize dependencies",
+      "desc": "ArtBastard, bastard of art, avance: Update Vite configuration for framer-motion and optimize dependencies. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/98c2c104aef472ded743a960f386f48135a8922a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "98c2c104aef4"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Update package-lock.json and start.ps1 for improved user experience and dependency management",
+      "desc": "ArtBastard, bastard of art, avance: Update package-lock.json and start.ps1 for improved user experience and dependency management. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e3c060ed0ae2557b13a823ddb2811eab00391d21",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "e3c060ed0ae2"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "SuperControl UX improvements, build fallback, demo documentation (#32)",
+      "desc": "Encore une gifle à la médiocrité lumineuse: SuperControl UX improvements, build fallback, demo documentation (#32). Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c48822e63164e8a79581faae8d87337c68ce6955",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c48822e63164"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Update documentation and publish labeled UI UX release tour",
+      "desc": "ArtBastard, bastard of art, avance: Update documentation and publish labeled UI UX release tour. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/eaedd89ac8225e0f13704b6c41d2c773765014d4",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "eaedd89ac822"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove root react-beautiful-dnd to fix npm ci in backend CI",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Remove root react-beautiful-dnd to fix npm ci in backend CI. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9965bf1eaa4b0f9a71c2002a7f9dd0b0717ade89",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "9965bf1eaa4b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Stabilize experimental hash routing and tab deep links",
+      "desc": "ArtBastard, bastard of art, avance: Stabilize experimental hash routing and tab deep links. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c76a1dd2fd9233577ed83b434d7f85bfdcbe376c",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c76a1dd2fd92"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add hash-routable views and expanded demo captures",
+      "desc": "ArtBastard, bastard of art, avance: Add hash-routable views and expanded demo captures. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/91da2376f48a6ae23ba482a6fcaf1696826e6ce0",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "91da2376f48a"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add automated demo screenshot capture script",
+      "desc": "Camembert-fueled clarity at 3 AM: Add automated demo screenshot capture script. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e191cec0b64b6e06765475fdbd72eb1fc84df19d",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "e191cec0b64b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add backend API contract smoke test script",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Add backend API contract smoke test script. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0abfddef9bcf076ec219b08da74057561728186b",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "0abfddef9bcf"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add ACT trigger action helper regression tests",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Add ACT trigger action helper regression tests. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cedc7caf070c0aa5bfb3e20bbeb7a99a1e5423ca",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "cedc7caf070c"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add scene capture indexing regression helper and tests",
+      "desc": "ArtBastard, bastard of art, avance: Add scene capture indexing regression helper and tests. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/dcdfcc4b17784706a24e2b93c88d683e46397f91",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "dcdfcc4b1778"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add clip follow helper regression tests",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Add clip follow helper regression tests. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/ffa8d506d888c46e53c902409f6cbca52683a958",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "ffa8d506d888"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove redundant API socket setup bootstrap path",
+      "desc": "Camembert-fueled clarity at 3 AM: Remove redundant API socket setup bootstrap path. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fc6cd0e5eca5e4ce8ad50a17e7bff4d14d74a97a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "fc6cd0e5eca5"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Make clip follow actions deterministic in launcher playback hook",
+      "desc": "ArtBastard, bastard of art, avance: Make clip follow actions deterministic in launcher playback hook. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c1d28e692c9fca0a107e976ba7893e802f58f637",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c1d28e692c9f"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove unused legacy supercontrol demo implementations",
+      "desc": "Camembert-fueled clarity at 3 AM: Remove unused legacy supercontrol demo implementations. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/ecebc72bb93b561f349020f978e98879673fe978",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "ecebc72bb93b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Make server own socket lifecycle and delegate core handlers",
+      "desc": "ArtBastard, bastard of art, avance: Make server own socket lifecycle and delegate core handlers. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/70308e53ac90cd4428f052ba401a8181b6fbe52a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "70308e53ac90"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove verbose debug logging from touch super control",
+      "desc": "ArtBastard, bastard of art, avance: Remove verbose debug logging from touch super control. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/69d6f10f61c3c83f4874e6788dfd842011fe66b1",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "69d6f10f61c3"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Retire unused legacy backend entrypoint and standalone server",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Retire unused legacy backend entrypoint and standalone server. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/7c77b68adfbac90183cb6d911c2de296a0848e81",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "7c77b68adfba"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Route API socket handlers through server connection lifecycle",
+      "desc": "Camembert-fueled clarity at 3 AM: Route API socket handlers through server connection lifecycle. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/8e073e487d89957ec7f34a26cd314b3d095f2302",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "8e073e487d89"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Unify dockable super control with canonical implementation",
+      "desc": "Camembert-fueled clarity at 3 AM: Unify dockable super control with canonical implementation. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b5a15d47efdb5f7a15602218aa3bf0ccc3dfd7c3",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "b5a15d47efdb"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Implement ACT next/previous triggers and timeline batch updates",
+      "desc": "Camembert-fueled clarity at 3 AM: Implement ACT next/previous triggers and timeline batch updates. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/07033e5b683f2df1cc5269b09c4e8076287858d7",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "07033e5b683f"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove local TypeScript build cache artifact",
+      "desc": "ArtBastard, bastard of art, avance: Remove local TypeScript build cache artifact. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/46ef0a75a5fec04c38fbfb56156e3a84bc090484",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "46ef0a75a5fe"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Align API state, config, and scenes routes with frontend contract",
+      "desc": "ArtBastard, bastard of art, avance: Align API state, config, and scenes routes with frontend contract. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/3bd3f11bc8adfd7c7d23b6da28f9bf48e133dab8",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "3bd3f11bc8ad"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Simplify mobile control surface data flow and remove brittle socket calls",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Simplify mobile control surface data flow and remove brittle socket calls. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/af40abafb9d043570fa5b9cd5b82a202843cc371",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "af40abafb9d0"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Fix panel registry type mismatches for default layouts",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Fix panel registry type mismatches for default layouts. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/2ee1f792fbc280dc2c8d9980afc47b63e7bcd419",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "2ee1f792fbc2"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add npm lockfiles and track them in git",
+      "desc": "Camembert-fueled clarity at 3 AM: Add npm lockfiles and track them in git. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/87f001eb170c2789d86f44382e1597184723e885",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "87f001eb170c"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add X-Touch and APC40 MIDI controller templates",
+      "desc": "Protocole photonique mis à jour: Add X-Touch and APC40 MIDI controller templates. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/165bb1c0782031494107ab3572be60eff9ee075e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "165bb1c07820"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX page header stats and selector shell",
+      "desc": "Art-Net whisper in the catacombs: Extract DMX page header stats and selector shell. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9519b72217016a02cec4bff15db1b50a5d3c1bde",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "9519b7221701"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX filtering utilities with regression tests",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Extract DMX filtering utilities with regression tests. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f7e50660a05439b266a5949615b7cf8d548beb1f",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "f7e50660a054"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add TouchOSC exporter regression tests for canonical output",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Add TouchOSC exporter regression tests for canonical output. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/8df64164a7a4db14cae600d1ab954159cb51d12a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "8df64164a7a4"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove DMX page debug logging and dead helper code",
+      "desc": "Art-Net whisper in the catacombs: Remove DMX page debug logging and dead helper code. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/180c5993f7cb52148f22d009cf0917acf323fa64",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "180c5993f7cb"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX channels viewport list orchestration component",
+      "desc": "Art-Net whisper in the catacombs: Extract DMX channels viewport list orchestration component. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/1d01d9a736ea58013c13990be5e812ed469d52fa",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "1d01d9a736ea"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract per-channel DMX card renderer into dedicated component",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Extract per-channel DMX card renderer into dedicated component. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/1c97d9f92553be2325bb8fe715169078fa9e9456",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "1c97d9f92553"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract active DMX summary grid into dedicated component",
+      "desc": "Protocole photonique mis à jour: Extract active DMX summary grid into dedicated component. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c071caf7f1d576228c20588d8974c592572b2a30",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "c071caf7f1d5"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX pinned channels panel into reusable component",
+      "desc": "Protocole photonique mis à jour: Extract DMX pinned channels panel into reusable component. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/501a4f254172accf0f9f79533c4977aa9920e15e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "501a4f254172"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX MIDI device connection panel component",
+      "desc": "Protocole photonique mis à jour: Extract DMX MIDI device connection panel component. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b54f1b247f9d079979bc221c665e5690d3f49ab2",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "b54f1b247f9d"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX page footer status into dedicated component",
+      "desc": "Art-Net whisper in the catacombs: Extract DMX page footer status into dedicated component. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c54139067616f09750de0922cda80f988f9c57c0",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "c54139067616"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX scene management section into reusable component",
+      "desc": "Protocole photonique mis à jour: Extract DMX scene management section into reusable component. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/22161042f1e84f2a2fe50bf347f9eb3e23bdcf3e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "22161042f1e8"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX fixture selector into reusable component",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Extract DMX fixture selector into reusable component. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/1fc3a3a805f3a1e4884dbc5d5858a7eef13d3de5",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "1fc3a3a805f3"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Modularize DMX page controls into dedicated panel component",
+      "desc": "Art-Net whisper in the catacombs: Modularize DMX page controls into dedicated panel component. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/90fc7555494b18198501b6e77a26a3c1b5c9df80",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "90fc7555494b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Use shared fixture persistence in graceful shutdown path",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Use shared fixture persistence in graceful shutdown path. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/167e1b3a460a349d913bb4093b2e1cf7ab83617a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "167e1b3a460a"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove obsolete alternate TouchOSC XML generator",
+      "desc": "Art-Net whisper in the catacombs: Remove obsolete alternate TouchOSC XML generator. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/bc90ec75fcbcc9cadca33d074ce09b76e3f28f32",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "bc90ec75fcbc"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Use one canonical XML generator path for TouchOSC helpers",
+      "desc": "Art-Net whisper in the catacombs: Use one canonical XML generator path for TouchOSC helpers. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/ad8bd97df3bf96242598f608abea5a5bed3125c2",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "ad8bd97df3bf"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Use canonical SuperControl in fixture setup preview",
+      "desc": "Protocole photonique mis à jour: Use canonical SuperControl in fixture setup preview. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b85e4337e66fc6c16a74cc7baa1454846174e878",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "b85e4337e66f"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Unify fixture persistence with shared storage service",
+      "desc": "Protocole photonique mis à jour: Unify fixture persistence with shared storage service. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/4941fede39551ab2dac3558839fcccc5ec5ab59d",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "4941fede3955"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Improve TouchOSC UX feedback and expose exporter in experimental tabs",
+      "desc": "Protocole photonique mis à jour: Improve TouchOSC UX feedback and expose exporter in experimental tabs. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a1c243656344893462d60aac58db34241dc8909f",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "a1c243656344"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Update Vite configuration for framer-motion and optimize dependencies",
+      "desc": "ArtBastard, bastard of art, avance: Update Vite configuration for framer-motion and optimize dependencies. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/98c2c104aef472ded743a960f386f48135a8922a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "98c2c104aef4"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Update package-lock.json and start.ps1 for improved user experience and dependency management",
+      "desc": "ArtBastard, bastard of art, avance: Update package-lock.json and start.ps1 for improved user experience and dependency management. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/e3c060ed0ae2557b13a823ddb2811eab00391d21",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "e3c060ed0ae2"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "SuperControl UX improvements, build fallback, demo documentation (#32)",
+      "desc": "Encore une gifle à la médiocrité lumineuse: SuperControl UX improvements, build fallback, demo documentation (#32). Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/c48822e63164e8a79581faae8d87337c68ce6955",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c48822e63164"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Update documentation and publish labeled UI UX release tour",
+      "desc": "ArtBastard, bastard of art, avance: Update documentation and publish labeled UI UX release tour. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/eaedd89ac8225e0f13704b6c41d2c773765014d4",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "eaedd89ac822"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove root react-beautiful-dnd to fix npm ci in backend CI",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Remove root react-beautiful-dnd to fix npm ci in backend CI. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/9965bf1eaa4b0f9a71c2002a7f9dd0b0717ade89",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "9965bf1eaa4b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add X-Touch and APC40 MIDI controller templates",
+      "desc": "Protocole photonique mis à jour: Add X-Touch and APC40 MIDI controller templates. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/165bb1c0782031494107ab3572be60eff9ee075e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "165bb1c07820"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Stabilize experimental hash routing and tab deep links",
+      "desc": "ArtBastard, bastard of art, avance: Stabilize experimental hash routing and tab deep links. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/c76a1dd2fd9233577ed83b434d7f85bfdcbe376c",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c76a1dd2fd92"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add hash-routable views and expanded demo captures",
+      "desc": "ArtBastard, bastard of art, avance: Add hash-routable views and expanded demo captures. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/91da2376f48a6ae23ba482a6fcaf1696826e6ce0",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "91da2376f48a"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add consolidated demo evidence workflow scripts",
+      "desc": "Le beret vole; les serveurs obéissent: Add consolidated demo evidence workflow scripts. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/a1b5c2af0472ac9298a77595a7bf57b059a4b0eb",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "a1b5c2af0472"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add automated demo screenshot capture script",
+      "desc": "Camembert-fueled clarity at 3 AM: Add automated demo screenshot capture script. The photons remember.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/e191cec0b64b6e06765475fdbd72eb1fc84df19d",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "e191cec0b64b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX page header stats and selector shell",
+      "desc": "Art-Net whisper in the catacombs: Extract DMX page header stats and selector shell. The photons remember.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/9519b72217016a02cec4bff15db1b50a5d3c1bde",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "9519b7221701"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add backend API contract smoke test script",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Add backend API contract smoke test script. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/0abfddef9bcf076ec219b08da74057561728186b",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "0abfddef9bcf"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX filtering utilities with regression tests",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Extract DMX filtering utilities with regression tests. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/f7e50660a05439b266a5949615b7cf8d548beb1f",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "f7e50660a054"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add ACT trigger action helper regression tests",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Add ACT trigger action helper regression tests. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/cedc7caf070c0aa5bfb3e20bbeb7a99a1e5423ca",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "cedc7caf070c"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add scene capture indexing regression helper and tests",
+      "desc": "ArtBastard, bastard of art, avance: Add scene capture indexing regression helper and tests. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/dcdfcc4b17784706a24e2b93c88d683e46397f91",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "dcdfcc4b1778"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add clip follow helper regression tests",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Add clip follow helper regression tests. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/ffa8d506d888c46e53c902409f6cbca52683a958",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "ffa8d506d888"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Add TouchOSC exporter regression tests for canonical output",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Add TouchOSC exporter regression tests for canonical output. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/8df64164a7a4db14cae600d1ab954159cb51d12a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "8df64164a7a4"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove DMX page debug logging and dead helper code",
+      "desc": "Art-Net whisper in the catacombs: Remove DMX page debug logging and dead helper code. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/180c5993f7cb52148f22d009cf0917acf323fa64",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "180c5993f7cb"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove redundant API socket setup bootstrap path",
+      "desc": "Camembert-fueled clarity at 3 AM: Remove redundant API socket setup bootstrap path. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/fc6cd0e5eca5e4ce8ad50a17e7bff4d14d74a97a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "fc6cd0e5eca5"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX channels viewport list orchestration component",
+      "desc": "Art-Net whisper in the catacombs: Extract DMX channels viewport list orchestration component. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/1d01d9a736ea58013c13990be5e812ed469d52fa",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "1d01d9a736ea"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract per-channel DMX card renderer into dedicated component",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Extract per-channel DMX card renderer into dedicated component. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/1c97d9f92553be2325bb8fe715169078fa9e9456",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "1c97d9f92553"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract active DMX summary grid into dedicated component",
+      "desc": "Protocole photonique mis à jour: Extract active DMX summary grid into dedicated component. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/c071caf7f1d576228c20588d8974c592572b2a30",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "c071caf7f1d5"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX pinned channels panel into reusable component",
+      "desc": "Protocole photonique mis à jour: Extract DMX pinned channels panel into reusable component. The photons remember.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/501a4f254172accf0f9f79533c4977aa9920e15e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "501a4f254172"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX MIDI device connection panel component",
+      "desc": "Protocole photonique mis à jour: Extract DMX MIDI device connection panel component. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/b54f1b247f9d079979bc221c665e5690d3f49ab2",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "b54f1b247f9d"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX page footer status into dedicated component",
+      "desc": "Art-Net whisper in the catacombs: Extract DMX page footer status into dedicated component. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/c54139067616f09750de0922cda80f988f9c57c0",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "c54139067616"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX scene management section into reusable component",
+      "desc": "Protocole photonique mis à jour: Extract DMX scene management section into reusable component. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/22161042f1e84f2a2fe50bf347f9eb3e23bdcf3e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "22161042f1e8"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Make clip follow actions deterministic in launcher playback hook",
+      "desc": "ArtBastard, bastard of art, avance: Make clip follow actions deterministic in launcher playback hook. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/c1d28e692c9fca0a107e976ba7893e802f58f637",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c1d28e692c9f"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Extract DMX fixture selector into reusable component",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Extract DMX fixture selector into reusable component. The photons remember.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/1fc3a3a805f3a1e4884dbc5d5858a7eef13d3de5",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "1fc3a3a805f3"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove unused legacy supercontrol demo implementations",
+      "desc": "Camembert-fueled clarity at 3 AM: Remove unused legacy supercontrol demo implementations. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/ecebc72bb93b561f349020f978e98879673fe978",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "ecebc72bb93b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Modularize DMX page controls into dedicated panel component",
+      "desc": "Art-Net whisper in the catacombs: Modularize DMX page controls into dedicated panel component. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/90fc7555494b18198501b6e77a26a3c1b5c9df80",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "90fc7555494b"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Use shared fixture persistence in graceful shutdown path",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Use shared fixture persistence in graceful shutdown path. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/167e1b3a460a349d913bb4093b2e1cf7ab83617a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "167e1b3a460a"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove obsolete alternate TouchOSC XML generator",
+      "desc": "Art-Net whisper in the catacombs: Remove obsolete alternate TouchOSC XML generator. The photons remember.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/bc90ec75fcbcc9cadca33d074ce09b76e3f28f32",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "bc90ec75fcbc"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Use one canonical XML generator path for TouchOSC helpers",
+      "desc": "Art-Net whisper in the catacombs: Use one canonical XML generator path for TouchOSC helpers. The photons remember.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/ad8bd97df3bf96242598f608abea5a5bed3125c2",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "ad8bd97df3bf"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Use canonical SuperControl in fixture setup preview",
+      "desc": "Protocole photonique mis à jour: Use canonical SuperControl in fixture setup preview. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/b85e4337e66fc6c16a74cc7baa1454846174e878",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "b85e4337e66f"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Unify fixture persistence with shared storage service",
+      "desc": "Protocole photonique mis à jour: Unify fixture persistence with shared storage service. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/4941fede39551ab2dac3558839fcccc5ec5ab59d",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "4941fede3955"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Make server own socket lifecycle and delegate core handlers",
+      "desc": "ArtBastard, bastard of art, avance: Make server own socket lifecycle and delegate core handlers. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/70308e53ac90cd4428f052ba401a8181b6fbe52a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "70308e53ac90"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Remove verbose debug logging from touch super control",
+      "desc": "ArtBastard, bastard of art, avance: Remove verbose debug logging from touch super control. The photons remember.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/69d6f10f61c3c83f4874e6788dfd842011fe66b1",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "69d6f10f61c3"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Retire unused legacy backend entrypoint and standalone server",
+      "desc": "Encore une gifle à la médiocrité lumineuse: Retire unused legacy backend entrypoint and standalone server. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/7c77b68adfbac90183cb6d911c2de296a0848e81",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "7c77b68adfba"
+    },
+    {
+      "date": "2026-02-27",
+      "title": "Route API socket handlers through server connection lifecycle",
+      "desc": "Camembert-fueled clarity at 3 AM: Route API socket handlers through server connection lifecycle. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/ArtBastard-DMX512/commit/8e073e487d89957ec7f34a26cd314b3d095f2302",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "8e073e487d89"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "7 March 2026",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/WKIxfbhKbOA",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "interupt festival 2026 main day one",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/723RoOtu_K0",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "6 March 2026",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/hdWvcwmaaQU",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "interupt festival night 1 (teh friday) with Abraide",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/h3MvdL7VM-o",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Macroverse42-AdayEdition",
+      "desc": "Infrastructure constellation shift: Macroverse42-AdayEdition. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/99fad8b3cb1d46ebb9b43193db1801548dc5e0bc",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "99fad8b3cb1d"
+    },
+    {
+      "date": "2026-03-08",
+      "title": "SHIP IT",
+      "desc": "Back-end sky map updated: SHIP IT. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/4c7310b9007127b2063c1d3bb7efa19fa80abc40",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "4c7310b90071"
     },
     {
       "date": "2026-03-12",
@@ -346,11 +3466,961 @@
       "source": "github"
     },
     {
+      "date": "2026-05-13",
+      "title": "Bootstrap macroverse.aday.net.au production repository.",
+      "desc": "Tab and panel choreography: Bootstrap macroverse.aday.net.au production repository.. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/82cbee08b757c0abe69e04f70d6e2c7a53a47de9",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "82cbee08b757"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Use single-level test/private hostnames for Cloudflare TLS coverage.",
+      "desc": "Back-end sky map updated: Use single-level test/private hostnames for Cloudflare TLS coverage.. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/43669d6987c2b6375c825f6fb155ebcf6608afc3",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "43669d6987c2"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Fix export gate false-positive on absolute-path scan.",
+      "desc": "Ops layer note: Fix export gate false-positive on absolute-path scan.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ce6bc6a0a1187d9c6f2a35b08367550bccc3dc6a",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "ce6bc6a0a118"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Add root static page for GitHub Pages root deployment.",
+      "desc": "Transmission depuis le salon de déploiement: Add root static page for GitHub Pages root deployment.. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6e8037dc9b520fcf1d6f6e9f1762f5fce08b825c",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "6e8037dc9b52"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Update ArtBastard test hostname to TLS-compatible subdomain.",
+      "desc": "ArtBastard, bastard of art, avance: Update ArtBastard test hostname to TLS-compatible subdomain.. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/355f661a67f2a45df5e29859a2e56509d890b8d8",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "355f661a67f2"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Fix ArtBastard Docker build order for react-app install.",
+      "desc": "Camembert-fueled clarity at 3 AM: Fix ArtBastard Docker build order for react-app install.. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9aa98ef752a741b90a84664ea698f7cad681ca12",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "9aa98ef752a7"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Use npm install in Docker build due lock mismatch.",
+      "desc": "ArtBastard, bastard of art, avance: Use npm install in Docker build due lock mismatch.. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/2daf5b574c4de8035ce66cdb690858d3ce48b933",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "2daf5b574c4d"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Bootstrap artbastard.aday.net.au production repository.",
+      "desc": "ArtBastard, bastard of art, avance: Bootstrap artbastard.aday.net.au production repository.. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f6889cf0bef8744947f678f201dba03153c86faf",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "f6889cf0bef8"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Define DMX bridge decision, criteria, and spike plan.",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Define DMX bridge decision, criteria, and spike plan.. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fb9d40154c9c3ef55061bf28945a9664d857de1b",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "fb9d40154c9c"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Install alsa-lib in runtime image for midi native module.",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: Install alsa-lib in runtime image for midi native module.. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6fbfca9d7bbd96ef787a12fe1035e13202ab84d0",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "6fbfca9d7bbd"
+    },
+    {
       "date": "2026-05-14",
       "title": "SoundCloud and Bandcamp deck online",
       "desc": "Rapid-play embeds and profile links added to aday.net.au media panel",
       "url": "https://aday.net.au",
       "source": "platform"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Lighten palette + stop landing on broken shader",
+      "desc": "VJ crossfade territory: Lighten palette + stop landing on broken shader. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/7140f3d14f567fd562838c854138160412ae00db",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "shader",
+      "commitSha": "7140f3d14f56"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 8: VJ deck mobile redesign",
+      "desc": "GLSL lane update — Phase 8: VJ deck mobile redesign. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/d27eee7ebdc30f68456aa878d079e8907b8bc2df",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "shader",
+      "commitSha": "d27eee7ebdc3"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 2: top app bar with shader name, save state, view switcher",
+      "desc": "GLSL lane update — Phase 2: top app bar with shader name, save state, view switcher. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/428e72c7225c4c4c4e7a17abf5b5f16cebb7e322",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "shader",
+      "commitSha": "428e72c7225c"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "docs: showcase demo loops + Live deployments + comprehensive Help",
+      "desc": "Deploy lane transmission: docs: showcase demo loops + Live deployments + comprehensive Help. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/60dffffcb4ad37c7c0da297604beec4b2da333ca",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "60dffffcb4ad"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Add 'Last build' badge to top app bar",
+      "desc": "Operator UI refinement: Add 'Last build' badge to top app bar. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/a7c10c13be7c98629cb6ca2bd460227a224197d0",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "a7c10c13be7c"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 11: polish - splash, modals, panels, drawer headers",
+      "desc": "Control plane adjustment: Phase 11: polish - splash, modals, panels, drawer headers. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3b33d492cf9805e9751973c685751d1a299b6a85",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "3b33d492cf98"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 7: status bar slim-down + Display Effects in Settings",
+      "desc": "Operator UI refinement: Phase 7: status bar slim-down + Display Effects in Settings. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/5db0de36a3b150441fd203f13f57e354e244dc6e",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "5db0de36a3b1"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 5: hide redundant .view-tabs strip on phone",
+      "desc": "Control plane adjustment: Phase 5: hide redundant .view-tabs strip on phone. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/5a22d0379ab67f1d5f2022aa388b4ba4b69c64f0",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "5a22d0379ab6"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 4: dock system + bottom tab bar + tablet drawer triggers",
+      "desc": "Tab and panel choreography: Phase 4: dock system + bottom tab bar + tablet drawer triggers. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/c352a90827493195cd798a2bc33e8ab4ba8bd498",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "c352a9082749"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "docs: README + changelog align with showcase Help refresh (0.1.7)",
+      "desc": "Ops layer note: docs: README + changelog align with showcase Help refresh (0.1.7). Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1578692398879b31e5c1672e3d23db6999f915d5",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "157869239887"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "docs: remove stub HTML doc that was hiding the rich showcase",
+      "desc": "Back-end sky map updated: docs: remove stub HTML doc that was hiding the rich showcase. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f8e712171baf462b2ef34e7e0f581f7a1b7148cd",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "f8e712171baf"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Site test: enlarge status-bar Fix button on touch devices",
+      "desc": "Ops layer note: Site test: enlarge status-bar Fix button on touch devices. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/0639f142e5e7362ee7617b2b4174c6ac22ed73fd",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "0639f142e5e7"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Site test: fix two bugs surfaced by automated checks",
+      "desc": "Ops layer note: Site test: fix two bugs surfaced by automated checks. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/8889cb99fb01bf563e8b06407f29405205132df7",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "8889cb99fb01"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Add inline SVG favicon to silence 404 console error",
+      "desc": "Back-end sky map updated: Add inline SVG favicon to silence 404 console error. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f4e7a70a8a8b11d703713e9de076e3abdf487edc",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "f4e7a70a8a8b"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 12: typecheck cleanup - drop boolean return from clickById",
+      "desc": "Back-end sky map updated: Phase 12: typecheck cleanup - drop boolean return from clickById. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ee7a304c1d7a8669d72856df2128d40e59364677",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "ee7a304c1d7a"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 10: Pipeline + Wire Hub responsive layouts",
+      "desc": "Back-end sky map updated: Phase 10: Pipeline + Wire Hub responsive layouts. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1d36d93e9fbd5781648b74f9a93bb61e859adf42",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "1d36d93e9fbd"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 9: gallery responsive grid",
+      "desc": "Ops layer note: Phase 9: gallery responsive grid. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/4dfed3e203340b3b0c1a294fd64ac7ce99cc2599",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "4dfed3e20334"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 6: toolbar slim-down for phone",
+      "desc": "Infrastructure constellation shift: Phase 6: toolbar slim-down for phone. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/a15882729fb7df359b12e76c32c7a99bebec5442",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "a15882729fb7"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 3: command palette + registry with core commands",
+      "desc": "Back-end sky map updated: Phase 3: command palette + registry with core commands. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/2cb65af54b1e768dfbe09dd3de5a1302753ce1b1",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "2cb65af54b1e"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Phase 1: viewport meta + touch-target sizing + hover-none gating",
+      "desc": "Infrastructure constellation shift: Phase 1: viewport meta + touch-target sizing + hover-none gating. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/96e12ffb0a5caf5a02d35f764a34dd935219f777",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "96e12ffb0a5c"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Label Macroverse page as a GitHub showcase.",
+      "desc": "Ops layer note: Label Macroverse page as a GitHub showcase.. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/af3f4fd1e85911c22940b538373e50fb62f329b2",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "infra",
+      "commitSha": "af3f4fd1e859"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "ci: drop pages.yml (conflicted with deploy-website.yml)",
+      "desc": "Rituel Linode accompli — ci: drop pages.yml (conflicted with deploy-website.yml). Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e6bc4b2bbc3c736036e19910a54ab76fef78caa7",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "e6bc4b2bbc3c"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "remove orphan pages/ActsPage.module.scss",
+      "desc": "Le beret vole; les serveurs obéissent: remove orphan pages/ActsPage.module.scss. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/3aa3482c22980e7568235cbe258f854b406a7d39",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "3aa3482c2298"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "showcase: clarify URLs (hub at /, full showcase at /website/)",
+      "desc": "Les Light Jockeys murmurent dans le dépôt parisien: showcase: clarify URLs (hub at /, full showcase at /website/). Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a9dcc285a5f2bee433c67dcee76d5ea611d685c0",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "a9dcc285a5f2"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "docs: comprehensive refresh for v5.12.0 + showcase",
+      "desc": "Le Créateur des Lumières exige plus de luminance: docs: comprehensive refresh for v5.12.0 + showcase. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0dcdf0b24772e55124072308e464693c4d72a8ce",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "0dcdf0b24772"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "showcase: demo reel section, refreshed feature cards, lazy-load videos",
+      "desc": "Les Light Jockeys murmurent dans le dépôt parisien: showcase: demo reel section, refreshed feature cards, lazy-load videos. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cd206a996cc057ae6b79a420e4605ebea30bc557",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "cd206a996cc0"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "showcase: add demo video clips (8 routes, 5.9MB total)",
+      "desc": "Le Créateur des Lumières exige plus de luminance: showcase: add demo video clips (8 routes, 5.9MB total). The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/22811f4087562ec395bb8af0773ed213867d84a8",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "22811f408756"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "scripts: add capture-demo-videos.sh for showcase WebM clips",
+      "desc": "Le Créateur des Lumières exige plus de luminance: scripts: add capture-demo-videos.sh for showcase WebM clips. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/45b16b8f92e4c9509548b41df715e7b1f6f2404e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "45b16b8f92e4"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Add AGENTS.md with Cursor Cloud development instructions",
+      "desc": "Chronique de la Société — Add AGENTS.md with Cursor Cloud development instructions. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e564bcb1c3e0df504892b9c1c6b415d7b82ca0d1",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "e564bcb1c3e0"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Create a dedicated ArtBastard GitHub showcase landing page.",
+      "desc": "Chronique de la Société — Create a dedicated ArtBastard GitHub showcase landing page.. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/7761adc01a20b1b68da47be3b12ecb185d638850",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "7761adc01a20"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "scripts: add demo:capture-videos and demo:evidence-full",
+      "desc": "Encore une gifle à la médiocrité lumineuse: scripts: add demo:capture-videos and demo:evidence-full. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c66574c58f5cd4672f612abd216551b1e262e172",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c66574c58f5c"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "helpoverlay: sync tabs with v5.12.0 surface",
+      "desc": "Camembert-fueled clarity at 3 AM: helpoverlay: sync tabs with v5.12.0 surface. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/006f65620f7470eb389bc6b12efcbc817b6cc551",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "006f65620f74"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "changelog: document dedupe/debloat pass under [Unreleased]",
+      "desc": "ArtBastard, bastard of art, avance: changelog: document dedupe/debloat pass under [Unreleased]. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6493de0e8a4819445b4b07ca027f6d770858aab4",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "6493de0e8a48"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "dedupe root package.json: remove frontend-only deps, demote @types",
+      "desc": "ArtBastard, bastard of art, avance: dedupe root package.json: remove frontend-only deps, demote @types. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/8a7980732398452ccf2e4e82854bd2029036de5f",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "8a7980732398"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "remove unreferenced root scripts: watchdog.js, build-without-typechecking.js",
+      "desc": "Encore une gifle à la médiocrité lumineuse: remove unreferenced root scripts: watchdog.js, build-without-typechecking.js. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/998829daaf8a20e3357e52e56befa1581c58e6f8",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "998829daaf8a"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "remove orphan store slices (keep automationSlice + types/index)",
+      "desc": "ArtBastard, bastard of art, avance: remove orphan store slices (keep automationSlice + types/index). Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a3d5ff611d5e55d6b8a7666d8ca8e614f715dd68",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "a3d5ff611d5e"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "remove unused legacy style snapshots (index_old/index_clean)",
+      "desc": "Encore une gifle à la médiocrité lumineuse: remove unused legacy style snapshots (index_old/index_clean). Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cd881235a417457a897d1f590014cf548386c468",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "cd881235a417"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "delete dead scenes/ChromaticEnergyManipulatorMini duplicate",
+      "desc": "Encore une gifle à la médiocrité lumineuse: delete dead scenes/ChromaticEnergyManipulatorMini duplicate. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/4dd5b851f19a98fe1c123a9ea3b16ff89cde2d83",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "4dd5b851f19a"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "remove stale SuperControl backup copies (.broken/.minimal/etc)",
+      "desc": "ArtBastard, bastard of art, avance: remove stale SuperControl backup copies (.broken/.minimal/etc). The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f03532686c4294fbd336e90b57ff7ee4af3e9ba1",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "f03532686c42"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "responsive: bump tablet ceiling to 1280 so iPad landscape gets touch chrome",
+      "desc": "Encore une gifle à la médiocrité lumineuse: responsive: bump tablet ceiling to 1280 so iPad landscape gets touch chrome. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/dcb2d3ede02b9b673ee9b55db423ae66a1447bdf",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "dcb2d3ede02b"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "fix: stable popup detection + synchronous useMobile defaults",
+      "desc": "ArtBastard, bastard of art, avance: fix: stable popup detection + synchronous useMobile defaults. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/3d0054b491bfd0a8d0d6da058c82b73674f6fe90",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "3d0054b491bf"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "responsive: hide floating monitors on mobile, banner safe-area, touch targets (C3/D4)",
+      "desc": "ArtBastard, bastard of art, avance: responsive: hide floating monitors on mobile, banner safe-area, touch targets (C3/D4). The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/45b8d1ecc0427055c85173b70b01758a7e6e26b3",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "45b8d1ecc042"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "responsive: sparkles default-off on mobile, help overlay safe-area (D2/D3)",
+      "desc": "ArtBastard, bastard of art, avance: responsive: sparkles default-off on mobile, help overlay safe-area (D2/D3). Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/aa86c0868bf2ba3777a461bb2ed014dbaf7d6157",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "aa86c0868bf2"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "responsive: page polish (Phase B3/B4/B5)",
+      "desc": "ArtBastard, bastard of art, avance: responsive: page polish (Phase B3/B4/B5). Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/13f2b38d2e99a06ce024b930cdc70f0d20d44379",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "13f2b38d2e99"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "responsive: tab nav, toast, mobile defaults (Phase B1/B2/B7 + C1)",
+      "desc": "Encore une gifle à la médiocrité lumineuse: responsive: tab nav, toast, mobile defaults (Phase B1/B2/B7 + C1). Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c32580eaf4db4bb2ab6a410b8eb0c8c009fadb6e",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "c32580eaf4db"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "responsive: mobile top bar + drawer chrome (Phase A2/A4/A5/A6)",
+      "desc": "Encore une gifle à la médiocrité lumineuse: responsive: mobile top bar + drawer chrome (Phase A2/A4/A5/A6). The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/32ca96df905d57336e8c96232b07884cb42572e2",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "32ca96df905d"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "ui: add Drawer primitive (left/right/bottom off-canvas)",
+      "desc": "Encore une gifle à la médiocrité lumineuse: ui: add Drawer primitive (left/right/bottom off-canvas). Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9b6aad81ac6540a3c2dbca1b138e62cedbec3b74",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "9b6aad81ac65"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "responsive: viewport-fit, dvh height, breakpoints and safe-area tokens",
+      "desc": "Encore une gifle à la médiocrité lumineuse: responsive: viewport-fit, dvh height, breakpoints and safe-area tokens. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/14fd4a8feeb81a185c1194f1af11cd39e56bbe51",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "awakening",
+      "commitSha": "14fd4a8feeb8"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "scripts: pre-grant chrome MIDI consent for demo capture",
+      "desc": "Art-Net whisper in the catacombs: scripts: pre-grant chrome MIDI consent for demo capture. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/1f1f4d8db705064fae0d3c7ed14f36b4ddf1645f",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "1f1f4d8db705"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "strip unused FixtureLibrary block from build-backend.js",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: strip unused FixtureLibrary block from build-backend.js. Not for the faint of PAR.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/178137eccd8f6002c25a3710655e1718e8f325e2",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "178137eccd8f"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "delete dead fixtures/SuperControl.tsx duplicate (use dmx/SuperControl)",
+      "desc": "Art-Net whisper in the catacombs: delete dead fixtures/SuperControl.tsx duplicate (use dmx/SuperControl). The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f855ca850c51018c27fb8908edd05e8bc2cd50bb",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "f855ca850c51"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "fix: clamp DMX page controls to viewport on tablet/phone",
+      "desc": "Les Wind Dancing Masters approuvent ce patch DMX: fix: clamp DMX page controls to viewport on tablet/phone. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a5448095f6e5a834c9c3b49378c2e9cf919cbf4d",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "protocol",
+      "commitSha": "a5448095f6e5"
+    },
+    {
+      "date": "2026-05-15",
+      "title": "agents: extend AGENTS.md with demo pipeline + Pages deployment notes",
+      "desc": "Transmission depuis le salon de déploiement: agents: extend AGENTS.md with demo pipeline + Pages deployment notes. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a690e5ab816c7c60df5f0ca191c97ad8b88b15de",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "a690e5ab816c"
+    },
+    {
+      "date": "2026-05-15",
+      "title": "Add AGENTS.md with Cursor Cloud development instructions",
+      "desc": "Chronique de la Société — Add AGENTS.md with Cursor Cloud development instructions. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fadf3d535861fd28442fb82ee0d1e84e0cc7e7a7",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "fadf3d535861"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Add terminal CRT code view effect with settings toggle.",
+      "desc": "VJ crossfade territory: Add terminal CRT code view effect with settings toggle.. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/d24aeb014a6776ff93ff9697f65a7007268b7a1b",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "shader",
+      "commitSha": "d24aeb014a67"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Fix deploy-aday-shaders SSH remote command quoting.",
+      "desc": "VJ crossfade territory: Fix deploy-aday-shaders SSH remote command quoting.. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/c8e4f21bec942e7413a058989b6afb860917f9a0",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "shader",
+      "commitSha": "c8e4f21bec94"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Mount aday lane shaders from private VPS path; add local FortyTwo deploy script.",
+      "desc": "GLSL lane update — Mount aday lane shaders from private VPS path; add local FortyTwo deploy script.. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ab3876adbf438df531841651e6dda28f1ca179bd",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "shader",
+      "commitSha": "ab3876adbf43"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Larger view tabs and wider VJ crossfader hit targets.",
+      "desc": "VJ crossfade territory: Larger view tabs and wider VJ crossfader hit targets.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1fc13c3d5e13aace7335853af9900d2de62775ad",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "shader",
+      "commitSha": "1fc13c3d5e13"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Fix nginx -t compose service name; document DNS token permissions.",
+      "desc": "Deploy lane transmission: Fix nginx -t compose service name; document DNS token permissions.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/8dca3b9e789b3e41ce22813d97a0a36188945517",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "8dca3b9e789b"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Harden DNS sync: dev-only mode, clearer API errors, skip optional 403s.",
+      "desc": "Production path hardened: Harden DNS sync: dev-only mode, clearer API errors, skip optional 403s.. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1b4725a5c0e5a08e970d8b7bde8047c5c348ce30",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "1b4725a5c0e5"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "DNS sync resolves zone by name; validate nginx config before reload.",
+      "desc": "DNS / edge ritual complete: DNS sync resolves zone by name; validate nginx config before reload.. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/be3e2d71b9d88c20e04df9afd7b3fbc4875cab43",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "be3e2d71b9d8"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Fix aday htpasswd deploy: LF hash, pull conflict handling, DNS sync workflow.",
+      "desc": "DNS / edge ritual complete: Fix aday htpasswd deploy: LF hash, pull conflict handling, DNS sync workflow.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3ae46ffbb13dcf1b6849f8935a589e8747670981",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "3ae46ffbb13d"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Remove unused Terraform infra (Cloudflare/Linode).",
+      "desc": "DNS / edge ritual complete: Remove unused Terraform infra (Cloudflare/Linode).. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/5657cea5ee899aa6d2eb52ba0c032dd122aad60a",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "5657cea5ee89"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy metadata switcher, Terraform macroverse-aday DNS, git pull on Linode deploy.",
+      "desc": "Deploy lane transmission: Deploy metadata switcher, Terraform macroverse-aday DNS, git pull on Linode deploy.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/acdfa7e6dd638770fd6217988d8ba2c7121ac40c",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "acdfa7e6dd63"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy meta widget: minimized bar, tap to expand, hide + restore chip.",
+      "desc": "Production path hardened: Deploy meta widget: minimized bar, tap to expand, hide + restore chip.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/c09700ae3a235404e2968168afa4965485438ee0",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "c09700ae3a23"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Add deploy metadata badge and publish metadata on deploy.",
+      "desc": "DNS / edge ritual complete: Add deploy metadata badge and publish metadata on deploy.. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/517d3873bd63c64ac1d8321afdccacc97d0ba054",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "517d3873bd63"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Add dev branch deployment lane for Macroverse stack.",
+      "desc": "Deploy lane transmission: Add dev branch deployment lane for Macroverse stack.. Part of the browser stack that grew out of the Fringe performance.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/cbadd2bd636de75c11788c0ebfdea9418b34b4ca",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "cbadd2bd636d"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Automate live Linode deploys from main pushes.",
+      "desc": "Deploy lane transmission: Automate live Linode deploys from main pushes.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3e0903ae8f08307b1f6a9cb0252c12cbe3b71a72",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "deploy",
+      "commitSha": "3e0903ae8f08"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Add MacroVerse Fringe origin pages, aday htpasswd, and fix deploy switcher lane detection.",
+      "desc": "MacroVerse show DNA surfaces again: Add MacroVerse Fringe origin pages, aday htpasswd, and fix deploy switcher lane detection.. Feeds the master presence graph on blog.aday.net.au.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/b277ff10b7bc75da9e7408ebd8c69c6bb5d3af94",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "fringe",
+      "commitSha": "b277ff10b7bc"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Frontend bootstrap and settings panel updates",
+      "desc": "Operator UI refinement: Frontend bootstrap and settings panel updates. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/621ab19270375e29a9d4ba2a9d1ed142ad653176",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "621ab1927037"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy meta: since build/deploy shorthand, drop redundant Age labels.",
+      "desc": "Control plane adjustment: Deploy meta: since build/deploy shorthand, drop redundant Age labels.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e9b580f33e4bbd96bf1d6888a51a9c43133e1fb9",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "e9b580f33e4b"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy meta: local TZ line, build/deploy age, labeled changelog links.",
+      "desc": "Tab and panel choreography: Deploy meta: local TZ line, build/deploy age, labeled changelog links.. Timeline folds this into the living Macroverse engine.",
+      "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f4dc9328db48e30fdf1cf1b5d6ddffc9aef5a701",
+      "source": "devlog-macroverse",
+      "storyTrain": "macroverse",
+      "phaseId": "frontend",
+      "commitSha": "f4dc9328db48"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Fix nginx -t compose service name on deploy.",
+      "desc": "Rituel Linode accompli — Fix nginx -t compose service name on deploy.. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cd76636a4e65421dd5569d06dc3acfa806149f04",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "cd76636a4e65"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Validate nginx config before reload on Linode deploy.",
+      "desc": "Transmission depuis le salon de déploiement: Validate nginx config before reload on Linode deploy.. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6e7ce8781bb9667e1db85d242f6ba6e40fa5f542",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "6e7ce8781bb9"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Fix Live/Dev deploy switcher host detection for dev subdomains.",
+      "desc": "Le beret vole; les serveurs obéissent: Fix Live/Dev deploy switcher host detection for dev subdomains.. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f632290481a90ec5da10a7c3d14b448c630dcbec",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "f632290481a9"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy dock switcher, Linode deploy pulls compose before compose up.",
+      "desc": "Rituel Linode accompli — Deploy dock switcher, Linode deploy pulls compose before compose up.. The photons remember.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0ab973754d9c1c34edf28ec7f8b3a91a81d9227b",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "0ab973754d9c"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy meta: since build/deploy shorthand, drop redundant Age labels.",
+      "desc": "Le beret vole; les serveurs obéissent: Deploy meta: since build/deploy shorthand, drop redundant Age labels.. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/199d72c2e7435e7d95cc10cd083a460270a87f7b",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "199d72c2e743"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy meta widget: minimized bar, tap to expand, hide + restore chip.",
+      "desc": "Le beret vole; les serveurs obéissent: Deploy meta widget: minimized bar, tap to expand, hide + restore chip.. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/397dc9946fe549814a7a6cfeb94a7d3b5b4b7518",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "397dc9946fe5"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Deploy meta: local TZ line, build/deploy age, labeled changelog links.",
+      "desc": "Le beret vole; les serveurs obéissent: Deploy meta: local TZ line, build/deploy age, labeled changelog links.. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/3ab4f69053f6107a1746948d7a9afec752fdd9bf",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "3ab4f69053f6"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Add deploy metadata badge and publish metadata on deploy.",
+      "desc": "Rituel Linode accompli — Add deploy metadata badge and publish metadata on deploy.. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b420184a56e63f282a785409cd99dffa1b4bfb33",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "b420184a56e6"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Add dev branch deployment lane for Artbastard.",
+      "desc": "Transmission depuis le salon de déploiement: Add dev branch deployment lane for Artbastard.. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/bb5fb801789d38325b0f04b3f3242137c8347b89",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "bb5fb801789d"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Automate live Linode deploys from main pushes.",
+      "desc": "Transmission depuis le salon de déploiement: Automate live Linode deploys from main pushes.. Honouring Feng Zhi's breeze choreography in silicon.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/dced141b968ea5e6cbb3e289d745bff729783de6",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "deploy",
+      "commitSha": "dced141b968e"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Add themed Amiga-style SVG cursor (light/dark palette).",
+      "desc": "Les Light Jockeys murmurent dans le dépôt parisien: Add themed Amiga-style SVG cursor (light/dark palette).. Ainsi soit la lumière, mes amis.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/70e27bf7258a9f47321665d451c5313e0f244476",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "70e27bf7258a"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Trigger GitHub Pages when DOCS showcase changes",
+      "desc": "Le Créateur des Lumières exige plus de luminance: Trigger GitHub Pages when DOCS showcase changes. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/da38aa1ff523ce420670e788e8f8d6c54170435a",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "da38aa1ff523"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "DOCS hub theme with Luminary quotes from FancyQuotes; sync script and SMX/UI refinements",
+      "desc": "Les Light Jockeys murmurent dans le dépôt parisien: DOCS hub theme with Luminary quotes from FancyQuotes; sync script and SMX/UI refinements. Vibe-coded, beret-approved.",
+      "url": "https://github.com/aday1/artbastard.aday.net.au/commit/18413fcbb9cd44fa89925696e0091d23b057244d",
+      "source": "devlog-artbastard",
+      "storyTrain": "artbastard",
+      "phaseId": "society",
+      "commitSha": "18413fcbb9cd"
     }
   ]
 }

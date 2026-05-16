@@ -5,8 +5,8 @@
   const timelineGraph = document.getElementById("timelineGraph");
   const blogNodeMap = document.getElementById("blogNodeMap");
   const blogYtFrame = document.getElementById("blogYtFrame");
-  const blogYtSelector = document.getElementById("blogYtSelector");
-  const blogYtRandom = document.getElementById("blogYtRandom");
+  const blogYtSection = document.getElementById("blogYtSection");
+  const blogYtNowPlaying = document.getElementById("blogYtNowPlaying");
   const pageTransition = document.getElementById("pageTransition");
 
   const CUTON_SESSION_KEY = "aday-blog-cuton-done-v1";
@@ -17,6 +17,8 @@
       return false;
     }
   })();
+  const prefersReducedMotion = !!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+  const liteBoot = hasSeenCutOn || prefersReducedMotion;
   const finishBoot = () => {
     body.classList.remove("boot-seq");
     body.classList.add("cuton-settled");
@@ -130,10 +132,12 @@
     tick();
   };
 
-  document.querySelectorAll(".decrypt").forEach((node, i) => {
-    const text = node.textContent || "";
-    setTimeout(() => scramble(node, text), 220 + i * 140);
-  });
+  if (!liteBoot) {
+    document.querySelectorAll(".decrypt").forEach((node, i) => {
+      const text = node.textContent || "";
+      setTimeout(() => scramble(node, text), 220 + i * 140);
+    });
+  }
 
   const animateHeaders = () => {
     if (!window.anime) return false;
@@ -168,11 +172,10 @@
     }, 120);
   };
 
-  waitForAnime(() => animateHeaders());
+  if (!liteBoot) waitForAnime(() => animateHeaders());
 
   const typeInNodes = () => {
-    const prefersReducedMotion = !!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || liteBoot) return;
     const nodes = [...document.querySelectorAll(".typed:not(.decrypt)")];
     nodes.forEach((node, idx) => {
       const fullText = (node.textContent || "").trim();
@@ -196,34 +199,40 @@
       setTimeout(tick, 140 + idx * 120);
     });
   };
-  typeInNodes();
-
-  if (bgShader) bgShader.style.display = "none";
+  if (!liteBoot) typeInNodes();
 
   const runTimelineGraph = () => {
     if (!timelineGraph) return;
     const ctx = timelineGraph.getContext("2d");
     if (!ctx) return;
-    const labels = [...document.querySelectorAll(".timeline-node")];
-    if (!labels.length) return;
+    const presenceRoot = document.getElementById("presenceTimeline");
+    const cardNodes = presenceRoot
+      ? [...presenceRoot.querySelectorAll(".timeline-node")]
+      : [...document.querySelectorAll(".timeline-node")];
+    if (!cardNodes.length) return;
+
+    const DAY_MS = 86400000;
+    const MIN_VIEW_MS = DAY_MS * 21;
+    const padX = 34;
+
     const laneForSource = (s) => {
       if (["soundcloud", "weeklybeats", "bandcamp"].includes(s)) return 0;
       if (["youtube", "vimeo"].includes(s)) return 1;
       if (["demozoo", "scene"].includes(s)) return 2;
-      if (["github", "codepen"].includes(s)) return 3;
+      if (["github", "codepen", "devlog-macroverse", "devlog-artbastard"].includes(s)) return 3;
       return 4;
     };
-    const laneColor = (lane) => {
+    const laneColor = (lane, alpha = 1) => {
       const c = [
-        "rgba(140, 255, 190, 0.92)",
-        "rgba(130, 200, 255, 0.92)",
-        "rgba(255, 190, 120, 0.9)",
-        "rgba(200, 160, 255, 0.92)",
-        "rgba(180, 220, 255, 0.88)"
+        `rgba(122, 230, 168, ${alpha})`,
+        `rgba(118, 200, 255, ${alpha})`,
+        `rgba(255, 196, 118, ${alpha})`,
+        `rgba(200, 160, 255, ${alpha})`,
+        `rgba(186, 214, 238, ${alpha})`
       ];
       return c[Math.min(lane, c.length - 1)];
     };
-    const entries = labels.map((el, idx) => {
+    const entries = cardNodes.map((el, idx) => {
       const rawDate = (el.querySelector(".date")?.textContent || "").trim();
       const title = (el.dataset.title || el.textContent || `node-${idx}`).trim();
       const source = (el.dataset.source || "").toLowerCase();
@@ -231,6 +240,7 @@
       const lane = laneForSource(source);
       return {
         idx,
+        el,
         title,
         rawDate,
         source,
@@ -238,28 +248,94 @@
         ts: Number.isFinite(date.getTime()) ? date.getTime() : Date.now()
       };
     });
-    const minTs = Math.min(...entries.map((e) => e.ts));
-    const maxTs = Math.max(...entries.map((e) => e.ts));
-    const range = Math.max(1, maxTs - minTs);
-    let isVisible = true;
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((rows) => {
-        rows.forEach((row) => {
-          isVisible = row.isIntersecting;
-        });
-      }, { threshold: 0.08 });
-      observer.observe(timelineGraph);
-    }
+    const dataMinTs = Math.min(...entries.map((e) => e.ts));
+    const dataMaxTs = Math.max(...entries.map((e) => e.ts));
+    const totalRange = Math.max(1, dataMaxTs - dataMinTs);
+    let viewMinTs = dataMinTs;
+    let viewMaxTs = dataMaxTs;
     const spine = [...entries].sort((a, b) => a.ts - b.ts);
-    const prefersReducedMotionBlog = !!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    let pointCache = [];
+    let hoverIdx = -1;
+    let graphVisible = false;
+    let plotWidth = 1;
+    let dragging = false;
+    let dragStartX = 0;
+    let dragViewMin = 0;
+    let suppressClick = false;
+    let zoomSlider = null;
+    let zoomLabel = null;
 
-    const quadPoint = (ax, ay, cx, cy, bx, by, u) => {
-      const om = 1 - u;
-      return {
-        x: om * om * ax + 2 * om * u * cx + u * u * bx,
-        y: om * om * ay + 2 * om * u * cy + u * u * by
-      };
+    const viewSpan = () => Math.max(1, viewMaxTs - viewMinTs);
+    const isFullView = () => viewSpan() >= totalRange * 0.995;
+
+    const clampView = () => {
+      let span = Math.min(totalRange, Math.max(MIN_VIEW_MS, viewMaxTs - viewMinTs));
+      if (span >= totalRange * 0.995) {
+        viewMinTs = dataMinTs;
+        viewMaxTs = dataMaxTs;
+        return;
+      }
+      let center = (viewMinTs + viewMaxTs) * 0.5;
+      const half = span * 0.5;
+      const minCenter = dataMinTs + half;
+      const maxCenter = dataMaxTs - half;
+      center = Math.min(maxCenter, Math.max(minCenter, center));
+      viewMinTs = center - half;
+      viewMaxTs = center + half;
     };
+
+    const formatTs = (ts) =>
+      new Date(ts).toLocaleDateString("en-AU", { day: "numeric", month: "short", year: "numeric" });
+
+    const updateZoomUi = () => {
+      if (zoomLabel) {
+        zoomLabel.textContent = isFullView()
+          ? `Full range (${formatTs(dataMinTs)} – ${formatTs(dataMaxTs)})`
+          : `${formatTs(viewMinTs)} – ${formatTs(viewMaxTs)}`;
+      }
+      if (!zoomSlider) return;
+      const span = viewSpan();
+      const logMin = Math.log(MIN_VIEW_MS);
+      const logMax = Math.log(totalRange);
+      const t = (Math.log(span) - logMax) / (logMin - logMax);
+      const pct = Math.round(Math.min(100, Math.max(0, t * 100)));
+      if (Number(zoomSlider.value) !== pct) zoomSlider.value = String(pct);
+    };
+
+    const setViewFromSlider = (pct) => {
+      const t = Math.min(1, Math.max(0, Number(pct) / 100));
+      const span = Math.exp(Math.log(MIN_VIEW_MS) * t + Math.log(totalRange) * (1 - t));
+      const center = (viewMinTs + viewMaxTs) * 0.5;
+      viewMinTs = center - span * 0.5;
+      viewMaxTs = center + span * 0.5;
+      clampView();
+      updateZoomUi();
+      drawFrame();
+    };
+
+    const resetView = () => {
+      viewMinTs = dataMinTs;
+      viewMaxTs = dataMaxTs;
+      updateZoomUi();
+      drawFrame();
+    };
+
+    const zoomAt = (clientX, factor) => {
+      const rect = timelineGraph.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const inner = Math.max(1, plotWidth);
+      const ratio = Math.min(1, Math.max(0, (x - padX) / inner));
+      const anchor = viewMinTs + ratio * viewSpan();
+      const nextSpan = Math.min(totalRange, Math.max(MIN_VIEW_MS, viewSpan() * factor));
+      viewMinTs = anchor - ratio * nextSpan;
+      viewMaxTs = anchor + (1 - ratio) * nextSpan;
+      clampView();
+      updateZoomUi();
+      drawFrame();
+    };
+
+    const tsToX = (ts, w) => padX + ((ts - viewMinTs) / viewSpan()) * (w - padX * 2);
+
     const synapseControl = (ax, ay, bx, by, edgeIdx) => {
       const mx = (ax + bx) * 0.5;
       const my = (ay + by) * 0.5;
@@ -269,98 +345,326 @@
       const nx = -dy / len;
       const ny = dx / len;
       const dir = edgeIdx % 2 === 0 ? 1 : -1;
-      const bend = 10 + (edgeIdx % 4) * 1.8;
+      const bend = 8 + (edgeIdx % 3) * 1.4;
       return { cx: mx + nx * bend * dir, cy: my + ny * bend * dir };
     };
 
-    const animate = (time) => {
-      if (document.hidden || !isVisible) {
-        requestAnimationFrame(animate);
+    const setActiveCard = (idx) => {
+      cardNodes.forEach((node, i) => {
+        node.classList.toggle("timeline-graph-focus", i === idx && idx >= 0);
+      });
+    };
+
+    const drawTimeTicks = (w, laneTop, axisY) => {
+      const span = viewSpan();
+      const monthMode = span < DAY_MS * 400;
+      const weekMode = span < DAY_MS * 120;
+
+      if (monthMode) {
+        let t = viewMinTs;
+        if (weekMode) {
+          const start = new Date(viewMinTs);
+          start.setUTCDate(start.getUTCDate() - start.getUTCDay());
+          start.setUTCHours(0, 0, 0, 0);
+          t = start.getTime();
+        } else {
+          const start = new Date(viewMinTs);
+          start.setUTCDate(1);
+          start.setUTCHours(0, 0, 0, 0);
+          t = start.getTime();
+        }
+        while (t <= viewMaxTs + DAY_MS) {
+          if (t >= viewMinTs - DAY_MS) {
+            const x = tsToX(t, w);
+            if (x >= padX - 2 && x <= w - padX + 2) {
+              ctx.strokeStyle = "rgba(134, 198, 255, 0.14)";
+              ctx.beginPath();
+              ctx.moveTo(x, laneTop - 2);
+              ctx.lineTo(x, axisY + 10);
+              ctx.stroke();
+              const d = new Date(t);
+              const label = weekMode
+                ? d.toLocaleDateString("en-AU", { day: "numeric", month: "short" })
+                : d.toLocaleDateString("en-AU", { month: "short", year: "2-digit" });
+              ctx.fillStyle = "rgba(168, 228, 255, 0.72)";
+              ctx.font = weekMode ? "9px Consolas, monospace" : "10px Consolas, monospace";
+              ctx.fillText(label, x - 16, axisY + 24);
+            }
+          }
+          if (weekMode) {
+            t += 7 * DAY_MS;
+          } else {
+            const next = new Date(t);
+            next.setUTCMonth(next.getUTCMonth() + 1);
+            t = next.getTime();
+          }
+        }
         return;
       }
+
+      const y0 = new Date(viewMinTs).getUTCFullYear();
+      const y1 = new Date(viewMaxTs).getUTCFullYear();
+      for (let year = y0; year <= y1; year += 1) {
+        const yrTs = Date.UTC(year, 0, 1);
+        const x = tsToX(yrTs, w);
+        if (x < padX - 20 || x > w - padX + 20) continue;
+        ctx.strokeStyle = "rgba(134, 198, 255, 0.16)";
+        ctx.beginPath();
+        ctx.moveTo(x, laneTop - 2);
+        ctx.lineTo(x, axisY + 10);
+        ctx.stroke();
+        ctx.fillStyle = "rgba(168, 228, 255, 0.78)";
+        ctx.font = "10px Consolas, monospace";
+        ctx.fillText(String(year), x - 14, axisY + 24);
+      }
+    };
+
+    const drawFrame = () => {
+      if (!graphVisible || document.hidden) return;
       const ratio = window.devicePixelRatio || 1;
       const rect = timelineGraph.getBoundingClientRect();
+      if (rect.width < 8 || rect.height < 8) return;
       timelineGraph.width = Math.max(1, Math.floor(rect.width * ratio));
       timelineGraph.height = Math.max(1, Math.floor(rect.height * ratio));
       ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
       const w = rect.width;
       const h = rect.height;
-      const t = time * 0.001;
-      const padX = 34;
-      const axisY = h * 0.68;
-      const laneTop = h * 0.18;
+      plotWidth = w - padX * 2;
+      const axisY = h * 0.72;
+      const laneTop = h * 0.16;
       const laneCount = 5;
       ctx.clearRect(0, 0, w, h);
 
-      ctx.strokeStyle = "rgba(90, 166, 255, 0.42)";
-      ctx.lineWidth = 1.2;
+      const bgGrad = ctx.createLinearGradient(0, 0, 0, h);
+      bgGrad.addColorStop(0, "rgba(8, 18, 32, 0.55)");
+      bgGrad.addColorStop(1, "rgba(4, 8, 14, 0.15)");
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, w, h);
+
+      const laneSpan = Math.max(12, axisY - laneTop - 20);
+      for (let lane = 0; lane < laneCount; lane += 1) {
+        const u = laneCount <= 1 ? 0.5 : lane / (laneCount - 1);
+        const y = laneTop + u * laneSpan;
+        ctx.strokeStyle = laneColor(lane, 0.12);
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padX, y);
+        ctx.lineTo(w - padX, y);
+        ctx.stroke();
+      }
+
+      ctx.strokeStyle = "rgba(90, 166, 255, 0.5)";
+      ctx.lineWidth = 1.3;
       ctx.beginPath();
       ctx.moveTo(padX, axisY);
       ctx.lineTo(w - padX, axisY);
       ctx.stroke();
 
-      const years = [...new Set(entries.map((item) => new Date(item.ts).getUTCFullYear()))].sort((a, b) => a - b);
-      years.forEach((year) => {
-        const yrTs = Date.UTC(year, 0, 1);
-        const x = padX + ((yrTs - minTs) / range) * (w - padX * 2);
-        ctx.strokeStyle = "rgba(134, 198, 255, 0.2)";
-        ctx.beginPath();
-        ctx.moveTo(x, laneTop - 4);
-        ctx.lineTo(x, axisY + 14);
-        ctx.stroke();
-        ctx.fillStyle = "rgba(168, 228, 255, 0.72)";
-        ctx.font = "10px Consolas, monospace";
-        ctx.fillText(String(year), x - 14, axisY + 28);
-      });
+      drawTimeTicks(w, laneTop, axisY);
 
-      const laneSpan = Math.max(12, axisY - laneTop - 24);
-      const points = entries.map((item) => {
-        const x = padX + ((item.ts - minTs) / range) * (w - padX * 2);
-        const u = laneCount <= 1 ? 0.5 : item.lane / (laneCount - 1);
-        const y = laneTop + u * laneSpan + (prefersReducedMotionBlog ? 0 : Math.sin(t * 0.55 + item.idx * 0.2) * 0.6);
-        return { ...item, x, y };
-      });
-      const byIdx = new Map(points.map((p) => [p.idx, p]));
+      const margin = viewSpan() * 0.02;
+      pointCache = entries
+        .filter((item) => item.ts >= viewMinTs - margin && item.ts <= viewMaxTs + margin)
+        .map((item) => {
+          const x = tsToX(item.ts, w);
+          const u = laneCount <= 1 ? 0.5 : item.lane / (laneCount - 1);
+          const y = laneTop + u * laneSpan;
+          return { ...item, x, y };
+        });
+      const byIdx = new Map(pointCache.map((p) => [p.idx, p]));
 
-      for (let i = 0; i < spine.length - 1; i++) {
+      for (let i = 0; i < spine.length - 1; i += 1) {
         const a = byIdx.get(spine[i].idx);
         const b = byIdx.get(spine[i + 1].idx);
         if (!a || !b) continue;
         const { cx, cy } = synapseControl(a.x, a.y, b.x, b.y, i);
-        ctx.strokeStyle = "rgba(110, 195, 255, 0.28)";
-        ctx.lineWidth = 1.05;
+        ctx.strokeStyle = "rgba(110, 195, 255, 0.22)";
+        ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.quadraticCurveTo(cx, cy, b.x, b.y);
         ctx.stroke();
-        const u = (t * 0.1 + i * 0.037) % 1;
-        const pulse = quadPoint(a.x, a.y, cx, cy, b.x, b.y, u);
-        ctx.fillStyle = "rgba(200, 245, 255, 0.55)";
-        ctx.beginPath();
-        ctx.arc(pulse.x, pulse.y, 3.2, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.fillStyle = "rgba(255, 255, 255, 0.75)";
-        ctx.beginPath();
-        ctx.arc(pulse.x, pulse.y, 1.2, 0, Math.PI * 2);
-        ctx.fill();
       }
 
-      points.forEach((p, i) => {
-        const ring = 4.2 + (i % 4) * 0.35;
-        ctx.strokeStyle = "rgba(120, 200, 255, 0.22)";
-        ctx.lineWidth = 1;
+      pointCache.forEach((p) => {
+        const focused = p.idx === hoverIdx;
+        const ring = focused ? 6.2 : 4.4;
+        ctx.strokeStyle = focused ? laneColor(p.lane, 0.85) : laneColor(p.lane, 0.35);
+        ctx.lineWidth = focused ? 1.6 : 1;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, ring + 5.5, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, ring + 4, 0, Math.PI * 2);
         ctx.stroke();
-        ctx.fillStyle = laneColor(p.lane);
+        ctx.fillStyle = laneColor(p.lane, focused ? 1 : 0.88);
         ctx.beginPath();
         ctx.arc(p.x, p.y, ring, 0, Math.PI * 2);
         ctx.fill();
+        if (focused) {
+          ctx.fillStyle = "rgba(232, 251, 255, 0.92)";
+          ctx.font = "11px Consolas, monospace";
+          const label = p.title.length > 42 ? `${p.title.slice(0, 39)}...` : p.title;
+          ctx.fillText(label, Math.min(p.x + 10, w - padX - 120), Math.max(14, p.y - 10));
+        }
       });
-
-      requestAnimationFrame(animate);
     };
-    requestAnimationFrame(animate);
+
+    const pickPoint = (x, y) => {
+      let best = null;
+      let bestDist = Infinity;
+      pointCache.forEach((p) => {
+        const dx = x - p.x;
+        const dy = y - p.y;
+        const dist = dx * dx + dy * dy;
+        if (dist < bestDist) {
+          bestDist = dist;
+          best = p;
+        }
+      });
+      return bestDist <= 14 * 14 ? best : null;
+    };
+
+    const pointerPos = (event) => {
+      const rect = timelineGraph.getBoundingClientRect();
+      return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+    };
+
+    const graphWrap = timelineGraph.closest(".timeline-graph-wrap");
+    const ensureZoomBar = () => {
+      if (!graphWrap || graphWrap.querySelector(".timeline-zoom-bar")) {
+        return graphWrap?.querySelector(".timeline-zoom-bar") || null;
+      }
+      const bar = document.createElement("div");
+      bar.className = "timeline-zoom-bar";
+      bar.setAttribute("role", "toolbar");
+      bar.setAttribute("aria-label", "Timeline zoom and pan");
+      bar.innerHTML = [
+        '<button type="button" class="timeline-zoom-btn" data-zoom="out" title="Zoom out" aria-label="Zoom out">-</button>',
+        '<input type="range" class="timeline-zoom-range" min="0" max="100" value="0" aria-label="Timeline zoom level">',
+        '<button type="button" class="timeline-zoom-btn" data-zoom="in" title="Zoom in" aria-label="Zoom in">+</button>',
+        '<button type="button" class="timeline-zoom-btn timeline-zoom-reset" data-zoom="reset" title="Show full range" aria-label="Reset zoom">All</button>',
+        '<span class="timeline-zoom-label" aria-live="polite"></span>'
+      ].join("");
+      graphWrap.insertBefore(bar, graphWrap.querySelector(".timeline-stage"));
+      return bar;
+    };
+
+    const zoomBar = ensureZoomBar();
+    if (zoomBar) {
+      zoomSlider = zoomBar.querySelector(".timeline-zoom-range");
+      zoomLabel = zoomBar.querySelector(".timeline-zoom-label");
+      zoomBar.addEventListener("click", (event) => {
+        const btn = event.target.closest("[data-zoom]");
+        if (!btn) return;
+        const mode = btn.dataset.zoom;
+        if (mode === "in") zoomAt(timelineGraph.getBoundingClientRect().left + plotWidth * 0.5, 0.72);
+        else if (mode === "out") zoomAt(timelineGraph.getBoundingClientRect().left + plotWidth * 0.5, 1.38);
+        else if (mode === "reset") resetView();
+      });
+      zoomSlider?.addEventListener("input", () => setViewFromSlider(zoomSlider.value));
+    }
+    updateZoomUi();
+
+    timelineGraph.addEventListener("wheel", (event) => {
+      event.preventDefault();
+      const factor = event.deltaY > 0 ? 1.14 : 0.86;
+      zoomAt(event.clientX, factor);
+    }, { passive: false });
+
+    timelineGraph.addEventListener("mousedown", (event) => {
+      if (event.button !== 0) return;
+      dragging = true;
+      dragStartX = event.clientX;
+      dragViewMin = viewMinTs;
+      timelineGraph.classList.add("is-panning");
+      suppressClick = false;
+    });
+
+    window.addEventListener("mousemove", (event) => {
+      if (!dragging) return;
+      const dx = event.clientX - dragStartX;
+      if (Math.abs(dx) > 4) suppressClick = true;
+      const span = viewSpan();
+      viewMinTs = dragViewMin + (-dx / Math.max(1, plotWidth)) * span;
+      viewMaxTs = viewMinTs + span;
+      clampView();
+      updateZoomUi();
+      drawFrame();
+    });
+
+    window.addEventListener("mouseup", () => {
+      if (!dragging) return;
+      dragging = false;
+      timelineGraph.classList.remove("is-panning");
+    });
+
+    timelineGraph.addEventListener("dblclick", () => resetView());
+
+    timelineGraph.addEventListener("mousemove", (event) => {
+      if (dragging) return;
+      const p = pointerPos(event);
+      const hit = pickPoint(p.x, p.y);
+      const nextIdx = hit?.idx ?? -1;
+      if (nextIdx === hoverIdx) return;
+      hoverIdx = nextIdx;
+      setActiveCard(hoverIdx);
+      drawFrame();
+    });
+    timelineGraph.addEventListener("mouseleave", () => {
+      if (dragging) return;
+      hoverIdx = -1;
+      setActiveCard(-1);
+      drawFrame();
+    });
+    timelineGraph.addEventListener("click", (event) => {
+      if (suppressClick) {
+        suppressClick = false;
+        return;
+      }
+      const p = pointerPos(event);
+      const hit = pickPoint(p.x, p.y);
+      if (!hit?.el) return;
+      hit.el.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "center" });
+      hit.el.classList.add("timeline-graph-ping");
+      setTimeout(() => hit.el.classList.remove("timeline-graph-ping"), 900);
+    });
+
+    let resizeTimer = 0;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(drawFrame, 120);
+    });
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((rows) => {
+        rows.forEach((row) => {
+          graphVisible = row.isIntersecting;
+          if (graphVisible) drawFrame();
+        });
+      }, { threshold: 0.05, rootMargin: "80px 0px" });
+      observer.observe(timelineGraph);
+    } else {
+      graphVisible = true;
+      drawFrame();
+    }
+  };
+
+  const wireTimelinePresence = () => {
+    const root = document.getElementById("presenceTimeline");
+    if (!root) return;
+    const nodes = [...root.querySelectorAll(".timeline-node")];
+    if (!nodes.length) return;
+
+    if ("IntersectionObserver" in window) {
+      const reveal = new IntersectionObserver((rows) => {
+        rows.forEach((row) => {
+          if (!row.isIntersecting) return;
+          row.target.classList.add("timeline-inview");
+          reveal.unobserve(row.target);
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -5% 0px" });
+      nodes.forEach((node) => reveal.observe(node));
+    } else {
+      nodes.forEach((node) => node.classList.add("timeline-inview"));
+    }
   };
 
   const applyTimelineCategories = () => {
@@ -437,8 +741,12 @@
     ];
     const linkById = new Map(linkRows.map((row) => [row.dataset.nodeId, row]));
     let hoverId = "";
-    let isVisible = true;
+    let isVisible = false;
+    let rafId = 0;
     let nodeCache = [];
+    const kickAnimate = () => {
+      if (!rafId) rafId = requestAnimationFrame(animate);
+    };
     const MAX_LAYER = 4;
     const PAD_X = 40;
     const PAD_Y = 32;
@@ -474,9 +782,13 @@
       const observer = new IntersectionObserver((rows) => {
         rows.forEach((row) => {
           isVisible = row.isIntersecting;
+          if (isVisible) kickAnimate();
+          else rafId = 0;
         });
-      }, { threshold: 0.08 });
+      }, { threshold: 0.08, rootMargin: "120px 0px" });
       observer.observe(blogNodeMap);
+    } else {
+      isVisible = true;
     }
 
     const pickNode = (x, y) => {
@@ -512,10 +824,8 @@
     });
 
     const animate = (time) => {
-      if (document.hidden || !isVisible) {
-        requestAnimationFrame(animate);
-        return;
-      }
+      rafId = 0;
+      if (document.hidden || !isVisible) return;
       const ratio = window.devicePixelRatio || 1;
       const rect = blogNodeMap.getBoundingClientRect();
       blogNodeMap.width = Math.max(1, Math.floor(rect.width * ratio));
@@ -579,13 +889,13 @@
         ctx.stroke();
       });
 
-      requestAnimationFrame(animate);
+      rafId = requestAnimationFrame(animate);
     };
-    requestAnimationFrame(animate);
+    if (!("IntersectionObserver" in window)) kickAnimate();
   };
 
   const randomizeFrameGeneration = () => {
-    document.querySelectorAll("main section, .timeline-stage").forEach((node) => {
+    document.querySelectorAll("main section:not(.presence-timeline), .timeline-stage:not(.timeline-stage--calm)").forEach((node) => {
       const edgeLen = 8 + Math.floor(Math.random() * 18);
       const edgeGap = 5 + Math.floor(Math.random() * 14);
       const edgeCut = 7 + Math.floor(Math.random() * 12);
@@ -601,41 +911,25 @@
     });
   };
 
-  const scheduleFrameRandomizer = () => {
-    const roll = () => {
-      randomizeFrameGeneration();
-      const next = 5200 + Math.floor(Math.random() * 6200);
-      setTimeout(roll, next);
-    };
-    roll();
+  randomizeFrameGeneration();
+
+  const bootHeavyVisuals = () => {
+    runTimelineGraph();
+    wireTimelinePresence();
+    runBlogNodeMap();
+    if (window.AdayMediaArchive) {
+      window.AdayMediaArchive.wireYoutubeCatalog(blogYtSection, "blogYtFrame", "blogYtNowPlaying");
+      window.AdayMediaArchive.initWeeklybeatsArchive({
+        rootId: "blogWbSection",
+        dataUrl: "./data/weeklybeats_tracks.json"
+      });
+    }
+    applyTimelineCategories();
   };
 
-  randomizeFrameGeneration();
-  runTimelineGraph();
-  runBlogNodeMap();
-
-  if (blogYtFrame) {
-    const sources = [
-      "https://www.youtube-nocookie.com/embed/videoseries?list=UUIAFCgAIIABAjGuoBogfmAQ&rel=0",
-      "https://www.youtube-nocookie.com/embed/videoseries?list=UU7t6b5NpEJGq71jPu8DqBVW&rel=0",
-      "https://www.youtube-nocookie.com/embed/videoseries?list=UU1_w2-bcOXGXzxS79c2qnqA&rel=0"
-    ];
-    blogYtSelector?.addEventListener("change", () => {
-      blogYtFrame.src = blogYtSelector.value;
-    });
-
-    blogYtRandom?.addEventListener("click", () => {
-      const src = sources[Math.floor(Math.random() * sources.length)];
-      blogYtFrame.src = src;
-      if (blogYtSelector) blogYtSelector.value = src;
-    });
-
-    setInterval(() => {
-      if (!document.hidden) {
-        blogYtFrame.src = sources[Math.floor(Math.random() * sources.length)];
-      }
-    }, 18000);
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(bootHeavyVisuals, { timeout: 1400 });
+  } else {
+    setTimeout(bootHeavyVisuals, 60);
   }
-
-  applyTimelineCategories();
 })();
