@@ -1,6 +1,9 @@
 /**
- * Light CRT chroma via VFX.js — tuned for mint/cyan/gold blog palette.
+ * Light CRT chroma via VFX.js — disabled when body has vfx-off / blog-no-scanlines.
  */
+if (document.body.classList.contains("vfx-off") || document.body.classList.contains("blog-no-scanlines")) {
+  document.body.classList.add("vfx-off");
+} else {
 const CUTON_SESSION_KEY = "aday-blog-cuton-done-v1";
 const prefersReducedMotion = !!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 let liteBoot = prefersReducedMotion;
@@ -180,4 +183,5 @@ void main() {
   } else {
     startWhenReady();
   }
+}
 }

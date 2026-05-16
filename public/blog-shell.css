@@ -1,10 +1,11 @@
 .blog-shell {
   display: grid;
   grid-template-columns: minmax(148px, 200px) minmax(0, 1fr);
-  gap: 1rem 1.25rem;
+  gap: 1rem 1.35rem;
   align-items: start;
-  max-width: 1280px;
+  max-width: min(96vw, 1680px);
   margin: 0 auto;
+  width: 100%;
 }
 
 .blog-shell-top {
@@ -61,8 +62,8 @@
 
 .blog-shell-panels[data-view="split"] {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.15rem;
   align-items: start;
 }
 
@@ -221,7 +222,7 @@ body.blog-shell-split-on .blog-section-nav {
   min-width: 0;
 }
 
-.devlog-chapter.is-collapsed .devlog-commit-list .devlog-entry:nth-child(n+6) {
+.devlog-chapter.is-collapsed .devlog-commit-list .devlog-entry:nth-child(n+3) {
   display: none;
 }
 

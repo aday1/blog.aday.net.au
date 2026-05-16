@@ -117,7 +117,7 @@
 }
 
 .presence-timeline {
-  --timeline-year-col: 4.5rem;
+  --timeline-year-col: 6.25rem;
   --timeline-spine-col: 1.35rem;
 }
 
@@ -172,7 +172,9 @@
 .timeline-rail-year {
   grid-column: 1;
   justify-self: end;
-  padding: 0.35rem 0.2rem 0 0;
+  padding: 0.35rem 0.35rem 0 0;
+  min-width: 0;
+  white-space: nowrap;
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 300;
@@ -403,7 +405,7 @@
 
 @media (max-width: 720px) {
   .presence-timeline {
-    --timeline-year-col: 3.1rem;
+    --timeline-year-col: 4.75rem;
     --timeline-spine-col: 1.1rem;
   }
 

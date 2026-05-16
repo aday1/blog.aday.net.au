@@ -167,7 +167,8 @@ const filmBodyScripts = `  <script src="/blog-film.js" defer></script>
   <script type="module" src="/blog-vfx.js"></script>
   <script src="/blog-shell.js" defer></script>
   <script src="/blog-range.js" defer></script>
-  <script src="/github-presence.js" defer></script>`;
+  <script src="/github-presence.js" defer></script>
+  <script src="/blog-presence.js" defer></script>`;
 
 const deployMetaHtml = `<div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
   <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
@@ -477,7 +478,7 @@ const posts = files.map((file) => {
   <link rel="stylesheet" href="/crt-cuton.css">
 ${filmHeadLinks}
 </head>
-<body class="boot-seq film-on">
+<body class="boot-seq film-on blog-no-scanlines vfx-off">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
       <span class="cuton-label" aria-hidden="true"></span>
@@ -732,6 +733,7 @@ const getTimeline = async () => {
         desc: track.description || `WeeklyBeats ${track.year || ""} week ${track.week || ""}`.trim(),
         url: track.url || "https://weeklybeats.com/aday",
         source: "weeklybeats",
+        audio_url: track.audio_url || "",
         timeline_image: track.banner_url || track.image_url || "",
         category: `wb-${track.year || "unknown"}`
       }));
@@ -796,7 +798,7 @@ const getTimeline = async () => {
       return repos
         .filter((repo) => !repo.fork)
         .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))
-        .slice(-40)
+        .slice(-12)
         .map((repo) => ({
           date: parseIsoDate(repo.created_at || "1970-01-01"),
           title: repo.name,
@@ -819,6 +821,7 @@ const getTimeline = async () => {
         title: video.title || video.id,
         desc: `${categorizeYoutubeTitle(video.title, video.id)} // ${video.channel_handle || "YouTube"}`,
         url: video.url || `https://www.youtube.com/watch?v=${video.id}`,
+        youtube_id: video.id,
         source: "youtube",
         category: video.section || categorizeYoutubeTitle(video.title, video.id),
         channel_handle: video.channel_handle || ""
@@ -889,6 +892,49 @@ const truncateTimelineDesc = (text, max = 220) => {
   return `${trimmed.slice(0, max - 3)}...`;
 };
 
+const extractYoutubeId = (url) => {
+  const u = String(url || "");
+  const watch = u.match(/[?&]v=([a-zA-Z0-9_-]{6,})/);
+  if (watch) return watch[1];
+  const shorts = u.match(/youtube\.com\/shorts\/([a-zA-Z0-9_-]{6,})/);
+  if (shorts) return shorts[1];
+  const short = u.match(/youtu\.be\/([a-zA-Z0-9_-]{6,})/);
+  if (short) return short[1];
+  return "";
+};
+
+const extractVimeoId = (url) => {
+  const m = String(url || "").match(/vimeo\.com\/(\d+)/);
+  return m ? m[1] : "";
+};
+
+const feedTierForSource = (source) => {
+  const s = slugifySource(source || "");
+  if (["weeklybeats", "youtube", "vimeo", "soundcloud", "bandcamp", "post"].includes(s)) return "media";
+  if (s.startsWith("devlog")) return "devlog";
+  if (["github", "codepen"].includes(s)) return "code";
+  return "signal";
+};
+
+const renderTimelineMedia = (entry, source) => {
+  const youtubeId = entry.youtube_id || extractYoutubeId(entry.url);
+  if (youtubeId) {
+    return `<div class="timeline-inline-media" data-media="youtube">
+    <iframe class="timeline-inline-frame" title="${escapeHtml(entry.title)}" loading="lazy" src="https://www.youtube-nocookie.com/embed/${escapeHtml(youtubeId)}?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>`;
+  }
+  if (entry.audio_url) {
+    return `<audio class="timeline-inline-audio" controls preload="none" src="${escapeHtml(entry.audio_url)}"></audio>`;
+  }
+  const vimeoId = extractVimeoId(entry.url);
+  if (source === "vimeo" && vimeoId) {
+    return `<div class="timeline-inline-media" data-media="vimeo">
+    <iframe class="timeline-inline-frame" title="${escapeHtml(entry.title)}" loading="lazy" src="https://player.vimeo.com/video/${escapeHtml(vimeoId)}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>`;
+  }
+  return "";
+};
+
 const pickTimelineImage = (entry) => {
   if (entry.timeline_image) {
     return { url: entry.timeline_image, signature: false };
@@ -929,6 +975,8 @@ const renderTimelineNode = (entry, idx, { isYearStart, year }) => {
     ? ` data-story-train="${escapeHtml(entry.storyTrain)}"`
     : "";
   const categoryAttr = entry.category ? ` data-category="${escapeHtml(entry.category)}"` : "";
+  const feedTier = feedTierForSource(source);
+  const mediaBlock = renderTimelineMedia(entry, source);
   const yearLabel = isYearStart
     ? `<span class="timeline-rail-year">${escapeHtml(year)}</span>`
     : `<span class="timeline-rail-year timeline-rail-year--carry" aria-hidden="true"></span>`;
@@ -936,7 +984,7 @@ const renderTimelineNode = (entry, idx, { isYearStart, year }) => {
     ? `<div class="timeline-entry-visual" style="--timeline-bg: url('${escapeHtml(picked.url)}')" aria-hidden="true"></div>`
     : "";
 
-  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}${compactClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-year="${escapeHtml(year)}" data-date="${escapeHtml(entry.date)}" data-title="${escapeHtml(entry.title)}"${yearStartAttr}${storyTrainAttr}${categoryAttr}>
+  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}${compactClass}" data-source="${escapeHtml(source)}" data-feed-tier="${escapeHtml(feedTier)}" data-node="${idx}" data-year="${escapeHtml(year)}" data-date="${escapeHtml(entry.date)}" data-title="${escapeHtml(entry.title)}"${yearStartAttr}${storyTrainAttr}${categoryAttr}>
   ${yearLabel}
   <span class="timeline-rail-marker" aria-hidden="true"></span>
   <article class="timeline-entry${picked?.url ? "" : " timeline-entry--compact"}">
@@ -947,6 +995,7 @@ const renderTimelineNode = (entry, idx, { isYearStart, year }) => {
         <span class="source-chip">${escapeHtml(source)}</span>
       </p>
       <h3 class="timeline-entry-title"><a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(entry.title)}</a></h3>
+      ${mediaBlock}
       ${desc ? `<p class="timeline-entry-desc">${escapeHtml(desc)}</p>` : ""}
     </div>
   </article>
@@ -962,10 +1011,15 @@ fs.writeFileSync(
 const devlogParts = renderDevlogSections(devlogBundle);
 const devlogHubHtml = devlogParts.hub;
 const devlogTrainsHtml = devlogParts.trains;
-const devlogTimelineRaw = devlogTimelineEntries(devlogBundle).map((entry) => ({
-  ...entry,
-  source: slugifySource(entry.source || "devlog")
-}));
+const devlogTrainTabsHtml = `<div class="devlog-train-tabs" role="tablist" aria-label="Story train filter">
+  <button type="button" class="devlog-train-tab is-active" data-train-filter="all">All trains</button>
+${devlogBundle.trains
+  .map(
+    (t) =>
+      `<button type="button" class="devlog-train-tab" data-train-filter="${escapeHtml(t.id)}">${escapeHtml(t.title)}</button>`
+  )
+  .join("\n")}
+</div>`;
 
 const mergeTimelineEvents = (base, extra) => {
   const dedupedMap = new Map();
@@ -983,7 +1037,15 @@ const mergeTimelineEvents = (base, extra) => {
   return [...dedupedMap.values()].sort((a, b) => new Date(a.date) - new Date(b.date));
 };
 
-const timelineEntries = mergeTimelineEvents(await getTimeline(), devlogTimelineRaw);
+const postTimelineEntries = posts.map((post) => ({
+  date: post.date || "1970-01-01",
+  title: post.title || post.slug,
+  desc: post.summary || "Blog post",
+  url: `/posts/${post.slug}.html`,
+  source: "post"
+}));
+
+const timelineEntries = mergeTimelineEvents(mergeTimelineEvents(await getTimeline(), postTimelineEntries), []);
 const timelineNewestFirst = [...timelineEntries].sort((a, b) => new Date(b.date) - new Date(a.date));
 let timelineYearMarker = "";
 const timelineRows = timelineNewestFirst
@@ -1133,9 +1195,17 @@ const blogSectionNav = `<nav class="blog-section-nav" aria-label="Blog sections"
   <button type="button" class="blog-nav-btn" data-panel-target="posts">Posts</button>
 </nav>`;
 
+const presenceFeedControlsHtml = `<div class="presence-feed-controls" role="group" aria-label="Timeline feed density">
+  <button type="button" class="presence-feed-btn is-active" data-feed-filter="media">Media & posts</button>
+  <button type="button" class="presence-feed-btn" data-feed-filter="all">Everything</button>
+  <button type="button" class="presence-feed-btn" data-feed-filter="signal">Scene & platform</button>
+  <button type="button" class="presence-feed-btn" data-feed-filter="code">GitHub & code</button>
+</div>`;
+
 const presenceSectionHtml = `<section class="presence-timeline" id="presenceTimeline">
       <h2>Presence timeline</h2>
-      <p class="date">Newest first. Years on the left rail; hero cards use full-bleed art. Graph: scroll to zoom, drag to pan, double-click reset.</p>
+      <p class="date">Newest first — media-heavy by default. Dev log commits live under Dev logs; expand filters for the full feed.</p>
+      ${presenceFeedControlsHtml}
       ${githubPresenceHtml}
       ${presenceRangeHtml}
       <div class="timeline-graph-wrap">
@@ -1150,7 +1220,7 @@ const presenceSectionHtml = `<section class="presence-timeline" id="presenceTime
           <canvas id="timelineGraph" width="960" height="240" aria-label="Presence timeline density map"></canvas>
         </div>
       </div>
-      <ul class="post-list timeline timeline-rail-layout" id="presenceTimelineList">
+      <ul class="post-list timeline timeline-rail-layout presence-timeline-list feed-filter-active" id="presenceTimelineList" data-feed-filter="media">
         ${timelineRows}
       </ul>
     </section>`;
@@ -1170,7 +1240,7 @@ const indexHtml = `<!doctype html>
   <link rel="stylesheet" href="/crt-cuton.css">
 ${filmHeadLinks}
 </head>
-<body class="boot-seq film-on">
+<body class="boot-seq film-on blog-no-scanlines vfx-off">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
       <span class="cuton-label" aria-hidden="true"></span>
@@ -1201,6 +1271,7 @@ ${filmHeadLinks}
         </section>
       </div>
       <div class="blog-panel" id="panel-devlog" data-panel="devlog">
+        ${devlogTrainTabsHtml}
         ${devlogTrainsHtml}
       </div>
       <div class="blog-panel" id="panel-media" data-panel="media">

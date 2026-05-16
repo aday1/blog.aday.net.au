@@ -222,7 +222,11 @@
       let panelId = "overview";
       if (href.includes("presence")) panelId = "presence";
       else if (href.includes("blogYt") || href.includes("blogWb")) panelId = "media";
-      else if (href.includes("devlog")) panelId = "devlog";
+      else if (href.includes("devlog")) {
+        panelId = "devlog";
+        const trainMatch = href.match(/^#devlog-([a-z0-9-]+)/i);
+        if (trainMatch) applyDevlogTrainFilter(trainMatch[1]);
+      }
       if (viewMode === "split") {
         setSplitPanels(splitLeft, panelId);
       } else {
@@ -240,20 +244,58 @@
       const list = chapter.querySelector(".devlog-commit-list");
       if (!list) return;
       const entries = list.querySelectorAll(".devlog-entry");
-      if (entries.length <= 5) return;
+      if (entries.length <= 2) return;
       chapter.classList.add("is-collapsed");
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "devlog-chapter-toggle";
-      btn.textContent = `Show all ${entries.length} commits`;
+      const hidden = entries.length - 2;
+      btn.textContent = `Show ${hidden} more commit${hidden === 1 ? "" : "s"}`;
       btn.addEventListener("click", () => {
         const collapsed = chapter.classList.toggle("is-collapsed");
         btn.textContent = collapsed
-          ? `Show all ${entries.length} commits`
+          ? `Show ${hidden} more commit${hidden === 1 ? "" : "s"}`
           : "Collapse chapter";
       });
       chapter.insertBefore(btn, list);
     });
+  };
+
+  const LS_DEVLOG_TRAIN = "blogDevlogTrain:v1";
+
+  const applyDevlogTrainFilter = (trainId) => {
+    const panel = document.getElementById("panel-devlog");
+    if (!panel) return;
+    panel.querySelectorAll(".devlog-train-tab").forEach((tab) => {
+      tab.classList.toggle("is-active", tab.dataset.trainFilter === trainId);
+    });
+    panel.querySelectorAll(".devlog-train").forEach((train) => {
+      const id = train.dataset.storyTrain || "";
+      const show = trainId === "all" || id === trainId;
+      train.classList.toggle("devlog-train-hidden", !show);
+    });
+    try {
+      localStorage.setItem(LS_DEVLOG_TRAIN, trainId);
+    } catch {
+      // ignore
+    }
+  };
+
+  const wireDevlogTrainTabs = () => {
+    const panel = document.getElementById("panel-devlog");
+    if (!panel) return;
+    let active = "all";
+    try {
+      active = localStorage.getItem(LS_DEVLOG_TRAIN) || "all";
+    } catch {
+      // ignore
+    }
+    panel.querySelectorAll(".devlog-train-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        applyDevlogTrainFilter(tab.dataset.trainFilter || "all");
+      });
+    });
+    applyDevlogTrainFilter(active);
   };
 
   const bootFromHash = () => {
@@ -280,4 +322,5 @@
   bootFromHash();
   window.addEventListener("hashchange", bootFromHash);
   wireChapterCollapse();
+  wireDevlogTrainTabs();
 })();
