@@ -2,7 +2,7 @@
   "source": "weeklybeats.com/music/aday",
   "profile_url": "https://weeklybeats.com/music/aday",
   "playlist_url": "https://weeklybeats.com/music/player?s=by:aday",
-  "generated_at": "2026-05-16T13:07:51.055Z",
+  "generated_at": "2026-05-16T13:27:33.345Z",
   "count": 185,
   "tracks": [
     {
@@ -13,6 +13,7 @@
       "week": 4,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2026/aday_weeklybeats-2026_3_late-calibration-test-late-submission.mp3",
       "embed_url": "https://weeklybeats.com/aday/music/late-calibration-test-late-submission",
+      "banner_url": "https://weeklybeats.com/images/wb2026-social.jpg",
       "description": "Sorry, It's late but.... (Disclaimer, I used a late upload link because I missed the deadline.... too much overtime, were only human) It's me reinstalling computers, replacing disks etc It's only a minute, so personally i consider this a warm up track for those weeks where my time is overwealmed..... See you in week 4 for yet another time-stretched-goal I hope to do Weeklyvids at least once a month, but one track a week ..."
     },
     {
@@ -23,6 +24,7 @@
       "week": 2,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2026/aday_weeklybeats-2026_2_untitled-granular.mp3",
       "embed_url": "https://weeklybeats.com/aday/music/untitled-granular",
+      "banner_url": "https://weeklybeats.com/images/wb2026-social.jpg",
       "description": "Love a good organ sample... Didn't do a weeklyvid this week though, Kinda left it to the last minute So this is just having a jam before bed, the night before deadline ... classic Something to help me sleep"
     },
     {
@@ -33,6 +35,7 @@
       "week": 1,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2026/aday_weeklybeats-2026_1_cubic-waveform.mp3",
       "embed_url": "https://weeklybeats.com/aday/music/cubic-waveform",
+      "banner_url": "https://weeklybeats.com/images/wb2026-social.jpg",
       "description": "Audio stems from a mess around with Mazetools Mutant, The Video from The Melbourne NYE Laser and Fireworks show from GLT's youtube capture, remixed into resolume and wire and me spending the weekend trying to get my computer to do AV stuff again after being dormant for too long...."
     },
     {
@@ -43,6 +46,7 @@
       "week": 27,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2024/aday_weeklybeats-2024_27_doomsday-data.m4a",
       "embed_url": "https://weeklybeats.com/aday/music/doomsday-data",
+      "banner_url": "https://weeklybeats.com/images/wb2024-social.jpg",
       "description": "Let’s try this again I’ll just throw down and see what sticks"
     },
     {
@@ -52,7 +56,8 @@
       "year": 2022,
       "week": 49,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_49_vr-midi-jam-capture-12-12-2022.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/vr-midi-jam-capture-12-12-2022"
+      "embed_url": "https://weeklybeats.com/aday/music/vr-midi-jam-capture-12-12-2022",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "chaosdragon",
@@ -61,7 +66,8 @@
       "year": 2022,
       "week": 33,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_33_chaosdragon.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/chaosdragon"
+      "embed_url": "https://weeklybeats.com/aday/music/chaosdragon",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "did-you-not-receive-my-memo",
@@ -70,7 +76,8 @@
       "year": 2022,
       "week": 31,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_31_did-you-not-receive-my-memo.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/did-you-not-receive-my-memo"
+      "embed_url": "https://weeklybeats.com/aday/music/did-you-not-receive-my-memo",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "spacetribe-17072022-week28",
@@ -79,7 +86,8 @@
       "year": 2022,
       "week": 28,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_28_spacetribe-17072022-week28.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/spacetribe-17072022-week28"
+      "embed_url": "https://weeklybeats.com/aday/music/spacetribe-17072022-week28",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "gen",
@@ -88,7 +96,8 @@
       "year": 2022,
       "week": 14,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_14_gen.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/gen"
+      "embed_url": "https://weeklybeats.com/aday/music/gen",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "filler-6-2022",
@@ -97,7 +106,8 @@
       "year": 2022,
       "week": 6,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_6_filler-6-2022.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/filler-6-2022"
+      "embed_url": "https://weeklybeats.com/aday/music/filler-6-2022",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "shoutouts-to-gesceap",
@@ -106,7 +116,8 @@
       "year": 2022,
       "week": 5,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_5_shoutouts-to-gesceap.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/shoutouts-to-gesceap"
+      "embed_url": "https://weeklybeats.com/aday/music/shoutouts-to-gesceap",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "untold-destruction-week-4-filler",
@@ -115,7 +126,8 @@
       "year": 2022,
       "week": 4,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_4_untold-destruction-week-4-filler.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/untold-destruction-week-4-filler"
+      "embed_url": "https://weeklybeats.com/aday/music/untold-destruction-week-4-filler",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "ios-jam-for-week3-iosthings012022",
@@ -124,7 +136,8 @@
       "year": 2022,
       "week": 3,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_3_ios-jam-for-week3-iosthings012022.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/ios-jam-for-week3-iosthings012022"
+      "embed_url": "https://weeklybeats.com/aday/music/ios-jam-for-week3-iosthings012022",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "plinkbeats-wb02",
@@ -133,7 +146,8 @@
       "year": 2022,
       "week": 2,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_2_plinkbeats-wb02.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/plinkbeats-wb02"
+      "embed_url": "https://weeklybeats.com/aday/music/plinkbeats-wb02",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "plug-the-chips-back-in-wb01-2",
@@ -142,7 +156,8 @@
       "year": 2022,
       "week": 1,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2022/aday_weeklybeats-2022_1_plug-the-chips-back-in-wb01.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/plug-the-chips-back-in-wb01-2"
+      "embed_url": "https://weeklybeats.com/aday/music/plug-the-chips-back-in-wb01-2",
+      "banner_url": "https://weeklybeats.com/images/wb2022-social.jpg"
     },
     {
       "slug": "ios-darkambient--sammichsid",
@@ -151,7 +166,8 @@
       "year": 2020,
       "week": 49,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_49_ios-darkambient--sammichsid.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/ios-darkambient--sammichsid"
+      "embed_url": "https://weeklybeats.com/aday/music/ios-darkambient--sammichsid",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "sector-44",
@@ -160,7 +176,8 @@
       "year": 2020,
       "week": 44,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_44_sector-44.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/sector-44"
+      "embed_url": "https://weeklybeats.com/aday/music/sector-44",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "justgrooveboxthings",
@@ -169,7 +186,8 @@
       "year": 2020,
       "week": 43,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_43_justgrooveboxthings.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/justgrooveboxthings"
+      "embed_url": "https://weeklybeats.com/aday/music/justgrooveboxthings",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "week-41-concoction",
@@ -178,7 +196,8 @@
       "year": 2020,
       "week": 41,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_41_week-41-concoction.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/week-41-concoction"
+      "embed_url": "https://weeklybeats.com/aday/music/week-41-concoction",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "fpv-pipedream",
@@ -187,7 +206,8 @@
       "year": 2020,
       "week": 40,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_40_fpv-pipedream.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/fpv-pipedream"
+      "embed_url": "https://weeklybeats.com/aday/music/fpv-pipedream",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "clan-analogue-twitch-stream-29-08-2020",
@@ -196,7 +216,8 @@
       "year": 2020,
       "week": 35,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_35_clan-analogue-twitch-stream-29-08-2020.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/clan-analogue-twitch-stream-29-08-2020"
+      "embed_url": "https://weeklybeats.com/aday/music/clan-analogue-twitch-stream-29-08-2020",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "cargomidreason",
@@ -205,7 +226,8 @@
       "year": 2020,
       "week": 25,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_25_cargomidreason.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/cargomidreason"
+      "embed_url": "https://weeklybeats.com/aday/music/cargomidreason",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "fm09cqmidwav",
@@ -214,7 +236,8 @@
       "year": 2020,
       "week": 24,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_24_fm09cqmidwav.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/fm09cqmidwav"
+      "embed_url": "https://weeklybeats.com/aday/music/fm09cqmidwav",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "common-ligand",
@@ -223,7 +246,8 @@
       "year": 2020,
       "week": 23,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_23_common-ligand.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/common-ligand"
+      "embed_url": "https://weeklybeats.com/aday/music/common-ligand",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "0pv4namgwecmqx1g9q82",
@@ -232,7 +256,8 @@
       "year": 2020,
       "week": 21,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_21_0pv4namgwecmqx1g9q82.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/0pv4namgwecmqx1g9q82"
+      "embed_url": "https://weeklybeats.com/aday/music/0pv4namgwecmqx1g9q82",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "[excerpt-from-prejam]-drone-lockdown-stream-with-will-i-roms",
@@ -241,7 +266,8 @@
       "year": 2020,
       "week": 20,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_20_[excerpt-from-prejam]-drone-lockdown-stream-with-will-i-roms.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/[excerpt-from-prejam]-drone-lockdown-stream-with-will-i-roms"
+      "embed_url": "https://weeklybeats.com/aday/music/[excerpt-from-prejam]-drone-lockdown-stream-with-will-i-roms",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "untitled-algo",
@@ -250,7 +276,8 @@
       "year": 2020,
       "week": 19,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_19_untitled-algo.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/untitled-algo"
+      "embed_url": "https://weeklybeats.com/aday/music/untitled-algo",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "untitled-16",
@@ -259,7 +286,8 @@
       "year": 2020,
       "week": 16,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_16_untitled-16.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/untitled-16"
+      "embed_url": "https://weeklybeats.com/aday/music/untitled-16",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "pulverized",
@@ -268,7 +296,8 @@
       "year": 2020,
       "week": 15,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_15_pulverized.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/pulverized"
+      "embed_url": "https://weeklybeats.com/aday/music/pulverized",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "muddy-mix-for-week-14",
@@ -277,7 +306,8 @@
       "year": 2020,
       "week": 14,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_14_muddy-mix-for-week-14.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/muddy-mix-for-week-14"
+      "embed_url": "https://weeklybeats.com/aday/music/muddy-mix-for-week-14",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "algorithmic-destroyed-asymptomatic-garbage",
@@ -286,7 +316,8 @@
       "year": 2020,
       "week": 13,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_13_algorithmic-destroyed-asymptomatic-garbage.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/algorithmic-destroyed-asymptomatic-garbage"
+      "embed_url": "https://weeklybeats.com/aday/music/algorithmic-destroyed-asymptomatic-garbage",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "we-are-so-done-here",
@@ -295,7 +326,8 @@
       "year": 2020,
       "week": 12,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_12_we-are-so-done-here.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/we-are-so-done-here"
+      "embed_url": "https://weeklybeats.com/aday/music/we-are-so-done-here",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "dubpocalypse----ambient---",
@@ -304,7 +336,8 @@
       "year": 2020,
       "week": 11,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_11_dubpocalypse----ambient---.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/dubpocalypse----ambient---"
+      "embed_url": "https://weeklybeats.com/aday/music/dubpocalypse----ambient---",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "the-doom-box-acid-reactor-systems-online-portal---now-with-hyper-power",
@@ -313,7 +346,8 @@
       "year": 2020,
       "week": 10,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_10_the-doom-box-acid-reactor-systems-online-portal---now-with-hyper-power.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/the-doom-box-acid-reactor-systems-online-portal---now-with-hyper-power"
+      "embed_url": "https://weeklybeats.com/aday/music/the-doom-box-acid-reactor-systems-online-portal---now-with-hyper-power",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "filler-techno-pi-for-week9",
@@ -322,7 +356,8 @@
       "year": 2020,
       "week": 9,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_9_filler-techno-pi-for-week9.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/filler-techno-pi-for-week9"
+      "embed_url": "https://weeklybeats.com/aday/music/filler-techno-pi-for-week9",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "trisawpulsesin----ambient-",
@@ -331,7 +366,8 @@
       "year": 2020,
       "week": 8,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_8_trisawpulsesin----ambient-.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/trisawpulsesin----ambient-"
+      "embed_url": "https://weeklybeats.com/aday/music/trisawpulsesin----ambient-",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "speedrun-thatll-do-techno-thatll-do",
@@ -340,7 +376,8 @@
       "year": 2020,
       "week": 7,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_7_speedrun-thatll-do-techno-thatll-do.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/speedrun-thatll-do-techno-thatll-do"
+      "embed_url": "https://weeklybeats.com/aday/music/speedrun-thatll-do-techno-thatll-do",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "ambient-ish-techno-2",
@@ -349,7 +386,8 @@
       "year": 2020,
       "week": 6,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_6_ambient-ish-techno.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/ambient-ish-techno-2"
+      "embed_url": "https://weeklybeats.com/aday/music/ambient-ish-techno-2",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "vecherinka",
@@ -358,7 +396,8 @@
       "year": 2020,
       "week": 5,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_5_vecherinka.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/vecherinka"
+      "embed_url": "https://weeklybeats.com/aday/music/vecherinka",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "week-4-motivation-slump",
@@ -367,7 +406,8 @@
       "year": 2020,
       "week": 4,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_4_week-4-motivation-slump.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/week-4-motivation-slump"
+      "embed_url": "https://weeklybeats.com/aday/music/week-4-motivation-slump",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "deluge",
@@ -376,7 +416,8 @@
       "year": 2020,
       "week": 3,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_3_deluge.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/deluge"
+      "embed_url": "https://weeklybeats.com/aday/music/deluge",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "anxious-goth-rabbit-2",
@@ -386,6 +427,7 @@
       "week": 2,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_2_anxious-goth-rabbit.mp3",
       "embed_url": "https://weeklybeats.com/aday/music/anxious-goth-rabbit-2",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg",
       "description": "About 4-hours worth of time spent on it. Was kinda going for a happy-derpy rabbit but then got frustrated, and the rabbit turned goth."
     },
     {
@@ -395,7 +437,8 @@
       "year": 2020,
       "week": 1,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_1_the-dreamurium.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/the-dreamurium"
+      "embed_url": "https://weeklybeats.com/aday/music/the-dreamurium",
+      "banner_url": "https://weeklybeats.com/images/wb2020-social.jpg"
     },
     {
       "slug": "conceded",
@@ -404,7 +447,8 @@
       "year": 2018,
       "week": 52,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_52_conceded.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/conceded"
+      "embed_url": "https://weeklybeats.com/aday/music/conceded",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "itll-do",
@@ -413,7 +457,8 @@
       "year": 2018,
       "week": 48,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_48_itll-do.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/itll-do"
+      "embed_url": "https://weeklybeats.com/aday/music/itll-do",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "bare-minimum-trap-door",
@@ -422,7 +467,8 @@
       "year": 2018,
       "week": 42,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_42_bare-minimum-trap-door.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/bare-minimum-trap-door"
+      "embed_url": "https://weeklybeats.com/aday/music/bare-minimum-trap-door",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "propper-not-techno",
@@ -431,7 +477,8 @@
       "year": 2018,
       "week": 41,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_41_propper-not-techno.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/propper-not-techno"
+      "embed_url": "https://weeklybeats.com/aday/music/propper-not-techno",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "nuclear-bitch",
@@ -440,7 +487,8 @@
       "year": 2018,
       "week": 40,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_40_nuclear-bitch.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/nuclear-bitch"
+      "embed_url": "https://weeklybeats.com/aday/music/nuclear-bitch",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "post-processing-algorithm",
@@ -449,7 +497,8 @@
       "year": 2018,
       "week": 38,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_38_post-processing-algorithm.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/post-processing-algorithm"
+      "embed_url": "https://weeklybeats.com/aday/music/post-processing-algorithm",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "pressures-touch",
@@ -458,7 +507,8 @@
       "year": 2018,
       "week": 37,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_37_pressures-touch.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/pressures-touch"
+      "embed_url": "https://weeklybeats.com/aday/music/pressures-touch",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "when-the-universe-screams-back",
@@ -467,7 +517,8 @@
       "year": 2018,
       "week": 31,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_31_when-the-universe-screams-back.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/when-the-universe-screams-back"
+      "embed_url": "https://weeklybeats.com/aday/music/when-the-universe-screams-back",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "algoraving-midines-2-vs-esx",
@@ -476,7 +527,8 @@
       "year": 2018,
       "week": 29,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_29_algoraving-midines-2-vs-esx.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/algoraving-midines-2-vs-esx"
+      "embed_url": "https://weeklybeats.com/aday/music/algoraving-midines-2-vs-esx",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "algoraving-midines",
@@ -485,7 +537,8 @@
       "year": 2018,
       "week": 28,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_28_algoraving-midines.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/algoraving-midines"
+      "embed_url": "https://weeklybeats.com/aday/music/algoraving-midines",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "algorithm-piano-test-1",
@@ -494,7 +547,8 @@
       "year": 2018,
       "week": 24,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_24_algorithm-piano-test-1.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/algorithm-piano-test-1"
+      "embed_url": "https://weeklybeats.com/aday/music/algorithm-piano-test-1",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "burrrgh-bleep-beep-brrrrugghhh-snare-snare-snnnns-hihat-hi-hat-snare-kickdrum-snare-snn-snn-break-filter-phaser-buffer-rince",
@@ -503,7 +557,8 @@
       "year": 2018,
       "week": 21,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_21_burrrgh-bleep-beep-brrrrugghhh-snare-snare-snnnns-hihat-hi-hat-snare-kickdrum-snare-snn-snn-break-filter-phaser-buffer-rince.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/burrrgh-bleep-beep-brrrrugghhh-snare-snare-snnnns-hihat-hi-hat-snare-kickdrum-snare-snn-snn-break-filter-phaser-buffer-rince"
+      "embed_url": "https://weeklybeats.com/aday/music/burrrgh-bleep-beep-brrrrugghhh-snare-snare-snnnns-hihat-hi-hat-snare-kickdrum-snare-snn-snn-break-filter-phaser-buffer-rince",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "electronic-drama-aday-vs-snuggyman-jam",
@@ -512,7 +567,8 @@
       "year": 2018,
       "week": 20,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_20_electronic-drama-aday-vs-snuggyman-jam.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/electronic-drama-aday-vs-snuggyman-jam"
+      "embed_url": "https://weeklybeats.com/aday/music/electronic-drama-aday-vs-snuggyman-jam",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "reaktor-block-jam",
@@ -521,7 +577,8 @@
       "year": 2018,
       "week": 14,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_14_reaktor-block-jam.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/reaktor-block-jam"
+      "embed_url": "https://weeklybeats.com/aday/music/reaktor-block-jam",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "made-about-11-minutes-ago",
@@ -530,7 +587,8 @@
       "year": 2018,
       "week": 12,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_12_made-about-11-minutes-ago.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/made-about-11-minutes-ago"
+      "embed_url": "https://weeklybeats.com/aday/music/made-about-11-minutes-ago",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "dawn-of-a-dismal-imaginary-place",
@@ -539,7 +597,8 @@
       "year": 2018,
       "week": 11,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_11_dawn-of-a-dismal-imaginary-place.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/dawn-of-a-dismal-imaginary-place"
+      "embed_url": "https://weeklybeats.com/aday/music/dawn-of-a-dismal-imaginary-place",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "inscectawinnermp3-2",
@@ -548,7 +607,8 @@
       "year": 2018,
       "week": 10,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_10_inscectawinnermp3.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/inscectawinnermp3-2"
+      "embed_url": "https://weeklybeats.com/aday/music/inscectawinnermp3-2",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "week9-nonstickpan-antialias-unlive-remix",
@@ -557,7 +617,8 @@
       "year": 2018,
       "week": 9,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_9_nonstick-pan-[antialias]-unlive-mix.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/week9-nonstickpan-antialias-unlive-remix"
+      "embed_url": "https://weeklybeats.com/aday/music/week9-nonstickpan-antialias-unlive-remix",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "the-squaresounds-openmic-experimental-diy-project-track",
@@ -566,7 +627,8 @@
       "year": 2018,
       "week": 8,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_8_the-squaresounds-openmic-experimental-diy-project-track.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/the-squaresounds-openmic-experimental-diy-project-track"
+      "embed_url": "https://weeklybeats.com/aday/music/the-squaresounds-openmic-experimental-diy-project-track",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "to-hell-with-it",
@@ -575,7 +637,8 @@
       "year": 2018,
       "week": 7,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_7_to-hell-with-it.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/to-hell-with-it"
+      "embed_url": "https://weeklybeats.com/aday/music/to-hell-with-it",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "unidirectional-interupt",
@@ -584,7 +647,8 @@
       "year": 2018,
       "week": 6,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_6_unidirectional-interupt.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/unidirectional-interupt"
+      "embed_url": "https://weeklybeats.com/aday/music/unidirectional-interupt",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "leastleasylease-timerestriction-mix-2",
@@ -593,7 +657,8 @@
       "year": 2018,
       "week": 5,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_5_leastleasylease-timerestriction-mix.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/leastleasylease-timerestriction-mix-2"
+      "embed_url": "https://weeklybeats.com/aday/music/leastleasylease-timerestriction-mix-2",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "the-default-machine",
@@ -602,7 +667,8 @@
       "year": 2018,
       "week": 4,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_4_the-default-machine.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/the-default-machine"
+      "embed_url": "https://weeklybeats.com/aday/music/the-default-machine",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "synth-meltdown-3",
@@ -611,7 +677,8 @@
       "year": 2018,
       "week": 3,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_3_synth-meltdown.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/synth-meltdown-3"
+      "embed_url": "https://weeklybeats.com/aday/music/synth-meltdown-3",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "antialias---2018e2-technotest2",
@@ -620,7 +687,8 @@
       "year": 2018,
       "week": 2,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_2_antialias---2018e2-technotest2.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/antialias---2018e2-technotest2"
+      "embed_url": "https://weeklybeats.com/aday/music/antialias---2018e2-technotest2",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "dust-off---wb01-2018",
@@ -629,7 +697,8 @@
       "year": 2018,
       "week": 1,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2018/aday_weeklybeats-2018_1_dust-off---wb01-2018.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/dust-off---wb01-2018"
+      "embed_url": "https://weeklybeats.com/aday/music/dust-off---wb01-2018",
+      "banner_url": "https://weeklybeats.com/images/wb2018-social.jpg"
     },
     {
       "slug": "renagadelsdj-[co-op-remix]",
@@ -638,7 +707,8 @@
       "year": 2016,
       "week": 52,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_52_renagadelsdj-[co-op-remix].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/renagadelsdj-[co-op-remix]"
+      "embed_url": "https://weeklybeats.com/aday/music/renagadelsdj-[co-op-remix]",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "slainedbell",
@@ -647,7 +717,8 @@
       "year": 2016,
       "week": 51,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_51_slainedbell.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/slainedbell"
+      "embed_url": "https://weeklybeats.com/aday/music/slainedbell",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "untitled-audiofile2mp3",
@@ -656,7 +727,8 @@
       "year": 2016,
       "week": 50,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_50_untitled-audiofile2mp3.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/untitled-audiofile2mp3"
+      "embed_url": "https://weeklybeats.com/aday/music/untitled-audiofile2mp3",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "hammond-by-a-stretch",
@@ -665,7 +737,8 @@
       "year": 2016,
       "week": 49,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_49_hammond-by-a-stretch.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/hammond-by-a-stretch"
+      "embed_url": "https://weeklybeats.com/aday/music/hammond-by-a-stretch",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "im-outta-milk-mondays-not-good-for-me",
@@ -674,7 +747,8 @@
       "year": 2016,
       "week": 48,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_48_im-outta-milk-mondays-not-good-for-me.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/im-outta-milk-mondays-not-good-for-me"
+      "embed_url": "https://weeklybeats.com/aday/music/im-outta-milk-mondays-not-good-for-me",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "deformed-inertia",
@@ -683,7 +757,8 @@
       "year": 2016,
       "week": 47,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_47_deformed-inertia.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/deformed-inertia"
+      "embed_url": "https://weeklybeats.com/aday/music/deformed-inertia",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "maximilian-and-toni-flex-420vhs",
@@ -692,7 +767,8 @@
       "year": 2016,
       "week": 46,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_46_maximilian-and-toni-flex-420vhs.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/maximilian-and-toni-flex-420vhs"
+      "embed_url": "https://weeklybeats.com/aday/music/maximilian-and-toni-flex-420vhs",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "amigabachafieidsyntax",
@@ -701,7 +777,8 @@
       "year": 2016,
       "week": 45,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_45_amigabachafieidsyntax.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/amigabachafieidsyntax"
+      "embed_url": "https://weeklybeats.com/aday/music/amigabachafieidsyntax",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "paxitypaxpaxpaxxed-[korg-ds10]",
@@ -710,7 +787,8 @@
       "year": 2016,
       "week": 44,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_44_paxitypaxpaxpaxxed-[korg-ds10].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/paxitypaxpaxpaxxed-[korg-ds10]"
+      "embed_url": "https://weeklybeats.com/aday/music/paxitypaxpaxpaxxed-[korg-ds10]",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "frequency-modulation-factory",
@@ -719,7 +797,8 @@
       "year": 2016,
       "week": 43,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_43_frequency-modulation-factory.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/frequency-modulation-factory"
+      "embed_url": "https://weeklybeats.com/aday/music/frequency-modulation-factory",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "emergency-techno-procedures",
@@ -728,7 +807,8 @@
       "year": 2016,
       "week": 42,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_42_emergency-techno-procedures.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/emergency-techno-procedures"
+      "embed_url": "https://weeklybeats.com/aday/music/emergency-techno-procedures",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "breaking-news-linn-drums-samples-played-live-from-the-future",
@@ -737,7 +817,8 @@
       "year": 2016,
       "week": 41,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_41_breaking-news-linn-drums-samples-played-live-from-the-future.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/breaking-news-linn-drums-samples-played-live-from-the-future"
+      "embed_url": "https://weeklybeats.com/aday/music/breaking-news-linn-drums-samples-played-live-from-the-future",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "amenbach-alpha",
@@ -746,7 +827,8 @@
       "year": 2016,
       "week": 40,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_40_amenbach-alpha.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/amenbach-alpha"
+      "embed_url": "https://weeklybeats.com/aday/music/amenbach-alpha",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "smashing-a-spaceship-into-a-brickwall-at-sublightspeed",
@@ -755,7 +837,8 @@
       "year": 2016,
       "week": 39,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_39_smashing-a-spaceship-into-a-brickwall-at-sublightspeed.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/smashing-a-spaceship-into-a-brickwall-at-sublightspeed"
+      "embed_url": "https://weeklybeats.com/aday/music/smashing-a-spaceship-into-a-brickwall-at-sublightspeed",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "halpcore",
@@ -764,7 +847,8 @@
       "year": 2016,
       "week": 38,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_38_halpcore.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/halpcore"
+      "embed_url": "https://weeklybeats.com/aday/music/halpcore",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "transformative-tft-nero-cracktro",
@@ -773,7 +857,8 @@
       "year": 2016,
       "week": 37,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_37_transformative-tft-nero-cracktro.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/transformative-tft-nero-cracktro"
+      "embed_url": "https://weeklybeats.com/aday/music/transformative-tft-nero-cracktro",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "gaffer-tape",
@@ -782,7 +867,8 @@
       "year": 2016,
       "week": 36,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_36_gaffer-tape.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/gaffer-tape"
+      "embed_url": "https://weeklybeats.com/aday/music/gaffer-tape",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "rock-steady-reggae",
@@ -791,7 +877,8 @@
       "year": 2016,
       "week": 35,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_35_rock-steady-reggae.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/rock-steady-reggae"
+      "embed_url": "https://weeklybeats.com/aday/music/rock-steady-reggae",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "anxiety--renoise--midines--esx---live-take",
@@ -800,7 +887,8 @@
       "year": 2016,
       "week": 34,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_34_anxiety--renoise--midines--esx---live-take.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/anxiety--renoise--midines--esx---live-take"
+      "embed_url": "https://weeklybeats.com/aday/music/anxiety--renoise--midines--esx---live-take",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "a-minutes-isolation",
@@ -809,7 +897,8 @@
       "year": 2016,
       "week": 33,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_33_a-minutes-isolation.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/a-minutes-isolation"
+      "embed_url": "https://weeklybeats.com/aday/music/a-minutes-isolation",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "submission-title",
@@ -818,7 +907,8 @@
       "year": 2016,
       "week": 32,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_32_submission-title.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/submission-title"
+      "embed_url": "https://weeklybeats.com/aday/music/submission-title",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "882016mp3",
@@ -827,7 +917,8 @@
       "year": 2016,
       "week": 31,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_31_882016mp3.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/882016mp3"
+      "embed_url": "https://weeklybeats.com/aday/music/882016mp3",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "yayt-yet-another-filler-track",
@@ -836,7 +927,8 @@
       "year": 2016,
       "week": 30,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_30_yayt-yet-another-filler-track.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/yayt-yet-another-filler-track"
+      "embed_url": "https://weeklybeats.com/aday/music/yayt-yet-another-filler-track",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "weekly-breakcore-quota",
@@ -845,7 +937,8 @@
       "year": 2016,
       "week": 29,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_29_weekly-breakcore-quota.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/weekly-breakcore-quota"
+      "embed_url": "https://weeklybeats.com/aday/music/weekly-breakcore-quota",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "eternal-distortions",
@@ -854,7 +947,8 @@
       "year": 2016,
       "week": 28,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_28_eternal-distortions.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/eternal-distortions"
+      "embed_url": "https://weeklybeats.com/aday/music/eternal-distortions",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "successfully-uploaded-weekly-seizures-that-caused-the-brain-to-stop-workingmp3",
@@ -863,7 +957,8 @@
       "year": 2016,
       "week": 27,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_27_successfully-uploaded-weekly-seizures-that-caused-the-brain-to-stop-workingmp3.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/successfully-uploaded-weekly-seizures-that-caused-the-brain-to-stop-workingmp3"
+      "embed_url": "https://weeklybeats.com/aday/music/successfully-uploaded-weekly-seizures-that-caused-the-brain-to-stop-workingmp3",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "fail-at-naming-this-early-in-the-morning",
@@ -872,7 +967,8 @@
       "year": 2016,
       "week": 26,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_26_fail-at-naming-this-early-in-the-morning.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/fail-at-naming-this-early-in-the-morning"
+      "embed_url": "https://weeklybeats.com/aday/music/fail-at-naming-this-early-in-the-morning",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "bach-deluxe-fugue-in-overdrive-g-minus",
@@ -881,7 +977,8 @@
       "year": 2016,
       "week": 25,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_25_bach-deluxe-fugue-in-overdrive-g-minus.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/bach-deluxe-fugue-in-overdrive-g-minus"
+      "embed_url": "https://weeklybeats.com/aday/music/bach-deluxe-fugue-in-overdrive-g-minus",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "filler-edm-generic-waste-of-time",
@@ -890,7 +987,8 @@
       "year": 2016,
       "week": 24,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_24_filler-edm-generic-waste-of-time.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/filler-edm-generic-waste-of-time"
+      "embed_url": "https://weeklybeats.com/aday/music/filler-edm-generic-waste-of-time",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "super-collider-function-flip-flop-heavy-weight-sinewave-apocalypse",
@@ -899,7 +997,8 @@
       "year": 2016,
       "week": 23,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_23_super-collider-function-flip-flop-heavy-weight-sinewave-apocalypse.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/super-collider-function-flip-flop-heavy-weight-sinewave-apocalypse"
+      "embed_url": "https://weeklybeats.com/aday/music/super-collider-function-flip-flop-heavy-weight-sinewave-apocalypse",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "amen-666-[sonic-pi-livecoding]",
@@ -908,7 +1007,8 @@
       "year": 2016,
       "week": 22,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_22_amen-666-[sonic-pi-livecoding].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/amen-666-[sonic-pi-livecoding]"
+      "embed_url": "https://weeklybeats.com/aday/music/amen-666-[sonic-pi-livecoding]",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "sequence-guy-video",
@@ -917,7 +1017,8 @@
       "year": 2016,
       "week": 21,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_21_sequence-guy-video.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/sequence-guy-video"
+      "embed_url": "https://weeklybeats.com/aday/music/sequence-guy-video",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "char-riffs[]-",
@@ -926,7 +1027,8 @@
       "year": 2016,
       "week": 20,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_20_char-riffs[]-.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/char-riffs[]-"
+      "embed_url": "https://weeklybeats.com/aday/music/char-riffs[]-",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "god-should-stop-resting-on-the-seventh-day",
@@ -935,7 +1037,8 @@
       "year": 2016,
       "week": 19,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_19_god-should-stop-resting-on-the-seventh-day.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/god-should-stop-resting-on-the-seventh-day"
+      "embed_url": "https://weeklybeats.com/aday/music/god-should-stop-resting-on-the-seventh-day",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "dreampiano-jam-itchio-app",
@@ -944,7 +1047,8 @@
       "year": 2016,
       "week": 18,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_18_dreampiano-jam-itchio-app.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/dreampiano-jam-itchio-app"
+      "embed_url": "https://weeklybeats.com/aday/music/dreampiano-jam-itchio-app",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "lame-untitled-bus-trip-drone",
@@ -953,7 +1057,8 @@
       "year": 2016,
       "week": 17,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_17_lame-untitled-bus-trip-drone.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/lame-untitled-bus-trip-drone"
+      "embed_url": "https://weeklybeats.com/aday/music/lame-untitled-bus-trip-drone",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "lazy-trap-shovelwares",
@@ -962,7 +1067,8 @@
       "year": 2016,
       "week": 16,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_16_lazy-trap-shovelwares.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/lazy-trap-shovelwares"
+      "embed_url": "https://weeklybeats.com/aday/music/lazy-trap-shovelwares",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "phat-dollops-derivative",
@@ -971,7 +1077,8 @@
       "year": 2016,
       "week": 15,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_15_phat-dollops-derivative.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/phat-dollops-derivative"
+      "embed_url": "https://weeklybeats.com/aday/music/phat-dollops-derivative",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "snooze-button-nesblast-heavymentalrockout",
@@ -980,7 +1087,8 @@
       "year": 2016,
       "week": 14,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_14_snooze-button-nesblast-heavymentalrockout.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/snooze-button-nesblast-heavymentalrockout"
+      "embed_url": "https://weeklybeats.com/aday/music/snooze-button-nesblast-heavymentalrockout",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "do-they-know-its-techno-beat-paul-stretch-with-a-dubstep-beat-over-it",
@@ -989,7 +1097,8 @@
       "year": 2016,
       "week": 13,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_13_do-they-know-its-techno-beat-paul-stretch-with-a-dubstep-beat-over-it.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/do-they-know-its-techno-beat-paul-stretch-with-a-dubstep-beat-over-it"
+      "embed_url": "https://weeklybeats.com/aday/music/do-they-know-its-techno-beat-paul-stretch-with-a-dubstep-beat-over-it",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "nuclear-option",
@@ -998,7 +1107,8 @@
       "year": 2016,
       "week": 12,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_12_nuclear-option.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/nuclear-option"
+      "embed_url": "https://weeklybeats.com/aday/music/nuclear-option",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "week11-of-2016-was-a-lsdj-vs-esx-jam",
@@ -1007,7 +1117,8 @@
       "year": 2016,
       "week": 11,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_11_week11-of-2016-was-a-lsdj-vs-esx-jam.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/week11-of-2016-was-a-lsdj-vs-esx-jam"
+      "embed_url": "https://weeklybeats.com/aday/music/week11-of-2016-was-a-lsdj-vs-esx-jam",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "18212",
@@ -1016,7 +1127,8 @@
       "year": 2016,
       "week": 10,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_10_18212.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/18212"
+      "embed_url": "https://weeklybeats.com/aday/music/18212",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "chippy-doom-ft-retrovertigo",
@@ -1025,7 +1137,8 @@
       "year": 2016,
       "week": 9,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_9_chippy-doom-ft-retrovertigo.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/chippy-doom-ft-retrovertigo"
+      "embed_url": "https://weeklybeats.com/aday/music/chippy-doom-ft-retrovertigo",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "antiquality-chiptune",
@@ -1034,7 +1147,8 @@
       "year": 2016,
       "week": 8,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_8_antiquality-chiptune.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/antiquality-chiptune"
+      "embed_url": "https://weeklybeats.com/aday/music/antiquality-chiptune",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "weeklybeats-vs-a-busride",
@@ -1043,7 +1157,8 @@
       "year": 2016,
       "week": 7,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_7_weeklybeats-vs-a-busride.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/weeklybeats-vs-a-busride"
+      "embed_url": "https://weeklybeats.com/aday/music/weeklybeats-vs-a-busride",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "[the-dawpocalypse-exposition]",
@@ -1052,7 +1167,8 @@
       "year": 2016,
       "week": 5,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_5_[the-dawpocalypse-exposition].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/[the-dawpocalypse-exposition]"
+      "embed_url": "https://weeklybeats.com/aday/music/[the-dawpocalypse-exposition]",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod",
@@ -1062,6 +1178,7 @@
       "week": 4,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_4_cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod.mp3",
       "embed_url": "https://weeklybeats.com/aday/music/cusersadaydesktoppixitracker_1bit2016-02-01-09-44piximod",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg",
       "description": "*shrugs* Post FX in audacity Should have started earlier but it's been a busy week.. Sus out http://www.warmplace.ru/soft/pixitracker/ (I used 1bit)"
     },
     {
@@ -1071,7 +1188,8 @@
       "year": 2016,
       "week": 3,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_3_midimess-midines.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/midimess-midines"
+      "embed_url": "https://weeklybeats.com/aday/music/midimess-midines",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "maenads-k-hole",
@@ -1080,7 +1198,8 @@
       "year": 2016,
       "week": 2,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_2_maenads-k-hole.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/maenads-k-hole"
+      "embed_url": "https://weeklybeats.com/aday/music/maenads-k-hole",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "triangle-proliferation",
@@ -1089,7 +1208,8 @@
       "year": 2016,
       "week": 1,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_1_triangle-proliferation.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/triangle-proliferation"
+      "embed_url": "https://weeklybeats.com/aday/music/triangle-proliferation",
+      "banner_url": "https://weeklybeats.com/images/wb2016-social.jpg"
     },
     {
       "slug": "schedule-i",
@@ -1098,7 +1218,8 @@
       "year": 2014,
       "week": 45,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_45_schedule-i.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/schedule-i"
+      "embed_url": "https://weeklybeats.com/aday/music/schedule-i",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "---2",
@@ -1107,7 +1228,8 @@
       "year": 2014,
       "week": 43,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_43_--.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/---2"
+      "embed_url": "https://weeklybeats.com/aday/music/---2",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "untitled---nitrotracker-vs-esx",
@@ -1116,7 +1238,8 @@
       "year": 2014,
       "week": 42,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_42_untitled---nitrotracker-vs-esx.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/untitled---nitrotracker-vs-esx"
+      "embed_url": "https://weeklybeats.com/aday/music/untitled---nitrotracker-vs-esx",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "surviving-breath-pixitracker",
@@ -1125,7 +1248,8 @@
       "year": 2014,
       "week": 41,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_41_surviving-breath-pixitracker.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/surviving-breath-pixitracker"
+      "embed_url": "https://weeklybeats.com/aday/music/surviving-breath-pixitracker",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "gabberdivorseparty-[skip-this-to-continue]",
@@ -1134,7 +1258,8 @@
       "year": 2014,
       "week": 40,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_40_gabberdivorseparty-[skip-this-to-continue].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/gabberdivorseparty-[skip-this-to-continue]"
+      "embed_url": "https://weeklybeats.com/aday/music/gabberdivorseparty-[skip-this-to-continue]",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "automation-envelope-abuse-[lsdj]",
@@ -1143,7 +1268,8 @@
       "year": 2014,
       "week": 39,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_39_automation-envelope-abuse-[lsdj].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/automation-envelope-abuse-[lsdj]"
+      "embed_url": "https://weeklybeats.com/aday/music/automation-envelope-abuse-[lsdj]",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "lsdj-track-pulverized-into-tiny-little-bits",
@@ -1152,7 +1278,8 @@
       "year": 2014,
       "week": 38,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_38_lsdj-track-pulverized-into-tiny-little-bits.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/lsdj-track-pulverized-into-tiny-little-bits"
+      "embed_url": "https://weeklybeats.com/aday/music/lsdj-track-pulverized-into-tiny-little-bits",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "weeklythrowawaytrack-915930-[esx-vs-lsdj]",
@@ -1161,7 +1288,8 @@
       "year": 2014,
       "week": 37,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_37_weeklythrowawaytrack-915930-[esx-vs-lsdj].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/weeklythrowawaytrack-915930-[esx-vs-lsdj]"
+      "embed_url": "https://weeklybeats.com/aday/music/weeklythrowawaytrack-915930-[esx-vs-lsdj]",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "wyldrose-[lsdj]",
@@ -1170,7 +1298,8 @@
       "year": 2014,
       "week": 36,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_36_wyldrose-[lsdj].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/wyldrose-[lsdj]"
+      "embed_url": "https://weeklybeats.com/aday/music/wyldrose-[lsdj]",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "accepted-reality",
@@ -1179,7 +1308,8 @@
       "year": 2014,
       "week": 35,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_35_accepted-reality.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/accepted-reality"
+      "embed_url": "https://weeklybeats.com/aday/music/accepted-reality",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "week34---beatsurvivoroftheraptures",
@@ -1188,7 +1318,8 @@
       "year": 2014,
       "week": 34,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_34_week34---beatsurvivoroftheraptures.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/week34---beatsurvivoroftheraptures"
+      "embed_url": "https://weeklybeats.com/aday/music/week34---beatsurvivoroftheraptures",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "weeklyambience",
@@ -1197,7 +1328,8 @@
       "year": 2014,
       "week": 33,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_33_weeklyambience.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/weeklyambience"
+      "embed_url": "https://weeklybeats.com/aday/music/weeklyambience",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "gabberhatenoise-lsdjrenoise",
@@ -1206,7 +1338,8 @@
       "year": 2014,
       "week": 32,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_32_gabberhatenoise-lsdjrenoise.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/gabberhatenoise-lsdjrenoise"
+      "embed_url": "https://weeklybeats.com/aday/music/gabberhatenoise-lsdjrenoise",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "psychostimulant",
@@ -1215,7 +1348,8 @@
       "year": 2014,
       "week": 31,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_31_psychostimulant.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/psychostimulant"
+      "embed_url": "https://weeklybeats.com/aday/music/psychostimulant",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "sinister-slumbers-lsdj",
@@ -1224,7 +1358,8 @@
       "year": 2014,
       "week": 30,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_30_sinister-slumbers-lsdj.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/sinister-slumbers-lsdj"
+      "embed_url": "https://weeklybeats.com/aday/music/sinister-slumbers-lsdj",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "ltc1799-test",
@@ -1233,7 +1368,8 @@
       "year": 2014,
       "week": 29,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_29_ltc1799-test.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/ltc1799-test"
+      "embed_url": "https://weeklybeats.com/aday/music/ltc1799-test",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "lords-of-grunge-[psytrance]",
@@ -1242,7 +1378,8 @@
       "year": 2014,
       "week": 28,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_28_lords-of-grunge-[psytrance].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/lords-of-grunge-[psytrance]"
+      "embed_url": "https://weeklybeats.com/aday/music/lords-of-grunge-[psytrance]",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "my-first-fract-osc-track!-[raw-fract-osc]",
@@ -1251,7 +1388,8 @@
       "year": 2014,
       "week": 27,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_27_my-first-fract-osc-track!-[raw-fract-osc].mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/my-first-fract-osc-track!-[raw-fract-osc]"
+      "embed_url": "https://weeklybeats.com/aday/music/my-first-fract-osc-track!-[raw-fract-osc]",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "broken-dreams",
@@ -1260,7 +1398,8 @@
       "year": 2014,
       "week": 26,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_26_broken-dreams.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/broken-dreams"
+      "embed_url": "https://weeklybeats.com/aday/music/broken-dreams",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "subjected-to-drones-all-week",
@@ -1269,7 +1408,8 @@
       "year": 2014,
       "week": 25,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_25_subjected-to-drones-all-week.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/subjected-to-drones-all-week"
+      "embed_url": "https://weeklybeats.com/aday/music/subjected-to-drones-all-week",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "exit-loop",
@@ -1278,7 +1418,8 @@
       "year": 2014,
       "week": 24,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_24_exit-loop.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/exit-loop"
+      "embed_url": "https://weeklybeats.com/aday/music/exit-loop",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "backslashbackslash",
@@ -1287,7 +1428,8 @@
       "year": 2014,
       "week": 23,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_23_backslashbackslash.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/backslashbackslash"
+      "embed_url": "https://weeklybeats.com/aday/music/backslashbackslash",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "nighttime-organ-dream-rave",
@@ -1296,7 +1438,8 @@
       "year": 2014,
       "week": 22,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_22_nighttime-organ-dream-rave.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/nighttime-organ-dream-rave"
+      "embed_url": "https://weeklybeats.com/aday/music/nighttime-organ-dream-rave",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "missed-my-alarm",
@@ -1305,7 +1448,8 @@
       "year": 2014,
       "week": 21,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_21_missed-my-alarm.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/missed-my-alarm"
+      "embed_url": "https://weeklybeats.com/aday/music/missed-my-alarm",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "debugging-my-nightmare",
@@ -1314,7 +1458,8 @@
       "year": 2014,
       "week": 20,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_20_debugging-my-nightmare.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/debugging-my-nightmare"
+      "embed_url": "https://weeklybeats.com/aday/music/debugging-my-nightmare",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "depressing-existential-farewell",
@@ -1323,7 +1468,8 @@
       "year": 2014,
       "week": 19,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_19_depressing-existential-farewell.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/depressing-existential-farewell"
+      "embed_url": "https://weeklybeats.com/aday/music/depressing-existential-farewell",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "nitrobreak-nitrotracker",
@@ -1332,7 +1478,8 @@
       "year": 2014,
       "week": 18,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_18_nitrobreak-nitrotracker.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/nitrobreak-nitrotracker"
+      "embed_url": "https://weeklybeats.com/aday/music/nitrobreak-nitrotracker",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "hells-chorus-piano-demise",
@@ -1341,7 +1488,8 @@
       "year": 2014,
       "week": 17,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_17_hells-chorus-piano-demise.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/hells-chorus-piano-demise"
+      "embed_url": "https://weeklybeats.com/aday/music/hells-chorus-piano-demise",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "traffic-hiphop-colab",
@@ -1350,7 +1498,8 @@
       "year": 2014,
       "week": 16,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_16_traffic-hiphop-colab.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/traffic-hiphop-colab"
+      "embed_url": "https://weeklybeats.com/aday/music/traffic-hiphop-colab",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "achronic-projection",
@@ -1359,7 +1508,8 @@
       "year": 2014,
       "week": 15,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_15_achronic-projection.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/achronic-projection"
+      "embed_url": "https://weeklybeats.com/aday/music/achronic-projection",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "emobeats",
@@ -1368,7 +1518,8 @@
       "year": 2014,
       "week": 14,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_14_emobeats.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/emobeats"
+      "embed_url": "https://weeklybeats.com/aday/music/emobeats",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "cant_find_laptopchargercuz_squaresounds!",
@@ -1377,7 +1528,8 @@
       "year": 2014,
       "week": 13,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_13_cant_find_laptopchargercuz_squaresounds!.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/cant_find_laptopchargercuz_squaresounds!"
+      "embed_url": "https://weeklybeats.com/aday/music/cant_find_laptopchargercuz_squaresounds!",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "scrutinize-lsdj",
@@ -1386,7 +1538,8 @@
       "year": 2014,
       "week": 12,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_12_scrutinize-lsdj.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/scrutinize-lsdj"
+      "embed_url": "https://weeklybeats.com/aday/music/scrutinize-lsdj",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "out-of-hand-lsdj-esx-reaper",
@@ -1395,7 +1548,8 @@
       "year": 2014,
       "week": 11,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_11_out-of-hand-lsdj-esx-reaper.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/out-of-hand-lsdj-esx-reaper"
+      "embed_url": "https://weeklybeats.com/aday/music/out-of-hand-lsdj-esx-reaper",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "step-sequencer-transformation-scene",
@@ -1404,7 +1558,8 @@
       "year": 2014,
       "week": 10,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_10_step-sequencer-transformation-scene.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/step-sequencer-transformation-scene"
+      "embed_url": "https://weeklybeats.com/aday/music/step-sequencer-transformation-scene",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "____-this-isnt-music-___-texture-explore",
@@ -1413,7 +1568,8 @@
       "year": 2014,
       "week": 9,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_9_____-this-isnt-music-___-texture-explore.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/____-this-isnt-music-___-texture-explore"
+      "embed_url": "https://weeklybeats.com/aday/music/____-this-isnt-music-___-texture-explore",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "dac-hungee-v-aday",
@@ -1422,7 +1578,8 @@
       "year": 2014,
       "week": 8,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_8_dac-hungee-v-aday.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/dac-hungee-v-aday"
+      "embed_url": "https://weeklybeats.com/aday/music/dac-hungee-v-aday",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "modulate-my-demise-wheres-my-immune-system-at",
@@ -1431,7 +1588,8 @@
       "year": 2014,
       "week": 7,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_7_modulate-my-demise-wheres-my-immune-system-at.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/modulate-my-demise-wheres-my-immune-system-at"
+      "embed_url": "https://weeklybeats.com/aday/music/modulate-my-demise-wheres-my-immune-system-at",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "epochjam-pixitracker",
@@ -1441,6 +1599,7 @@
       "week": 6,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_6_epochjam-pixitracker.mp3",
       "embed_url": "https://weeklybeats.com/aday/music/epochjam-pixitracker",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg",
       "description": "With >40 degree days and an on going heatwave in Melbourne, and needing a new pair of headphones (I think I've lost my good ones) - I've decided to go with a nuclear option. So here's a PixiTracker jam track! Cool application by Alexander Zolotov (A.K.A Nightradio) from warmplace.ru Check it -- http://www.warmplace.ru/soft/pixitracker/ Also available on Android (most nightradio software run on multiple platforms) (may run on your toaster!) Yep, Built this simple track in about 2 hours. No post FX on this one, just a simple native jam... because nuclear, because weeklybeats. The video output is also native from the PixiTracker software. / no post fx. Link to piximod file Next week is a colab with Hungee Funk ... My first Weeklybeats Colab for the year! - exciting"
     },
     {
@@ -1450,7 +1609,8 @@
       "year": 2014,
       "week": 5,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_5_dem-duty-cycles-from-studio-hell-midines.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/dem-duty-cycles-from-studio-hell-midines"
+      "embed_url": "https://weeklybeats.com/aday/music/dem-duty-cycles-from-studio-hell-midines",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "shared-melody-iterations",
@@ -1459,7 +1619,8 @@
       "year": 2014,
       "week": 4,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_4_shared-melody-iterations.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/shared-melody-iterations"
+      "embed_url": "https://weeklybeats.com/aday/music/shared-melody-iterations",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "aday---demon-class-planet",
@@ -1468,7 +1629,8 @@
       "year": 2014,
       "week": 3,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_3_aday---demon-class-planet.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/aday---demon-class-planet"
+      "embed_url": "https://weeklybeats.com/aday/music/aday---demon-class-planet",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "binaural-percolator",
@@ -1477,7 +1639,8 @@
       "year": 2014,
       "week": 2,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_2_binaural-percolator.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/binaural-percolator"
+      "embed_url": "https://weeklybeats.com/aday/music/binaural-percolator",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "electrichip",
@@ -1486,7 +1649,8 @@
       "year": 2014,
       "week": 1,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_1_electrichip.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/electrichip"
+      "embed_url": "https://weeklybeats.com/aday/music/electrichip",
+      "banner_url": "https://weeklybeats.com/images/wb2014-social.jpg"
     },
     {
       "slug": "the-mission-objective",
@@ -1495,7 +1659,8 @@
       "year": 2012,
       "week": 52,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_52_the-mission-objective.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/the-mission-objective"
+      "embed_url": "https://weeklybeats.com/aday/music/the-mission-objective",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "advance-apocalyptic-australian",
@@ -1504,7 +1669,8 @@
       "year": 2012,
       "week": 49,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_49_advance-apocalyptic-australian.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/advance-apocalyptic-australian"
+      "embed_url": "https://weeklybeats.com/aday/music/advance-apocalyptic-australian",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "raspberrypi-powered-simple-midi-experiments",
@@ -1513,7 +1679,8 @@
       "year": 2012,
       "week": 48,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_48_raspberrypi-powered-simple-midi-experiments.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/raspberrypi-powered-simple-midi-experiments"
+      "embed_url": "https://weeklybeats.com/aday/music/raspberrypi-powered-simple-midi-experiments",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "syntax-obnoxiouscore",
@@ -1522,7 +1689,8 @@
       "year": 2012,
       "week": 46,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_46_syntax-obnoxiouscore.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/syntax-obnoxiouscore"
+      "embed_url": "https://weeklybeats.com/aday/music/syntax-obnoxiouscore",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "thats-not-a-beat!-thats-a-spaceship!",
@@ -1531,7 +1699,8 @@
       "year": 2012,
       "week": 45,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_45_thats-not-a-beat!-thats-a-spaceship!.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/thats-not-a-beat!-thats-a-spaceship!"
+      "embed_url": "https://weeklybeats.com/aday/music/thats-not-a-beat!-thats-a-spaceship!",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "bells-and-whistles",
@@ -1540,7 +1709,8 @@
       "year": 2012,
       "week": 44,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_44_bells-and-whistles.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/bells-and-whistles"
+      "embed_url": "https://weeklybeats.com/aday/music/bells-and-whistles",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "steam-is-ruining-my-life",
@@ -1549,7 +1719,8 @@
       "year": 2012,
       "week": 38,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_38_steam-is-ruining-my-life.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/steam-is-ruining-my-life"
+      "embed_url": "https://weeklybeats.com/aday/music/steam-is-ruining-my-life",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "virtual-analogue-beatroots",
@@ -1558,7 +1729,8 @@
       "year": 2012,
       "week": 37,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_37_virtual-analogue-beatroots.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/virtual-analogue-beatroots"
+      "embed_url": "https://weeklybeats.com/aday/music/virtual-analogue-beatroots",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "destructed-beats",
@@ -1567,7 +1739,8 @@
       "year": 2012,
       "week": 36,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_36_destructed-beats.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/destructed-beats"
+      "embed_url": "https://weeklybeats.com/aday/music/destructed-beats",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "sleep-dep-organ-sunrise",
@@ -1576,7 +1749,8 @@
       "year": 2012,
       "week": 35,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_35_sleep-dep-organ-sunrise.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/sleep-dep-organ-sunrise"
+      "embed_url": "https://weeklybeats.com/aday/music/sleep-dep-organ-sunrise",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "made-in-5-minutes--korg-esx",
@@ -1585,7 +1759,8 @@
       "year": 2012,
       "week": 34,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_34_made-in-5-minutes--korg-esx.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/made-in-5-minutes--korg-esx"
+      "embed_url": "https://weeklybeats.com/aday/music/made-in-5-minutes--korg-esx",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "the-fog---ambient-noise-attack",
@@ -1594,7 +1769,8 @@
       "year": 2012,
       "week": 32,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_32_the-fog---ambient-noise-attack.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/the-fog---ambient-noise-attack"
+      "embed_url": "https://weeklybeats.com/aday/music/the-fog---ambient-noise-attack",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "wake-up-and-make-brkfast-lsdj",
@@ -1603,7 +1779,8 @@
       "year": 2012,
       "week": 31,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_31_wake-up-and-make-brkfast-lsdj.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/wake-up-and-make-brkfast-lsdj"
+      "embed_url": "https://weeklybeats.com/aday/music/wake-up-and-make-brkfast-lsdj",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "chillstep",
@@ -1612,7 +1789,8 @@
       "year": 2012,
       "week": 30,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_30_chillstep.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/chillstep"
+      "embed_url": "https://weeklybeats.com/aday/music/chillstep",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "2012am-arpeggiated-sequencers--and-you",
@@ -1621,7 +1799,8 @@
       "year": 2012,
       "week": 29,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_29_2012am-arpeggiated-sequencers--and-you.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/2012am-arpeggiated-sequencers--and-you"
+      "embed_url": "https://weeklybeats.com/aday/music/2012am-arpeggiated-sequencers--and-you",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "synthantemeridiem-synthesizer-jam-for-brekky",
@@ -1630,7 +1809,8 @@
       "year": 2012,
       "week": 28,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_28_synthantemeridiem-synthesizer-jam-for-brekky.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/synthantemeridiem-synthesizer-jam-for-brekky"
+      "embed_url": "https://weeklybeats.com/aday/music/synthantemeridiem-synthesizer-jam-for-brekky",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "aday---6-month-neurosis-problem-solver---wb27-2012",
@@ -1639,7 +1819,8 @@
       "year": 2012,
       "week": 27,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_27_aday---6-month-neurosis-problem-solver---wb27-2012.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/aday---6-month-neurosis-problem-solver---wb27-2012"
+      "embed_url": "https://weeklybeats.com/aday/music/aday---6-month-neurosis-problem-solver---wb27-2012",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "musical-appfinity-flashback2012-weekend",
@@ -1648,7 +1829,8 @@
       "year": 2012,
       "week": 23,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_23_musical-appfinity-flashback2012-weekend.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/musical-appfinity-flashback2012-weekend"
+      "embed_url": "https://weeklybeats.com/aday/music/musical-appfinity-flashback2012-weekend",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "progressive-dirty-electrotrain!",
@@ -1657,7 +1839,8 @@
       "year": 2012,
       "week": 18,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_18_progressive-dirty-electrotrain!.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/progressive-dirty-electrotrain!"
+      "embed_url": "https://weeklybeats.com/aday/music/progressive-dirty-electrotrain!",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "rendered-for-headphones",
@@ -1666,7 +1849,8 @@
       "year": 2012,
       "week": 16,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_16_rendered-for-headphones.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/rendered-for-headphones"
+      "embed_url": "https://weeklybeats.com/aday/music/rendered-for-headphones",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     },
     {
       "slug": "aday---camping-space-bongos",
@@ -1675,7 +1859,8 @@
       "year": 2012,
       "week": 14,
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_14_aday---camping-space-bongos.mp3",
-      "embed_url": "https://weeklybeats.com/aday/music/aday---camping-space-bongos"
+      "embed_url": "https://weeklybeats.com/aday/music/aday---camping-space-bongos",
+      "banner_url": "https://weeklybeats.com/images/wb2012-social.jpg"
     }
   ]
 }

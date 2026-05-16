@@ -1,0 +1,216 @@
+:root {
+  --bg-deep: #060c18;
+  --bg-mid: #0c1628;
+  --ink-mint: #b7ff9f;
+  --ink-cyan: #7de8f0;
+  --ink-gold: #e8c06a;
+  --line-glow: rgba(118, 200, 255, 0.35);
+  --panel-a: rgba(14, 28, 48, 0.92);
+  --panel-b: rgba(8, 16, 30, 0.96);
+}
+
+body.blog-bg-on .bg-shader {
+  display: block;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 12% -5%, rgba(118, 200, 255, 0.22), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 92% 105%, rgba(183, 255, 159, 0.14), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 40%, rgba(232, 192, 106, 0.08), transparent 60%),
+    linear-gradient(165deg, var(--bg-mid) 0%, var(--bg-deep) 100%);
+  color: var(--ink-mint);
+}
+
+main.blog-shell,
+main {
+  position: relative;
+  z-index: 3;
+  max-width: 1280px;
+  border: 1px solid var(--line-glow);
+  background:
+    linear-gradient(145deg, rgba(18, 36, 58, 0.88), rgba(8, 14, 26, 0.94));
+  box-shadow:
+    0 0 0 1px rgba(183, 255, 159, 0.08),
+    0 0 48px rgba(118, 200, 255, 0.12),
+    0 24px 80px rgba(0, 0, 0, 0.55);
+}
+
+body.cuton-settled main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.14) 3px,
+    rgba(0, 0, 0, 0.14) 4px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.35;
+}
+
+body.cuton-settled main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 49;
+  border-radius: inherit;
+  box-shadow: inset 0 0 80px rgba(118, 200, 255, 0.08), inset 0 0 120px rgba(0, 0, 0, 0.45);
+}
+
+main section,
+.blog-panel > section,
+.devlog-card {
+  border-color: rgba(118, 200, 255, 0.2);
+  background:
+    linear-gradient(160deg, rgba(22, 42, 68, 0.85), rgba(10, 18, 32, 0.92));
+}
+
+h1 {
+  color: var(--ink-mint);
+  text-shadow: -1px 0 2px rgba(219, 116, 151, 0.4), 1px 0 2px rgba(65, 188, 188, 0.45);
+}
+
+h2, h3 {
+  color: var(--ink-cyan);
+}
+
+p, .date {
+  color: #c8e8f0;
+}
+
+.timeline::before {
+  background: linear-gradient(180deg, #7ae8a8 0%, #76c8ff 45%, #e8c06a 100%);
+  box-shadow: 0 0 14px rgba(122, 230, 168, 0.45);
+}
+
+.timeline .timeline-node {
+  border-color: rgba(118, 200, 255, 0.25);
+  background:
+    linear-gradient(135deg, rgba(16, 32, 52, 0.95), rgba(8, 14, 24, 0.98));
+}
+
+.timeline .timeline-node::before {
+  background: linear-gradient(180deg, #b7ff9f, #76c8ff);
+  box-shadow: 0 0 8px rgba(122, 230, 168, 0.6);
+}
+
+.github-presence-block {
+  margin: 0 0 1.35rem;
+  padding: 0.85rem 1rem 1rem;
+  border: 1px solid rgba(122, 230, 168, 0.28);
+  background:
+    linear-gradient(135deg, rgba(12, 28, 24, 0.9), rgba(10, 20, 36, 0.92));
+  border-radius: 6px;
+}
+
+.github-presence-block h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.github-contrib-wrap {
+  overflow-x: auto;
+  margin-bottom: 0.65rem;
+}
+
+#githubContribChart {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.github-activity-feed {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.84rem;
+}
+
+.github-activity-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+  align-items: baseline;
+}
+
+.github-activity-type {
+  opacity: 0.72;
+  font-size: 0.78rem;
+}
+
+.wb-track-pick {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.65rem;
+  align-items: stretch;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(118, 200, 255, 0.22);
+  background: rgba(6, 12, 22, 0.85);
+}
+
+.wb-track-pick.is-active {
+  border-color: rgba(212, 160, 36, 0.55);
+  box-shadow: 0 0 12px rgba(212, 160, 36, 0.2);
+}
+
+.wb-track-banner {
+  width: 120px;
+  min-height: 72px;
+  object-fit: cover;
+  display: block;
+  border-right: 1px solid rgba(118, 200, 255, 0.15);
+}
+
+.wb-track-pick-text {
+  padding: 0.55rem 0.65rem 0.55rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.wb-track-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.blog-overview-cards .story-trains-hub {
+  border-color: rgba(212, 160, 36, 0.25);
+}
+
+body.vfx-off.cuton-settled .film-photo,
+body.vfx-off.cuton-settled .timeline-entry-visual {
+  filter: contrast(1.05) saturate(1.12);
+}
+
+@media (max-width: 640px) {
+  .wb-track-pick {
+    grid-template-columns: 1fr;
+  }
+  .wb-track-banner {
+    width: 100%;
+    min-height: 56px;
+    border-right: none;
+    border-bottom: 1px solid rgba(118, 200, 255, 0.15);
+  }
+}

@@ -160,11 +160,14 @@ const mdToHtml = (md) => {
 const filmHeadLinks = `  <link rel="stylesheet" href="/blog-film.css">
   <link rel="stylesheet" href="/timeline-spread.css">
   <link rel="stylesheet" href="/devlog.css">
-  <link rel="stylesheet" href="/blog-shell.css">`;
+  <link rel="stylesheet" href="/blog-shell.css">
+  <link rel="stylesheet" href="/blog-aesthetic.css">`;
 const filmBodyScripts = `  <script src="/blog-film.js" defer></script>
+  <script src="/blog-bg-shader.js" defer></script>
   <script type="module" src="/blog-vfx.js"></script>
   <script src="/blog-shell.js" defer></script>
-  <script src="/blog-range.js" defer></script>`;
+  <script src="/blog-range.js" defer></script>
+  <script src="/github-presence.js" defer></script>`;
 
 const deployMetaHtml = `<div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
   <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
@@ -729,7 +732,7 @@ const getTimeline = async () => {
         desc: track.description || `WeeklyBeats ${track.year || ""} week ${track.week || ""}`.trim(),
         url: track.url || "https://weeklybeats.com/aday",
         source: "weeklybeats",
-        timeline_image: track.image_url || "",
+        timeline_image: track.banner_url || track.image_url || "",
         category: `wb-${track.year || "unknown"}`
       }));
     } catch {
@@ -1109,6 +1112,15 @@ const renderWeeklybeatsCatalogSection = (catalog, { sectionId = "blogWbSection" 
 const youtubeSectionHtml = renderYoutubeCatalogSection(youtubeCatalog);
 const weeklybeatsSectionHtml = renderWeeklybeatsCatalogSection(weeklybeatsCatalog);
 
+const githubPresenceHtml = `<div class="github-presence-block" id="githubPresence" data-github-user="aday1">
+  <h3>GitHub activity</h3>
+  <p class="date">Contribution heatmap and recent public events folded into presence.</p>
+  <div class="github-contrib-wrap">
+    <canvas id="githubContribChart" width="640" height="98" aria-label="GitHub contribution heatmap for aday1"></canvas>
+  </div>
+  <ul class="github-activity-feed" aria-label="Recent GitHub activity"></ul>
+</div>`;
+
 const presenceRangeHtml = `<div class="range-explorer" data-range-scope="presence">
   <div class="range-explorer-head">
     <h3>Presence density — range check</h3>
@@ -1134,6 +1146,7 @@ const blogSectionNav = `<nav class="blog-section-nav" aria-label="Blog sections"
 const presenceSectionHtml = `<section class="presence-timeline" id="presenceTimeline">
       <h2>Presence timeline</h2>
       <p class="date">Newest first. Years on the left rail; hero cards use full-bleed art. Graph: scroll to zoom, drag to pan, double-click reset.</p>
+      ${githubPresenceHtml}
       ${presenceRangeHtml}
       <div class="timeline-graph-wrap">
         <ul class="timeline-lane-legend" aria-label="Timeline lanes">

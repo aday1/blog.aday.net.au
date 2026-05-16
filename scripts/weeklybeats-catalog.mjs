@@ -5,6 +5,14 @@ const PROFILE_URL = "https://weeklybeats.com/music/aday";
 const PLAYLIST_URL = "https://weeklybeats.com/music/player?s=by:aday";
 const USER_AGENT = "aday-media-catalog/1.0";
 
+export const weeklybeatsYearBanner = (year) => {
+  const y = Number(year);
+  if (Number.isFinite(y) && y >= 2012 && y <= 2030) {
+    return `https://weeklybeats.com/images/wb${y}-social.jpg`;
+  }
+  return "https://weeklybeats.com/images/wb2026-social.jpg";
+};
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const decodeHtml = (value) =>
@@ -37,7 +45,8 @@ const parsePlaylist = (html) => {
       year,
       week,
       audio_url: audioUrl,
-      embed_url: slug ? `https://weeklybeats.com/aday/music/${slug}` : PROFILE_URL
+      embed_url: slug ? `https://weeklybeats.com/aday/music/${slug}` : PROFILE_URL,
+      banner_url: weeklybeatsYearBanner(year)
     });
   }
   const deduped = new Map();
@@ -117,6 +126,7 @@ const enrichTracks = async (tracks, { maxEnrich = 200, delayMs = 100 } = {}) => 
       if (meta.youtube_video_id) track.youtube_video_id = meta.youtube_video_id;
       if (meta.year && !track.year) track.year = meta.year;
       if (meta.week && !track.week) track.week = meta.week;
+      track.banner_url = weeklybeatsYearBanner(track.year);
     } catch {
       // skip
     }

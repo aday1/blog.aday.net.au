@@ -1,4 +1,12 @@
 (() => {
+  const wbYearBanner = (year) => {
+    const y = Number(year);
+    if (Number.isFinite(y) && y >= 2012 && y <= 2030) {
+      return `https://weeklybeats.com/images/wb${y}-social.jpg`;
+    }
+    return "https://weeklybeats.com/images/wb2026-social.jpg";
+  };
+
   const escapeHtml = (value) =>
     String(value || "")
       .replaceAll("&", "&amp;")
@@ -162,9 +170,10 @@
 
       listEl.innerHTML = filtered
         .map((track) => {
-          const img = track.image_url
-            ? `<img class="wb-track-thumb" src="${escapeHtml(track.image_url)}" alt="" loading="lazy">`
-            : `<span class="wb-track-thumb wb-track-thumb--empty" aria-hidden="true"></span>`;
+          const bannerSrc = track.banner_url || wbYearBanner(track.year);
+          const img = bannerSrc
+            ? `<img class="wb-track-banner" src="${escapeHtml(bannerSrc)}" alt="WeeklyBeats ${escapeHtml(String(track.year || ""))} banner" loading="lazy" decoding="async">`
+            : `<span class="wb-track-banner wb-track-thumb--empty" aria-hidden="true"></span>`;
           return `<li><button type="button" class="wb-track-pick" data-slug="${escapeHtml(track.slug)}">
             ${img}
             <span class="wb-track-pick-text"><strong>${escapeHtml(track.title)}</strong>
