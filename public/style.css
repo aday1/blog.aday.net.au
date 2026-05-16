@@ -3,6 +3,7 @@
   --ink: #b7ff9f;
   --line: #3f638f;
   --muted: #91b6dd;
+  --blog-retro-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23e8fbff' stroke='%23d4a024' stroke-width='1' d='M2 2 L2 18 L8 12 L11 18 L13 16 L10 10 L18 10 Z'/%3E%3C/svg%3E") 2 2;
 }
 
 * { box-sizing: border-box; }
@@ -16,7 +17,6 @@ body {
     linear-gradient(180deg, #090f1c 0%, #050a12 100%);
   color: var(--ink);
   font-family: "Consolas", "Courier New", monospace;
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='30' viewBox='0 0 22 30'%3E%3Cpath d='M2 2V27L8 21L11 29L14 27L11 19H20V2Z' fill='%23ffffff' stroke='%23000000' stroke-width='1.2'/%3E%3Cpath d='M4 4V22L8 18L10.4 25L11.7 24.2L9.6 17H17V4Z' fill='%23cfd6db'/%3E%3Cpath d='M6 24L8 22L11 29L14 27L11 19H13' fill='none' stroke='%23000000' stroke-width='1' opacity='0.58'/%3E%3C/svg%3E") 2 2, auto;
 }
 
 .page-transition {
@@ -496,14 +496,65 @@ p { color: #c7ffe1; }
 }
 
 .retro-cursor {
-  display: none;
+  position: fixed;
+  inset: -100px auto auto -100px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: 9999;
+  visibility: hidden;
+}
+
+/* Same Amiga arrow as aday.net.au; blog uses mint fill + gold stroke */
+body.retro-cursor-on {
+  cursor: var(--blog-retro-cursor), auto !important;
+}
+
+body.retro-cursor-on * {
+  cursor: inherit;
+}
+
+body.retro-cursor-on a,
+body.retro-cursor-on button,
+body.retro-cursor-on input:not([type]),
+body.retro-cursor-on input[type="button"],
+body.retro-cursor-on input[type="submit"],
+body.retro-cursor-on input[type="reset"],
+body.retro-cursor-on input[type="checkbox"],
+body.retro-cursor-on input[type="radio"],
+body.retro-cursor-on input[type="range"],
+body.retro-cursor-on select,
+body.retro-cursor-on label,
+body.retro-cursor-on summary,
+body.retro-cursor-on [role="button"],
+body.retro-cursor-on .timeline-entry-title a {
+  cursor: var(--blog-retro-cursor), pointer !important;
+}
+
+body.retro-cursor-on input[type="text"],
+body.retro-cursor-on input[type="search"],
+body.retro-cursor-on input[type="email"],
+body.retro-cursor-on input[type="password"],
+body.retro-cursor-on input[type="url"],
+body.retro-cursor-on input[type="number"],
+body.retro-cursor-on textarea {
+  cursor: text !important;
 }
 
 @media (hover: none), (pointer: coarse) {
-  body, a { cursor: auto; }
-  .retro-cursor { display: none; }
-  .yt-tools button,
-  .yt-tools select { cursor: auto; }
+  body,
+  body.retro-cursor-on,
+  body.retro-cursor-on *,
+  a,
+  button {
+    cursor: auto !important;
+  }
+
+  .retro-cursor {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {

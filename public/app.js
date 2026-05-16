@@ -103,7 +103,11 @@
     img.dataset.fallbackReady = "1";
   };
 
-  if (cursor) cursor.style.display = "none";
+  const coarsePointer = window.matchMedia?.("(pointer: coarse)")?.matches;
+  const canUseRetroCursor = !coarsePointer;
+  if (canUseRetroCursor) {
+    body.classList.add("retro-cursor-on");
+  }
 
   document.querySelectorAll("img").forEach((img) => {
     armGenericImageFallback(img);
