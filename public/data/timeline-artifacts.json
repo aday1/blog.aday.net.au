@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T00:53:25.669Z",
-  "count": 50,
+  "generated_at": "2026-05-16T01:02:02.809Z",
+  "count": 51,
   "entries": [
     {
       "date": "2012-01-01",
@@ -351,6 +351,13 @@
       "desc": "Rapid-play embeds and profile links added to aday.net.au media panel",
       "url": "https://aday.net.au",
       "source": "platform"
+    },
+    {
+      "date": "2027-05-09",
+      "title": "YouTube tracker snapshot",
+      "desc": "Latest discovered public analytics timestamp from stats mirror",
+      "url": "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
+      "source": "youtube"
     }
   ]
 }
