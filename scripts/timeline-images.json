@@ -1,0 +1,74 @@
+{
+  "signature": "/assets/timeline/aday-antialias-blackmage.png",
+  "fallback": "https://raw.githubusercontent.com/aday1/error-diffusion/master/public/assets/max-patch-1.png",
+  "bySource": {
+    "soundcloud": [
+      "https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png"
+    ],
+    "weeklybeats": [
+      "https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png",
+      "https://avatars.githubusercontent.com/u/1834001?v=4"
+    ],
+    "youtube": [
+      "https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg"
+    ],
+    "vimeo": [
+      "https://i.vimeocdn.com/video/242046359-0e4ac17205e91f961490274544052b69a2d41b98c6d05e07f03255c62e567f6d-d_640?region=us",
+      "https://i.vimeocdn.com/video/460730834-9918088cfb557d28e8b15ddfd28843a784ce021fd2ac80f29072cfded083885e-d_640?region=us"
+    ],
+    "demozoo": [
+      "https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg",
+      "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png"
+    ],
+    "scene": [
+      "https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg"
+    ],
+    "github": [
+      "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
+      "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png",
+      "https://raw.githubusercontent.com/aday1/error-diffusion/master/public/assets/max-patch-1.png"
+    ],
+    "codepen": [
+      "https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png"
+    ],
+    "clan": [
+      "https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg"
+    ],
+    "events": [
+      "https://d1vlmco8ur52ud.cloudfront.net/06-05-2025-053103-4302.jpg",
+      "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png"
+    ],
+    "press": [
+      "https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg"
+    ],
+    "bandcamp": [
+      "https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png"
+    ],
+    "platform": [
+      "/assets/timeline/aday-antialias-blackmage.png"
+    ]
+  },
+  "urlMatch": [
+    {
+      "includes": "macroverse",
+      "image": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png"
+    },
+    {
+      "includes": "melbournefringe",
+      "image": "https://d1vlmco8ur52ud.cloudfront.net/06-05-2025-053103-4302.jpg"
+    },
+    {
+      "includes": "demozoo.org",
+      "image": "https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg"
+    },
+    {
+      "includes": "clananalogue",
+      "image": "https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg"
+    },
+    {
+      "includes": "vimeo.com",
+      "image": "https://i.vimeocdn.com/video/242046359-0e4ac17205e91f961490274544052b69a2d41b98c6d05e07f03255c62e567f6d-d_640?region=us"
+    }
+  ],
+  "sprinkleEvery": 6
+}

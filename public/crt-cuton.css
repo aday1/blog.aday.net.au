@@ -1,0 +1,127 @@
+/* CRT TV cut-on (lbebber turn-on, ~900ms). Link from aday / blog / keys public/. */
+
+@keyframes crtTvTurnOn {
+  0% {
+    transform: scale(1, 0.8) translate3d(0, 0, 0);
+    filter: brightness(30);
+    opacity: 1;
+  }
+  3.5% {
+    transform: scale(1, 0.8) translate3d(0, 100%, 0);
+  }
+  3.6% {
+    transform: scale(1, 0.8) translate3d(0, -100%, 0);
+    opacity: 1;
+  }
+  9% {
+    transform: scale(1.3, 0.6) translate3d(0, 100%, 0);
+    filter: brightness(30);
+    opacity: 0;
+  }
+  11% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    filter: contrast(0) brightness(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    filter: contrast(1) brightness(1.2) saturate(1.3);
+    opacity: 1;
+  }
+}
+
+@keyframes crtTvTurnOnGlow {
+  0% {
+    opacity: 0.2;
+    filter: blur(0.5px) brightness(1.8);
+    transform: translate(-50%, -50%) scale(0.72, 0.04);
+  }
+  3.5% {
+    transform: translate(-50%, -50%) scale(1, 0.08) translate3d(0, 40%, 0);
+    opacity: 0.95;
+  }
+  3.6% {
+    transform: translate(-50%, -50%) scale(1, 0.08) translate3d(0, -40%, 0);
+    opacity: 0.95;
+  }
+  9% {
+    transform: translate(-50%, -50%) scale(1.2, 0.05) translate3d(0, 30%, 0);
+    filter: brightness(2.4);
+    opacity: 0.35;
+  }
+  11% {
+    transform: translate(-50%, -50%) scale(1, 0.02);
+    filter: contrast(0) brightness(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.12;
+    filter: blur(0.1px) brightness(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes crtTvScanline {
+  0% {
+    opacity: 0.24;
+    transform: translate(-50%, -50%) scaleX(0.03) scaleY(0.05);
+  }
+  3.5% {
+    transform: translate(-50%, -50%) scaleX(0.5) scaleY(0.06) translate3d(0, 80%, 0);
+  }
+  3.6% {
+    transform: translate(-50%, -50%) scaleX(0.5) scaleY(0.06) translate3d(0, -80%, 0);
+  }
+  11% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleX(1) scaleY(0.02);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleX(1.05) scaleY(1);
+  }
+}
+
+@keyframes crtTvFlicker {
+  0% { opacity: 0.03; }
+  8% { opacity: 0.09; }
+  16% { opacity: 0.04; }
+  24% { opacity: 0.1; }
+  32% { opacity: 0.05; }
+  40% { opacity: 0.08; }
+  48% { opacity: 0.035; }
+  56% { opacity: 0.095; }
+  64% { opacity: 0.05; }
+  72% { opacity: 0.085; }
+  80% { opacity: 0.04; }
+  88% { opacity: 0.07; }
+  100% { opacity: 0.03; }
+}
+
+@keyframes crtTvNoise {
+  0% { transform: translate(0, 0); opacity: 0.28; }
+  50% { transform: translate(-1.8%, 1.1%); opacity: 0.58; }
+  100% { transform: translate(1.2%, -0.9%); opacity: 0.34; }
+}
+
+@keyframes crtChromaPulse {
+  0%, 100% { transform: translate(0, 0); opacity: 0.38; }
+  33% { transform: translate(-0.4%, 0.12%); opacity: 0.62; }
+  66% { transform: translate(0.35%, -0.1%); opacity: 0.48; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition::before,
+  .page-transition::after,
+  .page-transition-inner::before {
+    animation: none !important;
+  }
+
+  body:not(.boot-seq) .shell,
+  body:not(.boot-seq) main,
+  body:not(.boot-seq) .container {
+    animation: none !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}

@@ -1,4 +1,8 @@
-# MacroVerse at Melbourne Fringe
+---
+title: MacroVerse at Melbourne Fringe
+date: 2025-10-07
+summary: Live sonic/visual universe at Melbourne Fringe; macroverse.aday.net.au grew from the show.
+---
 
 MacroVerse was a live sonic and visual work at [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), part of Abbotsford Convent's experimental art program.
 

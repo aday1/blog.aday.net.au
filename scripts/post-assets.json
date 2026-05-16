@@ -1,0 +1,69 @@
+{
+  "2025-10-07-macroverse-fringe-origin": {
+    "hero": {
+      "src": "https://d1vlmco8ur52ud.cloudfront.net/06-05-2025-053103-4302.jpg",
+      "alt": "MacroVerse at Melbourne Fringe",
+      "caption": "Melbourne Fringe // MacroVerse at Abbotsford Convent",
+      "credit": "Image via melbournefringe.com.au event listing",
+      "fallbacks": [
+        "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
+        "https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg"
+      ]
+    },
+    "gallery": [
+      {
+        "src": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
+        "alt": "Macroverse shader engine preview",
+        "caption": "macroverse.aday.net.au // live GLSL stack after the Fringe show",
+        "fallbacks": [
+          "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/screenshot.png"
+        ]
+      }
+    ]
+  },
+  "2026-05-14-media-deck-and-timelog": {
+    "hero": {
+      "src": "https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png",
+      "alt": "Acid Banger browser remix tool",
+      "caption": "Portal media routing checkpoint",
+      "credit": "aday1/acid-banger preview",
+      "fallbacks": [
+        "https://raw.githubusercontent.com/aday1/error-diffusion/master/public/assets/max-patch-1.png",
+        "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png"
+      ]
+    },
+    "gallery": []
+  },
+  "2026-05-14-vimeo-index": {
+    "hero": {
+      "src": "https://i.vimeocdn.com/video/242046359-0e4ac17205e91f961490274544052b69a2d41b98c6d05e07f03255c62e567f6d-d_640?region=us",
+      "alt": "Vimeo archive frame one",
+      "caption": "vimeo.com/35409288",
+      "credit": "Thumbnail via Vimeo oEmbed",
+      "fallbacks": [
+        "https://media.demozoo.org/screens/t/dc/3c/d2ca.pl765305.jpg"
+      ]
+    },
+    "gallery": [
+      {
+        "src": "https://i.vimeocdn.com/video/460730834-9918088cfb557d28e8b15ddfd28843a784ce021fd2ac80f29072cfded083885e-d_640?region=us",
+        "alt": "Vimeo archive frame two",
+        "caption": "vimeo.com/84038041",
+        "fallbacks": []
+      }
+    ]
+  },
+  "2026-05-14-boot": {
+    "hero": {
+      "src": "https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg",
+      "alt": "Aday artist profile still",
+      "caption": "blog.aday.net.au // first boot post",
+      "credit": "Clan Analogue artist profile image",
+      "fallbacks": [
+        "https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png",
+        "https://avatars.githubusercontent.com/u/1834001?v=4"
+      ]
+    },
+    "gallery": []
+  }
+}

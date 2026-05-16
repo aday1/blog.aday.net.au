@@ -11,8 +11,8 @@
 
   const finishBoot = () => body.classList.remove("boot-seq");
   const hideTransition = () => pageTransition?.classList.add("hidden");
-  const CUTON_BOOT_MS = 2350;
-  const CUTON_HIDE_MS = 2950;
+  const CUTON_BOOT_MS = 100;
+  const CUTON_HIDE_MS = 920;
   let cutOnScheduled = false;
   const runCutOnSequence = (forceImmediate = false) => {
     if (forceImmediate) {

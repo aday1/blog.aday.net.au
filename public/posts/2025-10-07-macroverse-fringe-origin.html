@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Untitled // blog.aday.net.au</title>
+  <title>MacroVerse at Melbourne Fringe // blog.aday.net.au</title>
   <meta name="theme-color" content="#071224">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/crt-cuton.css">
+  <link rel="stylesheet" href="/blog-film.css">
+  <link rel="stylesheet" href="/timeline-spread.css">
 </head>
-<body class="boot-seq">
+<body class="boot-seq film-on">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
       <span class="cuton-label" aria-hidden="true"></span>
@@ -21,11 +24,33 @@
   <div class="noise" aria-hidden="true"></div>
   <main>
     <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
-    <h1 class="decrypt">Untitled</h1>
-    <p class="date">1970-01-01</p>
-    <h1>MacroVerse at Melbourne Fringe</h1>
-
-<p>MacroVerse was a live sonic and visual work at [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), part of Abbotsford Convent's experimental art program.</p>
+    <h1 class="decrypt">MacroVerse at Melbourne Fringe</h1>
+    <p class="date">2025-10-07</p>
+    <figure class="film-frame">
+  <div class="film-frame-stack">
+    <img class="film-photo" src="https://d1vlmco8ur52ud.cloudfront.net/06-05-2025-053103-4302.jpg" alt="MacroVerse at Melbourne Fringe" data-fallbacks="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png|https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg" loading="lazy" decoding="async">
+    <span class="film-phosphor" aria-hidden="true"></span>
+    <span class="film-grain" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-outer" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-inner" aria-hidden="true"></span>
+  </div>
+  <span class="film-credit">Image via melbournefringe.com.au event listing</span>
+  <figcaption>Melbourne Fringe // MacroVerse at Abbotsford Convent</figcaption>
+</figure>
+<div class="film-gallery">
+<figure class="film-frame">
+  <div class="film-frame-stack">
+    <img class="film-photo" src="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png" alt="Macroverse shader engine preview" data-fallbacks="https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/screenshot.png" loading="lazy" decoding="async">
+    <span class="film-phosphor" aria-hidden="true"></span>
+    <span class="film-grain" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-outer" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-inner" aria-hidden="true"></span>
+  </div>
+  
+  <figcaption>macroverse.aday.net.au // live GLSL stack after the Fringe show</figcaption>
+</figure>
+</div>
+    <p>MacroVerse was a live sonic and visual work at <a href="https://www.melbournefringe.com.au/whats-on/events/macroverse" target="_blank" rel="noopener noreferrer">Melbourne Fringe</a>, part of Abbotsford Convent's experimental art program.</p>
 
 <p>Reductionist (Nick Wilson) performed with battery-powered micro-instruments and micro-virtuosic technique, carrying a macro narrative of the universe from energy stasis through heat-death dissipation. Aday (Adrian Richardson) provided live video projection improv that distorted time and manipulated perceived energy flow.</p>
 
@@ -39,6 +64,7 @@
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
   <script src="/app.js"></script>
+  <script src="/blog-film.js" defer></script>
   <div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
   <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
     <button type="button" id="deployMetaShowBtn" style="font:inherit;cursor:pointer;padding:4px 10px;border:1px solid #4cff8a;background:rgba(0,0,0,.88);color:#b8ffd1;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.45);">build info</button>

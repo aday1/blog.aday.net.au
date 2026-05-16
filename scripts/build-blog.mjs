@@ -8,6 +8,7 @@ const outPostsDir = path.join(outDir, "posts");
 const outDataDir = path.join(outDir, "data");
 const adayWeeklybeatsPath = path.resolve(root, "..", "aday-net-au", "public", "data", "weeklybeats_tracks.json");
 const artifactSourcesPath = path.join(root, "scripts", "artifact-sources.json");
+const postAssetsPath = path.join(root, "scripts", "post-assets.json");
 
 if (!fs.existsSync(postsDir)) {
   throw new Error("posts directory missing");
@@ -21,19 +22,116 @@ const escapeHtml = (value) =>
   value
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
 
-const mdToHtml = (md) =>
-  md
-    .split("\n")
-    .map((line) => {
-      if (line.startsWith("### ")) return `<h3>${escapeHtml(line.slice(4))}</h3>`;
-      if (line.startsWith("## ")) return `<h2>${escapeHtml(line.slice(3))}</h2>`;
-      if (line.startsWith("# ")) return `<h1>${escapeHtml(line.slice(2))}</h1>`;
-      if (line.trim() === "") return "";
-      return `<p>${escapeHtml(line)}</p>`;
-    })
-    .join("\n");
+const postAssets = (() => {
+  try {
+    if (!fs.existsSync(postAssetsPath)) return {};
+    return JSON.parse(fs.readFileSync(postAssetsPath, "utf8"));
+  } catch {
+    return {};
+  }
+})();
+
+const inlineFormat = (text) => {
+  let out = escapeHtml(text);
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label, href) => {
+    const safeHref = escapeHtml(href);
+    return `<a href="${safeHref}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+  });
+  return out;
+};
+
+const renderFilmFigure = ({ src, alt = "", caption = "", credit = "", fallbacks = [] }) => {
+  const fb =
+    fallbacks.length > 0
+      ? ` data-fallbacks="${escapeHtml(fallbacks.join("|"))}"`
+      : "";
+  const creditHtml = credit ? `<span class="film-credit">${escapeHtml(credit)}</span>` : "";
+  const capHtml = caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : "";
+  return `<figure class="film-frame">
+  <div class="film-frame-stack">
+    <img class="film-photo" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}"${fb} loading="lazy" decoding="async">
+    <span class="film-phosphor" aria-hidden="true"></span>
+    <span class="film-grain" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-outer" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-inner" aria-hidden="true"></span>
+  </div>
+  ${creditHtml}
+  ${capHtml}
+</figure>`;
+};
+
+const renderPostAssetsBlock = (slug) => {
+  const pack = postAssets[slug];
+  if (!pack) return "";
+  const parts = [];
+  if (pack.hero) parts.push(renderFilmFigure(pack.hero));
+  if (Array.isArray(pack.gallery) && pack.gallery.length) {
+    const tiles = pack.gallery.map((item) => renderFilmFigure(item)).join("\n");
+    parts.push(`<div class="film-gallery">\n${tiles}\n</div>`);
+  }
+  return parts.join("\n");
+};
+
+const mdToHtml = (md) => {
+  const lines = md.split("\n");
+  const out = [];
+  let listOpen = false;
+
+  const closeList = () => {
+    if (listOpen) {
+      out.push("</ul>");
+      listOpen = false;
+    }
+  };
+
+  for (const line of lines) {
+    const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)\s*$/);
+    if (imgMatch) {
+      closeList();
+      out.push(renderFilmFigure({ src: imgMatch[2], alt: imgMatch[1], caption: imgMatch[1] }));
+      continue;
+    }
+    if (line.startsWith("### ")) {
+      closeList();
+      out.push(`<h3>${inlineFormat(line.slice(4))}</h3>`);
+      continue;
+    }
+    if (line.startsWith("## ")) {
+      closeList();
+      out.push(`<h2>${inlineFormat(line.slice(3))}</h2>`);
+      continue;
+    }
+    if (line.startsWith("# ")) {
+      closeList();
+      out.push(`<h1>${inlineFormat(line.slice(2))}</h1>`);
+      continue;
+    }
+    if (line.startsWith("- ")) {
+      if (!listOpen) {
+        out.push("<ul>");
+        listOpen = true;
+      }
+      out.push(`<li>${inlineFormat(line.slice(2))}</li>`);
+      continue;
+    }
+    if (line.trim() === "") {
+      closeList();
+      out.push("");
+      continue;
+    }
+    closeList();
+    out.push(`<p>${inlineFormat(line)}</p>`);
+  }
+  closeList();
+  return out.join("\n");
+};
+
+const filmHeadLinks = `  <link rel="stylesheet" href="/blog-film.css">
+  <link rel="stylesheet" href="/timeline-spread.css">`;
+const filmBodyScripts = `  <script src="/blog-film.js" defer></script>`;
 
 const deployMetaHtml = `<div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
   <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
@@ -327,6 +425,7 @@ const posts = files.map((file) => {
   const raw = fs.readFileSync(path.join(postsDir, file), "utf8");
   const { meta, body } = parsePost(raw);
   const htmlBody = mdToHtml(body.trim());
+  const assetsHtml = renderPostAssetsBlock(slug);
 
   const postHtml = `<!doctype html>
 <html lang="en">
@@ -339,8 +438,10 @@ const posts = files.map((file) => {
   <link rel="apple-touch-icon" href="/favicon.svg">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/crt-cuton.css">
+${filmHeadLinks}
 </head>
-<body class="boot-seq">
+<body class="boot-seq film-on">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
       <span class="cuton-label" aria-hidden="true"></span>
@@ -353,6 +454,7 @@ const posts = files.map((file) => {
     <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
     <h1 class="decrypt">${escapeHtml(meta.title)}</h1>
     <p class="date">${escapeHtml(meta.date)}</p>
+    ${assetsHtml}
     ${htmlBody}
     <footer class="blog-footer">
       <div class="footer-wave" aria-hidden="true"></div>
@@ -361,6 +463,7 @@ const posts = files.map((file) => {
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
   <script src="/app.js"></script>
+${filmBodyScripts}
   ${deployMetaHtml}
 </body>
 </html>
@@ -701,9 +804,95 @@ const getTimeline = async () => {
   return deduped.sort((a, b) => new Date(a.date) - new Date(b.date));
 };
 
+const timelineImagesPath = path.join(root, "scripts", "timeline-images.json");
+const timelineImages = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(timelineImagesPath, "utf8"));
+  } catch {
+    return {
+      signature: "/assets/timeline/aday-antialias-blackmage.png",
+      fallback: "",
+      bySource: {},
+      urlMatch: [],
+      sprinkleEvery: 6
+    };
+  }
+})();
+
+const truncateTimelineDesc = (text, max = 220) => {
+  const trimmed = String(text || "").trim();
+  if (trimmed.length <= max) return trimmed;
+  return `${trimmed.slice(0, max - 3)}...`;
+};
+
+const pickTimelineImage = (entry, idx) => {
+  const url = String(entry.url || "").toLowerCase();
+  const source = slugifySource(entry.source || "artifact");
+  const signature = timelineImages.signature || "/assets/timeline/aday-antialias-blackmage.png";
+  const sprinkleEvery = Number(timelineImages.sprinkleEvery) || 6;
+
+  if (sprinkleEvery > 0 && idx > 0 && idx % sprinkleEvery === 0) {
+    return { url: signature, signature: true };
+  }
+
+  for (const rule of timelineImages.urlMatch || []) {
+    const needle = String(rule.includes || "").toLowerCase();
+    if (needle && url.includes(needle)) {
+      return { url: rule.image, signature: rule.image === signature };
+    }
+  }
+
+  const pool = timelineImages.bySource?.[source];
+  if (Array.isArray(pool) && pool.length) {
+    const image = pool[idx % pool.length];
+    return { url: image, signature: image === signature };
+  }
+
+  if (timelineImages.fallback) {
+    return { url: timelineImages.fallback, signature: false };
+  }
+  return null;
+};
+
+const renderTimelineNode = (entry, idx) => {
+  const source = slugifySource(entry.source || "artifact");
+  const year = entry.date.slice(0, 4);
+  const picked = pickTimelineImage(entry, idx);
+  const sigClass = picked?.signature ? " is-signature" : "";
+  const visualClass = picked?.url
+    ? "timeline-entry-visual"
+    : "timeline-entry-visual timeline-entry-visual--plain";
+  const visualStyle = picked?.url ? ` style="--timeline-bg: url('${escapeHtml(picked.url)}')"` : "";
+  const desc = truncateTimelineDesc(entry.desc);
+
+  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-title="${escapeHtml(entry.title)}">
+  <article class="timeline-entry">
+    <div class="${visualClass}"${visualStyle} aria-hidden="true"><span class="timeline-entry-year">${escapeHtml(year)}</span></div>
+    <div class="timeline-entry-body">
+      <p class="timeline-entry-meta">
+        <span class="date">${escapeHtml(entry.date)}</span>
+        <span class="source-chip">${escapeHtml(source)}</span>
+      </p>
+      <h3 class="timeline-entry-title"><a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(entry.title)}</a></h3>
+      ${desc ? `<p class="timeline-entry-desc">${escapeHtml(desc)}</p>` : ""}
+    </div>
+  </article>
+</li>`;
+};
+
 const timelineEntries = await getTimeline();
+let timelineYearMarker = "";
 const timelineRows = timelineEntries
-  .map((entry, idx) => `<li class="timeline-node source-${escapeHtml(slugifySource(entry.source || "artifact"))}" data-source="${escapeHtml(slugifySource(entry.source || "artifact"))}" data-node="${idx}" data-title="${escapeHtml(entry.title)}"><span class="date">${escapeHtml(entry.date)}</span> <span class="source-chip">${escapeHtml(entry.source || "artifact")}</span> <a href="${escapeHtml(entry.url)}">${escapeHtml(entry.title)}</a> - ${escapeHtml(entry.desc)}</li>`)
+  .flatMap((entry, idx) => {
+    const year = entry.date.slice(0, 4);
+    const parts = [];
+    if (year !== timelineYearMarker) {
+      timelineYearMarker = year;
+      parts.push(`<li class="timeline-year-divider" aria-hidden="true"><span>${escapeHtml(year)}</span></li>`);
+    }
+    parts.push(renderTimelineNode(entry, idx));
+    return parts;
+  })
   .join("\n");
 const timeLogRows = [...timelineEntries]
   .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -733,8 +922,10 @@ const indexHtml = `<!doctype html>
   <link rel="apple-touch-icon" href="/favicon.svg">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/crt-cuton.css">
+${filmHeadLinks}
 </head>
-<body class="boot-seq">
+<body class="boot-seq film-on">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
       <span class="cuton-label" aria-hidden="true"></span>
@@ -847,6 +1038,7 @@ const indexHtml = `<!doctype html>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
   <script src="/app.js"></script>
+${filmBodyScripts}
   ${deployMetaHtml}
 </body>
 </html>
