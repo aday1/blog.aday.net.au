@@ -917,7 +917,8 @@
     runTimelineGraph();
     wireTimelinePresence();
     window.addEventListener("blog-panel-change", (ev) => {
-      if (ev.detail?.panelId === "presence") {
+      const ids = ev.detail?.panelIds || [ev.detail?.panelId].filter(Boolean);
+      if (ids.includes("presence")) {
         setTimeout(() => window.dispatchEvent(new Event("resize")), 80);
       }
     });

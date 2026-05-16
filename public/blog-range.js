@@ -295,14 +295,22 @@
       boot().catch((err) => console.warn("blog-range:", err));
     };
 
+    const needsCharts = (ids) =>
+      ids.some((id) => id === "presence" || id === "devlog");
+
     window.addEventListener("blog-panel-change", (ev) => {
-      const id = ev.detail?.panelId;
-      if (id === "presence" || id === "devlog") start();
+      const ids = ev.detail?.panelIds || [ev.detail?.panelId].filter(Boolean);
+      if (needsCharts(ids)) start();
     });
 
-    if (document.querySelector(".blog-panel.is-active[data-panel='presence'], .blog-panel.is-active[data-panel='devlog']")) {
-      start();
-    }
+    const visibleNow = () => {
+      const ids = [];
+      document.querySelectorAll(".blog-panel.is-active, .blog-panel.is-split-left, .blog-panel.is-split-right").forEach((p) => {
+        if (p.dataset.panel) ids.push(p.dataset.panel);
+      });
+      return ids;
+    };
+    if (needsCharts(visibleNow())) start();
 
     if ("requestIdleCallback" in window) {
       requestIdleCallback(start, { timeout: 2500 });
