@@ -25,7 +25,8 @@ jobs:
         run: |
           SHORT_SHA="$(echo "$GITHUB_SHA" | cut -c1-12)"
           BUILD_DATE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          cat > public/deploy-meta.json <<EOF
+          mkdir -p public/data
+          cat > public/data/deploy-meta.json <<EOF
           {
             "site": "blog.aday.net.au",
             "branch": "${GITHUB_REF_NAME}",

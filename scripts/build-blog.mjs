@@ -40,7 +40,7 @@ const deployMetaHtml = `<div id="deployMetaBadge" style="position:fixed;right:8p
     (function () {
       var badge = document.getElementById("deployMetaBadge");
       if (!badge) return;
-      fetch("/deploy-meta.json", { cache: "no-store" })
+      fetch("/data/deploy-meta.json", { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("missing")); })
         .then(function (m) {
           var dt = m.build_date ? new Date(m.build_date).toLocaleString() : "unknown-date";
