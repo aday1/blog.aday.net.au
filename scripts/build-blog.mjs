@@ -227,6 +227,11 @@ const deployMetaHtml = `<div id="deployMetaDock" style="position:fixed;right:10p
       }
       fetch("/data/deploy-meta.json", { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("missing")); })
+        .catch(function () {
+          return fetch("data/deploy-meta.json", { cache: "no-store" }).then(function (r2) {
+            return r2.ok ? r2.json() : Promise.reject(new Error("missing"));
+          });
+        })
         .then(render)
         .catch(function () {
           summaryEl.textContent = "build meta unavailable";
@@ -846,9 +851,31 @@ const indexHtml = `<!doctype html>
 `;
 
 fs.writeFileSync(path.join(outDir, "index.html"), indexHtml, "utf8");
+const genAt = new Date().toISOString();
 fs.writeFileSync(path.join(outDataDir, "timeline-artifacts.json"), JSON.stringify({
-  generated_at: new Date().toISOString(),
+  generated_at: genAt,
   count: timelineEntries.length,
   entries: timelineEntries
 }, null, 2), "utf8");
+const localDeployMeta = {
+  site: "blog.aday.net.au",
+  branch: "local",
+  track: "local",
+  version: "local",
+  build_date: genAt,
+  last_git_sha_short: "local",
+  last_git_sha: "local",
+  last_git_url: "https://github.com/aday1/blog.aday.net.au",
+  last_build_at: genAt,
+  last_deployed_at: genAt,
+  changelog_url: "https://github.com/aday1/blog.aday.net.au",
+  commits_history_url: "https://github.com/aday1/blog.aday.net.au/commits/main",
+  changelog_md_url: "https://github.com/aday1/blog.aday.net.au/blob/main/CHANGELOG.md",
+  releases_url: "https://github.com/aday1/blog.aday.net.au/releases",
+  workflow_run_url: "",
+  run_id: "",
+  run_number: "",
+  deploy_note: "Offline build fingerprint; CI overwrites deploy-meta.json and injects window.__DEPLOY_META__.",
+};
+fs.writeFileSync(path.join(outDataDir, "deploy-meta.json"), JSON.stringify(localDeployMeta, null, 2), "utf8");
 console.log(`Generated ${posts.length} post(s).`);

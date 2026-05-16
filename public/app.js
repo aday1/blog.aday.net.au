@@ -171,14 +171,35 @@
     if (!ctx) return;
     const labels = [...document.querySelectorAll(".timeline-node")];
     if (!labels.length) return;
+    const laneForSource = (s) => {
+      if (["soundcloud", "weeklybeats", "bandcamp"].includes(s)) return 0;
+      if (["youtube", "vimeo"].includes(s)) return 1;
+      if (["demozoo", "scene"].includes(s)) return 2;
+      if (["github", "codepen"].includes(s)) return 3;
+      return 4;
+    };
+    const laneColor = (lane) => {
+      const c = [
+        "rgba(140, 255, 190, 0.92)",
+        "rgba(130, 200, 255, 0.92)",
+        "rgba(255, 190, 120, 0.9)",
+        "rgba(200, 160, 255, 0.92)",
+        "rgba(180, 220, 255, 0.88)"
+      ];
+      return c[Math.min(lane, c.length - 1)];
+    };
     const entries = labels.map((el, idx) => {
       const rawDate = (el.querySelector(".date")?.textContent || "").trim();
       const title = (el.dataset.title || el.textContent || `node-${idx}`).trim();
+      const source = (el.dataset.source || "").toLowerCase();
       const date = new Date(rawDate);
+      const lane = laneForSource(source);
       return {
         idx,
         title,
         rawDate,
+        source,
+        lane,
         ts: Number.isFinite(date.getTime()) ? date.getTime() : Date.now()
       };
     });
@@ -194,6 +215,28 @@
       }, { threshold: 0.08 });
       observer.observe(timelineGraph);
     }
+    const spine = [...entries].sort((a, b) => a.ts - b.ts);
+    const prefersReducedMotionBlog = !!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+    const quadPoint = (ax, ay, cx, cy, bx, by, u) => {
+      const om = 1 - u;
+      return {
+        x: om * om * ax + 2 * om * u * cx + u * u * bx,
+        y: om * om * ay + 2 * om * u * cy + u * u * by
+      };
+    };
+    const synapseControl = (ax, ay, bx, by, edgeIdx) => {
+      const mx = (ax + bx) * 0.5;
+      const my = (ay + by) * 0.5;
+      const dx = bx - ax;
+      const dy = by - ay;
+      const len = Math.hypot(dx, dy) || 1;
+      const nx = -dy / len;
+      const ny = dx / len;
+      const dir = edgeIdx % 2 === 0 ? 1 : -1;
+      const bend = 10 + (edgeIdx % 4) * 1.8;
+      return { cx: mx + nx * bend * dir, cy: my + ny * bend * dir };
+    };
 
     const animate = (time) => {
       if (document.hidden || !isVisible) {
@@ -210,10 +253,11 @@
       const t = time * 0.001;
       const padX = 34;
       const axisY = h * 0.68;
-      const laneTop = h * 0.2;
+      const laneTop = h * 0.18;
+      const laneCount = 5;
       ctx.clearRect(0, 0, w, h);
 
-      ctx.strokeStyle = "rgba(90, 166, 255, 0.45)";
+      ctx.strokeStyle = "rgba(90, 166, 255, 0.42)";
       ctx.lineWidth = 1.2;
       ctx.beginPath();
       ctx.moveTo(padX, axisY);
@@ -224,56 +268,60 @@
       years.forEach((year) => {
         const yrTs = Date.UTC(year, 0, 1);
         const x = padX + ((yrTs - minTs) / range) * (w - padX * 2);
-        ctx.strokeStyle = "rgba(134, 198, 255, 0.22)";
+        ctx.strokeStyle = "rgba(134, 198, 255, 0.2)";
         ctx.beginPath();
-        ctx.moveTo(x, laneTop);
-        ctx.lineTo(x, axisY + 18);
+        ctx.moveTo(x, laneTop - 4);
+        ctx.lineTo(x, axisY + 14);
         ctx.stroke();
-        ctx.fillStyle = "rgba(168, 228, 255, 0.76)";
+        ctx.fillStyle = "rgba(168, 228, 255, 0.72)";
         ctx.font = "10px Consolas, monospace";
-        ctx.fillText(String(year), x - 14, axisY + 30);
+        ctx.fillText(String(year), x - 14, axisY + 28);
       });
 
-      const points = entries.map((item, i) => {
+      const laneSpan = Math.max(12, axisY - laneTop - 24);
+      const points = entries.map((item) => {
         const x = padX + ((item.ts - minTs) / range) * (w - padX * 2);
-        const lane = (i % 3);
-        const y = laneTop + lane * 34 + Math.sin(t * 1.2 + i * 0.7) * 3;
+        const u = laneCount <= 1 ? 0.5 : item.lane / (laneCount - 1);
+        const y = laneTop + u * laneSpan + (prefersReducedMotionBlog ? 0 : Math.sin(t * 0.55 + item.idx * 0.2) * 0.6);
         return { ...item, x, y };
       });
+      const byIdx = new Map(points.map((p) => [p.idx, p]));
 
-      ctx.strokeStyle = "rgba(118, 205, 255, 0.35)";
-      ctx.lineWidth = 1;
-      for (let i = 0; i < points.length - 1; i++) {
+      for (let i = 0; i < spine.length - 1; i++) {
+        const a = byIdx.get(spine[i].idx);
+        const b = byIdx.get(spine[i + 1].idx);
+        if (!a || !b) continue;
+        const { cx, cy } = synapseControl(a.x, a.y, b.x, b.y, i);
+        ctx.strokeStyle = "rgba(110, 195, 255, 0.28)";
+        ctx.lineWidth = 1.05;
         ctx.beginPath();
-        ctx.moveTo(points[i].x, points[i].y);
-        ctx.lineTo(points[i + 1].x, points[i + 1].y);
+        ctx.moveTo(a.x, a.y);
+        ctx.quadraticCurveTo(cx, cy, b.x, b.y);
         ctx.stroke();
+        const u = (t * 0.1 + i * 0.037) % 1;
+        const pulse = quadPoint(a.x, a.y, cx, cy, b.x, b.y, u);
+        ctx.fillStyle = "rgba(200, 245, 255, 0.55)";
+        ctx.beginPath();
+        ctx.arc(pulse.x, pulse.y, 3.2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = "rgba(255, 255, 255, 0.75)";
+        ctx.beginPath();
+        ctx.arc(pulse.x, pulse.y, 1.2, 0, Math.PI * 2);
+        ctx.fill();
       }
 
       points.forEach((p, i) => {
-        const pulse = 3.4 + 2.1 * (0.5 + 0.5 * Math.sin(t * 2.1 + i));
-        ctx.strokeStyle = "rgba(145, 255, 166, 0.72)";
-        ctx.fillStyle = "rgba(145, 255, 166, 0.24)";
+        const ring = 4.2 + (i % 4) * 0.35;
+        ctx.strokeStyle = "rgba(120, 200, 255, 0.22)";
+        ctx.lineWidth = 1;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, pulse + 2.2, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, pulse, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(169, 255, 176, 0.94)";
-        ctx.fill();
-        ctx.beginPath();
-        ctx.moveTo(p.x, p.y + pulse);
-        ctx.lineTo(p.x, axisY);
-        ctx.strokeStyle = "rgba(145, 255, 166, 0.28)";
+        ctx.arc(p.x, p.y, ring + 5.5, 0, Math.PI * 2);
         ctx.stroke();
+        ctx.fillStyle = laneColor(p.lane);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, ring, 0, Math.PI * 2);
+        ctx.fill();
       });
-
-      const sweepX = padX + ((t * 90) % (w - padX * 2));
-      ctx.strokeStyle = "rgba(172, 250, 255, 0.18)";
-      ctx.beginPath();
-      ctx.moveTo(sweepX, laneTop - 8);
-      ctx.lineTo(sweepX, axisY + 10);
-      ctx.stroke();
 
       requestAnimationFrame(animate);
     };
@@ -331,31 +379,61 @@
     const linkRows = [...document.querySelectorAll(".node-links li[data-node-id][data-url]")];
     if (!linkRows.length) return;
     const nodeDefs = [
-      { id: "blog-home", x: 0.5, y: 0.2, c: "#9eff89" },
-      { id: "aday-main", x: 0.2, y: 0.35, c: "#9ed1ff" },
-      { id: "demozoo-artifacts", x: 0.8, y: 0.35, c: "#a9f8ff" },
-      { id: "weeklybeats-xref", x: 0.22, y: 0.62, c: "#9fffbf" },
-      { id: "post-vimeo-index", x: 0.43, y: 0.62, c: "#b5d8ff" },
-      { id: "post-media-deck", x: 0.57, y: 0.62, c: "#b5d8ff" },
-      { id: "post-boot", x: 0.72, y: 0.62, c: "#b5d8ff" },
-      { id: "repo-blog", x: 0.5, y: 0.84, c: "#ffd38e" }
+      { id: "blog-home", layer: 0, slot: 0, c: "#9eff89" },
+      { id: "aday-main", layer: 1, slot: 0, c: "#9ed1ff" },
+      { id: "demozoo-artifacts", layer: 1, slot: 1, c: "#a9f8ff" },
+      { id: "weeklybeats-xref", layer: 2, slot: 0, c: "#9fffbf" },
+      { id: "post-vimeo-index", layer: 2, slot: 1, c: "#b5d8ff" },
+      { id: "post-media-deck", layer: 2, slot: 2, c: "#b5d8ff" },
+      { id: "post-boot", layer: 3, slot: 0, c: "#b5d8ff" },
+      { id: "repo-blog", layer: 4, slot: 0, c: "#ffd38e" }
     ];
     const edges = [
-      ["blog-home", "aday-main"],
-      ["blog-home", "demozoo-artifacts"],
-      ["blog-home", "weeklybeats-xref"],
-      ["blog-home", "post-vimeo-index"],
-      ["blog-home", "post-media-deck"],
-      ["blog-home", "post-boot"],
-      ["post-vimeo-index", "demozoo-artifacts"],
-      ["post-media-deck", "weeklybeats-xref"],
-      ["post-boot", "repo-blog"],
-      ["blog-home", "repo-blog"]
+      { a: "blog-home", b: "aday-main", w: 0.95 },
+      { a: "blog-home", b: "demozoo-artifacts", w: 0.85 },
+      { a: "blog-home", b: "weeklybeats-xref", w: 0.8 },
+      { a: "blog-home", b: "post-vimeo-index", w: 0.72 },
+      { a: "blog-home", b: "post-media-deck", w: 0.72 },
+      { a: "blog-home", b: "post-boot", w: 0.7 },
+      { a: "post-vimeo-index", b: "demozoo-artifacts", w: 0.45 },
+      { a: "post-media-deck", b: "weeklybeats-xref", w: 0.42 },
+      { a: "post-boot", b: "repo-blog", w: 0.55 },
+      { a: "blog-home", b: "repo-blog", w: 0.65 }
     ];
     const linkById = new Map(linkRows.map((row) => [row.dataset.nodeId, row]));
     let hoverId = "";
     let isVisible = true;
     let nodeCache = [];
+    const MAX_LAYER = 4;
+    const PAD_X = 40;
+    const PAD_Y = 32;
+    const layerCounts = () => {
+      const m = new Map();
+      nodeDefs.forEach((n) => {
+        m.set(n.layer, Math.max(m.get(n.layer) || 0, n.slot + 1));
+      });
+      return m;
+    };
+    const synapseControl = (ax, ay, bx, by, edgeIdx) => {
+      const mx = (ax + bx) * 0.5;
+      const my = (ay + by) * 0.5;
+      const dx = bx - ax;
+      const dy = by - ay;
+      const len = Math.hypot(dx, dy) || 1;
+      const nx = -dy / len;
+      const ny = dx / len;
+      const dir = edgeIdx % 2 === 0 ? 1 : -1;
+      const bend = 12 + (edgeIdx % 4) * 2;
+      return { cx: mx + nx * bend * dir, cy: my + ny * bend * dir };
+    };
+    const quadPoint = (ax, ay, cx, cy, bx, by, u) => {
+      const om = 1 - u;
+      return {
+        x: om * om * ax + 2 * om * u * cx + u * u * bx,
+        y: om * om * ay + 2 * om * u * cy + u * u * by
+      };
+    };
+    const motionBlog = !!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver((rows) => {
@@ -412,26 +490,45 @@
       const h = rect.height;
       const t = time * 0.001;
       ctx.clearRect(0, 0, w, h);
-
-      nodeCache = nodeDefs.map((n, i) => ({
-        ...n,
-        r: 5.5 + ((i + 1) % 3),
-        px: n.x * w + Math.sin(t * 0.9 + i) * 6,
-        py: n.y * h + Math.cos(t * 1.1 + i * 0.5) * 4
-      }));
+      const jit = motionBlog ? 0 : 1;
+      const counts = layerCounts();
+      nodeCache = nodeDefs.map((n, i) => {
+        const slotsInLayer = counts.get(n.layer) || 1;
+        const colX = PAD_X + (n.layer / MAX_LAYER) * (w - PAD_X * 2);
+        let rowY;
+        if (slotsInLayer <= 1) {
+          rowY = h * 0.5;
+        } else {
+          rowY = PAD_Y + (n.slot / (slotsInLayer - 1)) * (h - PAD_Y * 2);
+        }
+        const r = 5.2 + ((i + 1) % 3) * 0.4;
+        return {
+          ...n,
+          r,
+          px: colX + jit * Math.sin(t * 0.78 + i * 0.41) * 0.9,
+          py: rowY + jit * Math.cos(t * 0.66 + i * 0.33) * 0.75
+        };
+      });
       const byId = new Map(nodeCache.map((n) => [n.id, n]));
 
-      edges.forEach(([a, b], i) => {
-        const na = byId.get(a);
-        const nb = byId.get(b);
+      edges.forEach((edge, i) => {
+        const na = byId.get(edge.a);
+        const nb = byId.get(edge.b);
         if (!na || !nb) return;
-        const pulse = 0.2 + 0.24 * (0.5 + 0.5 * Math.sin(t * 2.0 + i));
-        ctx.strokeStyle = `rgba(120, 206, 255, ${pulse.toFixed(3)})`;
-        ctx.lineWidth = 1.1;
+        const wgt = edge.w;
+        const { cx, cy } = synapseControl(na.px, na.py, nb.px, nb.py, i);
+        ctx.strokeStyle = `rgba(118, 200, 255, ${0.18 + 0.38 * wgt})`;
+        ctx.lineWidth = 0.9 + 0.9 * wgt;
         ctx.beginPath();
         ctx.moveTo(na.px, na.py);
-        ctx.lineTo(nb.px, nb.py);
+        ctx.quadraticCurveTo(cx, cy, nb.px, nb.py);
         ctx.stroke();
+        const u = (t * 0.12 + i * 0.04) % 1;
+        const pulse = quadPoint(na.px, na.py, cx, cy, nb.px, nb.py, u);
+        ctx.fillStyle = `rgba(200, 255, 230, ${0.3 + 0.45 * wgt})`;
+        ctx.beginPath();
+        ctx.arc(pulse.x, pulse.y, 2.8, 0, Math.PI * 2);
+        ctx.fill();
       });
 
       nodeCache.forEach((n) => {
@@ -440,10 +537,10 @@
         ctx.beginPath();
         ctx.arc(n.px, n.py, n.r + (hovered ? 1.5 : 0), 0, Math.PI * 2);
         ctx.fill();
-        ctx.strokeStyle = "rgba(156, 255, 176, 0.34)";
+        ctx.strokeStyle = "rgba(156, 255, 176, 0.32)";
         ctx.lineWidth = 1;
         ctx.beginPath();
-        ctx.arc(n.px, n.py, n.r + 6 + Math.sin(t * 1.6 + n.r) * 1.8, 0, Math.PI * 2);
+        ctx.arc(n.px, n.py, n.r + 6, 0, Math.PI * 2);
         ctx.stroke();
       });
 

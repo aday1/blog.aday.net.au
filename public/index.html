@@ -93,7 +93,7 @@
         <li><span>github</span><span class="status-tag status-online">19</span></li>
 <li><span>weeklybeats</span><span class="status-tag status-online">11</span></li>
 <li><span>demozoo</span><span class="status-tag status-online">5</span></li>
-<li><span>youtube</span><span class="status-tag status-online">4</span></li>
+<li><span>youtube</span><span class="status-tag status-online">3</span></li>
 <li><span>clan</span><span class="status-tag status-online">3</span></li>
 <li><span>vimeo</span><span class="status-tag status-online">2</span></li>
 <li><span>soundcloud</span><span class="status-tag status-online">1</span></li>
@@ -162,14 +162,12 @@
 <li class="timeline-node source-github" data-source="github" data-node="47" data-title="artbastard.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/artbastard.aday.net.au">artbastard.aday.net.au</a> - ArtBastard web deploy, docker, pages, and CI</li>
 <li class="timeline-node source-github" data-source="github" data-node="48" data-title="blog.aday.net.au"><span class="date">2026-05-13</span> <span class="source-chip">github</span> <a href="https://github.com/aday1/blog.aday.net.au">blog.aday.net.au</a> - repo milestone</li>
 <li class="timeline-node source-platform" data-source="platform" data-node="49" data-title="SoundCloud and Bandcamp deck online"><span class="date">2026-05-14</span> <span class="source-chip">platform</span> <a href="https://aday.net.au">SoundCloud and Bandcamp deck online</a> - Rapid-play embeds and profile links added to aday.net.au media panel</li>
-<li class="timeline-node source-youtube" data-source="youtube" data-node="50" data-title="YouTube tracker snapshot"><span class="date">2027-05-09</span> <span class="source-chip">youtube</span> <a href="https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats">YouTube tracker snapshot</a> - Latest discovered public analytics timestamp from stats mirror</li>
       </ul>
     </section>
     <section>
       <h2>Recent ingest log</h2>
       <ul class="post-list">
-        <li><span class="date">2027-05-09</span> <span class="source-chip">youtube</span> YouTube tracker snapshot // <a href="https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats">open</a></li>
-<li><span class="date">2026-05-14</span> <span class="source-chip">platform</span> SoundCloud and Bandcamp deck online // <a href="https://aday.net.au">open</a></li>
+        <li><span class="date">2026-05-14</span> <span class="source-chip">platform</span> SoundCloud and Bandcamp deck online // <a href="https://aday.net.au">open</a></li>
 <li><span class="date">2026-05-13</span> <span class="source-chip">github</span> macroverse.aday.net.au // <a href="https://github.com/aday1/macroverse.aday.net.au">open</a></li>
 <li><span class="date">2026-05-13</span> <span class="source-chip">github</span> artbastard.aday.net.au // <a href="https://github.com/aday1/artbastard.aday.net.au">open</a></li>
 <li><span class="date">2026-05-13</span> <span class="source-chip">github</span> blog.aday.net.au // <a href="https://github.com/aday1/blog.aday.net.au">open</a></li>
@@ -182,6 +180,7 @@
 <li><span class="date">2026-04-07</span> <span class="source-chip">github</span> The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack // <a href="https://github.com/aday1/The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack">open</a></li>
 <li><span class="date">2026-04-02</span> <span class="source-chip">github</span> MoveMusicSaveEditor // <a href="https://github.com/aday1/MoveMusicSaveEditor">open</a></li>
 <li><span class="date">2026-03-17</span> <span class="source-chip">github</span> Cidewinder // <a href="https://github.com/aday1/Cidewinder">open</a></li>
+<li><span class="date">2026-03-12</span> <span class="source-chip">github</span> ZealPalace // <a href="https://github.com/aday1/ZealPalace">open</a></li>
       </ul>
     </section>
     <section>
@@ -403,6 +402,11 @@
       }
       fetch("/data/deploy-meta.json", { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("missing")); })
+        .catch(function () {
+          return fetch("data/deploy-meta.json", { cache: "no-store" }).then(function (r2) {
+            return r2.ok ? r2.json() : Promise.reject(new Error("missing"));
+          });
+        })
         .then(render)
         .catch(function () {
           summaryEl.textContent = "build meta unavailable";

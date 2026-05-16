@@ -230,6 +230,11 @@
       }
       fetch("/data/deploy-meta.json", { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("missing")); })
+        .catch(function () {
+          return fetch("data/deploy-meta.json", { cache: "no-store" }).then(function (r2) {
+            return r2.ok ? r2.json() : Promise.reject(new Error("missing"));
+          });
+        })
         .then(render)
         .catch(function () {
           summaryEl.textContent = "build meta unavailable";
