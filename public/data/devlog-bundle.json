@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T14:48:22.583Z",
+  "generated_at": "2026-05-16T16:21:51.409Z",
   "trains": [
     {
       "id": "macroverse",
@@ -20,6 +20,18 @@
           "id": "shader",
           "label": "Shader engine",
           "items": [
+            {
+              "sha": "9546e0fae7be",
+              "shaFull": "9546e0fae7be4b0b3f78d80b11c856484df9ff7f",
+              "date": "2026-05-16",
+              "subject": "Add curated starter-pack shaders and public export doc tweaks.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/9546e0fae7be4b0b3f78d80b11c856484df9ff7f",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "shader",
+              "phaseLabel": "Shader engine",
+              "narrative": "GLSL lane update — Add curated starter-pack shaders and public export doc tweaks.. Feeds the master presence graph on blog.aday.net.au."
+            },
             {
               "sha": "d24aeb014a67",
               "shaFull": "d24aeb014a6776ff93ff9697f65a7007268b7a1b",
@@ -559,18 +571,6 @@
               "phaseId": "infra",
               "phaseLabel": "Infrastructure",
               "narrative": "Back-end sky map updated: SHIP IT. Part of the browser stack that grew out of the Fringe performance."
-            },
-            {
-              "sha": "99fad8b3cb1d",
-              "shaFull": "99fad8b3cb1d46ebb9b43193db1801548dc5e0bc",
-              "date": "2026-03-07",
-              "subject": "Macroverse42-AdayEdition",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/99fad8b3cb1d46ebb9b43193db1801548dc5e0bc",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Infrastructure constellation shift: Macroverse42-AdayEdition. Timeline folds this into the living Macroverse engine."
             }
           ]
         }
@@ -592,159 +592,45 @@
       ],
       "phases": [
         {
-          "id": "society",
-          "label": "Société des Light Jockeys",
-          "items": [
-            {
-              "sha": "254de1f29162",
-              "shaFull": "254de1f291621d5881387632a019837fb8bf03b7",
-              "date": "2026-05-16",
-              "subject": "Update README, showcase, and docs for operator UI remaster.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/254de1f291621d5881387632a019837fb8bf03b7",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Chronique de la Société — Update README, showcase, and docs for operator UI remaster.. The photons remember."
-            },
-            {
-              "sha": "70e27bf7258a",
-              "shaFull": "70e27bf7258a9f47321665d451c5313e0f244476",
-              "date": "2026-05-16",
-              "subject": "Add themed Amiga-style SVG cursor (light/dark palette).",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/70e27bf7258a9f47321665d451c5313e0f244476",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: Add themed Amiga-style SVG cursor (light/dark palette).. Ainsi soit la lumière, mes amis."
-            },
-            {
-              "sha": "da38aa1ff523",
-              "shaFull": "da38aa1ff523ce420670e788e8f8d6c54170435a",
-              "date": "2026-05-16",
-              "subject": "Trigger GitHub Pages when DOCS showcase changes",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/da38aa1ff523ce420670e788e8f8d6c54170435a",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Le Créateur des Lumières exige plus de luminance: Trigger GitHub Pages when DOCS showcase changes. Vibe-coded, beret-approved."
-            },
-            {
-              "sha": "18413fcbb9cd",
-              "shaFull": "18413fcbb9cd44fa89925696e0091d23b057244d",
-              "date": "2026-05-16",
-              "subject": "DOCS hub theme with Luminary quotes from FancyQuotes; sync script and SMX/UI refinements",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/18413fcbb9cd44fa89925696e0091d23b057244d",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: DOCS hub theme with Luminary quotes from FancyQuotes; sync script and SMX/UI refinements. Vibe-coded, beret-approved."
-            },
-            {
-              "sha": "fadf3d535861",
-              "shaFull": "fadf3d535861fd28442fb82ee0d1e84e0cc7e7a7",
-              "date": "2026-05-15",
-              "subject": "Add AGENTS.md with Cursor Cloud development instructions",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fadf3d535861fd28442fb82ee0d1e84e0cc7e7a7",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Chronique de la Société — Add AGENTS.md with Cursor Cloud development instructions. Vibe-coded, beret-approved."
-            },
-            {
-              "sha": "a9dcc285a5f2",
-              "shaFull": "a9dcc285a5f2bee433c67dcee76d5ea611d685c0",
-              "date": "2026-05-14",
-              "subject": "showcase: clarify URLs (hub at /, full showcase at /website/)",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a9dcc285a5f2bee433c67dcee76d5ea611d685c0",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: showcase: clarify URLs (hub at /, full showcase at /website/). Not for the faint of PAR."
-            },
-            {
-              "sha": "0dcdf0b24772",
-              "shaFull": "0dcdf0b24772e55124072308e464693c4d72a8ce",
-              "date": "2026-05-14",
-              "subject": "docs: comprehensive refresh for v5.12.0 + showcase",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0dcdf0b24772e55124072308e464693c4d72a8ce",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Le Créateur des Lumières exige plus de luminance: docs: comprehensive refresh for v5.12.0 + showcase. Ainsi soit la lumière, mes amis."
-            },
-            {
-              "sha": "cd206a996cc0",
-              "shaFull": "cd206a996cc057ae6b79a420e4605ebea30bc557",
-              "date": "2026-05-14",
-              "subject": "showcase: demo reel section, refreshed feature cards, lazy-load videos",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cd206a996cc057ae6b79a420e4605ebea30bc557",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: showcase: demo reel section, refreshed feature cards, lazy-load videos. Not for the faint of PAR."
-            },
-            {
-              "sha": "22811f408756",
-              "shaFull": "22811f4087562ec395bb8af0773ed213867d84a8",
-              "date": "2026-05-14",
-              "subject": "showcase: add demo video clips (8 routes, 5.9MB total)",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/22811f4087562ec395bb8af0773ed213867d84a8",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Le Créateur des Lumières exige plus de luminance: showcase: add demo video clips (8 routes, 5.9MB total). The photons remember."
-            },
-            {
-              "sha": "45b16b8f92e4",
-              "shaFull": "45b16b8f92e4c9509548b41df715e7b1f6f2404e",
-              "date": "2026-05-14",
-              "subject": "scripts: add capture-demo-videos.sh for showcase WebM clips",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/45b16b8f92e4c9509548b41df715e7b1f6f2404e",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Le Créateur des Lumières exige plus de luminance: scripts: add capture-demo-videos.sh for showcase WebM clips. The photons remember."
-            },
-            {
-              "sha": "e564bcb1c3e0",
-              "shaFull": "e564bcb1c3e0df504892b9c1c6b415d7b82ca0d1",
-              "date": "2026-05-14",
-              "subject": "Add AGENTS.md with Cursor Cloud development instructions",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e564bcb1c3e0df504892b9c1c6b415d7b82ca0d1",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Chronique de la Société — Add AGENTS.md with Cursor Cloud development instructions. Vibe-coded, beret-approved."
-            },
-            {
-              "sha": "7761adc01a20",
-              "shaFull": "7761adc01a20b1b68da47be3b12ecb185d638850",
-              "date": "2026-05-14",
-              "subject": "Create a dedicated ArtBastard GitHub showcase landing page.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/7761adc01a20b1b68da47be3b12ecb185d638850",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Chronique de la Société — Create a dedicated ArtBastard GitHub showcase landing page.. The photons remember."
-            }
-          ]
-        },
-        {
           "id": "awakening",
           "label": "L'éveil",
           "items": [
+            {
+              "sha": "13f2fea0ef08",
+              "shaFull": "13f2fea0ef08f586294d103b1c15886d90d6a9c9",
+              "date": "2026-05-16",
+              "subject": "Remove duplicate HorizontalFader import breaking CI build.",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/13f2fea0ef08f586294d103b1c15886d90d6a9c9",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "awakening",
+              "phaseLabel": "L'éveil",
+              "narrative": "ArtBastard, bastard of art, avance: Remove duplicate HorizontalFader import breaking CI build.. The photons remember."
+            },
+            {
+              "sha": "c09755c4210c",
+              "shaFull": "c09755c4210c432e709e22042f48f3576a80d6d6",
+              "date": "2026-05-16",
+              "subject": "Use range window control for face tracker pan limits.",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c09755c4210c432e709e22042f48f3576a80d6d6",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "awakening",
+              "phaseLabel": "L'éveil",
+              "narrative": "ArtBastard, bastard of art, avance: Use range window control for face tracker pan limits.. The photons remember."
+            },
+            {
+              "sha": "32c0bff665c2",
+              "shaFull": "32c0bff665c27a68130b76952229566358246e01",
+              "date": "2026-05-16",
+              "subject": "Refine operator UI controls and unified settings layout.",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/32c0bff665c27a68130b76952229566358246e01",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "awakening",
+              "phaseLabel": "L'éveil",
+              "narrative": "ArtBastard, bastard of art, avance: Refine operator UI controls and unified settings layout.. Vibe-coded, beret-approved."
+            },
             {
               "sha": "28a9042dfc3c",
               "shaFull": "28a9042dfc3c5bfb978083f3fbff9c1e5a4a993d",
@@ -1380,42 +1266,156 @@
               "phaseId": "awakening",
               "phaseLabel": "L'éveil",
               "narrative": "ArtBastard, bastard of art, avance: Factory Reset FIX. The photons remember."
-            },
+            }
+          ]
+        },
+        {
+          "id": "society",
+          "label": "Société des Light Jockeys",
+          "items": [
             {
-              "sha": "6fc3485f3662",
-              "shaFull": "6fc3485f3662fa9739868cd2ffbf410ef3607510",
-              "date": "2025-12-24",
-              "subject": "start.ps1 reset didnt work..",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6fc3485f3662fa9739868cd2ffbf410ef3607510",
+              "sha": "254de1f29162",
+              "shaFull": "254de1f291621d5881387632a019837fb8bf03b7",
+              "date": "2026-05-16",
+              "subject": "Update README, showcase, and docs for operator UI remaster.",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/254de1f291621d5881387632a019837fb8bf03b7",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "awakening",
-              "phaseLabel": "L'éveil",
-              "narrative": "Camembert-fueled clarity at 3 AM: start.ps1 reset didnt work... Not for the faint of PAR."
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Chronique de la Société — Update README, showcase, and docs for operator UI remaster.. The photons remember."
             },
             {
-              "sha": "c70953321a29",
-              "shaFull": "c70953321a29f1e63785abe154c9468449ca7912",
-              "date": "2025-12-24",
-              "subject": "ArtBastard 5.1.2 - Current and Stable (for real tho)",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c70953321a29f1e63785abe154c9468449ca7912",
+              "sha": "70e27bf7258a",
+              "shaFull": "70e27bf7258a9f47321665d451c5313e0f244476",
+              "date": "2026-05-16",
+              "subject": "Add themed Amiga-style SVG cursor (light/dark palette).",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/70e27bf7258a9f47321665d451c5313e0f244476",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "awakening",
-              "phaseLabel": "L'éveil",
-              "narrative": "Encore une gifle à la médiocrité lumineuse: ArtBastard 5.1.2 - Current and Stable (for real tho). Ainsi soit la lumière, mes amis."
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: Add themed Amiga-style SVG cursor (light/dark palette).. Ainsi soit la lumière, mes amis."
             },
             {
-              "sha": "9527765330e9",
-              "shaFull": "9527765330e9eb2b8a6e16285f3f4b287dbb13f3",
-              "date": "2025-12-24",
-              "subject": "Release 5.1.2",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9527765330e9eb2b8a6e16285f3f4b287dbb13f3",
+              "sha": "da38aa1ff523",
+              "shaFull": "da38aa1ff523ce420670e788e8f8d6c54170435a",
+              "date": "2026-05-16",
+              "subject": "Trigger GitHub Pages when DOCS showcase changes",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/da38aa1ff523ce420670e788e8f8d6c54170435a",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "awakening",
-              "phaseLabel": "L'éveil",
-              "narrative": "ArtBastard, bastard of art, avance: Release 5.1.2. Honouring Feng Zhi's breeze choreography in silicon."
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Le Créateur des Lumières exige plus de luminance: Trigger GitHub Pages when DOCS showcase changes. Vibe-coded, beret-approved."
+            },
+            {
+              "sha": "18413fcbb9cd",
+              "shaFull": "18413fcbb9cd44fa89925696e0091d23b057244d",
+              "date": "2026-05-16",
+              "subject": "DOCS hub theme with Luminary quotes from FancyQuotes; sync script and SMX/UI refinements",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/18413fcbb9cd44fa89925696e0091d23b057244d",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: DOCS hub theme with Luminary quotes from FancyQuotes; sync script and SMX/UI refinements. Vibe-coded, beret-approved."
+            },
+            {
+              "sha": "fadf3d535861",
+              "shaFull": "fadf3d535861fd28442fb82ee0d1e84e0cc7e7a7",
+              "date": "2026-05-15",
+              "subject": "Add AGENTS.md with Cursor Cloud development instructions",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fadf3d535861fd28442fb82ee0d1e84e0cc7e7a7",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Chronique de la Société — Add AGENTS.md with Cursor Cloud development instructions. Vibe-coded, beret-approved."
+            },
+            {
+              "sha": "a9dcc285a5f2",
+              "shaFull": "a9dcc285a5f2bee433c67dcee76d5ea611d685c0",
+              "date": "2026-05-14",
+              "subject": "showcase: clarify URLs (hub at /, full showcase at /website/)",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/a9dcc285a5f2bee433c67dcee76d5ea611d685c0",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: showcase: clarify URLs (hub at /, full showcase at /website/). Not for the faint of PAR."
+            },
+            {
+              "sha": "0dcdf0b24772",
+              "shaFull": "0dcdf0b24772e55124072308e464693c4d72a8ce",
+              "date": "2026-05-14",
+              "subject": "docs: comprehensive refresh for v5.12.0 + showcase",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0dcdf0b24772e55124072308e464693c4d72a8ce",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Le Créateur des Lumières exige plus de luminance: docs: comprehensive refresh for v5.12.0 + showcase. Ainsi soit la lumière, mes amis."
+            },
+            {
+              "sha": "cd206a996cc0",
+              "shaFull": "cd206a996cc057ae6b79a420e4605ebea30bc557",
+              "date": "2026-05-14",
+              "subject": "showcase: demo reel section, refreshed feature cards, lazy-load videos",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cd206a996cc057ae6b79a420e4605ebea30bc557",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Les Light Jockeys murmurent dans le dépôt parisien: showcase: demo reel section, refreshed feature cards, lazy-load videos. Not for the faint of PAR."
+            },
+            {
+              "sha": "22811f408756",
+              "shaFull": "22811f4087562ec395bb8af0773ed213867d84a8",
+              "date": "2026-05-14",
+              "subject": "showcase: add demo video clips (8 routes, 5.9MB total)",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/22811f4087562ec395bb8af0773ed213867d84a8",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Le Créateur des Lumières exige plus de luminance: showcase: add demo video clips (8 routes, 5.9MB total). The photons remember."
+            },
+            {
+              "sha": "45b16b8f92e4",
+              "shaFull": "45b16b8f92e4c9509548b41df715e7b1f6f2404e",
+              "date": "2026-05-14",
+              "subject": "scripts: add capture-demo-videos.sh for showcase WebM clips",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/45b16b8f92e4c9509548b41df715e7b1f6f2404e",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Le Créateur des Lumières exige plus de luminance: scripts: add capture-demo-videos.sh for showcase WebM clips. The photons remember."
+            },
+            {
+              "sha": "e564bcb1c3e0",
+              "shaFull": "e564bcb1c3e0df504892b9c1c6b415d7b82ca0d1",
+              "date": "2026-05-14",
+              "subject": "Add AGENTS.md with Cursor Cloud development instructions",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e564bcb1c3e0df504892b9c1c6b415d7b82ca0d1",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Chronique de la Société — Add AGENTS.md with Cursor Cloud development instructions. Vibe-coded, beret-approved."
+            },
+            {
+              "sha": "7761adc01a20",
+              "shaFull": "7761adc01a20b1b68da47be3b12ecb185d638850",
+              "date": "2026-05-14",
+              "subject": "Create a dedicated ArtBastard GitHub showcase landing page.",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/7761adc01a20b1b68da47be3b12ecb185d638850",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "society",
+              "phaseLabel": "Société des Light Jockeys",
+              "narrative": "Chronique de la Société — Create a dedicated ArtBastard GitHub showcase landing page.. The photons remember."
             }
           ]
         },
