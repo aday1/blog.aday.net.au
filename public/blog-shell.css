@@ -1,0 +1,215 @@
+.blog-shell {
+  display: grid;
+  grid-template-columns: minmax(148px, 200px) minmax(0, 1fr);
+  gap: 1rem 1.25rem;
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.blog-shell-top {
+  grid-column: 1 / -1;
+}
+
+.blog-overview-cards {
+  margin-top: 1.25rem;
+}
+
+.blog-overview-cards .blog-nav-btn {
+  width: 100%;
+  text-align: left;
+}
+
+.blog-section-nav {
+  position: sticky;
+  top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.65rem 0.5rem;
+  border: 1px solid rgba(186, 214, 238, 0.16);
+  background: rgba(6, 10, 16, 0.88);
+  border-radius: 4px;
+  z-index: 20;
+}
+
+.blog-nav-btn {
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #b8c8dc;
+  background: transparent;
+}
+
+.blog-nav-btn:hover {
+  border-color: rgba(186, 214, 238, 0.22);
+  color: #e8f0ff;
+}
+
+.blog-nav-btn.is-active {
+  border-color: rgba(122, 230, 168, 0.45);
+  color: #d8ffe8;
+  background: rgba(122, 230, 168, 0.08);
+}
+
+.blog-shell-panels {
+  min-width: 0;
+}
+
+.blog-panel {
+  display: none;
+}
+
+.blog-panel.is-active {
+  display: block;
+}
+
+.blog-panel > section,
+.blog-panel > .devlog-train {
+  margin-top: 0;
+}
+
+.blog-panel[data-panel="devlog"] .devlog-train + .devlog-train {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(186, 214, 238, 0.1);
+}
+
+.blog-panel[data-panel="media"] {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.blog-panel[data-panel="media"].is-active {
+  display: grid;
+}
+
+.blog-panel[data-panel="media"] > section {
+  min-width: 0;
+}
+
+.devlog-chapter.is-collapsed .devlog-commit-list .devlog-entry:nth-child(n+6) {
+  display: none;
+}
+
+.devlog-chapter-toggle {
+  font: inherit;
+  cursor: pointer;
+  margin: 0 0 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(186, 214, 238, 0.2);
+  border-radius: 2px;
+  color: #9eb8d4;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.range-explorer {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 0.85rem 0.9rem;
+  border: 1px solid rgba(118, 200, 255, 0.22);
+  background: rgba(4, 8, 14, 0.72);
+  border-radius: 4px;
+}
+
+.range-explorer-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.range-explorer-head h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #b8d4f0;
+}
+
+.range-hint {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  opacity: 0.78;
+}
+
+.range-chart {
+  width: 100%;
+  height: 220px;
+}
+
+.range-bracket-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.65rem;
+  align-items: center;
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+}
+
+.range-bracket-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.range-bracket-controls input[type="date"] {
+  font: inherit;
+  padding: 0.15rem 0.35rem;
+  border: 1px solid rgba(186, 214, 238, 0.25);
+  background: rgba(0, 0, 0, 0.45);
+  color: inherit;
+  border-radius: 2px;
+}
+
+.range-bracket-controls button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid rgba(122, 230, 168, 0.35);
+  border-radius: 2px;
+  color: #c8ffe0;
+  background: rgba(122, 230, 168, 0.1);
+}
+
+.range-filter-active .timeline-node.range-out,
+.range-filter-active .devlog-entry.range-out {
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.range-filter-active .timeline-node.range-in,
+.range-filter-active .devlog-entry.range-in {
+  opacity: 1;
+}
+
+.timeline-node.range-focus-ping,
+.devlog-entry.range-focus-ping {
+  outline: 1px solid rgba(122, 230, 168, 0.65);
+  outline-offset: 2px;
+}
+
+@media (max-width: 960px) {
+  .blog-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-section-nav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .blog-panel[data-panel="media"].is-active {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .range-chart {
+    height: 180px;
+  }
+}

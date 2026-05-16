@@ -159,9 +159,12 @@ const mdToHtml = (md) => {
 
 const filmHeadLinks = `  <link rel="stylesheet" href="/blog-film.css">
   <link rel="stylesheet" href="/timeline-spread.css">
-  <link rel="stylesheet" href="/devlog.css">`;
+  <link rel="stylesheet" href="/devlog.css">
+  <link rel="stylesheet" href="/blog-shell.css">`;
 const filmBodyScripts = `  <script src="/blog-film.js" defer></script>
-  <script type="module" src="/blog-vfx.js"></script>`;
+  <script type="module" src="/blog-vfx.js"></script>
+  <script src="/blog-shell.js" defer></script>
+  <script src="/blog-range.js" defer></script>`;
 
 const deployMetaHtml = `<div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
   <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
@@ -930,7 +933,7 @@ const renderTimelineNode = (entry, idx, { isYearStart, year }) => {
     ? `<div class="timeline-entry-visual" style="--timeline-bg: url('${escapeHtml(picked.url)}')" aria-hidden="true"></div>`
     : "";
 
-  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}${compactClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-year="${escapeHtml(year)}" data-title="${escapeHtml(entry.title)}"${yearStartAttr}${storyTrainAttr}${categoryAttr}>
+  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}${compactClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-year="${escapeHtml(year)}" data-date="${escapeHtml(entry.date)}" data-title="${escapeHtml(entry.title)}"${yearStartAttr}${storyTrainAttr}${categoryAttr}>
   ${yearLabel}
   <span class="timeline-rail-marker" aria-hidden="true"></span>
   <article class="timeline-entry${picked?.url ? "" : " timeline-entry--compact"}">
@@ -953,7 +956,9 @@ fs.writeFileSync(
   JSON.stringify(devlogBundle, null, 2),
   "utf8"
 );
-const devlogSectionsHtml = renderDevlogSections(devlogBundle);
+const devlogParts = renderDevlogSections(devlogBundle);
+const devlogHubHtml = devlogParts.hub;
+const devlogTrainsHtml = devlogParts.trains;
 const devlogTimelineRaw = devlogTimelineEntries(devlogBundle).map((entry) => ({
   ...entry,
   source: slugifySource(entry.source || "devlog")
@@ -1104,6 +1109,49 @@ const renderWeeklybeatsCatalogSection = (catalog, { sectionId = "blogWbSection" 
 const youtubeSectionHtml = renderYoutubeCatalogSection(youtubeCatalog);
 const weeklybeatsSectionHtml = renderWeeklybeatsCatalogSection(weeklybeatsCatalog);
 
+const presenceRangeHtml = `<div class="range-explorer" data-range-scope="presence">
+  <div class="range-explorer-head">
+    <h3>Presence density — range check</h3>
+    <span class="range-hint">Inspired by <a href="https://codepen.io/MayYuan/pen/MYaELye" target="_blank" rel="noopener noreferrer">amCharts line + labels</a>. Pan/zoom, then Focus range to bracket the timeline list.</span>
+  </div>
+  <div id="presenceRangeChart" class="range-chart" role="img" aria-label="Presence timeline range"></div>
+  <div class="range-bracket-controls">
+    <label>From <input type="date" data-range-start></label>
+    <label>To <input type="date" data-range-end></label>
+    <button type="button" data-range-focus>Focus range</button>
+    <button type="button" data-range-clear>Clear filter</button>
+  </div>
+</div>`;
+
+const blogSectionNav = `<nav class="blog-section-nav" aria-label="Blog sections">
+  <button type="button" class="blog-nav-btn is-active" data-panel-target="overview">Overview</button>
+  <button type="button" class="blog-nav-btn" data-panel-target="devlog">Dev logs</button>
+  <button type="button" class="blog-nav-btn" data-panel-target="media">Media</button>
+  <button type="button" class="blog-nav-btn" data-panel-target="presence">Presence</button>
+  <button type="button" class="blog-nav-btn" data-panel-target="posts">Posts</button>
+</nav>`;
+
+const presenceSectionHtml = `<section class="presence-timeline" id="presenceTimeline">
+      <h2>Presence timeline</h2>
+      <p class="date">Newest first. Years on the left rail; hero cards use full-bleed art. Graph: scroll to zoom, drag to pan, double-click reset.</p>
+      ${presenceRangeHtml}
+      <div class="timeline-graph-wrap">
+        <ul class="timeline-lane-legend" aria-label="Timeline lanes">
+          <li><span class="lane-swatch lane-audio"></span>Audio</li>
+          <li><span class="lane-swatch lane-video"></span>Video</li>
+          <li><span class="lane-swatch lane-scene"></span>Scene</li>
+          <li><span class="lane-swatch lane-code"></span>Code</li>
+          <li><span class="lane-swatch lane-signal"></span>Signal</li>
+        </ul>
+        <div class="timeline-stage timeline-stage--calm">
+          <canvas id="timelineGraph" width="960" height="240" aria-label="Presence timeline density map"></canvas>
+        </div>
+      </div>
+      <ul class="post-list timeline timeline-rail-layout" id="presenceTimelineList">
+        ${timelineRows}
+      </ul>
+    </section>`;
+
 const indexHtml = `<!doctype html>
 <html lang="en">
 <head>
@@ -1128,45 +1176,52 @@ ${filmHeadLinks}
   </div>
   <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
-  <main>
-    <h1 class="decrypt typed">blog.aday.net.au</h1>
+  <main class="blog-shell">
+    <div class="blog-shell-top">
+      <h1 class="decrypt typed">blog.aday.net.au</h1>
     <p class="typed">Story trains: git dev logs, YouTube archive, and one master presence timeline.</p>
     <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads on aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
-    ${devlogSectionsHtml}
-    <p class="date"><a href="#blogYtSection">YouTube archive</a> | <a href="#blogWbSection">WeeklyBeats archive</a> | <a href="#presenceTimeline">Master timeline</a></p>
-    ${youtubeSectionHtml}
-    ${weeklybeatsSectionHtml}
-    <section class="presence-timeline" id="presenceTimeline">
-      <h2>Presence timeline</h2>
-      <p class="date">Newest first. Years on the left rail; hero cards use full-bleed art. Graph: scroll to zoom, drag to pan, double-click reset.</p>
-      <div class="timeline-graph-wrap">
-        <ul class="timeline-lane-legend" aria-label="Timeline lanes">
-          <li><span class="lane-swatch lane-audio"></span>Audio</li>
-          <li><span class="lane-swatch lane-video"></span>Video</li>
-          <li><span class="lane-swatch lane-scene"></span>Scene</li>
-          <li><span class="lane-swatch lane-code"></span>Code</li>
-          <li><span class="lane-swatch lane-signal"></span>Signal</li>
-        </ul>
-        <div class="timeline-stage timeline-stage--calm">
-          <canvas id="timelineGraph" width="960" height="240" aria-label="Presence timeline density map"></canvas>
-        </div>
+    </div>
+    ${blogSectionNav}
+    <div class="blog-shell-panels">
+      <div class="blog-panel is-active" id="panel-overview" data-panel="overview">
+        ${devlogHubHtml}
+        <section class="blog-overview-cards">
+          <h2>Sections</h2>
+          <p class="date">One panel at a time.</p>
+          <ul class="post-list">
+            <li><button type="button" class="blog-nav-btn" data-panel-target="devlog">Dev logs</button></li>
+            <li><button type="button" class="blog-nav-btn" data-panel-target="media">Media archives</button></li>
+            <li><button type="button" class="blog-nav-btn" data-panel-target="presence">Presence timeline</button></li>
+            <li><button type="button" class="blog-nav-btn" data-panel-target="posts">Posts</button></li>
+          </ul>
+        </section>
       </div>
-      <ul class="post-list timeline timeline-rail-layout" id="presenceTimelineList">
-        ${timelineRows}
-      </ul>
-    </section>
-    <section>
-      <h2>Recent ingest log</h2>
-      <ul class="post-list">
-        ${timeLogRows}
-      </ul>
-    </section>
-    <section>
-      <h2>Posts</h2>
-    <ul class="post-list">
-      ${listHtml}
-    </ul>
-    </section>
+      <div class="blog-panel" id="panel-devlog" data-panel="devlog">
+        ${devlogTrainsHtml}
+      </div>
+      <div class="blog-panel" id="panel-media" data-panel="media">
+        ${youtubeSectionHtml}
+        ${weeklybeatsSectionHtml}
+      </div>
+      <div class="blog-panel" id="panel-presence" data-panel="presence">
+        ${presenceSectionHtml}
+      </div>
+      <div class="blog-panel" id="panel-posts" data-panel="posts">
+        <section>
+          <h2>Recent ingest log</h2>
+          <ul class="post-list">
+            ${timeLogRows}
+          </ul>
+        </section>
+        <section>
+          <h2>Posts</h2>
+          <ul class="post-list">
+            ${listHtml}
+          </ul>
+        </section>
+      </div>
+    </div>
     <footer class="blog-footer">
       <div class="footer-wave" aria-hidden="true"></div>
       <p>blog.aday.net.au signal output // route: <a href="https://aday.net.au">aday.net.au</a></p>

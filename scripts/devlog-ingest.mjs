@@ -200,6 +200,20 @@ export const renderDevlogTrainSection = (train) => {
 
   const prologue = train.prologue.map((p) => `<p class="devlog-prologue">${escapeHtml(p)}</p>`).join("\n");
 
+  const rangeBlock = `<div class="range-explorer" data-range-train="${escapeHtml(train.id)}">
+  <div class="range-explorer-head">
+    <h3>${escapeHtml(train.title)} — commit timeline</h3>
+    <span class="range-hint">Pan / zoom the lane. Pick a date bracket, then Focus range to filter commits below.</span>
+  </div>
+  <div id="devlogRange-${escapeHtml(train.id)}" class="range-chart" role="img" aria-label="${escapeHtml(train.title)} dev log range"></div>
+  <div class="range-bracket-controls">
+    <label>From <input type="date" data-range-start></label>
+    <label>To <input type="date" data-range-end></label>
+    <button type="button" data-range-focus>Focus range</button>
+    <button type="button" data-range-clear>Clear filter</button>
+  </div>
+</div>`;
+
   return `<section class="devlog-train devlog-train--${escapeHtml(train.id)}" id="devlog-${escapeHtml(train.id)}" data-story-train="${escapeHtml(train.id)}">
   <header class="devlog-train-head">
     <img class="devlog-train-badge" src="${escapeHtml(train.previewImage)}" alt="" width="72" height="72" loading="lazy" decoding="async">
@@ -210,6 +224,7 @@ export const renderDevlogTrainSection = (train) => {
     </div>
   </header>
   ${prologue}
+  ${rangeBlock}
   <div class="devlog-chapters">${chapters}</div>
 </section>`;
 };
@@ -218,21 +233,21 @@ export const renderStoryTrainsNav = (bundle) => {
   const links = bundle.trains
     .map(
       (t) =>
-        `<a class="story-train-link story-train-link--${escapeHtml(t.id)}" href="#devlog-${escapeHtml(t.id)}">${escapeHtml(t.title)} <span class="story-train-count">${t.commitCount}</span></a>`
+        `<a class="story-train-link story-train-link--${escapeHtml(t.id)}" href="#devlog-${escapeHtml(t.id)}" data-panel-jump="devlog">${escapeHtml(t.title)} <span class="story-train-count">${t.commitCount}</span></a>`
     )
     .join("\n");
   return `<section class="story-trains-hub" id="storyTrains">
   <h2>Story trains</h2>
   <p class="date">Parallel lifecycles woven into one master timeline — dev logs from git, YouTube lanes for drone and demoscene, audio releases, and scene nodes.</p>
   <nav class="story-train-nav" aria-label="Story trains">${links}
-    <a class="story-train-link story-train-link--media" href="#blogYtSection">YouTube archive</a>
-    <a class="story-train-link story-train-link--master" href="#presenceTimeline">Master timeline</a>
+    <a class="story-train-link story-train-link--media" href="#blogYtSection" data-panel-jump="media">YouTube archive</a>
+    <a class="story-train-link story-train-link--master" href="#presenceTimeline" data-panel-jump="presence">Master timeline</a>
   </nav>
 </section>`;
 };
 
 export const renderDevlogSections = (bundle) => {
-  const nav = renderStoryTrainsNav(bundle);
-  const sections = bundle.trains.map((train) => renderDevlogTrainSection(train)).join("\n");
-  return `${nav}\n${sections}`;
+  const hub = renderStoryTrainsNav(bundle);
+  const trains = bundle.trains.map((train) => renderDevlogTrainSection(train)).join("\n");
+  return { hub, trains };
 };

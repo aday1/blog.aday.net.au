@@ -916,6 +916,11 @@
   const bootHeavyVisuals = () => {
     runTimelineGraph();
     wireTimelinePresence();
+    window.addEventListener("blog-panel-change", (ev) => {
+      if (ev.detail?.panelId === "presence") {
+        setTimeout(() => window.dispatchEvent(new Event("resize")), 80);
+      }
+    });
     runBlogNodeMap();
     if (window.AdayMediaArchive) {
       window.AdayMediaArchive.wireYoutubeCatalog(blogYtSection, "blogYtFrame", "blogYtNowPlaying");
