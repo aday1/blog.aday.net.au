@@ -16,13 +16,17 @@ export const YOUTUBE_CHANNELS = [
     channel_id: "UCdKgN2c92DhDON71FBwGq4g",
     handle: "@aday_net_au",
     channel_url: "https://www.youtube.com/@aday_net_au/videos"
-  },
-  {
-    id: "aday1",
-    handle: "@aday1",
-    channel_url: "https://www.youtube.com/@aday1/videos"
   }
 ];
+
+const EXCLUDED_YOUTUBE_CHANNEL_IDS = new Set(["UCv2idZd22rCQsmcBMh0AAeg"]);
+
+export const isExcludedYoutubeVideo = (video) => {
+  const handle = String(video?.channel_handle || "").toLowerCase();
+  const key = String(video?.channel_key || "").toLowerCase();
+  const channelId = String(video?.channel_id || "").trim();
+  return handle === "@aday1" || key === "aday1" || EXCLUDED_YOUTUBE_CHANNEL_IDS.has(channelId);
+};
 
 const overridesPath = path.join(process.cwd(), "scripts", "youtube-overrides.json");
 
@@ -134,6 +138,8 @@ export const buildYoutubeCatalog = (existingPath) => {
     }
   }
 
+  videos = videos.filter((video) => !isExcludedYoutubeVideo(video));
+
   if (!videos.length) return null;
 
   const deduped = new Map();
@@ -179,5 +185,5 @@ export const writeYoutubeCatalog = (outPath) => {
 };
 
 export const YOUTUBE_CHANNEL_URL = YOUTUBE_CHANNELS[0].channel_url;
-export const YOUTUBE_HANDLE = YOUTUBE_CHANNELS.map((c) => c.handle).join(" + ");
+export const YOUTUBE_HANDLE = YOUTUBE_CHANNELS[0].handle;
 export const YOUTUBE_CHANNEL_ID = YOUTUBE_CHANNELS[0].channel_id;

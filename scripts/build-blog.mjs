@@ -4,7 +4,8 @@ import {
   writeYoutubeCatalog,
   YOUTUBE_CHANNEL_URL,
   YOUTUBE_HANDLE,
-  categorizeYoutubeTitle
+  categorizeYoutubeTitle,
+  isExcludedYoutubeVideo
 } from "./youtube-catalog.mjs";
 import { writeWeeklybeatsCatalog } from "./weeklybeats-catalog.mjs";
 import {
@@ -409,7 +410,7 @@ const parseYoutubeFeedEntries = (xmlText) => {
     const title = (chunk.match(/<title>([\s\S]*?)<\/title>/)?.[1] || "YouTube upload")
       .replaceAll(/<!\[CDATA\[|\]\]>/g, "")
       .trim();
-    const url = (chunk.match(/<link[^>]*href="([^"]+)"/)?.[1] || "https://www.youtube.com/@aday1").trim();
+    const url = (chunk.match(/<link[^>]*href="([^"]+)"/)?.[1] || "https://www.youtube.com/@aday_net_au").trim();
     const published = (chunk.match(/<published>([\s\S]*?)<\/published>/)?.[1] || "1970-01-01").trim();
     entries.push({
       date: parseIsoDate(published),
@@ -815,7 +816,9 @@ const getTimeline = async () => {
     try {
       if (!fs.existsSync(youtubeCatalogPath)) return [];
       const catalog = JSON.parse(fs.readFileSync(youtubeCatalogPath, "utf8"));
-      const videos = Array.isArray(catalog?.videos) ? catalog.videos : [];
+      const videos = (Array.isArray(catalog?.videos) ? catalog.videos : []).filter(
+        (video) => !isExcludedYoutubeVideo(video)
+      );
       return videos.map((video) => ({
         date: video.upload_date || "2010-01-01",
         title: video.title || video.id,

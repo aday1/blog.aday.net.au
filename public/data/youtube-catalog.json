@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T16:21:51.177Z",
+  "generated_at": "2026-05-16T16:29:29.001Z",
   "channels": [
     {
       "id": "aday_net_au",
@@ -7,17 +7,10 @@
       "handle": "@aday_net_au",
       "channel_url": "https://www.youtube.com/@aday_net_au/videos",
       "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
-    },
-    {
-      "id": "aday1",
-      "handle": "@aday1",
-      "channel_url": "https://www.youtube.com/@aday1/videos",
-      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
-      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
     }
   ],
-  "channel_url": "https://www.youtube.com/@aday_net_au/videos | https://www.youtube.com/@aday1/videos",
-  "video_count": 51,
+  "channel_url": "https://www.youtube.com/@aday_net_au/videos",
+  "video_count": 48,
   "sections": [
     {
       "id": "drone",
@@ -534,7 +527,7 @@
     {
       "id": "archive",
       "label": "Archive / Other",
-      "count": 7,
+      "count": 4,
       "videos": [
         {
           "id": "2vEEz7kvcuY",
@@ -578,39 +571,6 @@
           "channel_handle": "@aday_net_au",
           "channel_key": "aday_net_au",
           "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g",
-          "section": "archive"
-        },
-        {
-          "id": "dH7O4fNh6dM",
-          "title": "Apa yang Terjadi jika Lautan Mengungkap Rahasianya?",
-          "duration": 531,
-          "url": "https://www.youtube.com/watch?v=dH7O4fNh6dM",
-          "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
-          "channel_handle": "@aday1",
-          "channel_key": "aday1",
-          "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg",
-          "section": "archive"
-        },
-        {
-          "id": "Knp5z3xNkQw",
-          "title": "Jika Kamu Dapat Memecahkan 15 Teka-teki, Kamu Lebih Pintar dari Sherlock",
-          "duration": 326,
-          "url": "https://www.youtube.com/watch?v=Knp5z3xNkQw",
-          "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
-          "channel_handle": "@aday1",
-          "channel_key": "aday1",
-          "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg",
-          "section": "archive"
-        },
-        {
-          "id": "AzvLZjdvSw0",
-          "title": "10 Fakta Unik di Seluruh Dunia - Tahukah Kamu | SISI CAHAYA",
-          "duration": 54,
-          "url": "https://www.youtube.com/watch?v=AzvLZjdvSw0",
-          "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
-          "channel_handle": "@aday1",
-          "channel_key": "aday1",
-          "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg",
           "section": "archive"
         }
       ]
@@ -1096,36 +1056,6 @@
       "channel_handle": "@aday_net_au",
       "channel_key": "aday_net_au",
       "uploads_playlist_id": "UUdKgN2c92DhDON71FBwGq4g"
-    },
-    {
-      "id": "dH7O4fNh6dM",
-      "title": "Apa yang Terjadi jika Lautan Mengungkap Rahasianya?",
-      "duration": 531,
-      "url": "https://www.youtube.com/watch?v=dH7O4fNh6dM",
-      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
-      "channel_handle": "@aday1",
-      "channel_key": "aday1",
-      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
-    },
-    {
-      "id": "Knp5z3xNkQw",
-      "title": "Jika Kamu Dapat Memecahkan 15 Teka-teki, Kamu Lebih Pintar dari Sherlock",
-      "duration": 326,
-      "url": "https://www.youtube.com/watch?v=Knp5z3xNkQw",
-      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
-      "channel_handle": "@aday1",
-      "channel_key": "aday1",
-      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
-    },
-    {
-      "id": "AzvLZjdvSw0",
-      "title": "10 Fakta Unik di Seluruh Dunia - Tahukah Kamu | SISI CAHAYA",
-      "duration": 54,
-      "url": "https://www.youtube.com/watch?v=AzvLZjdvSw0",
-      "channel_id": "UCv2idZd22rCQsmcBMh0AAeg",
-      "channel_handle": "@aday1",
-      "channel_key": "aday1",
-      "uploads_playlist_id": "UUv2idZd22rCQsmcBMh0AAeg"
     }
   ]
 }

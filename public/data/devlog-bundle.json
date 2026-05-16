@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T16:21:51.409Z",
+  "generated_at": "2026-05-16T16:29:29.009Z",
   "trains": [
     {
       "id": "macroverse",
@@ -16,6 +16,192 @@
         "Each entry below is a commit on the main timeline — deploy lanes, shader UI, and Fringe origin pages interleaved."
       ],
       "phases": [
+        {
+          "id": "infra",
+          "label": "Infrastructure",
+          "items": [
+            {
+              "sha": "70a33de7d0cd",
+              "shaFull": "70a33de7d0cd0ea36a08fdd4ef1bcfd19d11044e",
+              "date": "2026-05-16",
+              "subject": "Bump puppeteer to 23.11.1 for thumbnail scripts.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/70a33de7d0cd0ea36a08fdd4ef1bcfd19d11044e",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Ops layer note: Bump puppeteer to 23.11.1 for thumbnail scripts.. Timeline folds this into the living Macroverse engine."
+            },
+            {
+              "sha": "157869239887",
+              "shaFull": "1578692398879b31e5c1672e3d23db6999f915d5",
+              "date": "2026-05-14",
+              "subject": "docs: README + changelog align with showcase Help refresh (0.1.7)",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1578692398879b31e5c1672e3d23db6999f915d5",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Ops layer note: docs: README + changelog align with showcase Help refresh (0.1.7). Feeds the master presence graph on blog.aday.net.au."
+            },
+            {
+              "sha": "f8e712171baf",
+              "shaFull": "f8e712171baf462b2ef34e7e0f581f7a1b7148cd",
+              "date": "2026-05-14",
+              "subject": "docs: remove stub HTML doc that was hiding the rich showcase",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f8e712171baf462b2ef34e7e0f581f7a1b7148cd",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Back-end sky map updated: docs: remove stub HTML doc that was hiding the rich showcase. Feeds the master presence graph on blog.aday.net.au."
+            },
+            {
+              "sha": "0639f142e5e7",
+              "shaFull": "0639f142e5e7362ee7617b2b4174c6ac22ed73fd",
+              "date": "2026-05-14",
+              "subject": "Site test: enlarge status-bar Fix button on touch devices",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/0639f142e5e7362ee7617b2b4174c6ac22ed73fd",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Ops layer note: Site test: enlarge status-bar Fix button on touch devices. Feeds the master presence graph on blog.aday.net.au."
+            },
+            {
+              "sha": "8889cb99fb01",
+              "shaFull": "8889cb99fb01bf563e8b06407f29405205132df7",
+              "date": "2026-05-14",
+              "subject": "Site test: fix two bugs surfaced by automated checks",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/8889cb99fb01bf563e8b06407f29405205132df7",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Ops layer note: Site test: fix two bugs surfaced by automated checks. Timeline folds this into the living Macroverse engine."
+            },
+            {
+              "sha": "f4e7a70a8a8b",
+              "shaFull": "f4e7a70a8a8b11d703713e9de076e3abdf487edc",
+              "date": "2026-05-14",
+              "subject": "Add inline SVG favicon to silence 404 console error",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f4e7a70a8a8b11d703713e9de076e3abdf487edc",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Back-end sky map updated: Add inline SVG favicon to silence 404 console error. Feeds the master presence graph on blog.aday.net.au."
+            },
+            {
+              "sha": "ee7a304c1d7a",
+              "shaFull": "ee7a304c1d7a8669d72856df2128d40e59364677",
+              "date": "2026-05-14",
+              "subject": "Phase 12: typecheck cleanup - drop boolean return from clickById",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ee7a304c1d7a8669d72856df2128d40e59364677",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Back-end sky map updated: Phase 12: typecheck cleanup - drop boolean return from clickById. Part of the browser stack that grew out of the Fringe performance."
+            },
+            {
+              "sha": "1d36d93e9fbd",
+              "shaFull": "1d36d93e9fbd5781648b74f9a93bb61e859adf42",
+              "date": "2026-05-14",
+              "subject": "Phase 10: Pipeline + Wire Hub responsive layouts",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1d36d93e9fbd5781648b74f9a93bb61e859adf42",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Back-end sky map updated: Phase 10: Pipeline + Wire Hub responsive layouts. Feeds the master presence graph on blog.aday.net.au."
+            },
+            {
+              "sha": "4dfed3e20334",
+              "shaFull": "4dfed3e203340b3b0c1a294fd64ac7ce99cc2599",
+              "date": "2026-05-14",
+              "subject": "Phase 9: gallery responsive grid",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/4dfed3e203340b3b0c1a294fd64ac7ce99cc2599",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Ops layer note: Phase 9: gallery responsive grid. Timeline folds this into the living Macroverse engine."
+            },
+            {
+              "sha": "a15882729fb7",
+              "shaFull": "a15882729fb7df359b12e76c32c7a99bebec5442",
+              "date": "2026-05-14",
+              "subject": "Phase 6: toolbar slim-down for phone",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/a15882729fb7df359b12e76c32c7a99bebec5442",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Infrastructure constellation shift: Phase 6: toolbar slim-down for phone. Timeline folds this into the living Macroverse engine."
+            },
+            {
+              "sha": "2cb65af54b1e",
+              "shaFull": "2cb65af54b1e768dfbe09dd3de5a1302753ce1b1",
+              "date": "2026-05-14",
+              "subject": "Phase 3: command palette + registry with core commands",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/2cb65af54b1e768dfbe09dd3de5a1302753ce1b1",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Back-end sky map updated: Phase 3: command palette + registry with core commands. Part of the browser stack that grew out of the Fringe performance."
+            },
+            {
+              "sha": "96e12ffb0a5c",
+              "shaFull": "96e12ffb0a5caf5a02d35f764a34dd935219f777",
+              "date": "2026-05-14",
+              "subject": "Phase 1: viewport meta + touch-target sizing + hover-none gating",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/96e12ffb0a5caf5a02d35f764a34dd935219f777",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Infrastructure constellation shift: Phase 1: viewport meta + touch-target sizing + hover-none gating. Feeds the master presence graph on blog.aday.net.au."
+            },
+            {
+              "sha": "af3f4fd1e859",
+              "shaFull": "af3f4fd1e85911c22940b538373e50fb62f329b2",
+              "date": "2026-05-14",
+              "subject": "Label Macroverse page as a GitHub showcase.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/af3f4fd1e85911c22940b538373e50fb62f329b2",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Ops layer note: Label Macroverse page as a GitHub showcase.. Feeds the master presence graph on blog.aday.net.au."
+            },
+            {
+              "sha": "43669d6987c2",
+              "shaFull": "43669d6987c2b6375c825f6fb155ebcf6608afc3",
+              "date": "2026-05-13",
+              "subject": "Use single-level test/private hostnames for Cloudflare TLS coverage.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/43669d6987c2b6375c825f6fb155ebcf6608afc3",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Back-end sky map updated: Use single-level test/private hostnames for Cloudflare TLS coverage.. Part of the browser stack that grew out of the Fringe performance."
+            },
+            {
+              "sha": "ce6bc6a0a118",
+              "shaFull": "ce6bc6a0a1187d9c6f2a35b08367550bccc3dc6a",
+              "date": "2026-05-13",
+              "subject": "Fix export gate false-positive on absolute-path scan.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ce6bc6a0a1187d9c6f2a35b08367550bccc3dc6a",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "infra",
+              "phaseLabel": "Infrastructure",
+              "narrative": "Ops layer note: Fix export gate false-positive on absolute-path scan.. Timeline folds this into the living Macroverse engine."
+            }
+          ]
+        },
         {
           "id": "shader",
           "label": "Shader engine",
@@ -385,192 +571,6 @@
               "phaseId": "frontend",
               "phaseLabel": "Control surface",
               "narrative": "Tab and panel choreography: Bootstrap macroverse.aday.net.au production repository.. Part of the browser stack that grew out of the Fringe performance."
-            }
-          ]
-        },
-        {
-          "id": "infra",
-          "label": "Infrastructure",
-          "items": [
-            {
-              "sha": "157869239887",
-              "shaFull": "1578692398879b31e5c1672e3d23db6999f915d5",
-              "date": "2026-05-14",
-              "subject": "docs: README + changelog align with showcase Help refresh (0.1.7)",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1578692398879b31e5c1672e3d23db6999f915d5",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Ops layer note: docs: README + changelog align with showcase Help refresh (0.1.7). Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "f8e712171baf",
-              "shaFull": "f8e712171baf462b2ef34e7e0f581f7a1b7148cd",
-              "date": "2026-05-14",
-              "subject": "docs: remove stub HTML doc that was hiding the rich showcase",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f8e712171baf462b2ef34e7e0f581f7a1b7148cd",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: docs: remove stub HTML doc that was hiding the rich showcase. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "0639f142e5e7",
-              "shaFull": "0639f142e5e7362ee7617b2b4174c6ac22ed73fd",
-              "date": "2026-05-14",
-              "subject": "Site test: enlarge status-bar Fix button on touch devices",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/0639f142e5e7362ee7617b2b4174c6ac22ed73fd",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Ops layer note: Site test: enlarge status-bar Fix button on touch devices. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "8889cb99fb01",
-              "shaFull": "8889cb99fb01bf563e8b06407f29405205132df7",
-              "date": "2026-05-14",
-              "subject": "Site test: fix two bugs surfaced by automated checks",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/8889cb99fb01bf563e8b06407f29405205132df7",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Ops layer note: Site test: fix two bugs surfaced by automated checks. Timeline folds this into the living Macroverse engine."
-            },
-            {
-              "sha": "f4e7a70a8a8b",
-              "shaFull": "f4e7a70a8a8b11d703713e9de076e3abdf487edc",
-              "date": "2026-05-14",
-              "subject": "Add inline SVG favicon to silence 404 console error",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f4e7a70a8a8b11d703713e9de076e3abdf487edc",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: Add inline SVG favicon to silence 404 console error. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "ee7a304c1d7a",
-              "shaFull": "ee7a304c1d7a8669d72856df2128d40e59364677",
-              "date": "2026-05-14",
-              "subject": "Phase 12: typecheck cleanup - drop boolean return from clickById",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ee7a304c1d7a8669d72856df2128d40e59364677",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: Phase 12: typecheck cleanup - drop boolean return from clickById. Part of the browser stack that grew out of the Fringe performance."
-            },
-            {
-              "sha": "1d36d93e9fbd",
-              "shaFull": "1d36d93e9fbd5781648b74f9a93bb61e859adf42",
-              "date": "2026-05-14",
-              "subject": "Phase 10: Pipeline + Wire Hub responsive layouts",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/1d36d93e9fbd5781648b74f9a93bb61e859adf42",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: Phase 10: Pipeline + Wire Hub responsive layouts. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "4dfed3e20334",
-              "shaFull": "4dfed3e203340b3b0c1a294fd64ac7ce99cc2599",
-              "date": "2026-05-14",
-              "subject": "Phase 9: gallery responsive grid",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/4dfed3e203340b3b0c1a294fd64ac7ce99cc2599",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Ops layer note: Phase 9: gallery responsive grid. Timeline folds this into the living Macroverse engine."
-            },
-            {
-              "sha": "a15882729fb7",
-              "shaFull": "a15882729fb7df359b12e76c32c7a99bebec5442",
-              "date": "2026-05-14",
-              "subject": "Phase 6: toolbar slim-down for phone",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/a15882729fb7df359b12e76c32c7a99bebec5442",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Infrastructure constellation shift: Phase 6: toolbar slim-down for phone. Timeline folds this into the living Macroverse engine."
-            },
-            {
-              "sha": "2cb65af54b1e",
-              "shaFull": "2cb65af54b1e768dfbe09dd3de5a1302753ce1b1",
-              "date": "2026-05-14",
-              "subject": "Phase 3: command palette + registry with core commands",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/2cb65af54b1e768dfbe09dd3de5a1302753ce1b1",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: Phase 3: command palette + registry with core commands. Part of the browser stack that grew out of the Fringe performance."
-            },
-            {
-              "sha": "96e12ffb0a5c",
-              "shaFull": "96e12ffb0a5caf5a02d35f764a34dd935219f777",
-              "date": "2026-05-14",
-              "subject": "Phase 1: viewport meta + touch-target sizing + hover-none gating",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/96e12ffb0a5caf5a02d35f764a34dd935219f777",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Infrastructure constellation shift: Phase 1: viewport meta + touch-target sizing + hover-none gating. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "af3f4fd1e859",
-              "shaFull": "af3f4fd1e85911c22940b538373e50fb62f329b2",
-              "date": "2026-05-14",
-              "subject": "Label Macroverse page as a GitHub showcase.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/af3f4fd1e85911c22940b538373e50fb62f329b2",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Ops layer note: Label Macroverse page as a GitHub showcase.. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "43669d6987c2",
-              "shaFull": "43669d6987c2b6375c825f6fb155ebcf6608afc3",
-              "date": "2026-05-13",
-              "subject": "Use single-level test/private hostnames for Cloudflare TLS coverage.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/43669d6987c2b6375c825f6fb155ebcf6608afc3",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: Use single-level test/private hostnames for Cloudflare TLS coverage.. Part of the browser stack that grew out of the Fringe performance."
-            },
-            {
-              "sha": "ce6bc6a0a118",
-              "shaFull": "ce6bc6a0a1187d9c6f2a35b08367550bccc3dc6a",
-              "date": "2026-05-13",
-              "subject": "Fix export gate false-positive on absolute-path scan.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ce6bc6a0a1187d9c6f2a35b08367550bccc3dc6a",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Ops layer note: Fix export gate false-positive on absolute-path scan.. Timeline folds this into the living Macroverse engine."
-            },
-            {
-              "sha": "4c7310b90071",
-              "shaFull": "4c7310b9007127b2063c1d3bb7efa19fa80abc40",
-              "date": "2026-03-08",
-              "subject": "SHIP IT",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/4c7310b9007127b2063c1d3bb7efa19fa80abc40",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: SHIP IT. Part of the browser stack that grew out of the Fringe performance."
             }
           ]
         }
