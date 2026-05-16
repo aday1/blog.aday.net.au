@@ -37,6 +37,7 @@ jobs:
             "run_number": "${GITHUB_RUN_NUMBER}"
           }
           EOF
+          node -e "const fs=require('node:fs');const path='public/index.html';const html=fs.readFileSync(path,'utf8');const payload={site:'blog.aday.net.au',branch:'${GITHUB_REF_NAME}',track:'${GITHUB_REF_NAME}',version:'${SHORT_SHA}',build_date:'${BUILD_DATE}',run_id:'${GITHUB_RUN_ID}',run_number:'${GITHUB_RUN_NUMBER}'};const tag='<script>window.__DEPLOY_META__='+JSON.stringify(payload)+'</script>';fs.writeFileSync(path,html.replace('</body>',tag+'</body>'));"
       - name: Skip notice when token is missing
         if: ${{ env.CF_API_TOKEN == '' }}
         run: echo "CLOUDFLARE_API_TOKEN is not configured. Skipping Cloudflare deploy."

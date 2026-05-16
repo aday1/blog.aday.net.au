@@ -40,16 +40,22 @@ const deployMetaHtml = `<div id="deployMetaBadge" style="position:fixed;right:8p
     (function () {
       var badge = document.getElementById("deployMetaBadge");
       if (!badge) return;
+      var render = function (m) {
+        var dt = m.build_date ? new Date(m.build_date).toLocaleString() : "unknown-date";
+        var track = m.track || m.branch || "unknown-track";
+        var version = m.version || "unknown-version";
+        badge.textContent = track + " | " + version + " | " + dt;
+      };
+      if (window.__DEPLOY_META__) {
+        render(window.__DEPLOY_META__);
+      }
       fetch("/data/deploy-meta.json", { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("missing")); })
-        .then(function (m) {
-          var dt = m.build_date ? new Date(m.build_date).toLocaleString() : "unknown-date";
-          var track = m.track || m.branch || "unknown-track";
-          var version = m.version || "unknown-version";
-          badge.textContent = track + " | " + version + " | " + dt;
-        })
+        .then(render)
         .catch(function () {
-          badge.textContent = "deploy metadata unavailable";
+          if (!window.__DEPLOY_META__) {
+            badge.textContent = "deploy metadata unavailable";
+          }
         });
     })();
   </script>`;
