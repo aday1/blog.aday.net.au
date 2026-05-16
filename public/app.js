@@ -9,13 +9,35 @@
   const blogYtRandom = document.getElementById("blogYtRandom");
   const pageTransition = document.getElementById("pageTransition");
 
-  const finishBoot = () => body.classList.remove("boot-seq");
+  const CUTON_SESSION_KEY = "aday-blog-cuton-done-v1";
+  const hasSeenCutOn = (() => {
+    try {
+      return sessionStorage.getItem(CUTON_SESSION_KEY) === "1";
+    } catch {
+      return false;
+    }
+  })();
+  const finishBoot = () => {
+    body.classList.remove("boot-seq");
+    body.classList.add("cuton-settled");
+    if (!window.__blogScrollPinned) {
+      window.__blogScrollPinned = true;
+      window.scrollTo(0, 0);
+    }
+  };
   const hideTransition = () => pageTransition?.classList.add("hidden");
   const CUTON_BOOT_MS = 100;
   const CUTON_HIDE_MS = 920;
   let cutOnScheduled = false;
   const runCutOnSequence = (forceImmediate = false) => {
-    if (forceImmediate) {
+    if (forceImmediate || hasSeenCutOn) {
+      if (!hasSeenCutOn) {
+        try {
+          sessionStorage.setItem(CUTON_SESSION_KEY, "1");
+        } catch {
+          // ignore
+        }
+      }
       finishBoot();
       hideTransition();
       cutOnScheduled = true;
@@ -23,14 +45,23 @@
     }
     if (cutOnScheduled) return;
     cutOnScheduled = true;
+    try {
+      sessionStorage.setItem(CUTON_SESSION_KEY, "1");
+    } catch {
+      // ignore
+    }
     setTimeout(finishBoot, CUTON_BOOT_MS);
     setTimeout(hideTransition, CUTON_HIDE_MS);
   };
+  if (hasSeenCutOn) {
+    finishBoot();
+    hideTransition();
+  }
   document.addEventListener("DOMContentLoaded", () => {
-    runCutOnSequence();
+    runCutOnSequence(hasSeenCutOn);
   });
   window.addEventListener("load", () => {
-    runCutOnSequence();
+    runCutOnSequence(hasSeenCutOn);
   });
   window.addEventListener("pageshow", (event) => {
     if (event.persisted) runCutOnSequence(true);
@@ -102,7 +133,7 @@
 
   const animateHeaders = () => {
     if (!window.anime) return false;
-    const headers = [...document.querySelectorAll("h1, h2, h3")];
+    const headers = [...document.querySelectorAll("main > h1, main > section > h2")];
     if (!headers.length) return false;
     window.anime({
       targets: headers,
@@ -550,7 +581,7 @@
   };
 
   const randomizeFrameGeneration = () => {
-    document.querySelectorAll("main section, .timeline-stage, .post-list li").forEach((node) => {
+    document.querySelectorAll("main section, .timeline-stage").forEach((node) => {
       const edgeLen = 8 + Math.floor(Math.random() * 18);
       const edgeGap = 5 + Math.floor(Math.random() * 14);
       const edgeCut = 7 + Math.floor(Math.random() * 12);
@@ -576,7 +607,6 @@
   };
 
   randomizeFrameGeneration();
-  scheduleFrameRandomizer();
   runTimelineGraph();
   runBlogNodeMap();
 

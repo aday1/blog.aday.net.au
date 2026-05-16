@@ -825,15 +825,10 @@ const truncateTimelineDesc = (text, max = 220) => {
   return `${trimmed.slice(0, max - 3)}...`;
 };
 
-const pickTimelineImage = (entry, idx) => {
+const pickTimelineImage = (entry) => {
   const url = String(entry.url || "").toLowerCase();
-  const source = slugifySource(entry.source || "artifact");
+  const title = String(entry.title || "").toLowerCase();
   const signature = timelineImages.signature || "/assets/timeline/aday-antialias-blackmage.png";
-  const sprinkleEvery = Number(timelineImages.sprinkleEvery) || 6;
-
-  if (sprinkleEvery > 0 && idx > 0 && idx % sprinkleEvery === 0) {
-    return { url: signature, signature: true };
-  }
 
   for (const rule of timelineImages.urlMatch || []) {
     const needle = String(rule.includes || "").toLowerCase();
@@ -842,35 +837,38 @@ const pickTimelineImage = (entry, idx) => {
     }
   }
 
-  const pool = timelineImages.bySource?.[source];
-  if (Array.isArray(pool) && pool.length) {
-    const image = pool[idx % pool.length];
-    return { url: image, signature: image === signature };
+  for (const rule of timelineImages.titleMatch || []) {
+    const needles = [rule.includes, rule.includes2]
+      .filter(Boolean)
+      .map((part) => String(part).toLowerCase());
+    if (!needles.length) continue;
+    const haystack = `${title} ${url}`;
+    if (needles.every((needle) => haystack.includes(needle))) {
+      return { url: rule.image, signature: rule.image === signature };
+    }
   }
 
-  if (timelineImages.fallback) {
-    return { url: timelineImages.fallback, signature: false };
-  }
   return null;
 };
 
 const renderTimelineNode = (entry, idx) => {
   const source = slugifySource(entry.source || "artifact");
   const year = entry.date.slice(0, 4);
-  const picked = pickTimelineImage(entry, idx);
+  const picked = pickTimelineImage(entry);
   const sigClass = picked?.signature ? " is-signature" : "";
-  const visualClass = picked?.url
-    ? "timeline-entry-visual"
-    : "timeline-entry-visual timeline-entry-visual--plain";
-  const visualStyle = picked?.url ? ` style="--timeline-bg: url('${escapeHtml(picked.url)}')"` : "";
+  const compactClass = picked?.url ? "" : " timeline-node--compact";
   const desc = truncateTimelineDesc(entry.desc);
+  const visualBlock = picked?.url
+    ? `<div class="timeline-entry-visual" style="--timeline-bg: url('${escapeHtml(picked.url)}')" aria-hidden="true"><span class="timeline-entry-year">${escapeHtml(year)}</span></div>`
+    : "";
 
-  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-title="${escapeHtml(entry.title)}">
-  <article class="timeline-entry">
-    <div class="${visualClass}"${visualStyle} aria-hidden="true"><span class="timeline-entry-year">${escapeHtml(year)}</span></div>
+  return `<li class="timeline-node source-${escapeHtml(source)}${sigClass}${compactClass}" data-source="${escapeHtml(source)}" data-node="${idx}" data-title="${escapeHtml(entry.title)}">
+  <article class="timeline-entry${picked?.url ? "" : " timeline-entry--compact"}">
+    ${visualBlock}
     <div class="timeline-entry-body">
       <p class="timeline-entry-meta">
         <span class="date">${escapeHtml(entry.date)}</span>
+        <span class="timeline-year-pill">${escapeHtml(year)}</span>
         <span class="source-chip">${escapeHtml(source)}</span>
       </p>
       <h3 class="timeline-entry-title"><a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(entry.title)}</a></h3>
@@ -881,8 +879,9 @@ const renderTimelineNode = (entry, idx) => {
 };
 
 const timelineEntries = await getTimeline();
+const timelineNewestFirst = [...timelineEntries].sort((a, b) => new Date(b.date) - new Date(a.date));
 let timelineYearMarker = "";
-const timelineRows = timelineEntries
+const timelineRows = timelineNewestFirst
   .flatMap((entry, idx) => {
     const year = entry.date.slice(0, 4);
     const parts = [];
@@ -1012,6 +1011,7 @@ ${filmHeadLinks}
     </section>
     <section>
       <h2>Presence timeline</h2>
+      <p class="date">Newest first. Hero images only on matched milestones.</p>
       <div class="timeline-stage">
         <canvas id="timelineGraph" width="960" height="320" aria-hidden="true"></canvas>
       </div>

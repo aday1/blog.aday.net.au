@@ -47,6 +47,31 @@
   text-shadow: 0 0 20px rgba(212, 160, 36, 0.45);
 }
 
+.post-list.timeline > li.timeline-node--compact {
+  margin-bottom: 1.15rem;
+}
+
+.post-list.timeline > li.timeline-node--compact::before {
+  top: 1.1rem;
+}
+
+.timeline-entry--compact {
+  border-radius: 10px;
+}
+
+.timeline-entry--compact .timeline-entry-body {
+  padding: 0.85rem 1rem 0.95rem;
+}
+
+.timeline-year-pill {
+  border: 1px solid rgba(212, 160, 36, 0.45);
+  padding: 0.05rem 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: #d4a024;
+  border-radius: 4px;
+}
+
 .post-list.timeline > li.timeline-node {
   position: relative;
   margin: 0 0 2.85rem;

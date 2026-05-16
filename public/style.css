@@ -143,8 +143,8 @@ main {
   background: rgba(6, 12, 22, 0.9);
   box-shadow: 0 0 0 1px rgba(112, 188, 255, 0.18), 0 20px 70px rgba(0, 0, 0, 0.56);
   transform-origin: center;
-  animation: shellHuePulse 10.2s ease-in-out infinite;
-  overflow: hidden;
+  animation: none;
+  overflow: visible;
 }
 
 main::before {
@@ -167,7 +167,7 @@ main section {
   margin: 0.9rem 0 0;
   position: relative;
   isolation: isolate;
-  animation: panelDrift 18s ease-in-out infinite;
+  animation: none;
   transition: box-shadow 220ms ease, border-color 220ms ease;
 }
 
@@ -839,10 +839,14 @@ body.boot-seq main {
 body:not(.boot-seq) main {
   opacity: 1;
   visibility: visible;
-  animation:
-    crtTvTurnOn 900ms linear both,
-    blogCrtStretch 11.8s ease-in-out 0.85s infinite;
+  animation: crtTvTurnOn 900ms linear both;
+  transform: none;
   transform-origin: center center;
+}
+
+body.cuton-settled main {
+  animation: none !important;
+  transform: none !important;
 }
 
 /* Readable CRT refinement inspired by distortion demos, but reduced for legibility */
@@ -882,7 +886,7 @@ main::after {
     radial-gradient(circle at 50% 38%, rgba(116, 208, 255, 0.06), rgba(0, 0, 0, 0) 54%),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.2));
   mix-blend-mode: screen;
-  animation: blogScanDrift 9.2s linear infinite;
+  animation: none;
 }
 
 main section {
