@@ -13,6 +13,7 @@ const ART_PHASES = [
   { id: "workbench", label: "Emprunt Macroverse", match: /workbench|envelope|rack|transition tracker|relic: macroverse/i },
   { id: "tracker", label: "Tracker photonique", match: /tracker|fixture-aware|theme api|relic: dmx tracker/i },
   { id: "hosted", label: "Hosted stack", match: /hosted stack|ghcr|bridge|deploy-meta|relic: hosted/i },
+  { id: "hotfix", label: "5.1.2.3 hotfix", match: /5\.1\.2\.3|scroll and range slider|scroll\/slider/i },
   { id: "official", label: "Official 5.1.2", match: /release: v5\.1\.2|official hosted/i }
 ];
 
@@ -85,12 +86,27 @@ const macroNarrative = (subject, phase) => {
 
 const artNarrative = (subject, phase) => {
   const s = subject.trim();
-  if (/release: v5\.1\.2/i.test(s)) {
+  if (/release: v5\.1\.2\.3|5\.1\.2\.3/i.test(s)) {
+    return (
+      "A sub-patch on the DMX512 line: **5.1.2.3** — the monks insist the scroll wheel and the fader " +
+      "thumb are sacred; neither may be stolen by flexbox nor by an over-eager custom cursor. " +
+      s +
+      ". Petite correction, grande lumière."
+    );
+  }
+  if (/release: v5\.1\.2[^.]|scroll and range slider/i.test(s)) {
     return (
       "The Ordre des Bougies de Scène crowns 5.1.2 — a wink at DMX512, a vow that TCP/IP and React " +
       "may finally serve the candle monks' descendants. " +
       s +
       ". Ainsi soit la lumière, mes amis."
+    );
+  }
+  if (/fix\(ui\).*scroll/i.test(s)) {
+    return (
+      "Les faders refusent le silence: page scroll and sliders return to the faithful — " +
+      s +
+      ". (Shipped as 5.1.2.3 on the official line.)"
     );
   }
   const french = {
@@ -118,6 +134,11 @@ const artNarrative = (subject, phase) => {
       "The monks discover Linode — cloud catacombs with GHCR reliquaries: ",
       "Pi bridge agents whisper WSS where bamboo tubes once sighed: ",
       "Deploy-meta: scripture for when dev may ascend to live: "
+    ],
+    hotfix: [
+      "A vesper hotfix — scroll and sliders, lest the show stop in the stall: ",
+      "5.1.2.3: not a new minor, a fourth bead on the 5.1.2 rosary: ",
+      "Pointer-events restored; the custom cursor may not usurp the thumb: "
     ],
     official: [
       "Official sacrament: ",
@@ -156,7 +177,7 @@ export const trainPrologue = (train) => {
     return [
       "Long before DMX512, an elite order of French art-candle monks — the Illuminating Wind Dancing Masters — ran entire stage shows on breath, beeswax, and bamboo air-tracks. Feng Zhi conducted symphonies of flame; the Breaths of Light manuscripts were their patch sheets.",
       "Electricity arrived; the order survived in Parisian warehouses as the Société des Light Jockeys. Le Créateur des Lumières swore never again to insult a photon with a pedestrian desk. Candle logic became Art-Net packets, fan choreography became TouchOSC, catacombs became TCP/IP, ritual became React.",
-      "ArtBastard **5.1.2** (5 · 1 · 2 → DMX512) is the first official hosted release. Below: six relic commits and the release — real git history, draped in the same canon as DOCS/HISTORY.md."
+      "ArtBastard **5.1.2** (5 · 1 · 2 → DMX512) is the first official hosted release; **5.1.2.3** is the live hotfix on that line (scroll and sliders). Below: relic commits, release, and hotfix — real git history, draped in the same canon as DOCS/HISTORY.md."
     ];
   }
   return [

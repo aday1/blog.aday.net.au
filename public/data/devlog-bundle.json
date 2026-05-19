@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T03:03:21.310Z",
+  "generated_at": "2026-05-19T03:29:54.342Z",
   "trains": [
     {
       "id": "macroverse",
@@ -9,13 +9,55 @@
       "github": "aday1/macroverse.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
       "timelineSource": "devlog-macroverse",
-      "commitCount": 7,
+      "commitCount": 8,
       "prologue": [
         "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
         "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.0**.",
         "Six relic commits below trace Wire Atelier → showcase → VJ/bridge → Linode → deploy-meta → official release. Each line is a real commit, narrated for the blog timeline."
       ],
       "phases": [
+        {
+          "id": "official",
+          "label": "Official 42.0",
+          "items": [
+            {
+              "sha": "c5effae3b136",
+              "shaFull": "c5effae3b1360080c55bddf6b0458b942307a686",
+              "date": "2026-05-19",
+              "subject": "release: v42.0.1 slider hotfix for live deploy",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/c5effae3b1360080c55bddf6b0458b942307a686",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Official 42.0",
+              "narrative": "Forty-Two locks the hosted release: the same tool that once translated GLSL into ISF, fed FFT across Reductionist's micro-instruments at Abbotsford Convent, and painted the universe from stasis to heat-death — now runs on Linode with dev, live, and aday lanes. release: v42.0.1 slider hotfix for live deploy."
+            },
+            {
+              "sha": "518833cb9e22",
+              "shaFull": "518833cb9e2255199842e5ea2e5d6464eb069d0d",
+              "date": "2026-05-19",
+              "subject": "fix(ui): improve rich slider hit targets and touch handling",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/518833cb9e2255199842e5ea2e5d6464eb069d0d",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Official 42.0",
+              "narrative": "v42.0 on the manifest: fix(ui): improve rich slider hit targets and touch handling. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "dfd325feab93",
+              "shaFull": "dfd325feab93ba1712b10840e2d411f3a83c5342",
+              "date": "2026-05-19",
+              "subject": "release: v42.0 — first official hosted release (Forty-Two)",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/dfd325feab93ba1712b10840e2d411f3a83c5342",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Official 42.0",
+              "narrative": "Forty-Two locks the hosted release: the same tool that once translated GLSL into ISF, fed FFT across Reductionist's micro-instruments at Abbotsford Convent, and painted the universe from stasis to heat-death — now runs on Linode with dev, live, and aday lanes. release: v42.0 — first official hosted release (Forty-Two)."
+            }
+          ]
+        },
         {
           "id": "linode",
           "label": "Linode production",
@@ -43,24 +85,6 @@
               "phaseId": "linode",
               "phaseLabel": "Linode production",
               "narrative": "Production gravity well for the shader engine: relic: Linode production — compose, nginx, aday lane, DNS ops. Feeds the master timeline on blog.aday.net.au."
-            }
-          ]
-        },
-        {
-          "id": "official",
-          "label": "Official 42.0",
-          "items": [
-            {
-              "sha": "dfd325feab93",
-              "shaFull": "dfd325feab93ba1712b10840e2d411f3a83c5342",
-              "date": "2026-05-19",
-              "subject": "release: v42.0 — first official hosted release (Forty-Two)",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/dfd325feab93ba1712b10840e2d411f3a83c5342",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Official 42.0",
-              "narrative": "Forty-Two locks the hosted release: the same tool that once translated GLSL into ISF, fed FFT across Reductionist's micro-instruments at Abbotsford Convent, and painted the universe from stasis to heat-death — now runs on Linode with dev, live, and aday lanes. release: v42.0 — first official hosted release (Forty-Two)."
             }
           ]
         },
@@ -115,18 +139,6 @@
               "phaseId": "wire",
               "phaseLabel": "Wire Atelier",
               "narrative": "The Fringe tool-chain takes shape in code: relic: Wired Atelier theme — showcase, docs, GH Pages, release binaries. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "548ea714d88b",
-              "shaFull": "548ea714d88bb3c01c1b5799832061e96c9003cc",
-              "date": "2026-05-19",
-              "subject": "relic: Wire Atelier — shader index, GLSL lab, Resolume pipeline",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/548ea714d88bb3c01c1b5799832061e96c9003cc",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "wire",
-              "phaseLabel": "Wire Atelier",
-              "narrative": "The Fringe tool-chain takes shape in code: relic: Wire Atelier — shader index, GLSL lab, Resolume pipeline. Feeds the master timeline on blog.aday.net.au."
             }
           ]
         }
@@ -135,18 +147,48 @@
     {
       "id": "artbastard",
       "title": "ArtBastard",
-      "tagline": "French art-candle monks → TCP/IP → React — Le Créateur des Lumières wrangles DMX512 as high art (5.1.2).",
+      "tagline": "French art-candle monks → TCP/IP → React — DMX512 line 5.1.2, live hotfix 5.1.2.3.",
       "liveUrl": "https://artbastard.aday.net.au",
       "github": "aday1/artbastard.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png",
       "timelineSource": "devlog-artbastard",
-      "commitCount": 7,
+      "commitCount": 8,
       "prologue": [
         "Long before DMX512, an elite order of French art-candle monks — the Illuminating Wind Dancing Masters — ran entire stage shows on breath, beeswax, and bamboo air-tracks. Feng Zhi conducted symphonies of flame; the Breaths of Light manuscripts were their patch sheets.",
         "Electricity arrived; the order survived in Parisian warehouses as the Société des Light Jockeys. Le Créateur des Lumières swore never again to insult a photon with a pedestrian desk. Candle logic became Art-Net packets, fan choreography became TouchOSC, catacombs became TCP/IP, ritual became React.",
-        "ArtBastard **5.1.2** (5 · 1 · 2 → DMX512) is the first official hosted release. Below: six relic commits and the release — real git history, draped in the same canon as DOCS/HISTORY.md."
+        "ArtBastard **5.1.2** (5 · 1 · 2 → DMX512) is the first official hosted release; **5.1.2.3** is the live hotfix on that line (scroll and sliders). Below: relic commits, release, and hotfix — real git history, draped in the same canon as DOCS/HISTORY.md."
       ],
       "phases": [
+        {
+          "id": "hotfix",
+          "label": "5.1.2.3 hotfix",
+          "items": [
+            {
+              "sha": "be0c401d19c7",
+              "shaFull": "be0c401d19c7cff225fd9d19da5c18537da5f8c9",
+              "date": "2026-05-19",
+              "subject": "release: v5.1.2.3 scroll and slider hotfix on the 5.1.2 line",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/be0c401d19c7cff225fd9d19da5c18537da5f8c9",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "hotfix",
+              "phaseLabel": "5.1.2.3 hotfix",
+              "narrative": "A sub-patch on the DMX512 line: **5.1.2.3** — the monks insist the scroll wheel and the fader thumb are sacred; neither may be stolen by flexbox nor by an over-eager custom cursor. release: v5.1.2.3 scroll and slider hotfix on the 5.1.2 line. Petite correction, grande lumière."
+            },
+            {
+              "sha": "1b666434f6bc",
+              "shaFull": "1b666434f6bc7349942b289952a796fb34188fe6",
+              "date": "2026-05-19",
+              "subject": "fix(ui): restore page scroll and range slider interaction",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/1b666434f6bc7349942b289952a796fb34188fe6",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "hotfix",
+              "phaseLabel": "5.1.2.3 hotfix",
+              "narrative": "The Ordre des Bougies de Scène crowns 5.1.2 — a wink at DMX512, a vow that TCP/IP and React may finally serve the candle monks' descendants. fix(ui): restore page scroll and range slider interaction. Ainsi soit la lumière, mes amis."
+            }
+          ]
+        },
         {
           "id": "supercontrol",
           "label": "SuperControl salon",
@@ -240,24 +282,6 @@
               "phaseId": "workbench",
               "phaseLabel": "Emprunt Macroverse",
               "narrative": "A stolen glance at Macroverse's envelope cathedral: relic: Macroverse workbench borrow — envelopes, rack, transition tracker. Not for the faint of PAR."
-            }
-          ]
-        },
-        {
-          "id": "candles",
-          "label": "Ordre des bougies",
-          "items": [
-            {
-              "sha": "aab365c517dc",
-              "shaFull": "aab365c517dc5041a69551141bb6e606cc5233cd",
-              "date": "2026-05-19",
-              "subject": "relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/aab365c517dc5041a69551141bb6e606cc5233cd",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "candles",
-              "phaseLabel": "Ordre des bougies",
-              "narrative": "Before Art-Net, the elite French art-candle monks conducted stages with breath and beeswax: relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON. Not for the faint of PAR."
             }
           ]
         }

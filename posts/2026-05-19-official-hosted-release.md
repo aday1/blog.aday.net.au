@@ -26,6 +26,8 @@ Electricity did not kill the order. It moved them into Parisian warehouses as th
 
 The relic ladder in git walks that path: desk prototype → SuperControl skeuomorph → borrowed Macroverse workbench → DMX Tracker and themes → hosted stack with Pi bridge → **official 5.1.2**.
 
+**5.1.2.3** (same line, fourth segment — not 5.1.3) is the live hotfix: page scroll inside the layout and range sliders responding again after the first deploy.
+
 - Live: [artbastard.aday.net.au](https://artbastard.aday.net.au)
 - Dev: [artbastard-dev.aday.net.au](https://artbastard-dev.aday.net.au)
 - Release: [v5.1.2 on GitHub](https://github.com/aday1/artbastard.aday.net.au/releases/tag/v5.1.2)
