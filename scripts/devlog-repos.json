@@ -3,7 +3,7 @@
     {
       "id": "macroverse",
       "title": "Macroverse",
-      "tagline": "Browser shader engine born from MacroVerse at Melbourne Fringe — universe-scale visuals in the tab.",
+      "tagline": "GLSL → ISF → Resolume Wire, born at Melbourne Fringe — universe-scale visuals in the tab (42.0).",
       "localPath": "../macroverse.aday.net.au",
       "github": "aday1/macroverse.aday.net.au",
       "liveUrl": "https://macroverse.aday.net.au",
@@ -14,7 +14,7 @@
     {
       "id": "artbastard",
       "title": "ArtBastard",
-      "tagline": "Le Créateur des Lumières and the secret society of Light Jockeys — DMX/OSC/MIDI wrangling as high art.",
+      "tagline": "French art-candle monks → TCP/IP → React — Le Créateur des Lumières wrangles DMX512 as high art (5.1.2).",
       "localPath": "../artbastard.aday.net.au",
       "github": "aday1/artbastard.aday.net.au",
       "liveUrl": "https://artbastard.aday.net.au",

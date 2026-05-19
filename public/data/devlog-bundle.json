@@ -1,24 +1,54 @@
 {
-  "generated_at": "2026-05-19T02:53:42.247Z",
+  "generated_at": "2026-05-19T03:02:34.939Z",
   "trains": [
     {
       "id": "macroverse",
       "title": "Macroverse",
-      "tagline": "Browser shader engine born from MacroVerse at Melbourne Fringe — universe-scale visuals in the tab.",
+      "tagline": "GLSL → ISF → Resolume Wire, born at Melbourne Fringe — universe-scale visuals in the tab (42.0).",
       "liveUrl": "https://macroverse.aday.net.au",
       "github": "aday1/macroverse.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
       "timelineSource": "devlog-macroverse",
-      "commitCount": 6,
+      "commitCount": 7,
       "prologue": [
-        "MacroVerse began live at Melbourne Fringe: Reductionist on micro-instruments, Aday bending projection time and scale.",
-        "macroverse.aday.net.au carries that practice forward as a browser GLSL / ISF engine for VJ sets and installs.",
-        "Each entry below is a commit on the main timeline — deploy lanes, shader UI, and Fringe origin pages interleaved."
+        "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
+        "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.0**.",
+        "Six relic commits below trace Wire Atelier → showcase → VJ/bridge → Linode → deploy-meta → official release. Each line is a real commit, narrated for the blog timeline."
       ],
       "phases": [
         {
-          "id": "infra",
-          "label": "Infrastructure",
+          "id": "linode",
+          "label": "Linode production",
+          "items": [
+            {
+              "sha": "7779005659ed",
+              "shaFull": "7779005659edf2f3453eed0d2e73d38e4b965e6d",
+              "date": "2026-05-19",
+              "subject": "fix: deploy-linode uses fetch+reset after history rewrite",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/7779005659edf2f3453eed0d2e73d38e4b965e6d",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "linode",
+              "phaseLabel": "Linode production",
+              "narrative": "Abbotsford Convent closes; the convent stack opens on Linode: fix: deploy-linode uses fetch+reset after history rewrite. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "515e38018083",
+              "shaFull": "515e38018083667fe503155e225a1f62815c2b8c",
+              "date": "2026-05-19",
+              "subject": "relic: Linode production — compose, nginx, aday lane, DNS ops",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/515e38018083667fe503155e225a1f62815c2b8c",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "linode",
+              "phaseLabel": "Linode production",
+              "narrative": "Production gravity well for the shader engine: relic: Linode production — compose, nginx, aday lane, DNS ops. Feeds the master timeline on blog.aday.net.au."
+            }
+          ]
+        },
+        {
+          "id": "official",
+          "label": "Official 42.0",
           "items": [
             {
               "sha": "dfd325feab93",
@@ -28,9 +58,9 @@
               "url": "https://github.com/aday1/macroverse.aday.net.au/commit/dfd325feab93ba1712b10840e2d411f3a83c5342",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "infra",
-              "phaseLabel": "Infrastructure",
-              "narrative": "Back-end sky map updated: release: v42.0 — first official hosted release (Forty-Two). Feeds the master presence graph on blog.aday.net.au."
+              "phaseId": "official",
+              "phaseLabel": "Official 42.0",
+              "narrative": "Forty-Two locks the hosted release: the same tool that once translated GLSL into ISF, fed FFT across Reductionist's micro-instruments at Abbotsford Convent, and painted the universe from stasis to heat-death — now runs on Linode with dev, live, and aday lanes. release: v42.0 — first official hosted release (Forty-Two)."
             }
           ]
         },
@@ -48,37 +78,13 @@
               "trainId": "macroverse",
               "phaseId": "deploy",
               "phaseLabel": "Deploy lanes",
-              "narrative": "Deploy lane transmission: relic: Deploy-meta, dev/live switcher, gradient controls polish. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "515e38018083",
-              "shaFull": "515e38018083667fe503155e225a1f62815c2b8c",
-              "date": "2026-05-19",
-              "subject": "relic: Linode production — compose, nginx, aday lane, DNS ops",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/515e38018083667fe503155e225a1f62815c2b8c",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "deploy",
-              "phaseLabel": "Deploy lanes",
-              "narrative": "DNS / edge ritual complete: relic: Linode production — compose, nginx, aday lane, DNS ops. Feeds the master presence graph on blog.aday.net.au."
-            },
-            {
-              "sha": "e663efcec411",
-              "shaFull": "e663efcec41193bfc190981176af268afa5407f4",
-              "date": "2026-05-19",
-              "subject": "relic: Wired Atelier theme — showcase, docs, GH Pages, release binaries",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e663efcec41193bfc190981176af268afa5407f4",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "deploy",
-              "phaseLabel": "Deploy lanes",
-              "narrative": "Production path hardened: relic: Wired Atelier theme — showcase, docs, GH Pages, release binaries. Feeds the master presence graph on blog.aday.net.au."
+              "narrative": "Deploy-meta tells you when dev may kiss live: relic: Deploy-meta, dev/live switcher, gradient controls polish. Feeds the master timeline on blog.aday.net.au."
             }
           ]
         },
         {
-          "id": "shader",
-          "label": "Shader engine",
+          "id": "vj",
+          "label": "VJ & Fringe body",
           "items": [
             {
               "sha": "dd171466d1b0",
@@ -88,9 +94,27 @@
               "url": "https://github.com/aday1/macroverse.aday.net.au/commit/dd171466d1b0ca5b201617643a9f042904dc13ba",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "shader",
-              "phaseLabel": "Shader engine",
-              "narrative": "Another photon in the shader stack: relic: VJ deck — sessions, WebSocket sync, audience QR, bridge agent. Part of the browser stack that grew out of the Fringe performance."
+              "phaseId": "vj",
+              "phaseLabel": "VJ & Fringe body",
+              "narrative": "Reductionist's macro-narrative, your FFT on the visuals: relic: VJ deck — sessions, WebSocket sync, audience QR, bridge agent. Feeds the master timeline on blog.aday.net.au."
+            }
+          ]
+        },
+        {
+          "id": "wire",
+          "label": "Wire Atelier",
+          "items": [
+            {
+              "sha": "e663efcec411",
+              "shaFull": "e663efcec41193bfc190981176af268afa5407f4",
+              "date": "2026-05-19",
+              "subject": "relic: Wired Atelier theme — showcase, docs, GH Pages, release binaries",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e663efcec41193bfc190981176af268afa5407f4",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "wire",
+              "phaseLabel": "Wire Atelier",
+              "narrative": "The Fringe tool-chain takes shape in code: relic: Wired Atelier theme — showcase, docs, GH Pages, release binaries. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
             },
             {
               "sha": "548ea714d88b",
@@ -100,9 +124,9 @@
               "url": "https://github.com/aday1/macroverse.aday.net.au/commit/548ea714d88bb3c01c1b5799832061e96c9003cc",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "shader",
-              "phaseLabel": "Shader engine",
-              "narrative": "Another photon in the shader stack: relic: Wire Atelier — shader index, GLSL lab, Resolume pipeline. Feeds the master presence graph on blog.aday.net.au."
+              "phaseId": "wire",
+              "phaseLabel": "Wire Atelier",
+              "narrative": "The Fringe tool-chain takes shape in code: relic: Wire Atelier — shader index, GLSL lab, Resolume pipeline. Feeds the master timeline on blog.aday.net.au."
             }
           ]
         }
@@ -111,63 +135,33 @@
     {
       "id": "artbastard",
       "title": "ArtBastard",
-      "tagline": "Le Créateur des Lumières and the secret society of Light Jockeys — DMX/OSC/MIDI wrangling as high art.",
+      "tagline": "French art-candle monks → TCP/IP → React — Le Créateur des Lumières wrangles DMX512 as high art (5.1.2).",
       "liveUrl": "https://artbastard.aday.net.au",
       "github": "aday1/artbastard.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png",
       "timelineSource": "devlog-artbastard",
-      "commitCount": 6,
+      "commitCount": 7,
       "prologue": [
-        "Before DMX512, there were the Illuminating Wind Dancing Masters — candle symphonies conducted with bamboo and breath.",
-        "In a Parisian warehouse, Le Créateur des Lumières swore to never again insult a photon with a pedestrian console.",
-        "What follows is the dev log: real git commits, draped in the same fevered canon as DOCS/HISTORY.md (100% factual, lawyers please sit down)."
+        "Long before DMX512, an elite order of French art-candle monks — the Illuminating Wind Dancing Masters — ran entire stage shows on breath, beeswax, and bamboo air-tracks. Feng Zhi conducted symphonies of flame; the Breaths of Light manuscripts were their patch sheets.",
+        "Electricity arrived; the order survived in Parisian warehouses as the Société des Light Jockeys. Le Créateur des Lumières swore never again to insult a photon with a pedestrian desk. Candle logic became Art-Net packets, fan choreography became TouchOSC, catacombs became TCP/IP, ritual became React.",
+        "ArtBastard **5.1.2** (5 · 1 · 2 → DMX512) is the first official hosted release. Below: six relic commits and the release — real git history, draped in the same canon as DOCS/HISTORY.md."
       ],
       "phases": [
         {
-          "id": "protocol",
-          "label": "Protocole DMX",
+          "id": "supercontrol",
+          "label": "SuperControl salon",
           "items": [
             {
-              "sha": "418aca18e766",
-              "shaFull": "418aca18e766e3aaafd2d72512c3338826a268ea",
+              "sha": "64ee78bb3c94",
+              "shaFull": "64ee78bb3c9425d2f373f680c248c4fc224c79a3",
               "date": "2026-05-19",
-              "subject": "release: v5.1.2 — first official hosted release (DMX512)",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/418aca18e766e3aaafd2d72512c3338826a268ea",
+              "subject": "fix: CI build — panel types, TouchOSC deps",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/64ee78bb3c9425d2f373f680c248c4fc224c79a3",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "protocol",
-              "phaseLabel": "Protocole DMX",
-              "narrative": "Protocole photonique mis à jour: release: v5.1.2 — first official hosted release (DMX512). Honouring Feng Zhi's breeze choreography in silicon."
-            },
-            {
-              "sha": "aab365c517dc",
-              "shaFull": "aab365c517dc5041a69551141bb6e606cc5233cd",
-              "date": "2026-05-19",
-              "subject": "relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/aab365c517dc5041a69551141bb6e606cc5233cd",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "protocol",
-              "phaseLabel": "Protocole DMX",
-              "narrative": "Les Wind Dancing Masters approuvent ce patch DMX: relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON. Honouring Feng Zhi's breeze choreography in silicon."
-            }
-          ]
-        },
-        {
-          "id": "deploy",
-          "label": "Salon deploy",
-          "items": [
-            {
-              "sha": "d1ca2d8ea6fb",
-              "shaFull": "d1ca2d8ea6fb36634a7c3b1a0f374bc2a950a94e",
-              "date": "2026-05-19",
-              "subject": "relic: Hosted stack — Linode, GHCR, deploy-meta, Pi LAN bridge",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/d1ca2d8ea6fb36634a7c3b1a0f374bc2a950a94e",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "deploy",
-              "phaseLabel": "Salon deploy",
-              "narrative": "Rituel Linode accompli — relic: Hosted stack — Linode, GHCR, deploy-meta, Pi LAN bridge. Ainsi soit la lumière, mes amis."
+              "phaseId": "supercontrol",
+              "phaseLabel": "SuperControl salon",
+              "narrative": "SuperControl: skeuomorphic heresy the monks would have adored: fix: CI build — panel types, TouchOSC deps. Not for the faint of PAR."
             },
             {
               "sha": "42dc65b27ff9",
@@ -177,15 +171,51 @@
               "url": "https://github.com/aday1/artbastard.aday.net.au/commit/42dc65b27ff902d2b4cbaac9215144f0a6222259",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "deploy",
-              "phaseLabel": "Salon deploy",
-              "narrative": "Transmission depuis le salon de déploiement: relic: SuperControl skeuomorph — metallic UI, TouchOSC, MIDI templates. Vibe-coded, beret-approved."
+              "phaseId": "supercontrol",
+              "phaseLabel": "SuperControl salon",
+              "narrative": "TouchOSC scrolls replace silk fan gestures, non?: relic: SuperControl skeuomorph — metallic UI, TouchOSC, MIDI templates. Vibe-coded, beret-approved, monastery-sanctioned."
             }
           ]
         },
         {
-          "id": "society",
-          "label": "Société des Light Jockeys",
+          "id": "official",
+          "label": "Official 5.1.2",
+          "items": [
+            {
+              "sha": "418aca18e766",
+              "shaFull": "418aca18e766e3aaafd2d72512c3338826a268ea",
+              "date": "2026-05-19",
+              "subject": "release: v5.1.2 — first official hosted release (DMX512)",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/418aca18e766e3aaafd2d72512c3338826a268ea",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "official",
+              "phaseLabel": "Official 5.1.2",
+              "narrative": "The Ordre des Bougies de Scène crowns **5.1.2** — a wink at DMX512, a vow that TCP/IP and React may finally serve the candle monks' descendants. release: v5.1.2 — first official hosted release (DMX512). Ainsi soit la lumière, mes amis."
+            }
+          ]
+        },
+        {
+          "id": "hosted",
+          "label": "Hosted stack",
+          "items": [
+            {
+              "sha": "d1ca2d8ea6fb",
+              "shaFull": "d1ca2d8ea6fb36634a7c3b1a0f374bc2a950a94e",
+              "date": "2026-05-19",
+              "subject": "relic: Hosted stack — Linode, GHCR, deploy-meta, Pi LAN bridge",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/d1ca2d8ea6fb36634a7c3b1a0f374bc2a950a94e",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "hosted",
+              "phaseLabel": "Hosted stack",
+              "narrative": "Deploy-meta: scripture for when dev may ascend to live: relic: Hosted stack — Linode, GHCR, deploy-meta, Pi LAN bridge. Vibe-coded, beret-approved, monastery-sanctioned."
+            }
+          ]
+        },
+        {
+          "id": "workbench",
+          "label": "Emprunt Macroverse",
           "items": [
             {
               "sha": "b122baf05a1d",
@@ -195,16 +225,10 @@
               "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b122baf05a1d0b66aa773dc720d14354fef157b7",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "society",
-              "phaseLabel": "Société des Light Jockeys",
-              "narrative": "Le Créateur des Lumières exige plus de luminance: relic: DMX Tracker + fixture-aware lanes + live theme API. Not for the faint of PAR."
-            }
-          ]
-        },
-        {
-          "id": "awakening",
-          "label": "L'éveil",
-          "items": [
+              "phaseId": "workbench",
+              "phaseLabel": "Emprunt Macroverse",
+              "narrative": "A stolen glance at Macroverse's envelope cathedral: relic: DMX Tracker + fixture-aware lanes + live theme API. The photons remember the candles."
+            },
             {
               "sha": "6916d2f674d3",
               "shaFull": "6916d2f674d3212b4ede112fe456cc873622168e",
@@ -213,9 +237,27 @@
               "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6916d2f674d3212b4ede112fe456cc873622168e",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "awakening",
-              "phaseLabel": "L'éveil",
-              "narrative": "Camembert-fueled clarity at 3 AM: relic: Macroverse workbench borrow — envelopes, rack, transition tracker. Honouring Feng Zhi's breeze choreography in silicon."
+              "phaseId": "workbench",
+              "phaseLabel": "Emprunt Macroverse",
+              "narrative": "A stolen glance at Macroverse's envelope cathedral: relic: Macroverse workbench borrow — envelopes, rack, transition tracker. Not for the faint of PAR."
+            }
+          ]
+        },
+        {
+          "id": "candles",
+          "label": "Ordre des bougies",
+          "items": [
+            {
+              "sha": "aab365c517dc",
+              "shaFull": "aab365c517dc5041a69551141bb6e606cc5233cd",
+              "date": "2026-05-19",
+              "subject": "relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/aab365c517dc5041a69551141bb6e606cc5233cd",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "candles",
+              "phaseLabel": "Ordre des bougies",
+              "narrative": "Before Art-Net, the elite French art-candle monks conducted stages with breath and beeswax: relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON. Not for the faint of PAR."
             }
           ]
         }

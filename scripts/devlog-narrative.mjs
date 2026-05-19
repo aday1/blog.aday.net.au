@@ -1,17 +1,19 @@
 const MACRO_PHASES = [
-  { id: "fringe", label: "Fringe genesis", match: /fringe|origin|melbourne|convent|reductionist/i },
-  { id: "shader", label: "Shader engine", match: /shader|glsl|isf|vj|crossfade|crt|view tab|visual/i },
-  { id: "frontend", label: "Control surface", match: /frontend|bootstrap|settings|panel|ui|tab/i },
-  { id: "deploy", label: "Deploy lanes", match: /deploy|dns|nginx|linode|docker|compose|htpasswd|workflow|pages/i },
-  { id: "infra", label: "Infrastructure", match: /terraform|infra|dns sync|zone|api/i }
+  { id: "wire", label: "Wire Atelier", match: /wire atelier|shader index|glsl lab|resolume pipeline|relic: wire/i },
+  { id: "showcase", label: "Wired Atelier showcase", match: /showcase|gh pages|release binaries|wired atelier theme|relic: wired/i },
+  { id: "vj", label: "VJ & Fringe body", match: /vj deck|websocket|audience qr|bridge agent|fringe|relic: vj/i },
+  { id: "linode", label: "Linode production", match: /linode|compose|nginx|aday lane|relic: linode/i },
+  { id: "deploy", label: "Deploy lanes", match: /deploy-meta|dev\/live|gradient|relic: deploy/i },
+  { id: "official", label: "Official 42.0", match: /release: v42|official hosted/i }
 ];
 
 const ART_PHASES = [
-  { id: "society", label: "Société des Light Jockeys", match: /theme|luminary|quote|docs|showcase|cursor|amiga|svg/i },
-  { id: "deploy", label: "Salon deploy", match: /deploy|linode|compose|nginx|pages|workflow|dev branch|meta/i },
-  { id: "protocol", label: "Protocole DMX", match: /dmx|osc|midi|art-?net|fixture|smx|touchosc/i },
-  { id: "agents", label: "Archives secrètes", match: /agents|readme|license|history|pr #/i },
-  { id: "awakening", label: "L'éveil", match: /.*/ }
+  { id: "candles", label: "Ordre des bougies", match: /dmx512 desk|desk prototype|relic: dmx512|candle|wind dancing/i },
+  { id: "supercontrol", label: "SuperControl salon", match: /supercontrol|skeuomorph|touchosc|relic: supercontrol/i },
+  { id: "workbench", label: "Emprunt Macroverse", match: /workbench|envelope|rack|transition tracker|relic: macroverse/i },
+  { id: "tracker", label: "Tracker photonique", match: /tracker|fixture-aware|theme api|relic: dmx tracker/i },
+  { id: "hosted", label: "Hosted stack", match: /hosted stack|ghcr|bridge|deploy-meta|relic: hosted/i },
+  { id: "official", label: "Official 5.1.2", match: /release: v5\.1\.2|official hosted/i }
 ];
 
 const pickPhase = (trainId, subject) => {
@@ -30,80 +32,107 @@ const hashPick = (seed, list) => {
 
 const macroNarrative = (subject, phase) => {
   const s = subject.trim();
+  if (/release: v42/i.test(s)) {
+    return (
+      "Forty-Two locks the hosted release: the same tool that once translated GLSL into ISF, " +
+      "fed FFT across Reductionist's micro-instruments at Abbotsford Convent, and painted the universe " +
+      "from stasis to heat-death — now runs on Linode with dev, live, and aday lanes. " +
+      s +
+      "."
+    );
+  }
   const openers = {
-    fringe: [
-      "Fringe energy encoded in the repo: ",
-      "Abbotsford Convent echoes in this commit — ",
-      "MacroVerse show DNA surfaces again: "
+    wire: [
+      "In the Wired Atelier, a shader becomes a Wire patch: ",
+      "GLSL in, ISF out, Resolume on the other side — ",
+      "The Fringe tool-chain takes shape in code: "
     ],
-    shader: [
-      "Another photon in the shader stack: ",
-      "GLSL lane update — ",
-      "VJ crossfade territory: "
+    showcase: [
+      "Showcase pages glow like the free 12–4pm exhibition hours: ",
+      "Docs and GH Pages carry the psychonaut palette: ",
+      "Binary releases join the festival poster wall: "
     ],
-    frontend: [
-      "Control plane adjustment: ",
-      "Operator UI refinement: ",
-      "Tab and panel choreography: "
+    vj: [
+      "7pm session energy — deck sync and audience QR: ",
+      "Reductionist's macro-narrative, your FFT on the visuals: ",
+      "Clan Analogue ingenuity, now multi-browser VJ: "
+    ],
+    linode: [
+      "Abbotsford Convent closes; the convent stack opens on Linode: ",
+      "Compose, nginx, aday lane behind basic auth: ",
+      "Production gravity well for the shader engine: "
     ],
     deploy: [
-      "Deploy lane transmission: ",
-      "Production path hardened: ",
-      "DNS / edge ritual complete: "
+      "Deploy-meta tells you when dev may kiss live: ",
+      "Gradient sliders tuned for thumbs in the mosh pit: ",
+      "Lane sync counts like measures in a set: "
     ],
-    infra: [
-      "Infrastructure constellation shift: ",
-      "Back-end sky map updated: ",
-      "Ops layer note: "
+    official: [
+      "Official orbit achieved: ",
+      "v42.0 on the manifest: ",
+      "Hosted Forty-Two: "
     ]
   };
   const closer = [
-    "Timeline folds this into the living Macroverse engine.",
-    "Part of the browser stack that grew out of the Fringe performance.",
-    "Feeds the master presence graph on blog.aday.net.au."
+    "Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour.",
+    "The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument.",
+    "Feeds the master timeline on blog.aday.net.au."
   ];
-  const opener = hashPick(s + phase.id, openers[phase.id] || openers.shader);
+  const opener = hashPick(s + phase.id, openers[phase.id] || openers.wire);
   const end = hashPick(phase.id + s, closer);
   return `${opener}${s}. ${end}`;
 };
 
 const artNarrative = (subject, phase) => {
   const s = subject.trim();
+  if (/release: v5\.1\.2/i.test(s)) {
+    return (
+      "The Ordre des Bougies de Scène crowns **5.1.2** — a wink at DMX512, a vow that TCP/IP and React " +
+      "may finally serve the candle monks' descendants. " +
+      s +
+      ". Ainsi soit la lumière, mes amis."
+    );
+  }
   const french = {
-    society: [
-      "Les Light Jockeys murmurent dans le dépôt parisien: ",
-      "Le Créateur des Lumières exige plus de luminance: ",
-      "Chronique de la Société — "
+    candles: [
+      "Before Art-Net, the elite French art-candle monks conducted stages with breath and beeswax: ",
+      "Grand Master Feng Zhi's breeze choreography, digitised as channel 1: ",
+      "From Lumina's temple halls to a garage DMX desk: "
     ],
-    deploy: [
-      "Transmission depuis le salon de déploiement: ",
-      "Le beret vole; les serveurs obéissent: ",
-      "Rituel Linode accompli — "
+    supercontrol: [
+      "The Société adopts metallic faders — still lit by metaphorical flame: ",
+      "TouchOSC scrolls replace silk fan gestures, non?: ",
+      "SuperControl: skeuomorphic heresy the monks would have adored: "
     ],
-    protocol: [
-      "Protocole photonique mis à jour: ",
-      "Les Wind Dancing Masters approuvent ce patch DMX: ",
-      "Art-Net whisper in the catacombs: "
+    workbench: [
+      "A stolen glance at Macroverse's envelope cathedral: ",
+      "Rack UI like organ pipes, transitions like censer swings: ",
+      "Le Créateur borrows the workbench, returns it brighter: "
     ],
-    agents: [
-      "Scrolls archived by astral coding agents: ",
-      "Canon élargi dans les manuscrits: ",
-      "Les philistins tremblent; la doc s'enrichit: "
+    tracker: [
+      "The Renoise tracker, but for photons and fixture souls: ",
+      "Fixture-aware lanes — pan, tilt, gobo, dimmer as liturgy: ",
+      "Live theme API: vestments for the control surface: "
     ],
-    awakening: [
-      "Encore une gifle à la médiocrité lumineuse: ",
-      "ArtBastard, bastard of art, avance: ",
-      "Camembert-fueled clarity at 3 AM: "
+    hosted: [
+      "The monks discover Linode — cloud catacombs with GHCR reliquaries: ",
+      "Pi bridge agents whisper WSS where bamboo tubes once sighed: ",
+      "Deploy-meta: scripture for when dev may ascend to live: "
+    ],
+    official: [
+      "Official sacrament: ",
+      "DMX512 nod enshrined: ",
+      "Hosted ArtBastard, bastard of art, legitimate at last: "
     ]
   };
   const tails = [
-    "Ainsi soit la lumière, mes amis.",
-    "The photons remember.",
-    "Honouring Feng Zhi's breeze choreography in silicon.",
+    "The photons remember the candles.",
+    "TCP/IP carries what wind once did.",
+    "React components are the new bamboo tubes.",
     "Not for the faint of PAR.",
-    "Vibe-coded, beret-approved."
+    "Vibe-coded, beret-approved, monastery-sanctioned."
   ];
-  const opener = hashPick(s + phase.id, french[phase.id] || french.awakening);
+  const opener = hashPick(s + phase.id, french[phase.id] || french.candles);
   const tail = hashPick(phase.id + s.length, tails);
   return `${opener}${s}. ${tail}`;
 };
@@ -125,15 +154,15 @@ export const enrichCommit = (train, commit) => {
 export const trainPrologue = (train) => {
   if (train.id === "artbastard") {
     return [
-      "Before DMX512, there were the Illuminating Wind Dancing Masters — candle symphonies conducted with bamboo and breath.",
-      "In a Parisian warehouse, Le Créateur des Lumières swore to never again insult a photon with a pedestrian console.",
-      "What follows is the dev log: real git commits, draped in the same fevered canon as DOCS/HISTORY.md (100% factual, lawyers please sit down)."
+      "Long before DMX512, an elite order of French art-candle monks — the Illuminating Wind Dancing Masters — ran entire stage shows on breath, beeswax, and bamboo air-tracks. Feng Zhi conducted symphonies of flame; the Breaths of Light manuscripts were their patch sheets.",
+      "Electricity arrived; the order survived in Parisian warehouses as the Société des Light Jockeys. Le Créateur des Lumières swore never again to insult a photon with a pedestrian desk. Candle logic became Art-Net packets, fan choreography became TouchOSC, catacombs became TCP/IP, ritual became React.",
+      "ArtBastard **5.1.2** (5 · 1 · 2 → DMX512) is the first official hosted release. Below: six relic commits and the release — real git history, draped in the same canon as DOCS/HISTORY.md."
     ];
   }
   return [
-    "MacroVerse began live at Melbourne Fringe: Reductionist on micro-instruments, Aday bending projection time and scale.",
-    "macroverse.aday.net.au carries that practice forward as a browser GLSL / ISF engine for VJ sets and installs.",
-    "Each entry below is a commit on the main timeline — deploy lanes, shader UI, and Fringe origin pages interleaved."
+    "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
+    "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.0**.",
+    "Six relic commits below trace Wire Atelier → showcase → VJ/bridge → Linode → deploy-meta → official release. Each line is a real commit, narrated for the blog timeline."
   ];
 };
 

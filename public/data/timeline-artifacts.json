@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-19T02:53:46.342Z",
-  "count": 274,
+  "generated_at": "2026-05-19T03:02:39.288Z",
+  "count": 275,
   "entries": [
     {
       "date": "2010-01-01",
@@ -2407,7 +2407,7 @@
     {
       "date": "2025-10-07",
       "title": "MacroVerse at Melbourne Fringe",
-      "desc": "Live sonic/visual universe at Melbourne Fringe; macroverse.aday.net.au grew from the show.",
+      "desc": "Live universe-scale AV at Abbotsford Convent; the GLSL→ISF→Wire toolchain that became Macroverse 42.0.",
       "url": "/posts/2025-10-07-macroverse-fringe-origin.html",
       "source": "post"
     },
@@ -2612,9 +2612,16 @@
     {
       "date": "2026-05-19",
       "title": "Official hosted release — ArtBastard 5.1.2 and Macroverse 42.0",
-      "desc": "First official releases on Linode with dev/live lanes. Prior git history is relic-era archaeology.",
+      "desc": "Two origin stories meet official hosting — candle monks to DMX512, Fringe GLSL to Forty-Two.",
       "url": "/posts/2026-05-19-official-hosted-release.html",
       "source": "post"
+    },
+    {
+      "date": "2027-05-14",
+      "title": "YouTube tracker snapshot",
+      "desc": "Latest discovered public analytics timestamp from stats mirror",
+      "url": "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
+      "source": "youtube"
     }
   ]
 }
