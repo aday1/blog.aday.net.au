@@ -87,7 +87,7 @@ const artNarrative = (subject, phase) => {
   const s = subject.trim();
   if (/release: v5\.1\.2/i.test(s)) {
     return (
-      "The Ordre des Bougies de Scène crowns **5.1.2** — a wink at DMX512, a vow that TCP/IP and React " +
+      "The Ordre des Bougies de Scène crowns 5.1.2 — a wink at DMX512, a vow that TCP/IP and React " +
       "may finally serve the candle monks' descendants. " +
       s +
       ". Ainsi soit la lumière, mes amis."
