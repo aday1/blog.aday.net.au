@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T16:29:32.509Z",
-  "count": 278,
+  "generated_at": "2026-05-19T02:53:46.342Z",
+  "count": 274,
   "entries": [
     {
       "date": "2010-01-01",
@@ -2398,13 +2398,6 @@
       "source": "bandcamp"
     },
     {
-      "date": "2025-02-08",
-      "title": "Just ctrix things",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/QCSfLzHGPSQ",
-      "source": "youtube"
-    },
-    {
       "date": "2025-10-07",
       "title": "MacroVerse at Melbourne Fringe",
       "desc": "Live sonic/visual universe narrative: Reductionist (micro-instruments) + Aday (projection improv), Clan Analogue, Abbotsford Convent; free exhibition 12-4pm, 7pm performances",
@@ -2496,34 +2489,6 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2026/aday_weeklybeats-2026_3_late-calibration-test-late-submission.mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2026-social.jpg",
       "category": "wb-2026"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "7 March 2026",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/WKIxfbhKbOA",
-      "source": "youtube"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "interupt festival 2026 main day one",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/723RoOtu_K0",
-      "source": "youtube"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "6 March 2026",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/hdWvcwmaaQU",
-      "source": "youtube"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "interupt festival night 1 (teh friday) with Abraide",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/h3MvdL7VM-o",
-      "source": "youtube"
     },
     {
       "date": "2026-03-12",
@@ -2642,6 +2607,13 @@
       "title": "Boot Sequence",
       "desc": "Blog pipeline is live.",
       "url": "/posts/2026-05-14-boot.html",
+      "source": "post"
+    },
+    {
+      "date": "2026-05-19",
+      "title": "Official hosted release — ArtBastard 5.1.2 and Macroverse 42.0",
+      "desc": "First official releases on Linode with dev/live lanes. Prior git history is relic-era archaeology.",
+      "url": "/posts/2026-05-19-official-hosted-release.html",
       "source": "post"
     }
   ]

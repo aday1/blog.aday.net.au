@@ -9,7 +9,7 @@
       "liveUrl": "https://macroverse.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
       "timelineSource": "devlog-macroverse",
-      "maxCommits": 44
+      "maxCommits": 8
     },
     {
       "id": "artbastard",
@@ -20,7 +20,7 @@
       "liveUrl": "https://artbastard.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png",
       "timelineSource": "devlog-artbastard",
-      "maxCommits": 120,
+      "maxCommits": 8,
       "loreFile": "DOCS/HISTORY.md"
     }
   ],
