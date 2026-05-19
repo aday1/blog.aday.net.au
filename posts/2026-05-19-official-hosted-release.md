@@ -53,6 +53,8 @@ Behind the visuals was a toolchain I still use daily:
 
 The relic ladder: Wire Atelier → showcase/docs → VJ & bridge → Linode production → deploy-meta polish → **official 42.0**.
 
+**42.0.1** is the live patch on that line: rich gradient sliders get reliable pointer/touch hit targets after the first deploy (GitHub release tag stays **v42.0**).
+
 - Live: [macroverse.aday.net.au](https://macroverse.aday.net.au)
 - Test: [macroverse-test.aday.net.au](https://macroverse-test.aday.net.au)
 - Release: [v42.0 on GitHub](https://github.com/aday1/macroverse.aday.net.au/releases/tag/v42.0)
