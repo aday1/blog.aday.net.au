@@ -9,6 +9,11 @@
   --panel-b: rgba(8, 16, 30, 0.96);
 }
 
+body.vfx-on canvas,
+body.vfx-on [class*="vfx"] {
+  pointer-events: none !important;
+}
+
 body.blog-bg-on .bg-shader {
   display: block;
   position: fixed;

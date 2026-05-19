@@ -105,6 +105,22 @@
   display: block;
 }
 
+/* Single-panel mode: page scrolls on window; split mode scrolls inside each column */
+.blog-shell-panels[data-view="single"] .blog-panel.is-active {
+  overflow: visible;
+  max-height: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .blog-split-controls {
   margin-top: 0.85rem;
   padding-top: 0.75rem;

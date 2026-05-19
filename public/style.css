@@ -710,7 +710,7 @@ body.retro-cursor-on {
   cursor: var(--blog-retro-cursor), auto !important;
 }
 
-body.retro-cursor-on * {
+body.retro-cursor-on *:not(input):not(textarea):not(select):not(button):not(a) {
   cursor: inherit;
 }
 
