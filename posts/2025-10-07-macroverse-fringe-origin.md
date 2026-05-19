@@ -1,7 +1,7 @@
 ---
 title: MacroVerse at Melbourne Fringe
 date: 2025-10-07
-summary: Live universe-scale AV at Abbotsford Convent; the GLSL→ISF→Wire toolchain that became Macroverse 42.0.
+summary: Live universe-scale AV at Abbotsford Convent; the GLSL→ISF→Wire toolchain that became Macroverse 42.1.
 ---
 
 [MacroVerse](https://www.melbournefringe.com.au/whats-on/events/macroverse) was a live sonic and visual work at [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), part of Abbotsford Convent's experimental art program — contemplative, evocative, transcendent, as the festival put it.
@@ -21,6 +21,6 @@ MacroVerse on stage was not only performance — it was a working pipeline:
 - Export into **Resolume Wire** for the venue stack
 - **FFT** and live parameters steering crossfades, colour, and motion in sync with Reductionist's set
 
-That pipeline — shader index, fix chain, expose params, VJ deck, audience QR, LAN bridge — is what [macroverse.aday.net.au](https://macroverse.aday.net.au) grew into. Version **42.0** is the official hosted release name; the Fringe show is the origin myth.
+That pipeline — shader index, fix chain, expose params, VJ deck, audience QR, LAN bridge — is what [macroverse.aday.net.au](https://macroverse.aday.net.au) grew into. Version **42.1** is the stable hosted release name; the Fringe show is the origin myth.
 
-See also: [Official hosted release — ArtBastard 5.1.2 and Macroverse 42.0](/posts/2026-05-19-official-hosted-release.html) for the relic-era git squash and dev/live lanes.
+See also: [Official hosted release — ArtBastard 5.1.2.0 and Macroverse 42.1](/posts/2026-05-19-official-hosted-release.html) for the relic-era git squash and dev/live lanes.

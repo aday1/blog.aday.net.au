@@ -4,7 +4,7 @@ const MACRO_PHASES = [
   { id: "vj", label: "VJ & Fringe body", match: /vj deck|websocket|audience qr|bridge agent|fringe|relic: vj/i },
   { id: "linode", label: "Linode production", match: /linode|compose|nginx|aday lane|relic: linode/i },
   { id: "deploy", label: "Deploy lanes", match: /deploy-meta|dev\/live|gradient|relic: deploy/i },
-  { id: "official", label: "Official 42.0", match: /release: v42|official hosted/i }
+  { id: "official", label: "Stable 42.1", match: /release: v42|stable hosted|42\.1/i }
 ];
 
 const ART_PHASES = [
@@ -13,8 +13,7 @@ const ART_PHASES = [
   { id: "workbench", label: "Emprunt Macroverse", match: /workbench|envelope|rack|transition tracker|relic: macroverse/i },
   { id: "tracker", label: "Tracker photonique", match: /tracker|fixture-aware|theme api|relic: dmx tracker/i },
   { id: "hosted", label: "Hosted stack", match: /hosted stack|ghcr|bridge|deploy-meta|relic: hosted/i },
-  { id: "hotfix", label: "5.1.2.3 hotfix", match: /5\.1\.2\.3|scroll and range slider|scroll\/slider/i },
-  { id: "official", label: "Official 5.1.2", match: /release: v5\.1\.2|official hosted/i }
+  { id: "official", label: "Stable 5.1.2.0", match: /release: v5\.1\.2|stable hosted|5\.1\.2\.0/i }
 ];
 
 const pickPhase = (trainId, subject) => {
@@ -35,7 +34,7 @@ const macroNarrative = (subject, phase) => {
   const s = subject.trim();
   if (/release: v42/i.test(s)) {
     return (
-      "Forty-Two locks the hosted release: the same tool that once translated GLSL into ISF, " +
+      "Forty-Two locks the stable hosted line at **42.1**: the same tool that once translated GLSL into ISF, " +
       "fed FFT across Reductionist's micro-instruments at Abbotsford Convent, and painted the universe " +
       "from stasis to heat-death — now runs on Linode with dev, live, and aday lanes. " +
       s +
@@ -86,27 +85,13 @@ const macroNarrative = (subject, phase) => {
 
 const artNarrative = (subject, phase) => {
   const s = subject.trim();
-  if (/release: v5\.1\.2\.3|5\.1\.2\.3/i.test(s)) {
+  if (/release: v5\.1\.2|stable hosted|5\.1\.2\.0/i.test(s)) {
     return (
-      "A sub-patch on the DMX512 line: **5.1.2.3** — the monks insist the scroll wheel and the fader " +
-      "thumb are sacred; neither may be stolen by flexbox nor by an over-eager custom cursor. " +
-      s +
-      ". Petite correction, grande lumière."
-    );
-  }
-  if (/release: v5\.1\.2[^.]|scroll and range slider/i.test(s)) {
-    return (
-      "The Ordre des Bougies de Scène crowns 5.1.2 — a wink at DMX512, a vow that TCP/IP and React " +
-      "may finally serve the candle monks' descendants. " +
+      "The Ordre des Bougies de Scène crowns **5.1.2.0** — a wink at DMX512 (5 · 1 · 2), a stable line " +
+      "where TCP/IP and React serve the candle monks' descendants: scroll, sliders, touch faders, " +
+      "hosted stack, and relic work in one release. " +
       s +
       ". Ainsi soit la lumière, mes amis."
-    );
-  }
-  if (/fix\(ui\).*scroll/i.test(s)) {
-    return (
-      "Les faders refusent le silence: page scroll and sliders return to the faithful — " +
-      s +
-      ". (Shipped as 5.1.2.3 on the official line.)"
     );
   }
   const french = {
@@ -134,11 +119,6 @@ const artNarrative = (subject, phase) => {
       "The monks discover Linode — cloud catacombs with GHCR reliquaries: ",
       "Pi bridge agents whisper WSS where bamboo tubes once sighed: ",
       "Deploy-meta: scripture for when dev may ascend to live: "
-    ],
-    hotfix: [
-      "A vesper hotfix — scroll and sliders, lest the show stop in the stall: ",
-      "5.1.2.3: not a new minor, a fourth bead on the 5.1.2 rosary: ",
-      "Pointer-events restored; the custom cursor may not usurp the thumb: "
     ],
     official: [
       "Official sacrament: ",
@@ -177,13 +157,13 @@ export const trainPrologue = (train) => {
     return [
       "Long before DMX512, an elite order of French art-candle monks — the Illuminating Wind Dancing Masters — ran entire stage shows on breath, beeswax, and bamboo air-tracks. Feng Zhi conducted symphonies of flame; the Breaths of Light manuscripts were their patch sheets.",
       "Electricity arrived; the order survived in Parisian warehouses as the Société des Light Jockeys. Le Créateur des Lumières swore never again to insult a photon with a pedestrian desk. Candle logic became Art-Net packets, fan choreography became TouchOSC, catacombs became TCP/IP, ritual became React.",
-      "ArtBastard **5.1.2** (5 · 1 · 2 → DMX512) is the first official hosted release; **5.1.2.3** is the live hotfix on that line (scroll and sliders). Below: relic commits, release, and hotfix — real git history, draped in the same canon as DOCS/HISTORY.md."
+      "ArtBastard **5.1.2.0** (5 · 1 · 2 → DMX512) is the stable hosted line — relic commits plus one release tip. Below: real git history, draped in the same canon as DOCS/HISTORY.md."
     ];
   }
   return [
     "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
-    "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.0**.",
-    "Six relic commits below trace Wire Atelier → showcase → VJ/bridge → Linode → deploy-meta → official release. Each line is a real commit, narrated for the blog timeline."
+    "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.1**.",
+    "Six relic commits below trace Wire Atelier → showcase → VJ/bridge → Linode → deploy-meta → stable **42.1** release. Each line is a real commit, narrated for the blog timeline."
   ];
 };
 
