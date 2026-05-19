@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T03:02:34.939Z",
+  "generated_at": "2026-05-19T03:03:21.310Z",
   "trains": [
     {
       "id": "macroverse",
@@ -191,7 +191,7 @@
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Official 5.1.2",
-              "narrative": "The Ordre des Bougies de Scène crowns **5.1.2** — a wink at DMX512, a vow that TCP/IP and React may finally serve the candle monks' descendants. release: v5.1.2 — first official hosted release (DMX512). Ainsi soit la lumière, mes amis."
+              "narrative": "The Ordre des Bougies de Scène crowns 5.1.2 — a wink at DMX512, a vow that TCP/IP and React may finally serve the candle monks' descendants. release: v5.1.2 — first official hosted release (DMX512). Ainsi soit la lumière, mes amis."
             }
           ]
         },
