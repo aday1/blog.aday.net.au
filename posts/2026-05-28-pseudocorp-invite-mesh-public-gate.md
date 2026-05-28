@@ -32,7 +32,7 @@ Redeploy after edits: node temp_/deploy-public-gate-pages.mjs
 - Tailscale split DNS (Pi-hole via tailnet) — same full site on CELES
 - Public internet (1.1.1.1) — Cloudflare Pages proxied gate, whitepaper, and live phone directory JSON only
 
-ZealPalace uses the same pattern: [zealpalace.aday.net.au](https://zealpalace.aday.net.au/) is mesh only on the open web; on-net gets IRC, admin, blog, and MUD.
+ZealPalace uses the same pattern: [zealpalace.aday.net.au](https://zealpalace.aday.net.au/) is mesh only on the open web; on-net gets IRC, admin, blog, and MUD. See [ZealPalace public mesh gate — IRC MUD, not Minecraft](/posts/2026-05-28-zealpalace-mesh-public-gate.html) for the May 2026 deploy (Minecraft stack removed, Pi simulation restored).
 
 CELES nginx still 302 untrusted clients to pseudocorp-denied.yggdrasil.aday.net.au when they hit the LAN edge without Tailscale or LAN trust.
 

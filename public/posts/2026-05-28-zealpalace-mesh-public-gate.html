@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PSEUDOCORP public mesh gate — invite only // blog.aday.net.au</title>
+  <title>ZealPalace public mesh gate — IRC MUD, not Minecraft // blog.aday.net.au</title>
   <meta name="theme-color" content="#071224">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -27,68 +27,55 @@
   <div class="noise" aria-hidden="true"></div>
   <main>
     <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
-    <h1 class="decrypt">PSEUDOCORP public mesh gate — invite only</h1>
+    <h1 class="decrypt">ZealPalace public mesh gate — IRC MUD, not Minecraft</h1>
     <p class="date">2026-05-28</p>
     
-    <p>The yggdrasil homelab is not a public SaaS. Random visitors who resolve pseudocorp.aday.net.au or pseudocorp.yggdrasil.aday.net.au through public DNS (1.1.1.1) hit Cloudflare Pages — a Windows 3.1 hold-music gate that says plainly: invite mesh only.</p>
+    <p>ZealPalace is the Pi-hosted IRC MUD terrarium (ngIRCd, Zealot bots, filesystem RPG). It is not a public game server. Visitors who resolve <a href="https://zealpalace.aday.net.au/" target="_blank" rel="noopener noreferrer">zealpalace.aday.net.au</a> from the public internet get the same invite-mesh pattern as PSEUDOCORP: Cloudflare Pages gate + GitHub aesthetic, not live IRC or admin.</p>
 
 <h2>What changed (2026-05-28)</h2>
 
-<p>Public gate copy was tightened so nobody mistakes the hostname for an open signup service:</p>
-
 <ul>
-<li>Title and tagline: PSEUDOCORP -- invite mesh only</li>
-<li>Meta description for search snippets</li>
-<li>Hero line: this hostname is not a public service</li>
-<li>Panels renamed to Invite mesh only and Not on the mesh (Tailscale invite required)</li>
-<li>Whitepaper public copy badge: INVITE MESH ONLY // PUBLIC INTERNET = GATE PAGE ONLY</li>
-<li>Deployed to Cloudflare Pages project pseudocorp-denied</li>
+<li>Removed the CELES Minecraft bridge, GM console, and Paper integration. ZealPalace is simulation-only again.</li>
+<li>Rebuilt the public gate and on-net homepage from <a href="https://github.com/aday1/ZealPalace" target="_blank" rel="noopener noreferrer">github.com/aday1/ZealPalace</a> (retro v2.1 site, no Minecraft wishlist).</li>
+<li>Deployed static site to CELES (`/var/www/zealpalace`) and Cloudflare Pages project `zealpalace-denied`.</li>
+<li>Redeployed Pi stack: zealot-bot, zealot-rpg, zealot-hangs, web-api, admin, LCD/SIP patches.</li>
+<li>VoIP on PSEUDOCORP is live (Hermes 111, Grok 112–120); marked on the site wishlist as done.</li>
 </ul>
 
-<p>Source: temp_/pseudocorp-deploy/public-denied/ (synced to CELES /etc/celes/public-pages/ on publish).</p>
-
-<p>Redeploy after edits: node temp_/deploy-public-gate-pages.mjs</p>
-
-<h2>Who sees what (DNS split)</h2>
+<p>Build/deploy from the vault:</p>
 
 <ul>
-<li>Home LAN / Pi-hole (10.13.37.10) resolves pseudocorp.* to 10.13.37.37 CELES — full intranet: NOC, PBX, Hermes, whitepaper</li>
-<li>Tailscale split DNS (Pi-hole via tailnet) — same full site on CELES</li>
-<li>Public internet (1.1.1.1) — Cloudflare Pages proxied gate, whitepaper, and live phone directory JSON only</li>
+<li>`python temp_/pseudocorp-deploy/build-zealpalace-sites.py`</li>
+<li>`powershell temp_/deploy-zealpalace-all.ps1` (CELES + Pi + Cloudflare)</li>
 </ul>
 
-<p>ZealPalace uses the same pattern: <a href="https://zealpalace.aday.net.au/" target="_blank" rel="noopener noreferrer">zealpalace.aday.net.au</a> is mesh only on the open web; on-net gets IRC, admin, blog, and MUD. See <a href="/posts/2026-05-28-zealpalace-mesh-public-gate.html" target="_blank" rel="noopener noreferrer">ZealPalace public mesh gate — IRC MUD, not Minecraft</a> for the May 2026 deploy (Minecraft stack removed, Pi simulation restored).</p>
+<h2>Who sees what</h2>
 
-<p>CELES nginx still 302 untrusted clients to pseudocorp-denied.yggdrasil.aday.net.au when they hit the LAN edge without Tailscale or LAN trust.</p>
+<p>| Client | ZealPalace URL | Gets |</p>
+<p>| --- | --- | --- |</p>
+<p>| Public DNS | <a href="https://zealpalace.aday.net.au/" target="_blank" rel="noopener noreferrer">zealpalace.aday.net.au</a> | Gate page + links to GitHub / whitepaper |</p>
+<p>| LAN / Tailscale | <a href="https://zealpalace.yggdrasil.aday.net.au/" target="_blank" rel="noopener noreferrer">zealpalace.yggdrasil.aday.net.au</a> | Full retro site, `/admin/`, `/api/`, `/blog/` proxied to Pi |</p>
+<p>| IRC clients | `zealpalace.yggdrasil.aday.net.au:6667` | `#ZealPalace`, `#ZealHangs`, `#RPG` (mesh only) |</p>
+
+<p>Legacy `celes-minecraft-*` systemd units on CELES are disabled.</p>
 
 <h2>Public URLs (safe to share)</h2>
 
 <ul>
-<li>Gate: <a href="https://pseudocorp.aday.net.au/" target="_blank" rel="noopener noreferrer">pseudocorp.aday.net.au</a></li>
-<li>Gate (yggdrasil): <a href="https://pseudocorp.yggdrasil.aday.net.au/" target="_blank" rel="noopener noreferrer">pseudocorp.yggdrasil.aday.net.au</a></li>
-<li>Denied alias: <a href="https://pseudocorp-denied.yggdrasil.aday.net.au/" target="_blank" rel="noopener noreferrer">pseudocorp-denied.yggdrasil.aday.net.au</a></li>
-<li>Whitepaper: <a href="https://pseudocorp.aday.net.au/whitepaper.html" target="_blank" rel="noopener noreferrer">pseudocorp.aday.net.au/whitepaper.html</a></li>
+<li>Gate: <a href="https://zealpalace.aday.net.au/" target="_blank" rel="noopener noreferrer">zealpalace.aday.net.au</a></li>
+<li>Gate (yggdrasil): <a href="https://zealpalace-denied.yggdrasil.aday.net.au/" target="_blank" rel="noopener noreferrer">zealpalace-denied.yggdrasil.aday.net.au</a></li>
+<li>Open source: <a href="https://github.com/aday1/ZealPalace" target="_blank" rel="noopener noreferrer">github.com/aday1/ZealPalace</a></li>
 </ul>
-
-<p>Nothing on those URLs registers SIP, opens Hermes, or grants agent access without mesh membership.</p>
 
 <h2>On-net (invite + Tailscale or LAN)</h2>
 
-<p>Same hostnames when split DNS points at CELES:</p>
-
 <ul>
-<li>Program Manager / NOC: <a href="https://pseudocorp.yggdrasil.aday.net.au/" target="_blank" rel="noopener noreferrer">pseudocorp.yggdrasil.aday.net.au</a> from the mesh</li>
-<li>PBX: <a href="https://celes.yggdrasil.aday.net.au/pbx/" target="_blank" rel="noopener noreferrer">celes.yggdrasil.aday.net.au/pbx/</a></li>
-<li>Hermes: <a href="https://celes.yggdrasil.aday.net.au/hermes/" target="_blank" rel="noopener noreferrer">celes.yggdrasil.aday.net.au/hermes/</a></li>
+<li>Palace: <a href="https://zealpalace.yggdrasil.aday.net.au/" target="_blank" rel="noopener noreferrer">zealpalace.yggdrasil.aday.net.au</a></li>
+<li>Browser IRC: <a href="https://pseudocorp.yggdrasil.aday.net.au/irc.html" target="_blank" rel="noopener noreferrer">pseudocorp.yggdrasil.aday.net.au/irc.html</a></li>
+<li>Zealot blog (generated on Pi): <a href="https://zealpalace.yggdrasil.aday.net.au/blog/" target="_blank" rel="noopener noreferrer">zealpalace.yggdrasil.aday.net.au/blog/</a></li>
 </ul>
 
-<p>SIP registrar when registered: pseudocorp.yggdrasil.aday.net.au UDP 5060 — never a public WAN IP.</p>
-
-<p>Friend onboarding: ask aday for a Tailscale invite; first SIP registration can hear SCRIBE HR welcome.</p>
-
-<h2>Why bother</h2>
-
-<p>Portfolio sites (Macroverse, ArtBastard, this blog) are for the open web. The homelab mesh is invite-only: voice, agents, and LAN toys stay behind Tailscale and Pi-hole split DNS. The public gate exists so DNS lookups do not imply an anonymous service — and so hold music still plays while you fetch a whitepaper.</p>
+<p>Related: <a href="/posts/2026-05-28-pseudocorp-invite-mesh-public-gate.html" target="_blank" rel="noopener noreferrer">PSEUDOCORP public mesh gate — invite only</a></p>
     <footer class="blog-footer">
       <div class="footer-wave" aria-hidden="true"></div>
       <p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a></p>

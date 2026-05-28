@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-28T02:17:20.084Z",
-  "count": 276,
+  "generated_at": "2026-05-28T02:40:18.389Z",
+  "count": 277,
   "entries": [
     {
       "date": "2010-01-01",
@@ -2614,6 +2614,13 @@
       "title": "Official hosted release — ArtBastard 5.1.2.0 and Macroverse 42.1",
       "desc": "Stable hosted lines — candle monks to DMX512, Fringe GLSL to Forty-Two.",
       "url": "/posts/2026-05-19-official-hosted-release.html",
+      "source": "post"
+    },
+    {
+      "date": "2026-05-28",
+      "title": "ZealPalace public mesh gate — IRC MUD, not Minecraft",
+      "desc": "ZealPalace on the open web is a retro gate page only; on-net gets the Pi IRC MUD, blog, and admin. Minecraft stack removed.",
+      "url": "/posts/2026-05-28-zealpalace-mesh-public-gate.html",
       "source": "post"
     },
     {
