@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T12:56:13.106Z",
+  "generated_at": "2026-05-28T02:17:16.906Z",
   "trains": [
     {
       "id": "macroverse",
@@ -128,7 +128,7 @@
       "github": "aday1/artbastard.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png",
       "timelineSource": "devlog-artbastard",
-      "commitCount": 6,
+      "commitCount": 7,
       "prologue": [
         "Long before DMX512, an elite order of French art-candle monks — the Illuminating Wind Dancing Masters — ran entire stage shows on breath, beeswax, and bamboo air-tracks. Feng Zhi conducted symphonies of flame; the Breaths of Light manuscripts were their patch sheets.",
         "Electricity arrived; the order survived in Parisian warehouses as the Société des Light Jockeys. Le Créateur des Lumières swore never again to insult a photon with a pedestrian desk. Candle logic became Art-Net packets, fan choreography became TouchOSC, catacombs became TCP/IP, ritual became React.",
@@ -139,6 +139,18 @@
           "id": "official",
           "label": "Stable 5.1.2.0",
           "items": [
+            {
+              "sha": "3c313377ce59",
+              "shaFull": "3c313377ce591d57e2d2b9edfe6e0a6d8354ca21",
+              "date": "2026-05-19",
+              "subject": "fix(release): restore version helpers; CI build for 5.1.2.0",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/3c313377ce591d57e2d2b9edfe6e0a6d8354ca21",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "official",
+              "phaseLabel": "Stable 5.1.2.0",
+              "narrative": "The Ordre des Bougies de Scène crowns **5.1.2.0** — a wink at DMX512 (5 · 1 · 2), a stable line where TCP/IP and React serve the candle monks' descendants: scroll, sliders, touch faders, hosted stack, and relic work in one release. fix(release): restore version helpers; CI build for 5.1.2.0. Ainsi soit la lumière, mes amis."
+            },
             {
               "sha": "7218ecdaba69",
               "shaFull": "7218ecdaba691a2446427c27ad15f0f1cad3a2d6",

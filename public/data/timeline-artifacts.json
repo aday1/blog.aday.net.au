@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-19T12:56:15.462Z",
-  "count": 279,
+  "generated_at": "2026-05-28T02:17:20.084Z",
+  "count": 276,
   "entries": [
     {
       "date": "2010-01-01",
@@ -2398,13 +2398,6 @@
       "source": "bandcamp"
     },
     {
-      "date": "2025-02-08",
-      "title": "Just ctrix things",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/QCSfLzHGPSQ",
-      "source": "youtube"
-    },
-    {
       "date": "2025-10-07",
       "title": "MacroVerse at Melbourne Fringe",
       "desc": "Live sonic/visual universe narrative: Reductionist (micro-instruments) + Aday (projection improv), Clan Analogue, Abbotsford Convent; free exhibition 12-4pm, 7pm performances",
@@ -2496,34 +2489,6 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2026/aday_weeklybeats-2026_3_late-calibration-test-late-submission.mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2026-social.jpg",
       "category": "wb-2026"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "7 March 2026",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/WKIxfbhKbOA",
-      "source": "youtube"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "interupt festival 2026 main day one",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/723RoOtu_K0",
-      "source": "youtube"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "6 March 2026",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/hdWvcwmaaQU",
-      "source": "youtube"
-    },
-    {
-      "date": "2026-03-06",
-      "title": "interupt festival night 1 (teh friday) with Abraide",
-      "desc": "YouTube upload/feed item",
-      "url": "https://www.youtube.com/shorts/h3MvdL7VM-o",
-      "source": "youtube"
     },
     {
       "date": "2026-03-12",
@@ -2650,6 +2615,20 @@
       "desc": "Stable hosted lines — candle monks to DMX512, Fringe GLSL to Forty-Two.",
       "url": "/posts/2026-05-19-official-hosted-release.html",
       "source": "post"
+    },
+    {
+      "date": "2026-05-28",
+      "title": "PSEUDOCORP public mesh gate — invite only",
+      "desc": "Cloudflare Pages gate copy now states invite-mesh-only; public DNS never serves the full homelab site.",
+      "url": "/posts/2026-05-28-pseudocorp-invite-mesh-public-gate.html",
+      "source": "post"
+    },
+    {
+      "date": "2027-05-23",
+      "title": "YouTube tracker snapshot",
+      "desc": "Latest discovered public analytics timestamp from stats mirror",
+      "url": "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
+      "source": "youtube"
     }
   ]
 }
