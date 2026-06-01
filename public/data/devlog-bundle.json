@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T02:40:15.235Z",
+  "generated_at": "2026-06-01T08:16:09.147Z",
   "trains": [
     {
       "id": "macroverse",
@@ -9,7 +9,7 @@
       "github": "aday1/macroverse.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
       "timelineSource": "devlog-macroverse",
-      "commitCount": 6,
+      "commitCount": 8,
       "prologue": [
         "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
         "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.1**.",
@@ -21,52 +21,76 @@
           "label": "Stable 42.1",
           "items": [
             {
-              "sha": "608f73e7e295",
-              "shaFull": "608f73e7e2956a08de0b7a8a643dd2f55274ea93",
-              "date": "2026-05-19",
-              "subject": "release: v42.1 — stable hosted (Forty-Two)",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/608f73e7e2956a08de0b7a8a643dd2f55274ea93",
+              "sha": "7d071b81867c",
+              "shaFull": "7d071b81867c9269981e2f17a8a31b06b92c5bf9",
+              "date": "2026-06-01",
+              "subject": "Add BPM-synced Auto-VJ parameter motion modes and bar timing.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/7d071b81867c9269981e2f17a8a31b06b92c5bf9",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
               "phaseId": "official",
               "phaseLabel": "Stable 42.1",
-              "narrative": "Forty-Two locks the stable hosted line at **42.1**: the same tool that once translated GLSL into ISF, fed FFT across Reductionist's micro-instruments at Abbotsford Convent, and painted the universe from stasis to heat-death — now runs on Linode with dev, live, and aday lanes. release: v42.1 — stable hosted (Forty-Two)."
-            }
-          ]
-        },
-        {
-          "id": "deploy",
-          "label": "Deploy lanes",
-          "items": [
+              "narrative": "Official orbit achieved: Add BPM-synced Auto-VJ parameter motion modes and bar timing.. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
             {
-              "sha": "07a39b106982",
-              "shaFull": "07a39b106982796f5ee09bc94ed0b0bb3f977967",
-              "date": "2026-05-19",
-              "subject": "relic: Deploy-meta, dev/live switcher, gradient controls polish",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/07a39b106982796f5ee09bc94ed0b0bb3f977967",
+              "sha": "04e81dbd481e",
+              "shaFull": "04e81dbd481e18d1e1423027420c6995e453d6fa",
+              "date": "2026-06-01",
+              "subject": "Add VJ mix FX modes and Random auto-transition mixing.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/04e81dbd481e18d1e1423027420c6995e453d6fa",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "deploy",
-              "phaseLabel": "Deploy lanes",
-              "narrative": "Deploy-meta tells you when dev may kiss live: relic: Deploy-meta, dev/live switcher, gradient controls polish. Feeds the master timeline on blog.aday.net.au."
-            }
-          ]
-        },
-        {
-          "id": "linode",
-          "label": "Linode production",
-          "items": [
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Official orbit achieved: Add VJ mix FX modes and Random auto-transition mixing.. Feeds the master timeline on blog.aday.net.au."
+            },
             {
-              "sha": "515e38018083",
-              "shaFull": "515e38018083667fe503155e225a1f62815c2b8c",
-              "date": "2026-05-19",
-              "subject": "relic: Linode production — compose, nginx, aday lane, DNS ops",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/515e38018083667fe503155e225a1f62815c2b8c",
+              "sha": "f70f8d4a35e4",
+              "shaFull": "f70f8d4a35e4ff0fb2919d7ff111d8da65626bf3",
+              "date": "2026-06-01",
+              "subject": "Generate carousel previews on idle cycles only, visible cards first.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f70f8d4a35e4ff0fb2919d7ff111d8da65626bf3",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "linode",
-              "phaseLabel": "Linode production",
-              "narrative": "Production gravity well for the shader engine: relic: Linode production — compose, nginx, aday lane, DNS ops. Feeds the master timeline on blog.aday.net.au."
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Generate carousel previews on idle cycles only, visible cards first.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "3dea5edca6fb",
+              "shaFull": "3dea5edca6fb5c221a8de3bed1ad82efbd5ae280",
+              "date": "2026-06-01",
+              "subject": "Auto-generate shader previews for the VJ carousel on load.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3dea5edca6fb5c221a8de3bed1ad82efbd5ae280",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Auto-generate shader previews for the VJ carousel on load.. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "e3c9c5690090",
+              "shaFull": "e3c9c569009011f5b5a6044c6bb5c2179e274992",
+              "date": "2026-06-01",
+              "subject": "Show last build time and deploy age on the splash screen.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e3c9c569009011f5b5a6044c6bb5c2179e274992",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Show last build time and deploy age on the splash screen.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "f20bd7e1a61f",
+              "shaFull": "f20bd7e1a61ffc6a0dd779e9227fed1c04a1e969",
+              "date": "2026-06-01",
+              "subject": "Redesign splash as full-screen loading view with giant QRs.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f20bd7e1a61ffc6a0dd779e9227fed1c04a1e969",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Redesign splash as full-screen loading view with giant QRs.. Feeds the master timeline on blog.aday.net.au."
             }
           ]
         },
@@ -75,46 +99,28 @@
           "label": "VJ & Fringe body",
           "items": [
             {
-              "sha": "dd171466d1b0",
-              "shaFull": "dd171466d1b0ca5b201617643a9f042904dc13ba",
-              "date": "2026-05-19",
-              "subject": "relic: VJ deck — sessions, WebSocket sync, audience QR, bridge agent",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/dd171466d1b0ca5b201617643a9f042904dc13ba",
+              "sha": "278cd6c0cdbf",
+              "shaFull": "278cd6c0cdbf689c247c8fbaff547f2c66ba6764",
+              "date": "2026-06-01",
+              "subject": "Enlarge VJ deck previews and touch-friendly deck sliders.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/278cd6c0cdbf689c247c8fbaff547f2c66ba6764",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
               "phaseId": "vj",
               "phaseLabel": "VJ & Fringe body",
-              "narrative": "Reductionist's macro-narrative, your FFT on the visuals: relic: VJ deck — sessions, WebSocket sync, audience QR, bridge agent. Feeds the master timeline on blog.aday.net.au."
-            }
-          ]
-        },
-        {
-          "id": "wire",
-          "label": "Wire Atelier",
-          "items": [
-            {
-              "sha": "e663efcec411",
-              "shaFull": "e663efcec41193bfc190981176af268afa5407f4",
-              "date": "2026-05-19",
-              "subject": "relic: Wired Atelier theme — showcase, docs, GH Pages, release binaries",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e663efcec41193bfc190981176af268afa5407f4",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "wire",
-              "phaseLabel": "Wire Atelier",
-              "narrative": "The Fringe tool-chain takes shape in code: relic: Wired Atelier theme — showcase, docs, GH Pages, release binaries. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+              "narrative": "7pm session energy — deck sync and audience QR: Enlarge VJ deck previews and touch-friendly deck sliders.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
             },
             {
-              "sha": "548ea714d88b",
-              "shaFull": "548ea714d88bb3c01c1b5799832061e96c9003cc",
-              "date": "2026-05-19",
-              "subject": "relic: Wire Atelier — shader index, GLSL lab, Resolume pipeline",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/548ea714d88bb3c01c1b5799832061e96c9003cc",
+              "sha": "bf31078434e9",
+              "shaFull": "bf31078434e960863488f63ac36e2cc4ad4c8bee",
+              "date": "2026-06-01",
+              "subject": "Make VJ deck and master previews fill their layout boxes.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/bf31078434e960863488f63ac36e2cc4ad4c8bee",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "wire",
-              "phaseLabel": "Wire Atelier",
-              "narrative": "The Fringe tool-chain takes shape in code: relic: Wire Atelier — shader index, GLSL lab, Resolume pipeline. Feeds the master timeline on blog.aday.net.au."
+              "phaseId": "vj",
+              "phaseLabel": "VJ & Fringe body",
+              "narrative": "7pm session energy — deck sync and audience QR: Make VJ deck and master previews fill their layout boxes.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
             }
           ]
         }
