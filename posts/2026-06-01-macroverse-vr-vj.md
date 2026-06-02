@@ -10,7 +10,7 @@ tags:
   - vj
 ---
 
-Macroverse **42.2** adds WebXR to the gig stack: scan a QR, put on a Quest, and you are inside the live VJ mix — or wearing the remote desk.
+Macroverse **42.2** adds WebXR to the gig stack: scan a QR, put on a Quest, and you are inside the live VJ mix — or wearing the remote desk. Flat phones use the same session tokens; see [Mobile VJ shell and audience phones](/posts/2026-06-02-macroverse-mobile-audience-vj.html).
 
 ---
 

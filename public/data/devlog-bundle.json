@@ -1,96 +1,162 @@
 {
-  "generated_at": "2026-06-01T08:16:09.147Z",
+  "generated_at": "2026-06-02T06:47:36.098Z",
   "trains": [
     {
       "id": "macroverse",
       "title": "Macroverse",
-      "tagline": "GLSL → ISF → Resolume Wire, born at Melbourne Fringe — universe-scale visuals in the tab (42.1).",
+      "tagline": "GLSL → ISF → Resolume Wire, born at Melbourne Fringe — cloud VJ, mobile shell, WebXR audience (42.2).",
       "liveUrl": "https://macroverse.aday.net.au",
       "github": "aday1/macroverse.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
       "timelineSource": "devlog-macroverse",
-      "commitCount": 8,
+      "commitCount": 12,
       "prologue": [
         "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
-        "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.1**.",
-        "Six relic commits below trace Wire Atelier → showcase → VJ/bridge → Linode → deploy-meta → stable **42.1** release. Each line is a real commit, narrated for the blog timeline."
+        "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au. Stable **42.1** consolidated hosted lanes; **42.2** adds WebXR VR, touch-first mobile shell, and audience participation on the flat stream.",
+        "Recent commits below trace the 42.2 gig stack (VR, mobile drawer UI, splash QRs, co-VJ tokens) back through deploy-meta and the **42.1** release line. Each line is a real commit, narrated for the blog timeline."
       ],
       "phases": [
+        {
+          "id": "fortytwo-two",
+          "label": "42.2 — VR, mobile & audience",
+          "items": [
+            {
+              "sha": "cd52925ace4c",
+              "shaFull": "cd52925ace4c2e4830cba141dc594532d8757d0b",
+              "date": "2026-06-02",
+              "subject": "Fix VJ shader carousel A/B taps being swallowed by card drag.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/cd52925ace4c2e4830cba141dc594532d8757d0b",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Fix VJ shader carousel A/B taps being swallowed by card drag.. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "f2effe9b7d51",
+              "shaFull": "f2effe9b7d51b56b90b8e005ebe797e80e8ed62c",
+              "date": "2026-06-02",
+              "subject": "Add splash QR copy links, Jump into VR chooser, and VR page UI polish.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f2effe9b7d51b56b90b8e005ebe797e80e8ed62c",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "Audience in the pocket, VJ in the dome — Add splash QR copy links, Jump into VR chooser, and VR page UI polish.. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "8cbc57778c3b",
+              "shaFull": "8cbc57778c3b89fb8b99b8e76313ca65ff7c45aa",
+              "date": "2026-06-01",
+              "subject": "Move VJ session chip to top-right and clamp QR panel to viewport.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/8cbc57778c3b89fb8b99b8e76313ca65ff7c45aa",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "WebXR and touch tiers ship together: Move VJ session chip to top-right and clamp QR panel to viewport.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "82cbda956d7a",
+              "shaFull": "82cbda956d7a3b0672c0ab428a11280ed90b2b22",
+              "date": "2026-06-01",
+              "subject": "Fix VJ shader gallery empty on startup when index loads after deck mount.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/82cbda956d7a3b0672c0ab428a11280ed90b2b22",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Fix VJ shader gallery empty on startup when index loads after deck mount.. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "e347d2c89114",
+              "shaFull": "e347d2c89114af23ab905e11b59595818dea4c57",
+              "date": "2026-06-01",
+              "subject": "Restore VJ shader gallery as dedicated row above decks.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e347d2c89114af23ab905e11b59595818dea4c57",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "WebXR and touch tiers ship together: Restore VJ shader gallery as dedicated row above decks.. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "19153cf885f8",
+              "shaFull": "19153cf885f84f4d450488495d25aa6ad5932c85",
+              "date": "2026-06-01",
+              "subject": "Fix VJ shader carousel clipped by filter strip layout.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/19153cf885f84f4d450488495d25aa6ad5932c85",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Fix VJ shader carousel clipped by filter strip layout.. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "dd0291fec2fd",
+              "shaFull": "dd0291fec2fda5c5287f9b75ecedaff4d72981cd",
+              "date": "2026-06-01",
+              "subject": "Fix cloud 403 spam from stale VJ tokens after deploy.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/dd0291fec2fda5c5287f9b75ecedaff4d72981cd",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "Audience in the pocket, VJ in the dome — Fix cloud 403 spam from stale VJ tokens after deploy.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "b335062498ac",
+              "shaFull": "b335062498ac6fa6ebc8f101ff9162f912af8681",
+              "date": "2026-06-01",
+              "subject": "Colorful view-mode tabs with icons; fix VJ token and WebSocket nginx paths.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/b335062498ac6fa6ebc8f101ff9162f912af8681",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Colorful view-mode tabs with icons; fix VJ token and WebSocket nginx paths.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "76c9d6807f67",
+              "shaFull": "76c9d6807f67d961defbd245fcc56ee2542a4da8",
+              "date": "2026-06-01",
+              "subject": "Fix preview WebGL uniform spam and add mobile-web-app-capable meta.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/76c9d6807f67d961defbd245fcc56ee2542a4da8",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Fix preview WebGL uniform spam and add mobile-web-app-capable meta.. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "169e312efa67",
+              "shaFull": "169e312efa67e59b41325ef9355206c3805585e4",
+              "date": "2026-06-01",
+              "subject": "Ignore stale VJ control tokens on cloud; dedupe token mint client-side.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/169e312efa67e59b41325ef9355206c3805585e4",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Ignore stale VJ control tokens on cloud; dedupe token mint client-side.. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            }
+          ]
+        },
         {
           "id": "official",
           "label": "Stable 42.1",
           "items": [
             {
-              "sha": "7d071b81867c",
-              "shaFull": "7d071b81867c9269981e2f17a8a31b06b92c5bf9",
+              "sha": "53fac7734bf5",
+              "shaFull": "53fac7734bf54bdf4dbb6db80bf18d18f8c534b7",
               "date": "2026-06-01",
-              "subject": "Add BPM-synced Auto-VJ parameter motion modes and bar timing.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/7d071b81867c9269981e2f17a8a31b06b92c5bf9",
+              "subject": "Fix VJ session QR dropdown clipped below viewport.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/53fac7734bf54bdf4dbb6db80bf18d18f8c534b7",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
               "phaseId": "official",
               "phaseLabel": "Stable 42.1",
-              "narrative": "Official orbit achieved: Add BPM-synced Auto-VJ parameter motion modes and bar timing.. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "04e81dbd481e",
-              "shaFull": "04e81dbd481e18d1e1423027420c6995e453d6fa",
-              "date": "2026-06-01",
-              "subject": "Add VJ mix FX modes and Random auto-transition mixing.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/04e81dbd481e18d1e1423027420c6995e453d6fa",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Official orbit achieved: Add VJ mix FX modes and Random auto-transition mixing.. Feeds the master timeline on blog.aday.net.au."
-            },
-            {
-              "sha": "f70f8d4a35e4",
-              "shaFull": "f70f8d4a35e4ff0fb2919d7ff111d8da65626bf3",
-              "date": "2026-06-01",
-              "subject": "Generate carousel previews on idle cycles only, visible cards first.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f70f8d4a35e4ff0fb2919d7ff111d8da65626bf3",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "v42.0 on the manifest: Generate carousel previews on idle cycles only, visible cards first.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "3dea5edca6fb",
-              "shaFull": "3dea5edca6fb5c221a8de3bed1ad82efbd5ae280",
-              "date": "2026-06-01",
-              "subject": "Auto-generate shader previews for the VJ carousel on load.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3dea5edca6fb5c221a8de3bed1ad82efbd5ae280",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "v42.0 on the manifest: Auto-generate shader previews for the VJ carousel on load.. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "e3c9c5690090",
-              "shaFull": "e3c9c569009011f5b5a6044c6bb5c2179e274992",
-              "date": "2026-06-01",
-              "subject": "Show last build time and deploy age on the splash screen.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e3c9c569009011f5b5a6044c6bb5c2179e274992",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Hosted Forty-Two: Show last build time and deploy age on the splash screen.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "f20bd7e1a61f",
-              "shaFull": "f20bd7e1a61ffc6a0dd779e9227fed1c04a1e969",
-              "date": "2026-06-01",
-              "subject": "Redesign splash as full-screen loading view with giant QRs.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f20bd7e1a61ffc6a0dd779e9227fed1c04a1e969",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Hosted Forty-Two: Redesign splash as full-screen loading view with giant QRs.. Feeds the master timeline on blog.aday.net.au."
+              "narrative": "v42.0 on the manifest: Fix VJ session QR dropdown clipped below viewport.. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
             }
           ]
         },
@@ -99,28 +165,16 @@
           "label": "VJ & Fringe body",
           "items": [
             {
-              "sha": "278cd6c0cdbf",
-              "shaFull": "278cd6c0cdbf689c247c8fbaff547f2c66ba6764",
+              "sha": "d41878cfac4b",
+              "shaFull": "d41878cfac4b6f317466d40313f496cda8cea1bd",
               "date": "2026-06-01",
-              "subject": "Enlarge VJ deck previews and touch-friendly deck sliders.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/278cd6c0cdbf689c247c8fbaff547f2c66ba6764",
+              "subject": "Fix WebSocket /ws handshake, stable VJ QR tokens, and view tabs in VJ mode.",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/d41878cfac4b6f317466d40313f496cda8cea1bd",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
               "phaseId": "vj",
               "phaseLabel": "VJ & Fringe body",
-              "narrative": "7pm session energy — deck sync and audience QR: Enlarge VJ deck previews and touch-friendly deck sliders.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "bf31078434e9",
-              "shaFull": "bf31078434e960863488f63ac36e2cc4ad4c8bee",
-              "date": "2026-06-01",
-              "subject": "Make VJ deck and master previews fill their layout boxes.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/bf31078434e960863488f63ac36e2cc4ad4c8bee",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "vj",
-              "phaseLabel": "VJ & Fringe body",
-              "narrative": "7pm session energy — deck sync and audience QR: Make VJ deck and master previews fill their layout boxes.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+              "narrative": "Clan Analogue ingenuity, now multi-browser VJ: Fix WebSocket /ws handshake, stable VJ QR tokens, and view tabs in VJ mode.. Feeds the master timeline on blog.aday.net.au."
             }
           ]
         }
@@ -146,76 +200,76 @@
           "label": "Stable 5.1.2.0",
           "items": [
             {
-              "sha": "3c313377ce59",
-              "shaFull": "3c313377ce591d57e2d2b9edfe6e0a6d8354ca21",
-              "date": "2026-05-19",
-              "subject": "fix(release): restore version helpers; CI build for 5.1.2.0",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/3c313377ce591d57e2d2b9edfe6e0a6d8354ca21",
+              "sha": "98c2c104aef4",
+              "shaFull": "98c2c104aef472ded743a960f386f48135a8922a",
+              "date": "2026-02-27",
+              "subject": "Update Vite configuration for framer-motion and optimize dependencies",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/98c2c104aef472ded743a960f386f48135a8922a",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "The Ordre des Bougies de Scène crowns **5.1.2.0** — a wink at DMX512 (5 · 1 · 2), a stable line where TCP/IP and React serve the candle monks' descendants: scroll, sliders, touch faders, hosted stack, and relic work in one release. fix(release): restore version helpers; CI build for 5.1.2.0. Ainsi soit la lumière, mes amis."
+              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Update Vite configuration for framer-motion and optimize dependencies. React components are the new bamboo tubes."
             },
             {
-              "sha": "7218ecdaba69",
-              "shaFull": "7218ecdaba691a2446427c27ad15f0f1cad3a2d6",
-              "date": "2026-05-19",
-              "subject": "release: v5.1.2.0 — stable hosted (DMX512)",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/7218ecdaba691a2446427c27ad15f0f1cad3a2d6",
+              "sha": "e3c060ed0ae2",
+              "shaFull": "e3c060ed0ae2557b13a823ddb2811eab00391d21",
+              "date": "2026-02-27",
+              "subject": "Update package-lock.json and start.ps1 for improved user experience and dependency management",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/e3c060ed0ae2557b13a823ddb2811eab00391d21",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "The Ordre des Bougies de Scène crowns **5.1.2.0** — a wink at DMX512 (5 · 1 · 2), a stable line where TCP/IP and React serve the candle monks' descendants: scroll, sliders, touch faders, hosted stack, and relic work in one release. release: v5.1.2.0 — stable hosted (DMX512). Ainsi soit la lumière, mes amis."
-            }
-          ]
-        },
-        {
-          "id": "hosted",
-          "label": "Hosted stack",
-          "items": [
-            {
-              "sha": "d1ca2d8ea6fb",
-              "shaFull": "d1ca2d8ea6fb36634a7c3b1a0f374bc2a950a94e",
-              "date": "2026-05-19",
-              "subject": "relic: Hosted stack — Linode, GHCR, deploy-meta, Pi LAN bridge",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/d1ca2d8ea6fb36634a7c3b1a0f374bc2a950a94e",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "hosted",
-              "phaseLabel": "Hosted stack",
-              "narrative": "Deploy-meta: scripture for when dev may ascend to live: relic: Hosted stack — Linode, GHCR, deploy-meta, Pi LAN bridge. Vibe-coded, beret-approved, monastery-sanctioned."
-            }
-          ]
-        },
-        {
-          "id": "workbench",
-          "label": "Emprunt Macroverse",
-          "items": [
-            {
-              "sha": "b122baf05a1d",
-              "shaFull": "b122baf05a1d0b66aa773dc720d14354fef157b7",
-              "date": "2026-05-19",
-              "subject": "relic: DMX Tracker + fixture-aware lanes + live theme API",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b122baf05a1d0b66aa773dc720d14354fef157b7",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "workbench",
-              "phaseLabel": "Emprunt Macroverse",
-              "narrative": "A stolen glance at Macroverse's envelope cathedral: relic: DMX Tracker + fixture-aware lanes + live theme API. The photons remember the candles."
+              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Update package-lock.json and start.ps1 for improved user experience and dependency management. The photons remember the candles."
             },
             {
-              "sha": "6916d2f674d3",
-              "shaFull": "6916d2f674d3212b4ede112fe456cc873622168e",
-              "date": "2026-05-19",
-              "subject": "relic: Macroverse workbench borrow — envelopes, rack, transition tracker",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/6916d2f674d3212b4ede112fe456cc873622168e",
+              "sha": "eaedd89ac822",
+              "shaFull": "eaedd89ac8225e0f13704b6c41d2c773765014d4",
+              "date": "2026-02-27",
+              "subject": "Update documentation and publish labeled UI UX release tour",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/eaedd89ac8225e0f13704b6c41d2c773765014d4",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "workbench",
-              "phaseLabel": "Emprunt Macroverse",
-              "narrative": "A stolen glance at Macroverse's envelope cathedral: relic: Macroverse workbench borrow — envelopes, rack, transition tracker. Not for the faint of PAR."
+              "phaseId": "official",
+              "phaseLabel": "Stable 5.1.2.0",
+              "narrative": "DMX512 nod enshrined: Update documentation and publish labeled UI UX release tour. Not for the faint of PAR."
+            },
+            {
+              "sha": "9965bf1eaa4b",
+              "shaFull": "9965bf1eaa4b0f9a71c2002a7f9dd0b0717ade89",
+              "date": "2026-02-27",
+              "subject": "Remove root react-beautiful-dnd to fix npm ci in backend CI",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9965bf1eaa4b0f9a71c2002a7f9dd0b0717ade89",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "official",
+              "phaseLabel": "Stable 5.1.2.0",
+              "narrative": "DMX512 nod enshrined: Remove root react-beautiful-dnd to fix npm ci in backend CI. Not for the faint of PAR."
+            },
+            {
+              "sha": "165bb1c07820",
+              "shaFull": "165bb1c0782031494107ab3572be60eff9ee075e",
+              "date": "2026-02-27",
+              "subject": "Add X-Touch and APC40 MIDI controller templates",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/165bb1c0782031494107ab3572be60eff9ee075e",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "official",
+              "phaseLabel": "Stable 5.1.2.0",
+              "narrative": "DMX512 nod enshrined: Add X-Touch and APC40 MIDI controller templates. TCP/IP carries what wind once did."
+            },
+            {
+              "sha": "c76a1dd2fd92",
+              "shaFull": "c76a1dd2fd9233577ed83b434d7f85bfdcbe376c",
+              "date": "2026-02-27",
+              "subject": "Stabilize experimental hash routing and tab deep links",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c76a1dd2fd9233577ed83b434d7f85bfdcbe376c",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "official",
+              "phaseLabel": "Stable 5.1.2.0",
+              "narrative": "Official sacrament: Stabilize experimental hash routing and tab deep links. Not for the faint of PAR."
             }
           ]
         },
@@ -224,34 +278,16 @@
           "label": "SuperControl salon",
           "items": [
             {
-              "sha": "42dc65b27ff9",
-              "shaFull": "42dc65b27ff902d2b4cbaac9215144f0a6222259",
-              "date": "2026-05-19",
-              "subject": "relic: SuperControl skeuomorph — metallic UI, TouchOSC, MIDI templates",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/42dc65b27ff902d2b4cbaac9215144f0a6222259",
+              "sha": "c48822e63164",
+              "shaFull": "c48822e63164e8a79581faae8d87337c68ce6955",
+              "date": "2026-02-27",
+              "subject": "SuperControl UX improvements, build fallback, demo documentation (#32)",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/c48822e63164e8a79581faae8d87337c68ce6955",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "supercontrol",
               "phaseLabel": "SuperControl salon",
-              "narrative": "TouchOSC scrolls replace silk fan gestures, non?: relic: SuperControl skeuomorph — metallic UI, TouchOSC, MIDI templates. Vibe-coded, beret-approved, monastery-sanctioned."
-            }
-          ]
-        },
-        {
-          "id": "candles",
-          "label": "Ordre des bougies",
-          "items": [
-            {
-              "sha": "aab365c517dc",
-              "shaFull": "aab365c517dc5041a69551141bb6e606cc5233cd",
-              "date": "2026-05-19",
-              "subject": "relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/aab365c517dc5041a69551141bb6e606cc5233cd",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "candles",
-              "phaseLabel": "Ordre des bougies",
-              "narrative": "Before Art-Net, the elite French art-candle monks conducted stages with breath and beeswax: relic: DMX512 desk prototype — Art-Net, scenes, fixture JSON. Not for the faint of PAR."
+              "narrative": "SuperControl: skeuomorphic heresy the monks would have adored: SuperControl UX improvements, build fallback, demo documentation (#32). Vibe-coded, beret-approved, monastery-sanctioned."
             }
           ]
         }

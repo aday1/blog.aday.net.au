@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Macroverse 42.2 — WebXR VR VJ // blog.aday.net.au</title>
+  <title>Macroverse 42.2 — Mobile VJ shell &amp; audience phones // blog.aday.net.au</title>
   <meta name="theme-color" content="#071224">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
@@ -27,38 +27,48 @@
   <div class="noise" aria-hidden="true"></div>
   <main>
     <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
-    <h1 class="decrypt">Macroverse 42.2 — WebXR VR VJ</h1>
-    <p class="date">2026-06-01</p>
+    <h1 class="decrypt">Macroverse 42.2 — Mobile VJ shell &amp; audience phones</h1>
+    <p class="date">2026-06-02</p>
     
-    <p>Macroverse **42.2** adds WebXR to the gig stack: scan a QR, put on a Quest, and you are inside the live VJ mix — or wearing the remote desk. Flat phones use the same session tokens; see <a href="/posts/2026-06-02-macroverse-mobile-audience-vj.html" target="_blank" rel="noopener noreferrer">Mobile VJ shell and audience phones</a>.</p>
+    <p>Macroverse **42.2** is not desktop-only. The hosted cloud lanes now use a **touch-aware layout tier**: phones and tablets get a drawer shell instead of the three-column desktop grid, and the VJ deck stays usable with fat thumbs in a dark venue.</p>
+
+<p>Pair this with the <a href="/posts/2026-06-01-macroverse-vr-vj.html" target="_blank" rel="noopener noreferrer">WebXR VR VJ post</a> — flat phones, Quest headsets, and full co-VJ desks all share one salted gig session.</p>
 
 <p>---</p>
 
 <h2>What shipped</h2>
 
-<h3>Audience VR</h3>
+<h3>Mobile bottom tab bar</h3>
 
-<p>Open **Copy VR audience** from the VJ deck QR panel (or `vj-vr.html?remote=1&amp;viewToken=…`).</p>
-
-<ul>
-<li>SSE stream of the host A/B mix inside an immersive **360 dome** (default) or flat **screen** mode (`&amp;mode=screen`)</li>
-<li>Same signed `viewToken` tier as the flat phone stream — watch-only unless **Audience participation** is on</li>
-<li>When participation is enabled, touch or drag in VR steers `mouseX` / `mouseY` only (no deck hijack)</li>
-</ul>
-
-<h3>VJ controller VR</h3>
-
-<p>Open **Copy VR VJ** (`role=vj` + `controlToken` + `viewToken`).</p>
+<p>On viewports under **640px** you get five fixed tabs:</p>
 
 <ul>
-<li>Remote desk over WebSocket: crossfader, deck clips, mix mode, Auto VJ on/off and BPM</li>
-<li>**Live GLSL push** to the host via `vj:shader-live` — code from VR recompiles on the operator machine</li>
-<li>Enter/exit immersive WebXR with a DOM overlay HUD; host outputs and flat audience streams keep running</li>
+<li>**Library** — shader index dock</li>
+<li>**Preview** / **Code** — core views</li>
+<li>**Params** — right-hand slider dock</li>
+<li>**More** — VJ deck, Gallery, Split, command palette, Settings, Help</li>
 </ul>
 
-<h3>Auto VJ refinements</h3>
+<p>The top-bar **View** dropdown mirrors the tab strip when horizontal space is tight. Settings also has a **Mobile / Desktop** toggle if you want to force the mobile CSS on a laptop (Steam Deck, kiosk, etc.).</p>
 
-<p>When Auto VJ is on, **shader swap** and **depth/param motion** are independent toggles (persisted per browser).</p>
+<h3>Touch-friendly VJ deck</h3>
+
+<ul>
+<li>Deck previews and master mix fill their layout boxes on small screens</li>
+<li>Crossfader and deck sliders use touch-friendly hit targets (`touch-action` so drags do not scroll the page)</li>
+<li>Startup **splash QRs** show VJ collaboration + audience stream while the index loads — scan before the library finishes indexing</li>
+</ul>
+
+<h3>Audience on phones (flat stream)</h3>
+
+<p>Same tier as VR audience, without a headset:</p>
+
+<ul>
+<li>VJ deck QR panel → **Audience stream** → `vj-output.html?remote=1&amp;viewToken=…`</li>
+<li>Watch-only SSE preview of the live A/B mix</li>
+<li>Toggle **Audience participation** on the host: phones can touch/drag the stream to steer `mouseX` / `mouseY` only — no deck hijack, no crossfader access</li>
+<li>Co-VJs still use the top-bar **VJ** chip / `controlToken` link for full WebSocket desk sync</li>
+</ul>
 
 <p>---</p>
 
@@ -66,22 +76,19 @@
 
 <ul>
 <li>Live: <a href="https://macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">macroverse.aday.net.au</a></li>
-<li>Test: <a href="https://macroverse-test.aday.net.au" target="_blank" rel="noopener noreferrer">macroverse-test.aday.net.au</a></li>
-<li>Changelog: <a href="https://github.com/aday1/macroverse.aday.net.au/blob/main/changelog.md" target="_blank" rel="noopener noreferrer">CHANGELOG.md on GitHub</a></li>
-<li>Showcase: <a href="https://aday1.github.io/macroverse.aday.net.au/#vr-vj" target="_blank" rel="noopener noreferrer">aday1.github.io/macroverse.aday.net.au</a></li>
+<li>Showcase mobile help: <a href="https://aday1.github.io/macroverse.aday.net.au/#help" target="_blank" rel="noopener noreferrer">aday1.github.io/macroverse.aday.net.au/#help</a> (section 4 — Mobile bottom tab bar)</li>
+<li>Participatory VJ overview: <a href="https://aday1.github.io/macroverse.aday.net.au/#participatory-vj" target="_blank" rel="noopener noreferrer">showcase #participatory-vj</a></li>
 </ul>
 
-<p>On the host: Settings → **VJ Show Session ID** → Apply → VJ tab → QR panel → **Copy VR audience** or **Copy VR VJ**.</p>
-
-<p>Flat stream URLs (`vj-output.html`) are unchanged for Pi HDMI, OBS Browser Source, and phones.</p>
+<p>On the host: Settings → **VJ Show Session ID** → Apply → VJ tab → enable **Audience participation** if you want touch steering on the stream QR.</p>
 
 <p>---</p>
 
 <h2>Caveats (honest)</h2>
 
-<p>Flat 2D GLSL shaders are mapped onto the VR dome — it works, but shaders authored as true 360 ray-marches look best inside the sphere. Quest Browser or any headset with WebXR **immersive-vr** support.</p>
+<p>Mobile WebGL is still WebGL — thermal throttling on old phones can stutter heavy shaders. For venue output, keep the Pi/OBS path on `vj-output.html`; phones are best as remote eyes and light participation, not the main projector feed.</p>
 
-<p>Filter **Macroverse** in Dev logs on this blog for the commit trail.</p>
+<p>Filter **Macroverse** in Dev logs on this blog for the commit trail (touch-aware tiers, splash QRs, VJ token fixes).</p>
     <footer class="blog-footer">
       <div class="footer-wave" aria-hidden="true"></div>
       <p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a></p>

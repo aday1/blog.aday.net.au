@@ -3,13 +3,13 @@
     {
       "id": "macroverse",
       "title": "Macroverse",
-      "tagline": "GLSL → ISF → Resolume Wire, born at Melbourne Fringe — universe-scale visuals in the tab (42.1).",
+      "tagline": "GLSL → ISF → Resolume Wire, born at Melbourne Fringe — cloud VJ, mobile shell, WebXR audience (42.2).",
       "localPath": "../macroverse.aday.net.au",
       "github": "aday1/macroverse.aday.net.au",
       "liveUrl": "https://macroverse.aday.net.au",
       "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
       "timelineSource": "devlog-macroverse",
-      "maxCommits": 8
+      "maxCommits": 12
     },
     {
       "id": "artbastard",

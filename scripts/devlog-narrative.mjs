@@ -1,10 +1,11 @@
 const MACRO_PHASES = [
+  { id: "fortytwo-two", label: "42.2 — VR, mobile & audience", match: /webxr|\bvr\b|vj-vr|jump into vr|touch-aware|mobile-web-app|splash qr|gig qr|semver to 42\.2|lane status dashboard|view-mode tabs|library filter strip|token mint|shader gallery|shader carousel|vj session chip|qr panel|403 spam|websocket.*nginx|webgl uniform/i },
   { id: "wire", label: "Wire Atelier", match: /wire atelier|shader index|glsl lab|resolume pipeline|relic: wire/i },
   { id: "showcase", label: "Wired Atelier showcase", match: /showcase|gh pages|release binaries|wired atelier theme|relic: wired/i },
   { id: "vj", label: "VJ & Fringe body", match: /vj deck|websocket|audience qr|bridge agent|fringe|relic: vj/i },
   { id: "linode", label: "Linode production", match: /linode|compose|nginx|aday lane|relic: linode/i },
   { id: "deploy", label: "Deploy lanes", match: /deploy-meta|dev\/live|gradient|relic: deploy/i },
-  { id: "official", label: "Stable 42.1", match: /release: v42|stable hosted|42\.1/i }
+  { id: "official", label: "Stable 42.1", match: /release: v42|stable hosted|42\.1|bpm-synced auto-vj|mix fx modes|carousel preview|build time.*splash/i }
 ];
 
 const ART_PHASES = [
@@ -42,6 +43,11 @@ const macroNarrative = (subject, phase) => {
     );
   }
   const openers = {
+    "fortytwo-two": [
+      "42.2 gig stack — phones, headsets, and salted QRs in the room: ",
+      "Audience in the pocket, VJ in the dome — ",
+      "WebXR and touch tiers ship together: "
+    ],
     wire: [
       "In the Wired Atelier, a shader becomes a Wire patch: ",
       "GLSL in, ISF out, Resolume on the other side — ",
@@ -162,8 +168,8 @@ export const trainPrologue = (train) => {
   }
   return [
     "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
-    "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au as Macroverse **42.1**.",
-    "Six relic commits below trace Wire Atelier → showcase → VJ/bridge → Linode → deploy-meta → stable **42.1** release. Each line is a real commit, narrated for the blog timeline."
+    "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au. Stable **42.1** consolidated hosted lanes; **42.2** adds WebXR VR, touch-first mobile shell, and audience participation on the flat stream.",
+    "Recent commits below trace the 42.2 gig stack (VR, mobile drawer UI, splash QRs, co-VJ tokens) back through deploy-meta and the **42.1** release line. Each line is a real commit, narrated for the blog timeline."
   ];
 };
 
