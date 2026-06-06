@@ -28,8 +28,8 @@
   flex-direction: column;
   gap: 0.35rem;
   padding: 0.65rem 0.5rem;
-  border: 1px solid rgba(186, 214, 238, 0.16);
-  background: rgba(6, 10, 16, 0.88);
+  border: 1px solid rgba(255, 122, 168, 0.18);
+  background: rgba(9, 0, 10, 0.88);
   border-radius: 4px;
   z-index: 20;
 }
@@ -41,19 +41,19 @@
   padding: 0.45rem 0.55rem;
   border: 1px solid transparent;
   border-radius: 3px;
-  color: #b8c8dc;
+  color: #d6b7cc;
   background: transparent;
 }
 
 .blog-nav-btn:hover {
-  border-color: rgba(186, 214, 238, 0.22);
+  border-color: rgba(118, 200, 255, 0.28);
   color: #e8f0ff;
 }
 
 .blog-nav-btn.is-active {
-  border-color: rgba(122, 230, 168, 0.45);
-  color: #d8ffe8;
-  background: rgba(122, 230, 168, 0.08);
+  border-color: rgba(242, 196, 102, 0.48);
+  color: #fff0c4;
+  background: rgba(242, 196, 102, 0.08);
 }
 
 .blog-shell-panels {
@@ -73,10 +73,10 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 0.35rem;
-  border: 1px solid rgba(186, 214, 238, 0.12);
+  border: 1px solid rgba(255, 122, 168, 0.14);
   border-radius: 4px;
   padding: 0.65rem 0.75rem 1rem;
-  background: rgba(4, 8, 14, 0.45);
+  background: rgba(8, 0, 10, 0.5);
 }
 
 .blog-shell-panels[data-view="split"] .blog-panel.is-split-left,
@@ -91,10 +91,10 @@
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8aa8c4;
+  color: #be95b5;
   margin-bottom: 0.5rem;
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid rgba(186, 214, 238, 0.12);
+  border-bottom: 1px solid rgba(255, 122, 168, 0.12);
 }
 
 .blog-panel {
@@ -124,7 +124,7 @@ html {
 .blog-split-controls {
   margin-top: 0.85rem;
   padding-top: 0.75rem;
-  border-top: 1px solid rgba(186, 214, 238, 0.14);
+  border-top: 1px solid rgba(255, 122, 168, 0.14);
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
@@ -149,15 +149,15 @@ html {
   font: inherit;
   cursor: pointer;
   padding: 0.3rem 0.5rem;
-  border: 1px solid rgba(186, 214, 238, 0.2);
+  border: 1px solid rgba(255, 122, 168, 0.2);
   border-radius: 2px;
-  color: #b8c8dc;
+  color: #d6b7cc;
   background: rgba(0, 0, 0, 0.35);
 }
 
 .blog-view-btn.is-active {
-  border-color: rgba(122, 230, 168, 0.45);
-  color: #d8ffe8;
+  border-color: rgba(242, 196, 102, 0.48);
+  color: #fff0c4;
 }
 
 .blog-split-pickers {
@@ -176,7 +176,7 @@ html {
 .blog-split-select {
   font: inherit;
   padding: 0.25rem 0.35rem;
-  border: 1px solid rgba(186, 214, 238, 0.25);
+  border: 1px solid rgba(255, 122, 168, 0.24);
   background: rgba(0, 0, 0, 0.45);
   color: inherit;
   border-radius: 2px;
@@ -193,14 +193,14 @@ html {
   cursor: pointer;
   text-align: left;
   padding: 0.3rem 0.45rem;
-  border: 1px solid rgba(118, 200, 255, 0.22);
+  border: 1px solid rgba(118, 200, 255, 0.26);
   border-radius: 2px;
-  color: #c8d8ea;
+  color: #d6c1e8;
   background: rgba(0, 0, 0, 0.35);
 }
 
 .blog-split-preset:hover {
-  border-color: rgba(122, 230, 168, 0.4);
+  border-color: rgba(242, 196, 102, 0.44);
 }
 
 .blog-nav-btn.is-split-slot {
@@ -221,7 +221,7 @@ body.blog-shell-split-on .blog-section-nav {
 .blog-panel[data-panel="devlog"] .devlog-train + .devlog-train {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(186, 214, 238, 0.1);
+  border-top: 1px solid rgba(255, 122, 168, 0.1);
 }
 
 .blog-panel[data-panel="media"] {
@@ -247,17 +247,17 @@ body.blog-shell-split-on .blog-section-nav {
   cursor: pointer;
   margin: 0 0 0.5rem;
   padding: 0.2rem 0.5rem;
-  border: 1px solid rgba(186, 214, 238, 0.2);
+  border: 1px solid rgba(255, 122, 168, 0.2);
   border-radius: 2px;
-  color: #9eb8d4;
+  color: #d2a6c5;
   background: rgba(0, 0, 0, 0.35);
 }
 
 .range-explorer {
   margin: 0 0 1.25rem;
   padding: 0.75rem 0.85rem 0.9rem;
-  border: 1px solid rgba(118, 200, 255, 0.22);
-  background: rgba(4, 8, 14, 0.72);
+  border: 1px solid rgba(118, 200, 255, 0.24);
+  background: rgba(8, 0, 10, 0.74);
   border-radius: 4px;
 }
 
@@ -273,7 +273,7 @@ body.blog-shell-split-on .blog-section-nav {
 .range-explorer-head h3 {
   margin: 0;
   font-size: 0.95rem;
-  color: #b8d4f0;
+  color: #c8ddff;
 }
 
 .range-hint {
@@ -305,7 +305,7 @@ body.blog-shell-split-on .blog-section-nav {
 .range-bracket-controls input[type="date"] {
   font: inherit;
   padding: 0.15rem 0.35rem;
-  border: 1px solid rgba(186, 214, 238, 0.25);
+  border: 1px solid rgba(255, 122, 168, 0.24);
   background: rgba(0, 0, 0, 0.45);
   color: inherit;
   border-radius: 2px;
@@ -315,10 +315,10 @@ body.blog-shell-split-on .blog-section-nav {
   font: inherit;
   cursor: pointer;
   padding: 0.2rem 0.55rem;
-  border: 1px solid rgba(122, 230, 168, 0.35);
+  border: 1px solid rgba(242, 196, 102, 0.4);
   border-radius: 2px;
-  color: #c8ffe0;
-  background: rgba(122, 230, 168, 0.1);
+  color: #fff0c4;
+  background: rgba(242, 196, 102, 0.1);
 }
 
 .range-filter-active .timeline-node.range-out,
@@ -334,7 +334,7 @@ body.blog-shell-split-on .blog-section-nav {
 
 .timeline-node.range-focus-ping,
 .devlog-entry.range-focus-ping {
-  outline: 1px solid rgba(122, 230, 168, 0.65);
+  outline: 1px solid rgba(242, 196, 102, 0.66);
   outline-offset: 2px;
 }
 
@@ -363,6 +363,54 @@ body.blog-shell-split-on .blog-section-nav {
 }
 
 @media (max-width: 640px) {
+  main.blog-shell,
+  main {
+    max-width: 100% !important;
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .blog-shell {
+    gap: 0.85rem;
+  }
+
+  .blog-section-nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 0.45rem;
+    scrollbar-width: thin;
+  }
+
+  .blog-nav-btn,
+  .blog-view-btn,
+  .blog-split-preset {
+    min-height: 36px;
+  }
+
+  .blog-section-nav .blog-nav-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .blog-shell-panels[data-view="split"] .blog-panel {
+    padding: 0.55rem;
+  }
+
+  .range-bracket-controls {
+    align-items: stretch;
+  }
+
+  .range-bracket-controls label,
+  .range-bracket-controls button {
+    width: 100%;
+  }
+
+  .range-bracket-controls input[type="date"] {
+    flex: 1;
+    min-width: 0;
+  }
+
   .range-chart {
     height: 180px;
   }

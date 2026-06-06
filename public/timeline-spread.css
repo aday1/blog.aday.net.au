@@ -20,7 +20,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #9ecad0;
+  color: #d9b6ce;
 }
 
 .timeline-lane-legend li {
@@ -37,7 +37,7 @@
 }
 
 .lane-swatch.lane-audio {
-  background: #7ae6a8;
+  background: #ff7aa8;
 }
 
 .lane-swatch.lane-video {
@@ -45,15 +45,15 @@
 }
 
 .lane-swatch.lane-scene {
-  background: #ffc476;
+  background: #f2c466;
 }
 
 .lane-swatch.lane-code {
-  background: #c8a0ff;
+  background: #b88cff;
 }
 
 .lane-swatch.lane-signal {
-  background: #bad6ee;
+  background: #d9b6ce;
 }
 
 #timelineGraph {
@@ -72,41 +72,41 @@
   gap: 0.4rem 0.65rem;
   margin: 0 0 0.45rem;
   padding: 0.35rem 0.5rem;
-  border: 1px solid rgba(72, 110, 150, 0.55);
-  background: rgba(6, 14, 26, 0.88);
+  border: 1px solid rgba(112, 38, 64, 0.62);
+  background: rgba(12, 0, 10, 0.88);
   font-size: 0.72rem;
-  color: #9ecad0;
+  color: #d9b6ce;
 }
 
 .timeline-zoom-btn {
   min-width: 1.75rem;
   padding: 0.2rem 0.45rem;
-  border: 1px solid rgba(118, 168, 198, 0.45);
+  border: 1px solid rgba(118, 200, 255, 0.38);
   border-radius: 3px;
-  background: rgba(12, 24, 40, 0.95);
-  color: #b8e8f0;
+  background: rgba(24, 4, 26, 0.95);
+  color: #c8ddff;
   font: inherit;
   line-height: 1.3;
   cursor: pointer;
 }
 
 .timeline-zoom-btn:hover {
-  border-color: rgba(127, 212, 255, 0.65);
-  color: #e8fbff;
+  border-color: rgba(242, 196, 102, 0.62);
+  color: #fff0c4;
 }
 
 .timeline-zoom-range {
   flex: 1 1 120px;
   min-width: 100px;
   max-width: 220px;
-  accent-color: #76c8ff;
+  accent-color: #b88cff;
 }
 
 .timeline-zoom-label {
   flex: 1 1 100%;
   font-size: 0.68rem;
   letter-spacing: 0.04em;
-  color: #8eb8c4;
+  color: #c2a0c0;
 }
 
 @media (min-width: 640px) {
@@ -138,11 +138,12 @@
   border-radius: 2px;
   background: linear-gradient(
     180deg,
-    rgba(212, 160, 36, 0.9) 0%,
-    rgba(95, 228, 228, 0.5) 42%,
-    rgba(118, 168, 210, 0.35) 100%
+    rgba(242, 196, 102, 0.92) 0%,
+    rgba(118, 200, 255, 0.52) 38%,
+    rgba(184, 140, 255, 0.48) 66%,
+    rgba(255, 95, 142, 0.42) 100%
   );
-  box-shadow: 0 0 12px rgba(95, 228, 228, 0.22);
+  box-shadow: 0 0 12px rgba(255, 95, 142, 0.22);
   pointer-events: none;
 }
 
@@ -181,8 +182,8 @@
   font-size: clamp(1.55rem, 3.4vw, 2.2rem);
   line-height: 1;
   letter-spacing: 0.03em;
-  color: #d4a024;
-  text-shadow: 0 0 18px rgba(212, 160, 36, 0.38);
+  color: #f2c466;
+  text-shadow: 0 0 18px rgba(242, 196, 102, 0.34);
   position: sticky;
   top: 4.25rem;
   z-index: 2;
@@ -200,11 +201,11 @@
   height: 13px;
   margin-top: 1.15rem;
   border-radius: 50%;
-  border: 2px solid rgba(12, 18, 28, 0.95);
-  background: linear-gradient(180deg, #f0d080 0%, #d4a024 58%, #9a7020 100%);
+  border: 2px solid rgba(18, 0, 14, 0.95);
+  background: linear-gradient(180deg, #f2c466 0%, #b88cff 52%, #ff5f8e 100%);
   box-shadow:
-    0 0 0 3px rgba(212, 160, 36, 0.22),
-    0 0 12px rgba(212, 160, 36, 0.28);
+    0 0 0 3px rgba(242, 196, 102, 0.18),
+    0 0 12px rgba(255, 95, 142, 0.25);
   z-index: 2;
 }
 
@@ -226,9 +227,9 @@
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(108, 138, 176, 0.5);
+  border: 1px solid rgba(128, 70, 110, 0.54);
   border-left: 3px solid var(--timeline-source-accent, rgba(118, 206, 255, 0.55));
-  background: linear-gradient(180deg, rgba(32, 40, 54, 0.98), rgba(18, 22, 30, 0.99));
+  background: linear-gradient(180deg, rgba(38, 14, 42, 0.98), rgba(14, 5, 18, 0.99));
   box-shadow:
     0 12px 36px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(255, 255, 255, 0.04);
@@ -244,7 +245,7 @@
 .post-list.timeline > li.timeline-node.source-soundcloud,
 .post-list.timeline > li.timeline-node.source-weeklybeats,
 .post-list.timeline > li.timeline-node.source-bandcamp {
-  --timeline-source-accent: #7ae6a8;
+  --timeline-source-accent: #ff7aa8;
 }
 
 .post-list.timeline > li.timeline-node.source-youtube,
@@ -254,27 +255,35 @@
 
 .post-list.timeline > li.timeline-node.source-demozoo,
 .post-list.timeline > li.timeline-node.source-scene {
-  --timeline-source-accent: #ffc476;
+  --timeline-source-accent: #f2c466;
 }
 
 .post-list.timeline > li.timeline-node.source-github,
 .post-list.timeline > li.timeline-node.source-codepen {
-  --timeline-source-accent: #c8a0ff;
+  --timeline-source-accent: #b88cff;
 }
 
 .post-list.timeline > li.timeline-node.source-clan,
 .post-list.timeline > li.timeline-node.source-events,
-.post-list.timeline > li.timeline-node.source-press {
+.post-list.timeline > li.timeline-node.source-press,
+.post-list.timeline > li.timeline-node.source-collab,
+.post-list.timeline > li.timeline-node.source-gig {
   --timeline-source-accent: #f2c88a;
+}
+
+.post-list.timeline > li.timeline-node.source-archive,
+.post-list.timeline > li.timeline-node.source-blog-archive,
+.post-list.timeline > li.timeline-node.source-mastodon {
+  --timeline-source-accent: #76c8ff;
 }
 
 .post-list.timeline > li.timeline-node.timeline-graph-focus .timeline-entry,
 .post-list.timeline > li.timeline-node.timeline-graph-ping .timeline-entry {
-  border-color: rgba(127, 212, 255, 0.75);
+  border-color: rgba(242, 196, 102, 0.75);
   box-shadow:
     0 14px 42px rgba(0, 0, 0, 0.48),
-    0 0 0 1px rgba(127, 212, 255, 0.35),
-    0 0 22px rgba(95, 228, 228, 0.14);
+    0 0 0 1px rgba(242, 196, 102, 0.32),
+    0 0 22px rgba(255, 95, 142, 0.16);
 }
 
 .post-list.timeline > li.timeline-node:not(.timeline-inview) {
@@ -294,15 +303,15 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-color: #0a0f18;
-  background-image: var(--timeline-bg, linear-gradient(125deg, #1a2848 0%, #121820 48%, #0a0c12 100%));
+  background-color: #080008;
+  background-image: var(--timeline-bg, linear-gradient(125deg, #28123a 0%, #1a0718 48%, #070006 100%));
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .timeline-entry-visual--plain {
-  background-image: linear-gradient(125deg, #1e2a42 0%, #141a24 55%, #0c1018 100%);
+  background-image: linear-gradient(125deg, #2c1644 0%, #1c0a1b 55%, #080008 100%);
 }
 
 .timeline-entry-visual::before {
@@ -359,7 +368,7 @@
 .timeline-entry-meta .date {
   font-size: 0.82rem;
   letter-spacing: 0.06em;
-  color: #a8dee0;
+  color: #e2b8d0;
 }
 
 .timeline-entry-title {
@@ -370,7 +379,7 @@
 }
 
 .timeline-entry-title a {
-  color: #b8faf9;
+  color: #b8e4ff;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
@@ -383,7 +392,7 @@
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.55;
-  color: #c5dde1;
+  color: #f0d2dc;
   max-width: 68ch;
 }
 
@@ -399,8 +408,8 @@
 .post-list.timeline > li.timeline-node.is-signature .timeline-entry {
   box-shadow:
     0 14px 42px rgba(0, 0, 0, 0.48),
-    0 0 0 1px rgba(212, 160, 36, 0.28),
-    0 0 18px rgba(212, 160, 36, 0.12);
+    0 0 0 1px rgba(242, 196, 102, 0.26),
+    0 0 18px rgba(255, 95, 142, 0.12);
 }
 
 @media (max-width: 720px) {

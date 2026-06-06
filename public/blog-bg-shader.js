@@ -2,7 +2,8 @@
   const canvas = document.getElementById("blogBgShader");
   if (!canvas) return;
   const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-  if (prefersReduced) return;
+  const lowPowerViewport = window.matchMedia?.("(max-width: 700px), (pointer: coarse)")?.matches;
+  if (prefersReduced || lowPowerViewport) return;
 
   const gl = canvas.getContext("webgl", { alpha: true, antialias: false });
   if (!gl) return;
@@ -48,12 +49,12 @@
       float scan = sin((uv.y + t * 0.35) * uRes.y * 0.65) * 0.04;
       float neb = fbm(uv * 4.8 + vec2(t * 0.45, -t * 0.2));
       float swirl = sin((dot(p, p) * 14.0) - t * 3.2);
-      vec3 base = vec3(0.02, 0.06, 0.14);
+      vec3 base = vec3(0.055, 0.0, 0.035);
       vec3 col = base;
-      col += vec3(0.04, 0.14, 0.22) * neb;
-      col += vec3(0.18, 0.55, 0.38) * smoothstep(0.35, 0.95, neb) * 0.35;
-      col += vec3(0.55, 0.28, 0.12) * (0.45 + 0.55 * swirl) * 0.12;
-      col += vec3(0.08, 0.22, 0.42) * smoothstep(0.5, 1.0, sin((uv.x - t * 0.25) * 9.0)) * 0.08;
+      col += vec3(0.12, 0.04, 0.2) * neb;
+      col += vec3(0.45, 0.1, 0.2) * smoothstep(0.35, 0.95, neb) * 0.28;
+      col += vec3(0.62, 0.42, 0.16) * (0.45 + 0.55 * swirl) * 0.12;
+      col += vec3(0.08, 0.22, 0.48) * smoothstep(0.5, 1.0, sin((uv.x - t * 0.25) * 9.0)) * 0.1;
       col += vec3(scan);
       float vig = smoothstep(1.25, 0.35, length(p));
       col *= vig;
@@ -100,7 +101,12 @@
     }
   };
 
+  let frameId = 0;
   const render = (now) => {
+    if (document.hidden) {
+      frameId = 0;
+      return;
+    }
     resize();
     gl.viewport(0, 0, canvas.width, canvas.height);
     gl.useProgram(program);
@@ -110,9 +116,25 @@
     gl.uniform2f(uRes, canvas.width, canvas.height);
     gl.uniform1f(uTime, now * 0.001);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
-    requestAnimationFrame(render);
+    frameId = requestAnimationFrame(render);
+  };
+
+  const start = () => {
+    if (frameId || document.hidden) return;
+    frameId = requestAnimationFrame(render);
+  };
+
+  const stop = () => {
+    if (!frameId) return;
+    cancelAnimationFrame(frameId);
+    frameId = 0;
   };
 
   resize();
-  requestAnimationFrame(render);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else start();
+  });
+  window.addEventListener("pagehide", stop);
+  start();
 })();

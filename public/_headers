@@ -1,2 +1,4 @@
 /data/deploy-meta.json
   Cache-Control: no-store
+/deploy-meta.json
+  Cache-Control: no-store

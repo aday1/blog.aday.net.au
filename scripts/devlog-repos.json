@@ -7,7 +7,7 @@
       "localPath": "../macroverse.aday.net.au",
       "github": "aday1/macroverse.aday.net.au",
       "liveUrl": "https://macroverse.aday.net.au",
-      "previewImage": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
+      "previewImage": "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp",
       "timelineSource": "devlog-macroverse",
       "maxCommits": 12
     },
@@ -18,7 +18,7 @@
       "localPath": "../artbastard.aday.net.au",
       "github": "aday1/artbastard.aday.net.au",
       "liveUrl": "https://artbastard.aday.net.au",
-      "previewImage": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png",
+      "previewImage": "/assets/card-dmx-console.jpg",
       "timelineSource": "devlog-artbastard",
       "maxCommits": 8,
       "loreFile": "DOCS/HISTORY.md"
@@ -32,7 +32,8 @@
       "github": "aday1/ArtBastard-DMX512",
       "parentTrain": "artbastard",
       "timelineSource": "devlog-artbastard",
-      "maxCommits": 40
+      "maxCommits": 40,
+      "publicCommits": false
     }
   ]
 }

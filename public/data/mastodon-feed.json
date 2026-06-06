@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-06-06T06:33:26.545Z",
+  "source": {
+    "profile": "https://mastodon.social/@aday_net_au",
+    "rss": "https://mastodon.social/@aday_net_au.rss",
+    "api_lookup": "https://mastodon.social/api/v1/accounts/lookup?acct=aday_net_au"
+  },
+  "profile": {
+    "handle": "@aday_net_au@mastodon.social",
+    "display_name": "aday",
+    "url": "https://mastodon.social/@aday_net_au",
+    "note": "open source/modded/bendy/chip/h4xed enthusiasm",
+    "avatar": "https://files.mastodon.social/accounts/avatars/116/152/190/587/375/766/original/82af5c55ee6565f8.jpg",
+    "header": "https://files.mastodon.social/accounts/headers/116/152/190/587/375/766/original/747b779d1ab94530.png",
+    "statuses_count": 1,
+    "created_at": "2026-03-01T00:00:00.000Z",
+    "last_status_at": "2026-03-01"
+  },
+  "items": [],
+  "errors": []
+}

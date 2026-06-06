@@ -1,9 +1,9 @@
 :root {
-  --bg: #050a12;
-  --ink: #b7ff9f;
-  --line: #3f638f;
-  --muted: #91b6dd;
-  --blog-retro-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23e8fbff' stroke='%23d4a024' stroke-width='1' d='M2 2 L2 18 L8 12 L11 18 L13 16 L10 10 L18 10 Z'/%3E%3C/svg%3E") 2 2;
+  --bg: #0d0006;
+  --ink: #fff0c4;
+  --line: #7b2639;
+  --muted: #d5a7c8;
+  --blog-retro-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23fff0c4' stroke='%2376c8ff' stroke-width='1' d='M2 2 L2 18 L8 12 L11 18 L13 16 L10 10 L18 10 Z'/%3E%3C/svg%3E") 2 2;
 }
 
 * { box-sizing: border-box; }
@@ -12,9 +12,9 @@ body {
   margin: 0;
   padding: 2rem;
   background:
-    radial-gradient(circle at 15% -8%, rgba(88, 166, 255, 0.2), transparent 42%),
-    radial-gradient(circle at 84% 120%, rgba(125, 255, 144, 0.12), transparent 38%),
-    linear-gradient(180deg, #090f1c 0%, #050a12 100%);
+    radial-gradient(circle at 15% -8%, rgba(107, 64, 255, 0.18), transparent 42%),
+    radial-gradient(circle at 84% 120%, rgba(255, 44, 86, 0.15), transparent 38%),
+    linear-gradient(180deg, #170017 0%, #0d0006 100%);
   color: var(--ink);
   font-family: "Consolas", "Courier New", monospace;
 }
@@ -158,8 +158,8 @@ main {
   margin: 0 auto;
   padding: 1rem 1.2rem;
   border: 1px solid var(--line);
-  background: rgba(6, 12, 22, 0.9);
-  box-shadow: 0 0 0 1px rgba(112, 188, 255, 0.18), 0 20px 70px rgba(0, 0, 0, 0.56);
+  background: rgba(16, 0, 8, 0.9);
+  box-shadow: 0 0 0 1px rgba(255, 206, 112, 0.14), 0 20px 70px rgba(0, 0, 0, 0.62);
   transform-origin: center;
   animation: none;
   overflow: visible;
@@ -177,10 +177,10 @@ main::before {
 }
 
 main section {
-  border: 1px solid #314f74;
+  border: 1px solid #6f2032;
   background:
-    radial-gradient(circle at 12% 12%, rgba(109, 178, 255, 0.08), transparent 45%),
-    linear-gradient(180deg, rgba(9, 17, 31, 0.84), rgba(5, 11, 22, 0.9));
+    radial-gradient(circle at 12% 12%, rgba(118, 200, 255, 0.08), transparent 45%),
+    linear-gradient(180deg, rgba(38, 4, 22, 0.84), rgba(12, 2, 9, 0.9));
   padding: 0.75rem 0.75rem 0.8rem;
   margin: 0.9rem 0 0;
   position: relative;
@@ -190,8 +190,8 @@ main section {
 }
 
 main section:hover {
-  border-color: #4f78a8;
-  box-shadow: inset 0 0 24px rgba(95, 155, 226, 0.14), 0 0 16px rgba(92, 161, 238, 0.12);
+  border-color: #b84f78;
+  box-shadow: inset 0 0 24px rgba(255, 84, 126, 0.13), 0 0 16px rgba(118, 200, 255, 0.12);
 }
 
 main section::before {
@@ -238,13 +238,13 @@ body.boot-seq main {
 
 h1 {
   margin-top: 0;
-  color: #bbff9f;
-  text-shadow: 0 0 8px rgba(159, 255, 130, 0.6);
+  color: #ffe79a;
+  text-shadow: 0 0 8px rgba(255, 84, 126, 0.52);
 }
 
 h2 {
   margin: 1.5rem 0 0.6rem;
-  color: #b7d9ff;
+  color: #b9d8ff;
 }
 
 .headliner-title {
@@ -323,11 +323,11 @@ h2 {
 .service-explainer span {
   display: inline-block;
   min-width: 50px;
-  color: #95f69f;
+  color: #f2c466;
 }
 
 a {
-  color: #a9ff9c;
+  color: #86d8ff;
   cursor: inherit;
 }
 
@@ -338,7 +338,7 @@ a {
 }
 
 .post-list li {
-  border-top: 1px solid #244264;
+  border-top: 1px solid #55334c;
   padding: 1rem 0;
 }
 
@@ -352,8 +352,8 @@ a {
 
 .timeline-stage {
   margin: 0.6rem 0 0.9rem;
-  border: 1px solid #2f4c72;
-  background: rgba(6, 14, 26, 0.86);
+  border: 1px solid #55334c;
+  background: rgba(12, 0, 12, 0.86);
   min-height: 180px;
   position: relative;
   overflow: hidden;
@@ -394,11 +394,11 @@ a {
 }
 
 .node-links li {
-  border-top-color: #2e5578;
+  border-top-color: #55334c;
 }
 
 .node-links li:hover {
-  background: rgba(96, 184, 255, 0.08);
+  background: rgba(255, 95, 142, 0.08);
 }
 
 .blog-yt-frame {
@@ -406,7 +406,7 @@ a {
   min-height: 260px;
   border: 0;
   display: block;
-  background: #04070f;
+  background: #050006;
   filter: contrast(1.06) saturate(1.04);
 }
 
@@ -424,8 +424,8 @@ a {
 
 .presence-timeline .timeline-stage {
   min-height: 200px;
-  border-color: rgba(72, 110, 150, 0.65);
-  background: linear-gradient(180deg, rgba(6, 14, 26, 0.92), rgba(10, 18, 30, 0.88));
+  border-color: rgba(112, 38, 64, 0.68);
+  background: linear-gradient(180deg, rgba(16, 0, 16, 0.92), rgba(22, 4, 24, 0.88));
 }
 
 .timeline-stage {
@@ -474,9 +474,9 @@ a {
 }
 
 .yt-cat-tab {
-  background: #091426;
-  border: 1px solid #35567f;
-  color: #baf8d0;
+  background: #160414;
+  border: 1px solid #55334c;
+  color: #f2d5df;
   font-family: inherit;
   font-size: 0.82rem;
   padding: 0.35rem 0.55rem;
@@ -484,9 +484,9 @@ a {
 }
 
 .yt-cat-tab.is-active {
-  border-color: #7fd4ff;
-  color: #e8fbff;
-  box-shadow: 0 0 0 1px rgba(127, 212, 255, 0.35);
+  border-color: #f2c466;
+  color: #fff0c4;
+  box-shadow: 0 0 0 1px rgba(242, 196, 102, 0.28);
 }
 
 .yt-cat-count {
@@ -496,7 +496,7 @@ a {
 
 .yt-now-playing {
   margin: 0.45rem 0 0;
-  color: #a8ff99;
+  color: #f2c466;
   font-size: 0.86rem;
   line-height: 1.35;
 }
@@ -508,8 +508,8 @@ a {
 .yt-cat-panel {
   max-height: 220px;
   overflow: auto;
-  border: 1px solid #2a4a6d;
-  background: rgba(4, 12, 24, 0.72);
+  border: 1px solid #55334c;
+  background: rgba(8, 0, 10, 0.72);
   padding: 0.35rem 0.5rem;
 }
 
@@ -524,8 +524,8 @@ a {
   text-align: left;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid rgba(53, 86, 127, 0.45);
-  color: #c7ffe1;
+  border-bottom: 1px solid rgba(94, 50, 86, 0.48);
+  color: #f2d5df;
   font-family: inherit;
   font-size: 0.82rem;
   line-height: 1.35;
@@ -536,11 +536,11 @@ a {
 .yt-video-pick:hover,
 .yt-video-pick.is-active {
   color: #e8fbff;
-  background: rgba(96, 184, 255, 0.1);
+  background: rgba(118, 200, 255, 0.1);
 }
 
 .yt-video-pick.is-active {
-  border-left: 2px solid #7fd4ff;
+  border-left: 2px solid #f2c466;
   padding-left: 0.35rem;
 }
 
@@ -556,7 +556,7 @@ a {
 .yt-pick-channel {
   display: block;
   font-size: 0.72rem;
-  color: #7eb8e8;
+  color: #9fd8ff;
 }
 
 .yt-pick-hidden {
@@ -575,7 +575,7 @@ a {
   padding: 0;
   max-height: 420px;
   overflow: auto;
-  border: 1px solid #2a4a68;
+  border: 1px solid #55334c;
 }
 
 .wb-track-pick {
@@ -585,14 +585,14 @@ a {
   text-align: left;
   padding: 8px;
   border: 0;
-  border-bottom: 1px solid #1c3348;
-  background: rgba(4, 12, 22, 0.85);
-  color: #d8f4ff;
+  border-bottom: 1px solid #3a1f35;
+  background: rgba(12, 0, 12, 0.85);
+  color: #f2d5df;
   cursor: pointer;
 }
 
 .wb-track-pick.is-active {
-  background: rgba(64, 140, 200, 0.22);
+  background: rgba(242, 196, 102, 0.14);
 }
 
 .wb-track-thumb {
@@ -623,7 +623,7 @@ a {
   color: var(--muted);
 }
 
-p { color: #c7ffe1; }
+p { color: #f2d5df; }
 
 .yt-tools {
   margin-top: 0.7rem;
@@ -634,14 +634,14 @@ p { color: #c7ffe1; }
 }
 
 .yt-tools label {
-  color: #a8ff99;
+  color: #f2c466;
 }
 
 .yt-tools select,
 .yt-tools button {
-  background: #091426;
-  border: 1px solid #35567f;
-  color: #baf8d0;
+  background: #160414;
+  border: 1px solid #55334c;
+  color: #f2d5df;
   font-family: inherit;
   padding: 0.35rem 0.5rem;
   cursor: inherit;
@@ -654,14 +654,14 @@ p { color: #c7ffe1; }
 }
 
 .status-tag {
-  border: 1px solid #35567f;
+  border: 1px solid #55334c;
   padding: 0.1rem 0.35rem;
   font-size: 0.75rem;
 }
 
 .status-online {
-  color: #9eff89;
-  border-color: #4f7b47;
+  color: #86d8ff;
+  border-color: #4e7fa8;
 }
 
 .status-checking {
@@ -676,7 +676,7 @@ p { color: #c7ffe1; }
 
 .blog-footer {
   margin-top: 1.3rem;
-  border-top: 1px solid #2f4c72;
+  border-top: 1px solid #55334c;
   padding-top: 0.8rem;
 }
 
@@ -685,9 +685,9 @@ p { color: #c7ffe1; }
   height: 16px;
   background: repeating-linear-gradient(
     90deg,
-    rgba(92, 166, 255, 0.12) 0 6px,
-    rgba(151, 255, 145, 0.42) 6px 9px,
-    rgba(255, 118, 210, 0.2) 9px 12px
+    rgba(118, 200, 255, 0.18) 0 6px,
+    rgba(242, 196, 102, 0.42) 6px 9px,
+    rgba(255, 95, 142, 0.24) 9px 12px
   );
   animation: footerShift 2.6s linear infinite;
   margin-bottom: 0.5rem;
@@ -705,7 +705,7 @@ p { color: #c7ffe1; }
   visibility: hidden;
 }
 
-/* Same Amiga arrow as aday.net.au; blog uses mint fill + gold stroke */
+/* Same Amiga arrow as aday.net.au; blog uses warm fill + blue stroke */
 body.retro-cursor-on {
   cursor: var(--blog-retro-cursor), auto !important;
 }
@@ -938,46 +938,52 @@ body.retro-cursor-on textarea {
 
 /* 2026 aesthetic refresh: NLoGZZ-inspired timeline + CRT cyan/pink chroma */
 :root {
-  --bg: #111317;
-  --ink: #5fe4e4;
-  --line: #5b636f;
-  --muted: #9acfd0;
-  --accent-pink: #db7497;
-  --accent-cyan: #41bcbc;
+  --bg: #0f0006;
+  --ink: #ffefb8;
+  --line: #783046;
+  --muted: #d2a6c5;
+  --accent-pink: #ff5f8e;
+  --accent-cyan: #76c8ff;
+  --accent-violet: #9f7cff;
+  --accent-gold: #f2c466;
 }
 
 body {
   background:
-    radial-gradient(circle at 16% -8%, rgba(95, 228, 228, 0.08), transparent 42%),
-    radial-gradient(circle at 88% 112%, rgba(219, 116, 151, 0.12), transparent 48%),
-    linear-gradient(180deg, #171a1f 0%, #111317 100%);
+    radial-gradient(circle at 16% -8%, rgba(118, 200, 255, 0.1), transparent 42%),
+    radial-gradient(circle at 88% 112%, rgba(255, 76, 118, 0.18), transparent 48%),
+    radial-gradient(circle at 52% 22%, rgba(159, 124, 255, 0.08), transparent 44%),
+    linear-gradient(180deg, #1b0011 0%, #0f0006 56%, #050006 100%);
   color: var(--ink);
-  text-shadow: -1px 0 1px rgba(219, 116, 151, 0.34), 1px 0 1px rgba(65, 188, 188, 0.38);
+  text-shadow: -1px 0 1px rgba(255, 95, 142, 0.32), 1px 0 1px rgba(118, 200, 255, 0.34);
 }
 
 main {
-  border: 1px solid #3b424c;
+  border: 1px solid #6f2032;
   background:
-    linear-gradient(180deg, rgba(35, 40, 48, 0.94), rgba(23, 26, 31, 0.96));
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 16px 60px rgba(0, 0, 0, 0.65);
+    linear-gradient(180deg, rgba(35, 7, 25, 0.94), rgba(12, 2, 8, 0.97));
+  box-shadow:
+    0 0 0 1px rgba(255, 196, 118, 0.08),
+    0 16px 60px rgba(0, 0, 0, 0.7),
+    inset 0 0 42px rgba(120, 0, 48, 0.16);
 }
 
 main section {
-  border: 1px solid #39414d;
+  border: 1px solid #54304f;
   background:
-    linear-gradient(180deg, rgba(70, 76, 86, 0.84), rgba(36, 40, 47, 0.9));
+    linear-gradient(180deg, rgba(45, 18, 48, 0.86), rgba(18, 7, 20, 0.92));
 }
 
 h1, h2, h3, a {
-  color: #7df2f2;
+  color: #76d6ff;
 }
 
 h1 {
-  text-shadow: -2px 0 2px rgba(219, 116, 151, 0.55), 2px 0 2px rgba(65, 188, 188, 0.62);
+  text-shadow: -2px 0 2px rgba(255, 95, 142, 0.56), 2px 0 2px rgba(118, 200, 255, 0.54), 0 0 18px rgba(242, 196, 102, 0.18);
 }
 
 p, .service-explainer li, .date {
-  color: #bce9ea;
+  color: #f2d5df;
 }
 
 .timeline {
@@ -993,8 +999,8 @@ p, .service-explainer li, .date {
   bottom: 0;
   width: 4px;
   border-radius: 2px;
-  background: linear-gradient(180deg, #8a9196 0%, #7a8288 58%, #62696d 100%);
-  box-shadow: 0 0 10px rgba(95, 228, 228, 0.25);
+  background: linear-gradient(180deg, #f2c466 0%, #9f7cff 46%, #ff5f8e 100%);
+  box-shadow: 0 0 10px rgba(118, 200, 255, 0.22);
 }
 
 .timeline .timeline-node {
@@ -1006,7 +1012,7 @@ p, .service-explainer li, .date {
   border-bottom-right-radius: 0;
   border-radius: 12px;
   background:
-    linear-gradient(180deg, rgba(68, 73, 80, 0.95), rgba(27, 29, 33, 0.96));
+    linear-gradient(180deg, rgba(48, 22, 54, 0.95), rgba(18, 8, 24, 0.96));
 }
 
 .timeline .timeline-node::before {
@@ -1018,7 +1024,7 @@ p, .service-explainer li, .date {
   height: 10px;
   border-radius: 50%;
   border: 1px solid #17191b;
-  background: linear-gradient(180deg, #8a9196 0%, #7a8288 58%, #70787d 100%);
+  background: linear-gradient(180deg, #f2c466 0%, #bc7aff 58%, #ff5f8e 100%);
 }
 
 .timeline .timeline-node::after {
@@ -1028,17 +1034,17 @@ p, .service-explainer li, .date {
   top: 19px;
   width: 10px;
   height: 1px;
-  background: #515861;
+  background: #7c5468;
 }
 
 .source-chip {
   display: inline-block;
   margin: 0 0.45rem 0 0.35rem;
   padding: 0.06rem 0.38rem;
-  border: 1px solid #222831;
+  border: 1px solid #2a1825;
   border-radius: 999px;
-  background: linear-gradient(180deg, #74cae3, #5bc0de 62%, #4ab9db);
-  color: #0f171d;
+  background: linear-gradient(180deg, #f2c466, #b16dff 62%, #5bc0de);
+  color: #160611;
   font-size: 0.72rem;
   text-shadow: none;
   text-transform: uppercase;
@@ -1046,13 +1052,13 @@ p, .service-explainer li, .date {
 }
 
 .status-list li {
-  border-top: 1px solid #38404a;
+  border-top: 1px solid #55334c;
 }
 
 .status-list li span:first-child {
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #a8dee0;
+  color: #ffd990;
 }
 
 .status-tag.status-online {
@@ -1067,7 +1073,7 @@ p, .service-explainer li, .date {
   width: 0;
   height: 1em;
   vertical-align: bottom;
-  border-right: 0.11em solid #7ff2f2;
+  border-right: 0.11em solid #ffcf78;
   margin-left: 1px;
   animation: blink-caret 0.7s step-end infinite;
 }

@@ -6,17 +6,17 @@
       "caption": "Melbourne Fringe // MacroVerse at Abbotsford Convent",
       "credit": "Image via melbournefringe.com.au event listing",
       "fallbacks": [
-        "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
+        "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp",
         "https://www.clananalogue.org/wp-content/uploads/2019/10/aday-8bit-domination-AU-geoshed-768x512.jpg"
       ]
     },
     "gallery": [
       {
-        "src": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png",
+        "src": "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp",
         "alt": "Macroverse shader engine preview",
         "caption": "macroverse.aday.net.au // live GLSL stack after the Fringe show",
         "fallbacks": [
-          "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/screenshot.png"
+          "https://aday1.github.io/macroverse.aday.net.au/videos/hero-loop-poster.webp"
         ]
       }
     ]
@@ -29,7 +29,7 @@
       "credit": "aday1/acid-banger preview",
       "fallbacks": [
         "https://raw.githubusercontent.com/aday1/error-diffusion/master/public/assets/max-patch-1.png",
-        "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png"
+        "/assets/card-dmx-console.jpg"
       ]
     },
     "gallery": []

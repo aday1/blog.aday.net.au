@@ -21,7 +21,26 @@ const outPostsDir = path.join(outDir, "posts");
 const outDataDir = path.join(outDir, "data");
 const adayWeeklybeatsPath = path.resolve(root, "..", "aday-net-au", "public", "data", "weeklybeats_tracks.json");
 const artifactSourcesPath = path.join(root, "scripts", "artifact-sources.json");
+const archivedPresencePath = path.join(root, "scripts", "archived-presence.json");
+const archivedPresenceOutPath = path.join(outDataDir, "archived-presence.json");
 const postAssetsPath = path.join(root, "scripts", "post-assets.json");
+const mastodonFeedPath = path.join(outDataDir, "mastodon-feed.json");
+const MASTODON_HANDLE = "@aday_net_au@mastodon.social";
+const MASTODON_ACCT = "aday_net_au";
+const MASTODON_PROFILE_URL = "https://mastodon.social/@aday_net_au";
+const MASTODON_RSS_URL = `${MASTODON_PROFILE_URL}.rss`;
+const MASTODON_API_LOOKUP_URL = `https://mastodon.social/api/v1/accounts/lookup?acct=${encodeURIComponent(MASTODON_ACCT)}`;
+const mastodonFallbackProfile = {
+  handle: MASTODON_HANDLE,
+  display_name: "aday",
+  url: MASTODON_PROFILE_URL,
+  note: "open source / modded / bendy / chip / h4xed enthusiasm",
+  avatar: "https://avatars.githubusercontent.com/u/1834001?v=4",
+  header: "",
+  statuses_count: 0,
+  created_at: "2026-03-01",
+  last_status_at: "2026-03-01"
+};
 
 if (!fs.existsSync(postsDir)) {
   throw new Error("posts directory missing");
@@ -48,11 +67,42 @@ try {
 writeYoutubeCatalog(youtubeCatalogPath);
 
 const escapeHtml = (value) =>
-  value
+  String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+
+const decodeXmlEntities = (value) =>
+  String(value ?? "")
+    .replaceAll(/<!\[CDATA\[|\]\]>/g, "")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&apos;", "'")
+    .replaceAll(/&#(\d+);/g, (_m, dec) => {
+      const n = Number(dec);
+      return Number.isFinite(n) ? String.fromCodePoint(n) : "";
+    })
+    .replaceAll(/&#x([0-9a-f]+);/gi, (_m, hex) => {
+      const n = Number.parseInt(hex, 16);
+      return Number.isFinite(n) ? String.fromCodePoint(n) : "";
+    });
+
+const textFromHtml = (value) =>
+  decodeXmlEntities(value)
+    .replaceAll(/<br\s*\/?>/gi, "\n")
+    .replaceAll(/<\/p>/gi, "\n")
+    .replaceAll(/<[^>]+>/g, "")
+    .replaceAll(/\s+/g, " ")
+    .trim();
+
+const truncateText = (value, max = 180) => {
+  const text = String(value || "").trim();
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 3)}...`;
+};
 
 const postAssets = (() => {
   try {
@@ -158,7 +208,10 @@ const mdToHtml = (md) => {
   return out.join("\n");
 };
 
-const filmHeadLinks = `  <link rel="stylesheet" href="/blog-film.css">
+const identityHeadLinks = `  <link rel="me" href="${MASTODON_PROFILE_URL}">
+  <link rel="alternate" type="application/rss+xml" title="${MASTODON_HANDLE} on Mastodon" href="${MASTODON_RSS_URL}">`;
+const filmHeadLinks = `${identityHeadLinks}
+  <link rel="stylesheet" href="/blog-film.css">
   <link rel="stylesheet" href="/timeline-spread.css">
   <link rel="stylesheet" href="/devlog.css">
   <link rel="stylesheet" href="/blog-shell.css">
@@ -424,6 +477,102 @@ const parseYoutubeFeedEntries = (xmlText) => {
   return entries;
 };
 
+const readXmlTag = (chunk, tagName) => {
+  const tag = tagName.replaceAll(":", "\\:");
+  const match = String(chunk || "").match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return match ? decodeXmlEntities(match[1]).trim() : "";
+};
+
+const parseMastodonRssItems = (xmlText) => {
+  const items = [];
+  const itemRegex = /<item\b[\s\S]*?<\/item>/gi;
+  let match = itemRegex.exec(String(xmlText || ""));
+  while (match) {
+    const chunk = match[0];
+    const title = textFromHtml(readXmlTag(chunk, "title")) || "Mastodon update";
+    const rawDescription = readXmlTag(chunk, "description") || readXmlTag(chunk, "content:encoded");
+    const contentText = truncateText(textFromHtml(rawDescription), 240);
+    const publishedRaw = readXmlTag(chunk, "pubDate") || readXmlTag(chunk, "published") || readXmlTag(chunk, "updated");
+    const url = readXmlTag(chunk, "link") || MASTODON_PROFILE_URL;
+    items.push({
+      title,
+      url,
+      published_at: publishedRaw || "",
+      date: parseIsoDate(publishedRaw || "1970-01-01"),
+      content_text: contentText
+    });
+    match = itemRegex.exec(String(xmlText || ""));
+  }
+  return items
+    .filter((item) => item.url)
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 5);
+};
+
+const fetchMastodonFeed = async () => {
+  const errors = [];
+  let profile = { ...mastodonFallbackProfile };
+  try {
+    const response = await fetch(MASTODON_API_LOOKUP_URL, {
+      headers: { "User-Agent": "aday-blog-generator/1.0" }
+    });
+    if (response.ok) {
+      const account = await response.json();
+      const acct = String(account.acct || "").trim();
+      const displayHandle = acct
+        ? `@${acct.includes("@") ? acct : `${acct}@mastodon.social`}`
+        : MASTODON_HANDLE;
+      profile = {
+        handle: displayHandle,
+        display_name: account.display_name || mastodonFallbackProfile.display_name,
+        url: account.url || MASTODON_PROFILE_URL,
+        note: textFromHtml(account.note || mastodonFallbackProfile.note),
+        avatar: account.avatar || mastodonFallbackProfile.avatar,
+        header: account.header || mastodonFallbackProfile.header,
+        statuses_count: Number(account.statuses_count || 0),
+        created_at: account.created_at || mastodonFallbackProfile.created_at,
+        last_status_at: account.last_status_at || mastodonFallbackProfile.last_status_at
+      };
+    } else {
+      errors.push(`mastodon lookup ${response.status}`);
+    }
+  } catch (err) {
+    errors.push(`mastodon lookup ${err.message}`);
+  }
+
+  let items = [];
+  try {
+    const response = await fetch(MASTODON_RSS_URL, {
+      headers: { "User-Agent": "aday-blog-generator/1.0" }
+    });
+    if (response.ok) {
+      items = parseMastodonRssItems(await response.text());
+    } else {
+      errors.push(`mastodon rss ${response.status}`);
+    }
+  } catch (err) {
+    errors.push(`mastodon rss ${err.message}`);
+  }
+
+  return {
+    generated_at: new Date().toISOString(),
+    source: {
+      profile: MASTODON_PROFILE_URL,
+      rss: MASTODON_RSS_URL,
+      api_lookup: MASTODON_API_LOOKUP_URL
+    },
+    profile,
+    items,
+    errors
+  };
+};
+
+const writeMastodonFeed = async (targetPath) => {
+  const feed = await fetchMastodonFeed();
+  fs.writeFileSync(targetPath, JSON.stringify(feed, null, 2), "utf8");
+  return feed;
+};
+
 const artifactSources = (() => {
   try {
     if (!fs.existsSync(artifactSourcesPath)) return {};
@@ -432,6 +581,36 @@ const artifactSources = (() => {
     return {};
   }
 })();
+
+const archivedPresence = (() => {
+  const empty = { generated_at: "unknown", notes: [], entries: [], research_leads: [] };
+  try {
+    if (!fs.existsSync(archivedPresencePath)) return empty;
+    const parsed = JSON.parse(fs.readFileSync(archivedPresencePath, "utf8"));
+    return {
+      generated_at: parsed.generated_at || empty.generated_at,
+      notes: Array.isArray(parsed.notes) ? parsed.notes : [],
+      entries: Array.isArray(parsed.entries) ? parsed.entries : [],
+      research_leads: Array.isArray(parsed.research_leads) ? parsed.research_leads : []
+    };
+  } catch (err) {
+    console.warn("Archived presence warning:", err.message);
+    return empty;
+  }
+})();
+
+fs.writeFileSync(archivedPresenceOutPath, JSON.stringify(archivedPresence, null, 2), "utf8");
+
+const archivedPresenceTimelineEntries = archivedPresence.entries
+  .filter((entry) => entry?.confidence === "confirmed" && entry.render !== false)
+  .map((entry) => ({
+    date: entry.date || "1970-01-01",
+    title: entry.title || "Recovered presence note",
+    desc: entry.desc || "",
+    url: entry.url || "",
+    source: entry.source || "archive",
+    category: entry.category || "archive"
+  }));
 
 const parsePost = (raw) => {
   const normalized = raw.replaceAll("\r\n", "\n");
@@ -489,14 +668,14 @@ ${filmHeadLinks}
   <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <main>
-    <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+    <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
     <h1 class="decrypt">${escapeHtml(meta.title)}</h1>
     <p class="date">${escapeHtml(meta.date)}</p>
     ${assetsHtml}
     ${htmlBody}
     <footer class="blog-footer">
       <div class="footer-wave" aria-hidden="true"></div>
-      <p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a></p>
+      <p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a></p>
     </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
@@ -564,20 +743,6 @@ const getTimeline = async () => {
       title: "YouTube channel active",
       desc: "Channel timeline begins (@aday_net_au uploads)",
       url: "https://www.youtube.com/@aday_net_au",
-      source: "youtube"
-    },
-    {
-      date: "2025-10-31",
-      title: "YouTube activity snapshot",
-      desc: "Public tracker notes view movement for channel videos",
-      url: "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
-      source: "youtube"
-    },
-    {
-      date: "2026-04-16",
-      title: "YouTube stats check-in",
-      desc: "Latest indexed view delta recorded in public analytics mirror",
-      url: "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
       source: "youtube"
     },
     {
@@ -767,27 +932,7 @@ const getTimeline = async () => {
     return [];
   })();
 
-  const youtubeStatsFallback = await (async () => {
-    const statsUrl = String(artifactSources.youtube_stats_url || "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats").trim();
-    if (!statsUrl) return [];
-    try {
-      const response = await fetch(statsUrl, { headers: { "User-Agent": "aday-blog-generator/1.0" } });
-      if (!response.ok) return [];
-      const html = await response.text();
-      const snapshots = [...html.matchAll(/(\d{4}-\d{2}-\d{2})/g)].map((m) => m[1]);
-      if (!snapshots.length) return [];
-      const latest = snapshots.sort().at(-1);
-      return [{
-        date: latest || parseIsoDate(new Date().toISOString()),
-        title: "YouTube tracker snapshot",
-        desc: "Latest discovered public analytics timestamp from stats mirror",
-        url: statsUrl,
-        source: "youtube"
-      }];
-    } catch {
-      return [];
-    }
-  })();
+  const youtubeStatsFallback = [];
 
   const githubRepoTimeline = await (async () => {
     try {
@@ -836,6 +981,7 @@ const getTimeline = async () => {
 
   const allEvents = [
     ...curatedEvents,
+    ...archivedPresenceTimelineEntries,
     ...weeklybeatsScraped,
     ...youtubeFeedScraped,
     ...youtubeCatalogTimeline,
@@ -1005,6 +1151,71 @@ const renderTimelineNode = (entry, idx, { isYearStart, year }) => {
 </li>`;
 };
 
+const renderMastodonPanel = (feed, { id = "mastodonSignal" } = {}) => {
+  const profile = feed?.profile || mastodonFallbackProfile;
+  const items = Array.isArray(feed?.items) ? feed.items : [];
+  const safeId = slugifySource(id);
+  const titleId = `${safeId}Title`;
+  const headerStyle = profile.header
+    ? ` style="--mastodon-header: url('${escapeHtml(profile.header)}')"`
+    : "";
+  const statusMeta = [
+    Number.isFinite(Number(profile.statuses_count)) ? `${Number(profile.statuses_count)} public post${Number(profile.statuses_count) === 1 ? "" : "s"}` : "",
+    profile.last_status_at ? `latest ${escapeHtml(parseIsoDate(profile.last_status_at))}` : ""
+  ].filter(Boolean).join(" // ");
+  const itemRows = items
+    .map((item) => `<li>
+      <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>
+      <span class="date">${escapeHtml(item.date || parseIsoDate(item.published_at || "1970-01-01"))}</span>
+      ${item.content_text ? `<p>${escapeHtml(item.content_text)}</p>` : ""}
+    </li>`)
+    .join("\n");
+  const feedBody = itemRows
+    ? `<ul class="mastodon-feed-list">${itemRows}</ul>`
+    : `<p class="mastodon-empty">Public feed is quiet; the profile signal is wired and ready.</p>`;
+
+  return `<section class="mastodon-signal-card" id="${escapeHtml(safeId)}" aria-labelledby="${escapeHtml(titleId)}">
+  <div class="mastodon-banner"${headerStyle} aria-hidden="true"></div>
+  <div class="mastodon-signal-body">
+    <img class="mastodon-avatar" src="${escapeHtml(profile.avatar || mastodonFallbackProfile.avatar)}" alt="Aday Mastodon avatar" width="72" height="72" loading="lazy" decoding="async">
+    <div class="mastodon-profile-copy">
+      <p class="date">Mastodon stream</p>
+      <h2 id="${escapeHtml(titleId)}">${escapeHtml(profile.display_name || "aday")} <span>${escapeHtml(MASTODON_HANDLE)}</span></h2>
+      <p>${escapeHtml(profile.note || mastodonFallbackProfile.note)}</p>
+      ${statusMeta ? `<p class="mastodon-status-meta">${statusMeta}</p>` : ""}
+      <p class="mastodon-actions">
+        <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">Follow on Mastodon</a>
+        <a href="${MASTODON_RSS_URL}" target="_blank" rel="noopener noreferrer">RSS</a>
+      </p>
+    </div>
+  </div>
+  ${feedBody}
+</section>`;
+};
+
+const mastodonTimelineEntriesFromFeed = (feed) => {
+  const profile = feed?.profile || mastodonFallbackProfile;
+  const items = Array.isArray(feed?.items) ? feed.items : [];
+  if (items.length) {
+    return items.map((item) => ({
+      date: item.date || parseIsoDate(item.published_at || "1970-01-01"),
+      title: item.title || "Mastodon update",
+      desc: item.content_text || MASTODON_HANDLE,
+      url: item.url || MASTODON_PROFILE_URL,
+      source: "mastodon"
+    }));
+  }
+  return [
+    {
+      date: parseIsoDate(profile.last_status_at || profile.created_at || "2026-03-01"),
+      title: `${profile.display_name || "aday"} on Mastodon`,
+      desc: `${MASTODON_HANDLE} // ${profile.note || "Mastodon profile"}`,
+      url: profile.url || MASTODON_PROFILE_URL,
+      source: "mastodon"
+    }
+  ];
+};
+
 const devlogBundle = await buildDevlogBundle(root);
 fs.writeFileSync(
   path.join(outDataDir, "devlog-bundle.json"),
@@ -1023,6 +1234,10 @@ ${devlogBundle.trains
   )
   .join("\n")}
 </div>`;
+const mastodonFeed = await writeMastodonFeed(mastodonFeedPath);
+const mastodonPanelHtml = renderMastodonPanel(mastodonFeed, { id: "mastodon-signal-overview" });
+const mastodonPresencePanelHtml = renderMastodonPanel(mastodonFeed, { id: "mastodon-signal-presence" });
+const mastodonTimelineEntries = mastodonTimelineEntriesFromFeed(mastodonFeed);
 
 const mergeTimelineEvents = (base, extra) => {
   const dedupedMap = new Map();
@@ -1048,7 +1263,7 @@ const postTimelineEntries = posts.map((post) => ({
   source: "post"
 }));
 
-const timelineEntries = mergeTimelineEvents(mergeTimelineEvents(await getTimeline(), postTimelineEntries), []);
+const timelineEntries = mergeTimelineEvents(mergeTimelineEvents(await getTimeline(), postTimelineEntries), mastodonTimelineEntries);
 const timelineNewestFirst = [...timelineEntries].sort((a, b) => new Date(b.date) - new Date(a.date));
 let timelineYearMarker = "";
 const timelineRows = timelineNewestFirst
@@ -1209,6 +1424,7 @@ const presenceSectionHtml = `<section class="presence-timeline" id="presenceTime
       <h2>Presence timeline</h2>
       <p class="date">Newest first — media-heavy by default. Dev log commits live under Dev logs; expand filters for the full feed.</p>
       ${presenceFeedControlsHtml}
+      ${mastodonPresencePanelHtml}
       ${githubPresenceHtml}
       ${presenceRangeHtml}
       <div class="timeline-graph-wrap">
@@ -1256,12 +1472,13 @@ ${filmHeadLinks}
     <div class="blog-shell-top">
       <h1 class="decrypt typed">blog.aday.net.au</h1>
     <p class="typed">Story trains: git dev logs, YouTube archive, and one master presence timeline.</p>
-    <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads on aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+    <p><a href="https://aday.net.au">return to aday.net.au</a> | <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a> | <a href="https://aday.net.au/#demozoo-uploads">demozoo uploads on aday.net.au</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
     </div>
     ${blogSectionNav}
     <div class="blog-shell-panels">
       <div class="blog-panel is-active" id="panel-overview" data-panel="overview">
         ${devlogHubHtml}
+        ${mastodonPanelHtml}
         <section class="blog-overview-cards">
           <h2>Sections</h2>
           <p class="date">One panel at a time.</p>
@@ -1301,7 +1518,7 @@ ${filmHeadLinks}
     </div>
     <footer class="blog-footer">
       <div class="footer-wave" aria-hidden="true"></div>
-      <p>blog.aday.net.au signal output // route: <a href="https://aday.net.au">aday.net.au</a></p>
+      <p>blog.aday.net.au signal output // route: <a href="https://aday.net.au">aday.net.au</a> // <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a></p>
     </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
@@ -1340,5 +1557,7 @@ const localDeployMeta = {
   run_number: "",
   deploy_note: "Offline build fingerprint; CI overwrites deploy-meta.json and injects window.__DEPLOY_META__.",
 };
-fs.writeFileSync(path.join(outDataDir, "deploy-meta.json"), JSON.stringify(localDeployMeta, null, 2), "utf8");
+const localDeployMetaJson = JSON.stringify(localDeployMeta, null, 2);
+fs.writeFileSync(path.join(outDataDir, "deploy-meta.json"), localDeployMetaJson, "utf8");
+fs.writeFileSync(path.join(outDir, "deploy-meta.json"), localDeployMetaJson, "utf8");
 console.log(`Generated ${posts.length} post(s).`);

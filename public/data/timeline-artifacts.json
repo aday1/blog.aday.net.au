@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-06-02T06:47:39.742Z",
-  "count": 279,
+  "generated_at": "2026-06-06T06:33:28.329Z",
+  "count": 291,
   "entries": [
+    {
+      "date": "2005-04-28",
+      "title": "aday.net.au first Wayback placeholder",
+      "desc": "Early Internet Archive capture of aday.net.au before the public site was filled out.",
+      "url": "https://web.archive.org/web/20050428192146id_/http://aday.net.au/",
+      "source": "archive",
+      "category": "web"
+    },
+    {
+      "date": "2008-05-07",
+      "title": "aday - now in Web 2.0!",
+      "desc": "Recovered RSS item marking the move from hand-built pages/phpws era into Drupal.",
+      "url": "https://web.archive.org/web/20081201093553id_/http://www.aday.net.au/node/19",
+      "source": "blog-archive",
+      "category": "old-blog"
+    },
+    {
+      "date": "2008-05-23",
+      "title": "Gameon - WedNESday - Day of the NES!",
+      "desc": "Recovered old blog post about the ACMI Game On event at Federation Square.",
+      "url": "https://web.archive.org/web/20081201093553id_/http://www.aday.net.au/node/22",
+      "source": "blog-archive",
+      "category": "old-blog"
+    },
+    {
+      "date": "2008-06-03",
+      "title": "Network Monitoring - With FreeNATS",
+      "desc": "Recovered old technical post comparing FreeNATS with Nagios and Zabbix.",
+      "url": "https://web.archive.org/web/20081201093553id_/http://www.aday.net.au/node/29",
+      "source": "blog-archive",
+      "category": "old-blog"
+    },
+    {
+      "date": "2009-07-03",
+      "title": "Dr. Mario - Fever Remix",
+      "desc": "Recovered audio post with a Reason-made Dr. Mario Fever remix, MP3 download, and embedded YouTube.",
+      "url": "https://web.archive.org/web/20091013161012id_/http://aday.net.au/node/3",
+      "source": "blog-archive",
+      "category": "music"
+    },
+    {
+      "date": "2009-10-13",
+      "title": "Aday.net.au recovered Drupal homepage",
+      "desc": "Wayback homepage capture with Audio/Wireless/Projects nav, Thin Line, Dr. Mario remix, and the lost-blog-content note.",
+      "url": "https://web.archive.org/web/20091013161012id_/http://aday.net.au/",
+      "source": "archive",
+      "category": "old-blog"
+    },
     {
       "date": "2010-01-01",
       "title": "Calavera live at interupt festival 2026",
@@ -1406,6 +1454,14 @@
     },
     {
       "date": "2016-06-20",
+      "title": "Video credit on Mr. Spastic - Meta",
+      "desc": "Bandcamp release credits aday for distinct and expressive videos, with aday.net.au listed in the credits.",
+      "url": "https://mrspastic.bandcamp.com/album/meta",
+      "source": "collab",
+      "category": "video"
+    },
+    {
+      "date": "2016-06-20",
       "title": "Bach Deluxe Fugue in Overdrive G Minus",
       "desc": "WeeklyBeats 2016 week 25",
       "url": "https://weeklybeats.com/aday/music/bach-deluxe-fugue-in-overdrive-g-minus",
@@ -1959,6 +2015,14 @@
       "category": "wb-2018"
     },
     {
+      "date": "2019-05-16",
+      "title": "VJ: Aday at Doctor Terror [NL] Invites Axed (#6)",
+      "desc": "Resident Advisor listing for the final Grumpy's Green hardcore show includes VJ: Aday and visuals by ADAY.",
+      "url": "https://ra.co/events/1262086",
+      "source": "gig",
+      "category": "vj"
+    },
+    {
       "date": "2019-06-01",
       "title": "Demobus : Busdemo",
       "desc": "1st at Flashback 2019 (pouet scene archive listing)",
@@ -2398,6 +2462,13 @@
       "source": "bandcamp"
     },
     {
+      "date": "2025-02-08",
+      "title": "Just ctrix things",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/QCSfLzHGPSQ",
+      "source": "youtube"
+    },
+    {
       "date": "2025-10-07",
       "title": "MacroVerse at Melbourne Fringe",
       "desc": "Live sonic/visual universe narrative: Reductionist (micro-instruments) + Aday (projection improv), Clan Analogue, Abbotsford Convent; free exhibition 12-4pm, 7pm performances",
@@ -2410,13 +2481,6 @@
       "desc": "Live universe-scale AV at Abbotsford Convent; the GLSL→ISF→Wire toolchain that became Macroverse 42.1.",
       "url": "/posts/2025-10-07-macroverse-fringe-origin.html",
       "source": "post"
-    },
-    {
-      "date": "2025-10-31",
-      "title": "YouTube activity snapshot",
-      "desc": "Public tracker notes view movement for channel videos",
-      "url": "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
-      "source": "youtube"
     },
     {
       "date": "2025-11-01",
@@ -2491,6 +2555,41 @@
       "category": "wb-2026"
     },
     {
+      "date": "2026-03-01",
+      "title": "aday on Mastodon",
+      "desc": "@aday_net_au@mastodon.social // open source/modded/bendy/chip/h4xed enthusiasm",
+      "url": "https://mastodon.social/@aday_net_au",
+      "source": "mastodon"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "7 March 2026",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/WKIxfbhKbOA",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "interupt festival 2026 main day one",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/723RoOtu_K0",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "6 March 2026",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/hdWvcwmaaQU",
+      "source": "youtube"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "interupt festival night 1 (teh friday) with Abraide",
+      "desc": "YouTube upload/feed item",
+      "url": "https://www.youtube.com/shorts/h3MvdL7VM-o",
+      "source": "youtube"
+    },
+    {
       "date": "2026-03-12",
       "title": "ZealPalace",
       "desc": "A weird Raspberry PI MMUD RPG IRC Server Stack with a 3.5 LCD TFT Screen - RPG System, World simulation, Ollama personas, fun toy",
@@ -2517,13 +2616,6 @@
       "desc": "DAW MCP Survival pack - for mass sedding and envelope tweaking",
       "url": "https://github.com/aday1/The-DAW-Horsemen-of-the-apocalypse-MCP-survival-Pack",
       "source": "github"
-    },
-    {
-      "date": "2026-04-16",
-      "title": "YouTube stats check-in",
-      "desc": "Latest indexed view delta recorded in public analytics mirror",
-      "url": "https://ng.youtubers.me/aday-64775f5e-0cd6-430d-86d3-65ec4efc4105/youtuber-stats",
-      "source": "youtube"
     },
     {
       "date": "2026-05-09",

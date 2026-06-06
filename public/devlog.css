@@ -1,8 +1,8 @@
 .story-trains-hub {
   margin: 2.2rem 0 1.4rem;
   padding: 1rem 1.1rem 1.2rem;
-  border: 1px solid rgba(186, 214, 238, 0.14);
-  background: rgba(8, 12, 18, 0.55);
+  border: 1px solid rgba(255, 122, 168, 0.14);
+  background: rgba(12, 0, 12, 0.55);
 }
 
 .story-trains-hub h2 {
@@ -21,17 +21,17 @@
   align-items: center;
   gap: 0.35rem;
   padding: 0.35rem 0.65rem;
-  border: 1px solid rgba(186, 214, 238, 0.22);
+  border: 1px solid rgba(255, 122, 168, 0.2);
   border-radius: 3px;
   text-decoration: none;
   font-size: 0.92rem;
-  color: #c8d8ea;
+  color: #d6c1e8;
   background: rgba(0, 0, 0, 0.35);
 }
 
 .story-train-link:hover {
-  border-color: rgba(200, 160, 255, 0.45);
-  color: #e8f0ff;
+  border-color: rgba(242, 196, 102, 0.44);
+  color: #fff0c4;
 }
 
 .story-train-count {
@@ -48,7 +48,7 @@
 }
 
 .story-train-link--master {
-  border-color: rgba(122, 230, 168, 0.35);
+  border-color: rgba(255, 95, 142, 0.35);
 }
 
 .devlog-train {
@@ -68,7 +68,7 @@
   width: 72px;
   height: 72px;
   object-fit: cover;
-  border: 1px solid rgba(186, 214, 238, 0.2);
+  border: 1px solid rgba(255, 122, 168, 0.2);
   border-radius: 4px;
   flex-shrink: 0;
 }
@@ -98,7 +98,7 @@
   margin: 0 0 0.65rem;
   font-size: 1.05rem;
   letter-spacing: 0.02em;
-  color: #b8c8dc;
+  color: #d6c1e8;
 }
 
 .devlog-commit-list {
@@ -111,8 +111,8 @@
 
 .devlog-card {
   padding: 0.75rem 0.85rem;
-  border: 1px solid rgba(186, 214, 238, 0.12);
-  background: rgba(6, 10, 16, 0.62);
+  border: 1px solid rgba(255, 122, 168, 0.12);
+  background: rgba(10, 0, 12, 0.62);
   border-radius: 3px;
 }
 
@@ -126,7 +126,7 @@
 
 .devlog-phase-chip {
   padding: 0.05rem 0.4rem;
-  border: 1px solid rgba(186, 214, 238, 0.18);
+  border: 1px solid rgba(255, 122, 168, 0.18);
   border-radius: 2px;
   opacity: 0.85;
 }

@@ -8,19 +8,19 @@
     },
     {
       "includes": "macroverse.aday.net.au",
-      "image": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png"
+      "image": "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp"
     },
     {
       "includes": "artbastard.aday.net.au",
-      "image": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png"
+      "image": "/assets/card-dmx-console.jpg"
     },
     {
       "includes": "github.com/aday1/macroverse.aday.net.au/commit",
-      "image": "https://raw.githubusercontent.com/aday1/macroverse.aday.net.au/main/preview.png"
+      "image": "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp"
     },
     {
       "includes": "github.com/aday1/artbastard.aday.net.au/commit",
-      "image": "https://raw.githubusercontent.com/aday1/artbastard.aday.net.au/main/preview.png"
+      "image": "/assets/card-dmx-console.jpg"
     },
     {
       "includes": "demozoo.org",

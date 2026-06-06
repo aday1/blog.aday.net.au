@@ -130,7 +130,7 @@ export const buildDevlogBundle = async (blogRoot = path.resolve(scriptDir, "..")
       phases
     });
 
-    const optional = loadConfig(blogRoot).filter((t) => t.parentTrain === train.id);
+    const optional = loadConfig(blogRoot).filter((t) => t.parentTrain === train.id && t.publicCommits !== false);
     for (const sub of optional) {
       const subRaw = await resolveCommits(sub, blogRoot);
       if (!subRaw.length) continue;
@@ -216,7 +216,7 @@ export const renderDevlogTrainSection = (train) => {
 
   return `<section class="devlog-train devlog-train--${escapeHtml(train.id)}" id="devlog-${escapeHtml(train.id)}" data-story-train="${escapeHtml(train.id)}">
   <header class="devlog-train-head">
-    <img class="devlog-train-badge" src="${escapeHtml(train.previewImage)}" alt="" width="72" height="72" loading="lazy" decoding="async">
+    <img class="devlog-train-badge" src="${escapeHtml(train.previewImage)}" alt="" width="72" height="72" loading="lazy" decoding="async" onerror="this.hidden=true">
     <div>
       <h2 class="devlog-train-title">${escapeHtml(train.title)} dev log</h2>
       <p class="devlog-train-tagline">${escapeHtml(train.tagline)}</p>

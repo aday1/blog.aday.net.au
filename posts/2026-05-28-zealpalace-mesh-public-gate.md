@@ -38,7 +38,7 @@ Legacy `celes-minecraft-*` systemd units on CELES are disabled.
 ## Public URLs (safe to share)
 
 - Gate: [zealpalace.aday.net.au](https://zealpalace.aday.net.au/)
-- Gate (yggdrasil): [zealpalace-denied.yggdrasil.aday.net.au](https://zealpalace-denied.yggdrasil.aday.net.au/)
+- Gate (yggdrasil): `zealpalace-denied.yggdrasil.aday.net.au` (mesh DNS only)
 - Open source: [github.com/aday1/ZealPalace](https://github.com/aday1/ZealPalace)
 
 ## On-net (invite + Tailscale or LAN)

@@ -679,8 +679,12 @@
       codepen: "code",
       github: "code",
       platform: "platform",
+      archive: "platform",
+      "blog-archive": "platform",
       clan: "community",
       events: "community",
+      collab: "community",
+      gig: "community",
       press: "press",
       devlog: "devlog"
     };

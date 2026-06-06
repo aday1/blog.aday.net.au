@@ -47,6 +47,7 @@ jobs:
             "run_number": "${GITHUB_RUN_NUMBER}"
           }
           EOF
+          cp public/data/deploy-meta.json public/deploy-meta.json
           node -e "const fs=require('node:fs');const path='public/index.html';let html=fs.readFileSync(path,'utf8');const payload={site:'blog.aday.net.au',branch:'${GITHUB_REF_NAME}',track:'${GITHUB_REF_NAME}',version:'${SHORT_SHA}',build_date:'${BUILD_DATE}',last_git_sha_short:'${SHORT_SHA}',last_git_sha:'${GITHUB_SHA}',last_git_url:'https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}',last_build_at:'${BUILD_DATE}',last_deployed_at:'${BUILD_DATE}',changelog_url:'https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}',commits_history_url:'https://github.com/${GITHUB_REPOSITORY}/commits/${GITHUB_REF_NAME}',changelog_md_url:'https://github.com/${GITHUB_REPOSITORY}/blob/${GITHUB_REF_NAME}/CHANGELOG.md',releases_url:'https://github.com/${GITHUB_REPOSITORY}/releases',workflow_run_url:'https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}',run_id:'${GITHUB_RUN_ID}',run_number:'${GITHUB_RUN_NUMBER}'};const tag='<script>window.__DEPLOY_META__='+JSON.stringify(payload)+'</script>';const i=html.lastIndexOf('</body>');if(i<0)throw new Error('missing </body>');fs.writeFileSync(path,html.slice(0,i)+tag+html.slice(i));"
       - name: Skip notice when token is missing
         if: ${{ env.CF_API_TOKEN == '' }}
