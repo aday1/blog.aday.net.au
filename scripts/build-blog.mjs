@@ -1537,27 +1537,36 @@ fs.writeFileSync(path.join(outDataDir, "timeline-artifacts.json"), JSON.stringif
   count: timelineEntries.length,
   entries: timelineEntries
 }, null, 2), "utf8");
-const localDeployMeta = {
+
+const gitSha = process.env.GITHUB_SHA || process.env.CF_PAGES_COMMIT_SHA || "";
+const gitBranch = process.env.GITHUB_REF_NAME || process.env.CF_PAGES_BRANCH || "local";
+const gitRepo = process.env.GITHUB_REPOSITORY || "aday1/blog.aday.net.au";
+const repoUrl = `https://github.com/${gitRepo}`;
+const shortSha = gitSha ? gitSha.slice(0, 12) : "local";
+const isCiBuild = Boolean(gitSha || process.env.GITHUB_ACTIONS || process.env.CF_PAGES);
+const deployMeta = {
   site: "blog.aday.net.au",
-  branch: "local",
-  track: "local",
-  version: "local",
+  branch: gitBranch,
+  track: gitBranch,
+  version: shortSha,
   build_date: genAt,
-  last_git_sha_short: "local",
-  last_git_sha: "local",
-  last_git_url: "https://github.com/aday1/blog.aday.net.au",
+  last_git_sha_short: shortSha,
+  last_git_sha: gitSha || "local",
+  last_git_url: gitSha ? `${repoUrl}/commit/${gitSha}` : repoUrl,
   last_build_at: genAt,
   last_deployed_at: genAt,
-  changelog_url: "https://github.com/aday1/blog.aday.net.au",
-  commits_history_url: "https://github.com/aday1/blog.aday.net.au/commits/main",
-  changelog_md_url: "https://github.com/aday1/blog.aday.net.au/blob/main/CHANGELOG.md",
-  releases_url: "https://github.com/aday1/blog.aday.net.au/releases",
-  workflow_run_url: "",
-  run_id: "",
-  run_number: "",
-  deploy_note: "Offline build fingerprint; CI overwrites deploy-meta.json and injects window.__DEPLOY_META__.",
+  changelog_url: gitSha ? `${repoUrl}/commit/${gitSha}` : repoUrl,
+  commits_history_url: `${repoUrl}/commits/${gitBranch === "local" ? "main" : gitBranch}`,
+  changelog_md_url: `${repoUrl}/blob/${gitBranch === "local" ? "main" : gitBranch}/CHANGELOG.md`,
+  releases_url: `${repoUrl}/releases`,
+  workflow_run_url: process.env.GITHUB_RUN_ID ? `${repoUrl}/actions/runs/${process.env.GITHUB_RUN_ID}` : (process.env.CF_PAGES_URL || ""),
+  run_id: process.env.GITHUB_RUN_ID || "",
+  run_number: process.env.GITHUB_RUN_NUMBER || "",
 };
-const localDeployMetaJson = JSON.stringify(localDeployMeta, null, 2);
-fs.writeFileSync(path.join(outDataDir, "deploy-meta.json"), localDeployMetaJson, "utf8");
-fs.writeFileSync(path.join(outDir, "deploy-meta.json"), localDeployMetaJson, "utf8");
+if (!isCiBuild) {
+  deployMeta.deploy_note = "Offline build fingerprint; CI and Cloudflare Pages builds replace local metadata.";
+}
+const deployMetaJson = JSON.stringify(deployMeta, null, 2);
+fs.writeFileSync(path.join(outDataDir, "deploy-meta.json"), deployMetaJson, "utf8");
+fs.writeFileSync(path.join(outDir, "deploy-meta.json"), deployMetaJson, "utf8");
 console.log(`Generated ${posts.length} post(s).`);
