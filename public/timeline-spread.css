@@ -244,18 +244,22 @@
 
 .post-list.timeline > li.timeline-node.source-soundcloud,
 .post-list.timeline > li.timeline-node.source-weeklybeats,
-.post-list.timeline > li.timeline-node.source-bandcamp {
+.post-list.timeline > li.timeline-node.source-bandcamp,
+.post-list.timeline > li.timeline-node.source-demozoo-music {
   --timeline-source-accent: #ff7aa8;
 }
 
 .post-list.timeline > li.timeline-node.source-youtube,
 .post-list.timeline > li.timeline-node.source-vimeo,
-.post-list.timeline > li.timeline-node.source-twitch {
+.post-list.timeline > li.timeline-node.source-twitch,
+.post-list.timeline > li.timeline-node.source-demozoo-production {
   --timeline-source-accent: #76c8ff;
 }
 
 .post-list.timeline > li.timeline-node.source-demozoo,
-.post-list.timeline > li.timeline-node.source-scene {
+.post-list.timeline > li.timeline-node.source-demozoo-graphics,
+.post-list.timeline > li.timeline-node.source-scene,
+.post-list.timeline > li.timeline-node.source-pouet {
   --timeline-source-accent: #f2c466;
 }
 
@@ -274,6 +278,7 @@
 
 .post-list.timeline > li.timeline-node.source-archive,
 .post-list.timeline > li.timeline-node.source-blog-archive,
+.post-list.timeline > li.timeline-node.source-demozoo-profile,
 .post-list.timeline > li.timeline-node.source-mastodon {
   --timeline-source-accent: #76c8ff;
 }

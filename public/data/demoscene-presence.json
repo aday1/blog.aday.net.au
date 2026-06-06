@@ -1,207 +1,11 @@
 {
   "generated_at": "2026-06-06",
   "notes": [
-    "Confirmed entries are public-source-backed and are safe to render in the blog presence timeline.",
-    "Research leads stay in this data file until a source URL and date can be verified.",
-    "Facebook or Twitter archive imports should be added from first-party exports when available, with public third-party posts treated as leads unless they are clearly public and relevant.",
     "Confirmed demoscene records are sourced from Demozoo API releaser 28006 for Aday.",
     "This file separates the demoscene thread from the broader archived-presence ledger while still rendering confirmed entries into the public timeline.",
     "scene.org file URLs are retained in evidence where Demozoo exposes them; timeline cards link to Demozoo canonical pages."
   ],
   "entries": [
-    {
-      "date": "2005-04-28",
-      "title": "aday.net.au first Wayback placeholder",
-      "desc": "Early Internet Archive capture of aday.net.au before the public site was filled out.",
-      "url": "https://web.archive.org/web/20050428192146id_/http://aday.net.au/",
-      "source": "archive",
-      "category": "web",
-      "confidence": "confirmed",
-      "evidence": [
-        "Wayback capture 20050428192146"
-      ]
-    },
-    {
-      "date": "2008-05-07",
-      "title": "aday - now in Web 2.0!",
-      "desc": "Recovered RSS item marking the move from hand-built pages/phpws era into Drupal.",
-      "url": "https://web.archive.org/web/20081201093553id_/http://www.aday.net.au/node/19",
-      "source": "blog-archive",
-      "category": "old-blog",
-      "confidence": "confirmed",
-      "evidence": [
-        "Wayback RSS item pubDate Wed, 07 May 2008 04:34:10 +1000"
-      ]
-    },
-    {
-      "date": "2008-05-23",
-      "title": "Gameon - WedNESday - Day of the NES!",
-      "desc": "Recovered old blog post about the ACMI Game On event at Federation Square.",
-      "url": "https://web.archive.org/web/20081201093553id_/http://www.aday.net.au/node/22",
-      "source": "blog-archive",
-      "category": "old-blog",
-      "confidence": "confirmed",
-      "evidence": [
-        "Wayback RSS item pubDate Fri, 23 May 2008 14:22:50 +1000"
-      ]
-    },
-    {
-      "date": "2008-06-03",
-      "title": "Network Monitoring - With FreeNATS",
-      "desc": "Recovered old technical post comparing FreeNATS with Nagios and Zabbix.",
-      "url": "https://web.archive.org/web/20081201093553id_/http://www.aday.net.au/node/29",
-      "source": "blog-archive",
-      "category": "old-blog",
-      "confidence": "confirmed",
-      "evidence": [
-        "Wayback RSS item pubDate Tue, 03 Jun 2008 04:33:55 +1000"
-      ]
-    },
-    {
-      "date": "2009-04-29",
-      "title": "Vimeo Aday profile created",
-      "desc": "Public Vimeo profile for Aday, linked back to aday.net.au, with a small video archive covering old tracks, visuals, projection mapping, and experimental tests.",
-      "url": "https://vimeo.com/aday?fl=pl&fe=by",
-      "source": "vimeo",
-      "category": "video-platform",
-      "confidence": "confirmed",
-      "evidence": [
-        "Vimeo profile structured data dateCreated 2009-04-29 and sameAs aday.net.au"
-      ]
-    },
-    {
-      "date": "2009-07-03",
-      "title": "Dr. Mario - Fever Remix",
-      "desc": "Recovered audio post with a Reason-made Dr. Mario Fever remix, MP3 download, and embedded YouTube.",
-      "url": "https://web.archive.org/web/20091013161012id_/http://aday.net.au/node/3",
-      "source": "blog-archive",
-      "category": "music",
-      "confidence": "confirmed",
-      "evidence": [
-        "Wayback node page posted 03 July 2009 by aday"
-      ]
-    },
-    {
-      "date": "2009-10-13",
-      "title": "Aday.net.au recovered Drupal homepage",
-      "desc": "Wayback homepage capture with Audio/Wireless/Projects nav, Thin Line, Dr. Mario remix, and the lost-blog-content note.",
-      "url": "https://web.archive.org/web/20091013161012id_/http://aday.net.au/",
-      "source": "archive",
-      "category": "old-blog",
-      "confidence": "confirmed",
-      "evidence": [
-        "Wayback capture 20091013161012"
-      ]
-    },
-    {
-      "date": "2013-05-27",
-      "title": "GrumpyWombat setup timelapse",
-      "desc": "Vimeo clip documenting GrumpyWombat / New World Disorder setup and decor process from May 2013.",
-      "url": "https://vimeo.com/67066920",
-      "source": "vimeo",
-      "category": "vj-setup",
-      "confidence": "confirmed",
-      "evidence": [
-        "Vimeo RSS item pubDate Mon, 27 May 2013"
-      ]
-    },
-    {
-      "date": "2014-01-08",
-      "title": "Aday - Electrichip - Weeklyvids/WeeklyBeats",
-      "desc": "Vimeo Weeklyvids companion for WeeklyBeats week 1, pairing Electrichip with sound-reactive visual art.",
-      "url": "https://vimeo.com/83730468",
-      "source": "vimeo",
-      "category": "music-video",
-      "confidence": "confirmed",
-      "evidence": [
-        "Vimeo RSS item pubDate Wed, 08 Jan 2014"
-      ]
-    },
-    {
-      "date": "2014-04-14",
-      "title": "Projection Mapping Test - DMG-001",
-      "desc": "Game Boy projection mapping test used for Squaresounds Festival 2014 decor, with earlier Soundbytes PAX afterparty context noted in the Vimeo description.",
-      "url": "https://vimeo.com/91998453",
-      "source": "vimeo",
-      "category": "projection-mapping",
-      "confidence": "confirmed",
-      "evidence": [
-        "Vimeo RSS item pubDate Mon, 14 Apr 2014"
-      ]
-    },
-    {
-      "date": "2014-05-27",
-      "title": "Grumpy-Wombat export frames",
-      "desc": "Experimental Grumpy Wombat visual export clip archived on Vimeo.",
-      "url": "https://vimeo.com/96580312",
-      "source": "vimeo",
-      "category": "experimental-video",
-      "confidence": "confirmed",
-      "evidence": [
-        "Vimeo RSS item pubDate Tue, 27 May 2014"
-      ]
-    },
-    {
-      "date": "2015-04-15",
-      "title": "Weeklybeats 2014 - Challenge Accepted",
-      "desc": "Bandcamp album collecting selected WeeklyBeats 2014 tracks, tagged chipmusic and experimental from Melbourne.",
-      "url": "https://aday.bandcamp.com/album/weeklybeats-2014-challenge-accepted",
-      "source": "bandcamp",
-      "category": "music-release",
-      "confidence": "confirmed",
-      "evidence": [
-        "Bandcamp album page released April 15, 2015",
-        "Bandcamp track list shows 15 selected tracks"
-      ]
-    },
-    {
-      "date": "2015-06-14",
-      "title": "Flashstorm.mod live from Amiga 500 + ESX",
-      "desc": "Vimeo archive of a four-channel Amiga module performed from an Amiga 500 with Electribe ESX effects.",
-      "url": "https://vimeo.com/130662163",
-      "source": "vimeo",
-      "category": "music-video",
-      "confidence": "confirmed",
-      "evidence": [
-        "Vimeo RSS item pubDate Sun, 14 Jun 2015"
-      ]
-    },
-    {
-      "date": "2016-06-20",
-      "title": "Video credit on Mr. Spastic - Meta",
-      "desc": "Bandcamp release credits aday for distinct and expressive videos, with aday.net.au listed in the credits.",
-      "url": "https://mrspastic.bandcamp.com/album/meta",
-      "source": "collab",
-      "category": "video",
-      "confidence": "confirmed",
-      "evidence": [
-        "Bandcamp credits released June 20, 2016"
-      ]
-    },
-    {
-      "date": "2019-05-16",
-      "title": "VJ: Aday at Doctor Terror [NL] Invites Axed (#6)",
-      "desc": "Resident Advisor listing for the final Grumpy's Green hardcore show includes VJ: Aday and visuals by ADAY.",
-      "url": "https://ra.co/events/1262086",
-      "source": "gig",
-      "category": "vj",
-      "confidence": "confirmed",
-      "evidence": [
-        "Resident Advisor public listing"
-      ]
-    },
-    {
-      "date": "2026-06-06",
-      "title": "Twitch aday01 stream presence",
-      "desc": "Public Twitch channel for occasional studio streams, Quad FPV flight experiments, and video games, linked back to aday.net.au.",
-      "url": "https://www.twitch.tv/aday01/",
-      "source": "twitch",
-      "category": "stream-fpv",
-      "confidence": "confirmed",
-      "evidence": [
-        "Twitch profile metadata fetched 2026-06-06"
-      ]
-    },
     {
       "date": "2012-11-17",
       "title": "RPi-Sequenced NES",
@@ -660,35 +464,6 @@
   ],
   "research_leads": [
     {
-      "label": "SoundCloud 28-track item backlog",
-      "status": "source-confirmed-needs-item-dates",
-      "url": "https://soundcloud.com/adaynetau/",
-      "notes": "Public profile metadata confirms Aday (aday_net_au), Melbourne, 28 sounds, and 262 followers as of 2026-06-06. Track-level dates need a SoundCloud item crawl or first-party export before rendering individual entries."
-    },
-    {
-      "label": "Twitch VOD and FPV archive backlog",
-      "status": "source-confirmed-needs-dated-items",
-      "url": "https://www.twitch.tv/aday01/",
-      "notes": "Public profile confirms studio, Quad FPV, and occasional game stream context. Individual VOD/highlight dates need a Twitch archive/export or API-backed crawl."
-    },
-    {
-      "label": "Blah Blah: A Night of Disco Nonsense",
-      "date": "2009-07-31",
-      "status": "candidate",
-      "url": "https://ra.co/events/89980",
-      "notes": "Possible Miss Libertine VJ listing. Keep as a lead until the event page can be verified without relying on bot-blocked markup."
-    },
-    {
-      "label": "Fog Music / St Fog gigs or collaborations",
-      "status": "not-confirmed",
-      "notes": "No clean public hit found yet. Search again once private Facebook/Twitter exports or backups provide names, dates, venues, or aliases."
-    },
-    {
-      "label": "First-party Facebook and Twitter archives",
-      "status": "waiting-for-export",
-      "notes": "When available, parse exports locally into dated candidate rows, then promote only source-backed public items into the rendered timeline."
-    },
-    {
       "label": "Pouet comments and prod-thread enrichment",
       "status": "source-confirmed-needs-comment-pass",
       "url": "https://www.pouet.net/prod.php?which=81483",
@@ -701,7 +476,7 @@
       "notes": "Demozoo exposes several scene.org files for Aday entries. A later pass can enrich cards with file size, format, and mirrors without embedding heavy media by default."
     }
   ],
-  "demoscene_source_profile": {
+  "source_profile": {
     "demozoo_releaser_id": 28006,
     "demozoo_url": "https://demozoo.org/sceners/28006/",
     "external_links": [

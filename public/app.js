@@ -216,9 +216,9 @@
     const padX = 34;
 
     const laneForSource = (s) => {
-      if (["soundcloud", "weeklybeats", "bandcamp"].includes(s)) return 0;
-      if (["youtube", "vimeo"].includes(s)) return 1;
-      if (["demozoo", "scene"].includes(s)) return 2;
+      if (["soundcloud", "weeklybeats", "bandcamp", "demozoo-music"].includes(s)) return 0;
+      if (["youtube", "vimeo", "demozoo-production"].includes(s)) return 1;
+      if (["demozoo", "demozoo-graphics", "scene", "pouet"].includes(s)) return 2;
       if (["github", "codepen", "devlog-macroverse", "devlog-artbastard"].includes(s)) return 3;
       return 4;
     };
@@ -676,7 +676,12 @@
       vimeo: "video",
       twitch: "video",
       demozoo: "visual",
+      "demozoo-music": "audio",
+      "demozoo-production": "visual",
+      "demozoo-graphics": "visual",
+      "demozoo-profile": "platform",
       scene: "visual",
+      pouet: "visual",
       codepen: "code",
       github: "code",
       platform: "platform",

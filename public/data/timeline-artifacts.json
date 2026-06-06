@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06T07:07:25.417Z",
-  "count": 299,
+  "generated_at": "2026-06-06T07:29:02.562Z",
+  "count": 328,
   "entries": [
     {
       "date": "2005-04-28",
@@ -710,13 +710,6 @@
       "category": "wb-2012"
     },
     {
-      "date": "2012-11-01",
-      "title": "RPi-Sequenced NES",
-      "desc": "Demozoo upload node",
-      "url": "https://demozoo.org/productions/94050/",
-      "source": "demozoo"
-    },
-    {
       "date": "2012-11-04",
       "title": "Bells and Whistles",
       "desc": "Another Unmastered Studio Jam .. this is the direction I was leaning in ... I've been absent from Weeklybeats since Week 38.. life got in the way of life -- Mostly taken in one take after programming arpeggiators and messing around for a few hours.. Then swift edit/''clean up'' in Audacity and packaged.",
@@ -735,6 +728,22 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2012/aday_weeklybeats-2012_45_thats-not-a-beat!-thats-a-spaceship!.mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2012-social.jpg",
       "category": "wb-2012"
+    },
+    {
+      "date": "2012-11-17",
+      "title": "RPi-Sequenced NES",
+      "desc": "Video entry at Syntax 2012 Demo - Wild; placed 4 with 57 pts. Authors: Aday. Platforms: Nintendo Entertainment System (NES) / Raspberry Pi.",
+      "url": "https://demozoo.org/productions/94050/",
+      "source": "demozoo-production",
+      "category": "scene-video"
+    },
+    {
+      "date": "2012-11-17",
+      "title": "Wasted Precious Submission Time!!",
+      "desc": "Tracked Music entry at Syntax 2012 Tracked Music; placed 3 with 49 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/45246/",
+      "source": "demozoo-music",
+      "category": "scene-tracked-music"
     },
     {
       "date": "2012-11-18",
@@ -790,6 +799,30 @@
       "url": "https://vimeo.com/67066920",
       "source": "vimeo",
       "category": "vj-setup"
+    },
+    {
+      "date": "2013-06-09",
+      "title": "MAKe IT STOP",
+      "desc": "Demo entry at Flashback 2013 PC Demo; placed 7 with 45 pts. Authors: Aday + Jimage + cTrix. Platform: Windows.",
+      "url": "https://demozoo.org/productions/75073/",
+      "source": "demozoo-production",
+      "category": "scene-demo"
+    },
+    {
+      "date": "2013-11-09",
+      "title": "Bottleneck",
+      "desc": "Music entry at Syntax 2013 16 Second Music; placed 5 with 71 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/94293/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
+      "date": "2013-11-09",
+      "title": "Legend of Syntax",
+      "desc": "Graphics entry at Syntax 2013 Oldschool Gfx; placed =5 with 50 pts. Authors: Aday.",
+      "url": "https://demozoo.org/graphics/94286/",
+      "source": "demozoo-graphics",
+      "category": "scene-graphics"
     },
     {
       "date": "2013-12-30",
@@ -1053,6 +1086,30 @@
       "category": "wb-2014"
     },
     {
+      "date": "2014-06-08",
+      "title": "Achronic Projection (LSDJ)",
+      "desc": "Streaming Music entry at Flashback 2014 Music - Tracked; placed 6 with 53 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/113143/",
+      "source": "demozoo-music",
+      "category": "scene-tracked-music"
+    },
+    {
+      "date": "2014-06-08",
+      "title": "Eelectrichip",
+      "desc": "Streaming Music entry at Flashback 2014 Music - Streaming; placed 5 with 67 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/113135/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
+      "date": "2014-06-08",
+      "title": "Emobeats",
+      "desc": "Streaming Music entry at Flashback 2014 Music - Streaming; placed 6 with 66 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/113136/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
       "date": "2014-06-09",
       "title": "Exit Loop",
       "desc": "WeeklyBeats 2014 week 24",
@@ -1263,6 +1320,30 @@
       "category": "wb-2014"
     },
     {
+      "date": "2014-11-15",
+      "title": "Cuebasic",
+      "desc": "Demo entry at Syntax 2014 WiLD Demo; placed 2 with 123 pts. Authors: Aday + jimmage.",
+      "url": "https://demozoo.org/productions/126053/",
+      "source": "demozoo-production",
+      "category": "scene-demo"
+    },
+    {
+      "date": "2014-11-15",
+      "title": "Final Government - LiberalDemise",
+      "desc": "Demo entry at Syntax 2014 WiLD Demo; placed 3 with 111 pts. Authors: Aday.",
+      "url": "https://demozoo.org/productions/126054/",
+      "source": "demozoo-production",
+      "category": "scene-demo"
+    },
+    {
+      "date": "2014-11-15",
+      "title": "SyntaxAteMyGameboy",
+      "desc": "Music entry at Syntax 2014 17 Second Music; placed 5 with 97 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/126024/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
       "date": "2015-04-15",
       "title": "Weeklybeats 2014 - Challenge Accepted",
       "desc": "Bandcamp album collecting selected WeeklyBeats 2014 tracks, tagged chipmusic and experimental from Melbourne.",
@@ -1271,12 +1352,68 @@
       "category": "music-release"
     },
     {
+      "date": "2015-06-07",
+      "title": "Flashstöööööm",
+      "desc": "Tracked Music entry at Flashback 2015 Music - Tracked; placed 2 with 71 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/139422/",
+      "source": "demozoo-music",
+      "category": "scene-tracked-music"
+    },
+    {
       "date": "2015-06-14",
       "title": "Flashstorm.mod live from Amiga 500 + ESX",
       "desc": "Vimeo archive of a four-channel Amiga module performed from an Amiga 500 with Electribe ESX effects.",
       "url": "https://vimeo.com/130662163",
       "source": "vimeo",
       "category": "music-video"
+    },
+    {
+      "date": "2015-11-14",
+      "title": "COME TO SYNTAX RAVE",
+      "desc": "Tracked Music entry at Syntax 2015 Music - Tracked; placed 6 with 71 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/149997/",
+      "source": "demozoo-music",
+      "category": "scene-tracked-music"
+    },
+    {
+      "date": "2015-11-14",
+      "title": "HardSTYLE",
+      "desc": "Streaming Music entry at Syntax 2015 Music - Chip; placed 4 with 83 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/150001/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
+      "date": "2015-11-14",
+      "title": "Proliferated Triangle",
+      "desc": "Tracked Music entry at Syntax 2015 Music - Tracked; placed 4 with 74 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/149995/",
+      "source": "demozoo-music",
+      "category": "scene-tracked-music"
+    },
+    {
+      "date": "2015-11-14",
+      "title": "Reverse Engineered ProMIDI + Blinkenlights",
+      "desc": "Wild/demo entry at Syntax 2015 Demo - Wild; placed 2 with 107 pts. Authors: Aday + TrinaryLogic.",
+      "url": "https://demozoo.org/productions/150025/",
+      "source": "demozoo-production",
+      "category": "scene-demo"
+    },
+    {
+      "date": "2015-11-14",
+      "title": "Syntax FamiSphere",
+      "desc": "Video entry at Syntax 2015 Animation; placed 1 with 68 pts. Authors: Aday.",
+      "url": "https://demozoo.org/productions/150004/",
+      "source": "demozoo-production",
+      "category": "scene-video"
+    },
+    {
+      "date": "2015-11-14",
+      "title": "WindyWinzor",
+      "desc": "Streaming Music entry at Syntax 2015 Music - 20 Seconds; placed 2 with 82 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/149984/",
+      "source": "demozoo-music",
+      "category": "scene-music"
     },
     {
       "date": "2016-01-04",
@@ -1717,6 +1854,14 @@
       "category": "wb-2016"
     },
     {
+      "date": "2016-11-12",
+      "title": "Amigabach",
+      "desc": "Tracked Music entry at Syntax 2016 Music - Tracked; placed 4 with 63 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/165272/",
+      "source": "demozoo-music",
+      "category": "scene-tracked-music"
+    },
+    {
       "date": "2016-11-13",
       "title": "AmigaBachafieidSyntax",
       "desc": "This was recorded off the live stream at syntax, It's a 4 channel MOD file, running off a distorted broadcast mixer (damnit) and it's the only thing I had time to work on, audio related this week. It came last, a lot of good submissions from Syntax this year in tracked music category ... But from a technical stand point, Was interesting to spend a couple of days trying to convert my older weeklybeats submission track to amiga and trying it all out in OpenMPT. -- My drums in this track are far too loud, I ran out of time to finish this track. speed run. See you next week I spose",
@@ -1795,6 +1940,14 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2016/aday_weeklybeats-2016_52_renagadelsdj-[co-op-remix].mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2016-social.jpg",
       "category": "wb-2016"
+    },
+    {
+      "date": "2017-11-25",
+      "title": "The Official Syntax VR Super Demo 9000",
+      "desc": "Demo entry at Syntax 2017 Demo - Wild; placed 1 with 103 pts. Authors: Aday. Platform: Windows.",
+      "url": "https://demozoo.org/productions/180327/",
+      "source": "demozoo-production",
+      "category": "scene-demo"
     },
     {
       "date": "2018-01-01",
@@ -2044,11 +2197,36 @@
       "category": "wb-2018"
     },
     {
-      "date": "2018-11-01",
+      "date": "2018-11-10",
       "title": "64:20 Blaze It",
-      "desc": "Demozoo graphics upload",
+      "desc": "Graphics entry at Syntax 2018 Oldskool Graphics; placed 17 with 29 pts. Authors: Aday + CatchinAshes + Chicken + Jimage + Style + cTrix + ript. Platform: Commodore 64.",
       "url": "https://demozoo.org/graphics/195944/",
-      "source": "demozoo"
+      "source": "demozoo-graphics",
+      "category": "scene-graphics"
+    },
+    {
+      "date": "2018-11-10",
+      "title": "Algoraving MidiNES",
+      "desc": "Music entry at Syntax 2018 Chip Music; placed 6 with 70 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/195934/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
+      "date": "2018-11-10",
+      "title": "Atomicwaveform shovelware",
+      "desc": "Streaming Music entry at Syntax 2018 24 Seconds Music; placed 4 with 71 pts. Authors: Aday.",
+      "url": "https://demozoo.org/music/195968/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
+      "date": "2018-11-10",
+      "title": "Oscilloscopic Sharku XYRL Test 0.7",
+      "desc": "Video entry at Syntax 2018 Animation; placed =1 with 68 pts. Authors: Aday.",
+      "url": "https://demozoo.org/productions/195971/",
+      "source": "demozoo-production",
+      "category": "scene-video"
     },
     {
       "date": "2018-12-01",
@@ -2079,18 +2257,44 @@
       "category": "vj"
     },
     {
-      "date": "2019-06-01",
-      "title": "Demobus : Busdemo",
-      "desc": "1st at Flashback 2019 (pouet scene archive listing)",
-      "url": "https://m.pouet.net/groups.php?which=12461",
-      "source": "scene"
+      "date": "2019-06-09",
+      "title": "Demobus:Busdemo",
+      "desc": "Syntax Party Crew Windows demo/invitation at Flashback 2019 Demo - Newschool; Demozoo records 1st with 110 pts, while Pouet credits Syntax Party Crew + Aday + Jimmage.",
+      "url": "https://www.pouet.net/prod.php?which=81483",
+      "source": "pouet",
+      "category": "scene-invitation"
     },
     {
-      "date": "2019-06-01",
+      "date": "2019-06-09",
       "title": "Demobus from the Sky",
-      "desc": "Demozoo photo upload",
+      "desc": "Photo entry at Flashback 2019 Photo; placed 14 with 35 pts. Authors: Aday.",
       "url": "https://demozoo.org/graphics/204829/",
-      "source": "demozoo"
+      "source": "demozoo-graphics",
+      "category": "scene-photo"
+    },
+    {
+      "date": "2019-11-02",
+      "title": "Everybody Dies Down Here",
+      "desc": "Music entry at Syntax 2019 25 Second Music; placed 4 with 105 pts. Authors: Aday + SnuggyMan.",
+      "url": "https://demozoo.org/music/269754/",
+      "source": "demozoo-music",
+      "category": "scene-music"
+    },
+    {
+      "date": "2019-11-03",
+      "title": "gzdoom DreamLab.wad -fraglimit 50 -deathmatch -host",
+      "desc": "Photo entry at Syntax 2019 B&W Photograph; placed 29 with 48 pts. Authors: Aday.",
+      "url": "https://demozoo.org/graphics/269846/",
+      "source": "demozoo-graphics",
+      "category": "scene-photo"
+    },
+    {
+      "date": "2019-11-03",
+      "title": "Untitled Catchinashes ESSENCE OF CHIPTUNE Project",
+      "desc": "Photo entry at Syntax 2019 B&W Photograph; placed 23 with 55 pts. Authors: Aday + CatchinAshes.",
+      "url": "https://demozoo.org/graphics/269851/",
+      "source": "demozoo-graphics",
+      "category": "scene-photo"
     },
     {
       "date": "2019-12-30",
@@ -2363,6 +2567,14 @@
       "category": "wb-2020"
     },
     {
+      "date": "2020-11-28",
+      "title": "SyntaxFPV",
+      "desc": "Performance entry at Syntax 2020 Wild Demo; placed 8 with 89 pts. Authors: Aday.",
+      "url": "https://demozoo.org/productions/287641/",
+      "source": "demozoo-production",
+      "category": "scene-performance"
+    },
+    {
       "date": "2020-12-06",
       "title": "IOS DarkAmbient + SammichSID",
       "desc": "Mostly wirtten using IOS Apps and Cubasis, Then I added some SammichSID, threw it thru reason amps ... then got tired",
@@ -2371,6 +2583,22 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2020/aday_weeklybeats-2020_49_ios-darkambient--sammichsid.mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2020-social.jpg",
       "category": "wb-2020"
+    },
+    {
+      "date": "2021-11-27",
+      "title": "Fridge Nostalgia",
+      "desc": "Photo entry at Syntax 2021 B&W Photo; placed =6 with 81 pts. Authors: Aday.",
+      "url": "https://demozoo.org/graphics/302717/",
+      "source": "demozoo-graphics",
+      "category": "scene-photo"
+    },
+    {
+      "date": "2021-11-28",
+      "title": "ENTER THE LED MATRIX",
+      "desc": "Performance entry at Syntax 2021 Animation; placed 1 with 70 pts. Authors: Aday.",
+      "url": "https://demozoo.org/productions/302767/",
+      "source": "demozoo-production",
+      "category": "scene-performance"
     },
     {
       "date": "2022-01-01",
@@ -2497,11 +2725,12 @@
       "source": "weeklybeats"
     },
     {
-      "date": "2024-10-01",
+      "date": "2024-10-20",
       "title": "2 Nights At Syntax",
-      "desc": "Demozoo production entry",
+      "desc": "Video entry at Syntax 2024 Animation; placed 1 with 29 pts. Authors: Aday.",
       "url": "https://demozoo.org/productions/359782/",
-      "source": "demozoo"
+      "source": "demozoo-production",
+      "category": "scene-video"
     },
     {
       "date": "2025-01-01",
@@ -2539,11 +2768,12 @@
       "source": "post"
     },
     {
-      "date": "2025-11-01",
+      "date": "2025-11-16",
       "title": "Orbital Syntax",
-      "desc": "Demozoo photo entry",
+      "desc": "Photo entry at Syntax 2025 Black and White Photo; placed =10 with 65 pts. Authors: Aday.",
       "url": "https://demozoo.org/graphics/380235/",
-      "source": "demozoo"
+      "source": "demozoo-graphics",
+      "category": "scene-photo"
     },
     {
       "date": "2025-12-29",
@@ -2809,6 +3039,14 @@
       "url": "https://www.twitch.tv/aday01/",
       "source": "twitch",
       "category": "stream-fpv"
+    },
+    {
+      "date": "2026-06-06",
+      "title": "Demozoo Aday scener profile",
+      "desc": "Demozoo scener profile linking aday.net.au, GitHub, Pouet, SceneID, SoundCloud, Twitter, and YouTube; this audit found 33 Aday-authored Demozoo records.",
+      "url": "https://demozoo.org/sceners/28006/",
+      "source": "demozoo-profile",
+      "category": "scene-profile"
     }
   ]
 }

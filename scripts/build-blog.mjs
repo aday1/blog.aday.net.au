@@ -23,6 +23,8 @@ const adayWeeklybeatsPath = path.resolve(root, "..", "aday-net-au", "public", "d
 const artifactSourcesPath = path.join(root, "scripts", "artifact-sources.json");
 const archivedPresencePath = path.join(root, "scripts", "archived-presence.json");
 const archivedPresenceOutPath = path.join(outDataDir, "archived-presence.json");
+const demoscenePresencePath = path.join(root, "scripts", "demoscene-presence.json");
+const demoscenePresenceOutPath = path.join(outDataDir, "demoscene-presence.json");
 const postAssetsPath = path.join(root, "scripts", "post-assets.json");
 const mastodonFeedPath = path.join(outDataDir, "mastodon-feed.json");
 const MASTODON_HANDLE = "@aday_net_au@mastodon.social";
@@ -582,26 +584,38 @@ const artifactSources = (() => {
   }
 })();
 
-const archivedPresence = (() => {
-  const empty = { generated_at: "unknown", notes: [], entries: [], research_leads: [] };
+const emptyPresenceLedger = { generated_at: "unknown", notes: [], entries: [], research_leads: [] };
+const readPresenceLedger = (ledgerPath, label) => {
   try {
-    if (!fs.existsSync(archivedPresencePath)) return empty;
-    const parsed = JSON.parse(fs.readFileSync(archivedPresencePath, "utf8"));
+    if (!fs.existsSync(ledgerPath)) return emptyPresenceLedger;
+    const parsed = JSON.parse(fs.readFileSync(ledgerPath, "utf8"));
     return {
-      generated_at: parsed.generated_at || empty.generated_at,
+      generated_at: parsed.generated_at || emptyPresenceLedger.generated_at,
       notes: Array.isArray(parsed.notes) ? parsed.notes : [],
       entries: Array.isArray(parsed.entries) ? parsed.entries : [],
-      research_leads: Array.isArray(parsed.research_leads) ? parsed.research_leads : []
+      research_leads: Array.isArray(parsed.research_leads) ? parsed.research_leads : [],
+      source_profile: parsed.source_profile || null
     };
   } catch (err) {
-    console.warn("Archived presence warning:", err.message);
-    return empty;
+    console.warn(`${label} presence warning:`, err.message);
+    return emptyPresenceLedger;
   }
-})();
+};
 
-fs.writeFileSync(archivedPresenceOutPath, JSON.stringify(archivedPresence, null, 2), "utf8");
+const archivedPresence = readPresenceLedger(archivedPresencePath, "Archived");
+const demoscenePresence = readPresenceLedger(demoscenePresencePath, "Demoscene");
+const combinedPresence = {
+  generated_at: archivedPresence.generated_at,
+  notes: [...archivedPresence.notes, ...demoscenePresence.notes],
+  entries: [...archivedPresence.entries, ...demoscenePresence.entries],
+  research_leads: [...archivedPresence.research_leads, ...demoscenePresence.research_leads],
+  demoscene_source_profile: demoscenePresence.source_profile
+};
 
-const archivedPresenceTimelineEntries = archivedPresence.entries
+fs.writeFileSync(archivedPresenceOutPath, JSON.stringify(combinedPresence, null, 2), "utf8");
+fs.writeFileSync(demoscenePresenceOutPath, JSON.stringify(demoscenePresence, null, 2), "utf8");
+
+const archivedPresenceTimelineEntries = combinedPresence.entries
   .filter((entry) => entry?.confidence === "confirmed" && entry.render !== false)
   .map((entry) => ({
     date: entry.date || "1970-01-01",
@@ -732,13 +746,6 @@ const getTimeline = async () => {
       source: "clan"
     },
     {
-      date: "2019-06-01",
-      title: "Demobus : Busdemo",
-      desc: "1st at Flashback 2019 (pouet scene archive listing)",
-      url: "https://m.pouet.net/groups.php?which=12461",
-      source: "scene"
-    },
-    {
       date: "2013-01-01",
       title: "YouTube channel active",
       desc: "Channel timeline begins (@aday_net_au uploads)",
@@ -821,41 +828,6 @@ const getTimeline = async () => {
       desc: "WeeklyBeats 2026 week 3 late submission",
       url: "https://weeklybeats.com/music/aday",
       source: "weeklybeats"
-    },
-    {
-      date: "2012-11-01",
-      title: "RPi-Sequenced NES",
-      desc: "Demozoo upload node",
-      url: "https://demozoo.org/productions/94050/",
-      source: "demozoo"
-    },
-    {
-      date: "2018-11-01",
-      title: "64:20 Blaze It",
-      desc: "Demozoo graphics upload",
-      url: "https://demozoo.org/graphics/195944/",
-      source: "demozoo"
-    },
-    {
-      date: "2019-06-01",
-      title: "Demobus from the Sky",
-      desc: "Demozoo photo upload",
-      url: "https://demozoo.org/graphics/204829/",
-      source: "demozoo"
-    },
-    {
-      date: "2024-10-01",
-      title: "2 Nights At Syntax",
-      desc: "Demozoo production entry",
-      url: "https://demozoo.org/productions/359782/",
-      source: "demozoo"
-    },
-    {
-      date: "2025-11-01",
-      title: "Orbital Syntax",
-      desc: "Demozoo photo entry",
-      url: "https://demozoo.org/graphics/380235/",
-      source: "demozoo"
     },
     {
       date: "2026-05-14",
@@ -1059,7 +1031,18 @@ const extractVimeoId = (url) => {
 
 const feedTierForSource = (source) => {
   const s = slugifySource(source || "");
-  if (["weeklybeats", "youtube", "vimeo", "soundcloud", "bandcamp", "post"].includes(s)) return "media";
+  if ([
+    "weeklybeats",
+    "youtube",
+    "vimeo",
+    "soundcloud",
+    "bandcamp",
+    "post",
+    "demozoo-music",
+    "demozoo-production",
+    "demozoo-graphics",
+    "pouet"
+  ].includes(s)) return "media";
   if (s.startsWith("devlog")) return "devlog";
   if (["github", "codepen"].includes(s)) return "code";
   return "signal";
