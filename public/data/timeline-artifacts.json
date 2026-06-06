@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06T06:41:53.491Z",
-  "count": 291,
+  "generated_at": "2026-06-06T07:07:25.417Z",
+  "count": 299,
   "entries": [
     {
       "date": "2005-04-28",
@@ -33,6 +33,14 @@
       "url": "https://web.archive.org/web/20081201093553id_/http://www.aday.net.au/node/29",
       "source": "blog-archive",
       "category": "old-blog"
+    },
+    {
+      "date": "2009-04-29",
+      "title": "Vimeo Aday profile created",
+      "desc": "Public Vimeo profile for Aday, linked back to aday.net.au, with a small video archive covering old tracks, visuals, projection mapping, and experimental tests.",
+      "url": "https://vimeo.com/aday?fl=pl&fe=by",
+      "source": "vimeo",
+      "category": "video-platform"
     },
     {
       "date": "2009-07-03",
@@ -533,7 +541,7 @@
     {
       "date": "2012-01-01",
       "title": "SoundCloud profile signal",
-      "desc": "Primary streaming node for tracks, playlists, and sketches",
+      "desc": "Melbourne SoundCloud node for tracks, albums, playlists, and machine-facing sketches; public metadata currently lists 28 sounds.",
       "url": "https://soundcloud.com/adaynetau",
       "source": "soundcloud"
     },
@@ -776,6 +784,14 @@
       "source": "youtube"
     },
     {
+      "date": "2013-05-27",
+      "title": "GrumpyWombat setup timelapse",
+      "desc": "Vimeo clip documenting GrumpyWombat / New World Disorder setup and decor process from May 2013.",
+      "url": "https://vimeo.com/67066920",
+      "source": "vimeo",
+      "category": "vj-setup"
+    },
+    {
       "date": "2013-12-30",
       "title": "Electrichip",
       "desc": "WeeklyBeats 2014 week 1",
@@ -788,7 +804,7 @@
     {
       "date": "2014-01-01",
       "title": "Binaural Percolator",
-      "desc": "MindFlex EEG via Processing output test",
+      "desc": "MindFlex EEG via Processing output test, archived on Vimeo as part of the experimental video trail.",
       "url": "https://vimeo.com/84038041",
       "source": "vimeo"
     },
@@ -801,6 +817,14 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_2_binaural-percolator.mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2014-social.jpg",
       "category": "wb-2014"
+    },
+    {
+      "date": "2014-01-08",
+      "title": "Aday - Electrichip - Weeklyvids/WeeklyBeats",
+      "desc": "Vimeo Weeklyvids companion for WeeklyBeats week 1, pairing Electrichip with sound-reactive visual art.",
+      "url": "https://vimeo.com/83730468",
+      "source": "vimeo",
+      "category": "music-video"
     },
     {
       "date": "2014-01-13",
@@ -934,6 +958,14 @@
     },
     {
       "date": "2014-04-14",
+      "title": "Projection Mapping Test - DMG-001",
+      "desc": "Game Boy projection mapping test used for Squaresounds Festival 2014 decor, with earlier Soundbytes PAX afterparty context noted in the Vimeo description.",
+      "url": "https://vimeo.com/91998453",
+      "source": "vimeo",
+      "category": "projection-mapping"
+    },
+    {
+      "date": "2014-04-14",
       "title": "Traffic Hiphop (Colab)",
       "desc": "WeeklyBeats 2014 week 16",
       "url": "https://weeklybeats.com/aday/music/traffic-hiphop-colab",
@@ -1001,6 +1033,14 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_22_nighttime-organ-dream-rave.mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2014-social.jpg",
       "category": "wb-2014"
+    },
+    {
+      "date": "2014-05-27",
+      "title": "Grumpy-Wombat export frames",
+      "desc": "Experimental Grumpy Wombat visual export clip archived on Vimeo.",
+      "url": "https://vimeo.com/96580312",
+      "source": "vimeo",
+      "category": "experimental-video"
     },
     {
       "date": "2014-06-02",
@@ -1221,6 +1261,22 @@
       "audio_url": "https://weeklybeats.s3.amazonaws.com/music/2014/aday_weeklybeats-2014_45_schedule-i.mp3",
       "timeline_image": "https://weeklybeats.com/images/wb2014-social.jpg",
       "category": "wb-2014"
+    },
+    {
+      "date": "2015-04-15",
+      "title": "Weeklybeats 2014 - Challenge Accepted",
+      "desc": "Bandcamp album collecting selected WeeklyBeats 2014 tracks, tagged chipmusic and experimental from Melbourne.",
+      "url": "https://aday.bandcamp.com/album/weeklybeats-2014-challenge-accepted",
+      "source": "bandcamp",
+      "category": "music-release"
+    },
+    {
+      "date": "2015-06-14",
+      "title": "Flashstorm.mod live from Amiga 500 + ESX",
+      "desc": "Vimeo archive of a four-channel Amiga module performed from an Amiga 500 with Electribe ESX effects.",
+      "url": "https://vimeo.com/130662163",
+      "source": "vimeo",
+      "category": "music-video"
     },
     {
       "date": "2016-01-04",
@@ -2745,6 +2801,14 @@
       "desc": "Touch-first bottom bar, drawer layout on narrow screens, audience stream QR with optional touch X/Y — same gig session as VR and co-VJ.",
       "url": "/posts/2026-06-02-macroverse-mobile-audience-vj.html",
       "source": "post"
+    },
+    {
+      "date": "2026-06-06",
+      "title": "Twitch aday01 stream presence",
+      "desc": "Public Twitch channel for occasional studio streams, Quad FPV flight experiments, and video games, linked back to aday.net.au.",
+      "url": "https://www.twitch.tv/aday01/",
+      "source": "twitch",
+      "category": "stream-fpv"
     }
   ]
 }

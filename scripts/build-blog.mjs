@@ -748,7 +748,7 @@ const getTimeline = async () => {
     {
       date: "2012-01-01",
       title: "SoundCloud profile signal",
-      desc: "Primary streaming node for tracks, playlists, and sketches",
+      desc: "Melbourne SoundCloud node for tracks, albums, playlists, and machine-facing sketches; public metadata currently lists 28 sounds.",
       url: "https://soundcloud.com/adaynetau",
       source: "soundcloud"
     },
@@ -874,7 +874,7 @@ const getTimeline = async () => {
     {
       date: "2014-01-01",
       title: "Binaural Percolator",
-      desc: "MindFlex EEG via Processing output test",
+      desc: "MindFlex EEG via Processing output test, archived on Vimeo as part of the experimental video trail.",
       url: "https://vimeo.com/84038041",
       source: "vimeo"
     },

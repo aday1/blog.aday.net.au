@@ -674,6 +674,7 @@
       bandcamp: "audio",
       youtube: "video",
       vimeo: "video",
+      twitch: "video",
       demozoo: "visual",
       scene: "visual",
       codepen: "code",

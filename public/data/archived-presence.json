@@ -55,6 +55,18 @@
       ]
     },
     {
+      "date": "2009-04-29",
+      "title": "Vimeo Aday profile created",
+      "desc": "Public Vimeo profile for Aday, linked back to aday.net.au, with a small video archive covering old tracks, visuals, projection mapping, and experimental tests.",
+      "url": "https://vimeo.com/aday?fl=pl&fe=by",
+      "source": "vimeo",
+      "category": "video-platform",
+      "confidence": "confirmed",
+      "evidence": [
+        "Vimeo profile structured data dateCreated 2009-04-29 and sameAs aday.net.au"
+      ]
+    },
+    {
       "date": "2009-07-03",
       "title": "Dr. Mario - Fever Remix",
       "desc": "Recovered audio post with a Reason-made Dr. Mario Fever remix, MP3 download, and embedded YouTube.",
@@ -76,6 +88,79 @@
       "confidence": "confirmed",
       "evidence": [
         "Wayback capture 20091013161012"
+      ]
+    },
+    {
+      "date": "2013-05-27",
+      "title": "GrumpyWombat setup timelapse",
+      "desc": "Vimeo clip documenting GrumpyWombat / New World Disorder setup and decor process from May 2013.",
+      "url": "https://vimeo.com/67066920",
+      "source": "vimeo",
+      "category": "vj-setup",
+      "confidence": "confirmed",
+      "evidence": [
+        "Vimeo RSS item pubDate Mon, 27 May 2013"
+      ]
+    },
+    {
+      "date": "2014-01-08",
+      "title": "Aday - Electrichip - Weeklyvids/WeeklyBeats",
+      "desc": "Vimeo Weeklyvids companion for WeeklyBeats week 1, pairing Electrichip with sound-reactive visual art.",
+      "url": "https://vimeo.com/83730468",
+      "source": "vimeo",
+      "category": "music-video",
+      "confidence": "confirmed",
+      "evidence": [
+        "Vimeo RSS item pubDate Wed, 08 Jan 2014"
+      ]
+    },
+    {
+      "date": "2014-04-14",
+      "title": "Projection Mapping Test - DMG-001",
+      "desc": "Game Boy projection mapping test used for Squaresounds Festival 2014 decor, with earlier Soundbytes PAX afterparty context noted in the Vimeo description.",
+      "url": "https://vimeo.com/91998453",
+      "source": "vimeo",
+      "category": "projection-mapping",
+      "confidence": "confirmed",
+      "evidence": [
+        "Vimeo RSS item pubDate Mon, 14 Apr 2014"
+      ]
+    },
+    {
+      "date": "2014-05-27",
+      "title": "Grumpy-Wombat export frames",
+      "desc": "Experimental Grumpy Wombat visual export clip archived on Vimeo.",
+      "url": "https://vimeo.com/96580312",
+      "source": "vimeo",
+      "category": "experimental-video",
+      "confidence": "confirmed",
+      "evidence": [
+        "Vimeo RSS item pubDate Tue, 27 May 2014"
+      ]
+    },
+    {
+      "date": "2015-04-15",
+      "title": "Weeklybeats 2014 - Challenge Accepted",
+      "desc": "Bandcamp album collecting selected WeeklyBeats 2014 tracks, tagged chipmusic and experimental from Melbourne.",
+      "url": "https://aday.bandcamp.com/album/weeklybeats-2014-challenge-accepted",
+      "source": "bandcamp",
+      "category": "music-release",
+      "confidence": "confirmed",
+      "evidence": [
+        "Bandcamp album page released April 15, 2015",
+        "Bandcamp track list shows 15 selected tracks"
+      ]
+    },
+    {
+      "date": "2015-06-14",
+      "title": "Flashstorm.mod live from Amiga 500 + ESX",
+      "desc": "Vimeo archive of a four-channel Amiga module performed from an Amiga 500 with Electribe ESX effects.",
+      "url": "https://vimeo.com/130662163",
+      "source": "vimeo",
+      "category": "music-video",
+      "confidence": "confirmed",
+      "evidence": [
+        "Vimeo RSS item pubDate Sun, 14 Jun 2015"
       ]
     },
     {
@@ -101,9 +186,33 @@
       "evidence": [
         "Resident Advisor public listing"
       ]
+    },
+    {
+      "date": "2026-06-06",
+      "title": "Twitch aday01 stream presence",
+      "desc": "Public Twitch channel for occasional studio streams, Quad FPV flight experiments, and video games, linked back to aday.net.au.",
+      "url": "https://www.twitch.tv/aday01/",
+      "source": "twitch",
+      "category": "stream-fpv",
+      "confidence": "confirmed",
+      "evidence": [
+        "Twitch profile metadata fetched 2026-06-06"
+      ]
     }
   ],
   "research_leads": [
+    {
+      "label": "SoundCloud 28-track item backlog",
+      "status": "source-confirmed-needs-item-dates",
+      "url": "https://soundcloud.com/adaynetau/",
+      "notes": "Public profile metadata confirms Aday (aday_net_au), Melbourne, 28 sounds, and 262 followers as of 2026-06-06. Track-level dates need a SoundCloud item crawl or first-party export before rendering individual entries."
+    },
+    {
+      "label": "Twitch VOD and FPV archive backlog",
+      "status": "source-confirmed-needs-dated-items",
+      "url": "https://www.twitch.tv/aday01/",
+      "notes": "Public profile confirms studio, Quad FPV, and occasional game stream context. Individual VOD/highlight dates need a Twitch archive/export or API-backed crawl."
+    },
     {
       "label": "Blah Blah: A Night of Disco Nonsense",
       "date": "2009-07-31",

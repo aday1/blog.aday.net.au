@@ -249,7 +249,8 @@
 }
 
 .post-list.timeline > li.timeline-node.source-youtube,
-.post-list.timeline > li.timeline-node.source-vimeo {
+.post-list.timeline > li.timeline-node.source-vimeo,
+.post-list.timeline > li.timeline-node.source-twitch {
   --timeline-source-accent: #76c8ff;
 }
 
