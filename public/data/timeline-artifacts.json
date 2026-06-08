@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06T07:29:02.562Z",
-  "count": 328,
+  "generated_at": "2026-06-08T07:18:14.836Z",
+  "count": 329,
   "entries": [
     {
       "date": "2005-04-28",
@@ -3047,6 +3047,13 @@
       "url": "https://demozoo.org/sceners/28006/",
       "source": "demozoo-profile",
       "category": "scene-profile"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "ArtBastard 5.2.0.0 - canonical live/dev desk",
+      "desc": "ArtBastard's refreshed Reason-rack build is now the confirmed live/dev line, with the old beta identity retired and cleaner DMX strip visibility controls.",
+      "url": "/posts/2026-06-08-artbastard-5-2-canonical-live-dev.html",
+      "source": "post"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T06:41:51.503Z",
+  "generated_at": "2026-06-08T07:18:11.358Z",
   "trains": [
     {
       "id": "macroverse",
@@ -20,6 +20,18 @@
           "id": "official",
           "label": "Stable 42.1",
           "items": [
+            {
+              "sha": "f6084afb7284",
+              "shaFull": "f6084afb7284d9b40a58e0de71a34f18c399f60f",
+              "date": "2026-06-07",
+              "subject": "Retire ArtBastard beta hostname",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f6084afb7284d9b40a58e0de71a34f18c399f60f",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Retire ArtBastard beta hostname. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
             {
               "sha": "6923e8ebfa80",
               "shaFull": "6923e8ebfa80973569c7f41d361342031dc5fe69",
@@ -145,18 +157,6 @@
               "phaseId": "fortytwo-two",
               "phaseLabel": "42.2 — VR, mobile & audience",
               "narrative": "Audience in the pocket, VJ in the dome — Add splash QR copy links, Jump into VR chooser, and VR page UI polish.. Feeds the master timeline on blog.aday.net.au."
-            },
-            {
-              "sha": "8cbc57778c3b",
-              "shaFull": "8cbc57778c3b89fb8b99b8e76313ca65ff7c45aa",
-              "date": "2026-06-01",
-              "subject": "Move VJ session chip to top-right and clamp QR panel to viewport.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/8cbc57778c3b89fb8b99b8e76313ca65ff7c45aa",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "fortytwo-two",
-              "phaseLabel": "42.2 — VR, mobile & audience",
-              "narrative": "WebXR and touch tiers ship together: Move VJ session chip to top-right and clamp QR panel to viewport.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
             }
           ]
         },
@@ -200,106 +200,106 @@
           "label": "Stable 5.1.2.0",
           "items": [
             {
-              "sha": "ef78b85539fc",
-              "shaFull": "ef78b85539fcebf155b8aaca7e73830525029b5b",
-              "date": "2026-06-02",
-              "subject": "Serve full showcase from site root; retire /website/ path.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/ef78b85539fcebf155b8aaca7e73830525029b5b",
+              "sha": "548e59ce67e3",
+              "shaFull": "548e59ce67e3dd06eb4c5931dd6f206ef941081a",
+              "date": "2026-06-08",
+              "subject": "Add ArtBastard light mode",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/548e59ce67e3dd06eb4c5931dd6f206ef941081a",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Serve full showcase from site root; retire /website/ path.. Vibe-coded, beret-approved, monastery-sanctioned."
+              "narrative": "Official sacrament: Add ArtBastard light mode. The photons remember the candles."
             },
             {
-              "sha": "eb50ce9fa011",
-              "shaFull": "eb50ce9fa011567162fafa735c1ce0ef492bb0bf",
-              "date": "2026-06-02",
-              "subject": "Unify showcase hub, tour, and DOCS under shared artsnob shell.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/eb50ce9fa011567162fafa735c1ce0ef492bb0bf",
+              "sha": "33aa49e0b518",
+              "shaFull": "33aa49e0b5187b08f518b8720630fa0dcd17a980",
+              "date": "2026-06-08",
+              "subject": "Update ArtBastard rebuild runbook",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/33aa49e0b5187b08f518b8720630fa0dcd17a980",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "DMX512 nod enshrined: Unify showcase hub, tour, and DOCS under shared artsnob shell.. Vibe-coded, beret-approved, monastery-sanctioned."
+              "narrative": "DMX512 nod enshrined: Update ArtBastard rebuild runbook. TCP/IP carries what wind once did."
             },
             {
-              "sha": "132a4b9d8164",
-              "shaFull": "132a4b9d81641292d496babfb0b3365a37dd3279",
-              "date": "2026-06-02",
-              "subject": "Make coulisse vertical labels brass trim, tuck to margins after reveal.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/132a4b9d81641292d496babfb0b3365a37dd3279",
+              "sha": "58a3401c0a28",
+              "shaFull": "58a3401c0a283c9a7b3ba33db4db31a8e5fb9245",
+              "date": "2026-06-08",
+              "subject": "Promote refreshed ArtBastard lane labels",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/58a3401c0a283c9a7b3ba33db4db31a8e5fb9245",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: Make coulisse vertical labels brass trim, tuck to margins after reveal.. Vibe-coded, beret-approved, monastery-sanctioned."
+              "narrative": "DMX512 nod enshrined: Promote refreshed ArtBastard lane labels. Not for the faint of PAR."
             },
             {
-              "sha": "736fc72b2700",
-              "shaFull": "736fc72b27008bc176878184725d2d08df3313ac",
-              "date": "2026-06-02",
-              "subject": "Audit showcase anchors: scroll offset, deep links, local DOCS paths.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/736fc72b27008bc176878184725d2d08df3313ac",
+              "sha": "fc7e05ae857f",
+              "shaFull": "fc7e05ae857f5373a62e864dddda0ef04d9e08cb",
+              "date": "2026-06-08",
+              "subject": "Apply beta tint after theme variables",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fc7e05ae857f5373a62e864dddda0ef04d9e08cb",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: Audit showcase anchors: scroll offset, deep links, local DOCS paths.. Not for the faint of PAR."
+              "narrative": "DMX512 nod enshrined: Apply beta tint after theme variables. React components are the new bamboo tubes."
             },
             {
-              "sha": "01a3b4b94175",
-              "shaFull": "01a3b4b94175e12b1be48701b542a07888acd20f",
-              "date": "2026-06-02",
-              "subject": "Curtain reveal: start fully closed, then part after a beat.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/01a3b4b94175e12b1be48701b542a07888acd20f",
+              "sha": "0a628e29b30f",
+              "shaFull": "0a628e29b30f212de054caa8008ce3db572ae5d2",
+              "date": "2026-06-08",
+              "subject": "Make beta lane visually distinct",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0a628e29b30f212de054caa8008ce3db572ae5d2",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: Curtain reveal: start fully closed, then part after a beat.. Not for the faint of PAR."
+              "narrative": "Official sacrament: Make beta lane visually distinct. React components are the new bamboo tubes."
             },
             {
-              "sha": "b0e743997255",
-              "shaFull": "b0e743997255df18bf351b151b8bebc0e117110e",
-              "date": "2026-06-02",
-              "subject": "Fix quote sync and render full Luminary wall on all showcase pages.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b0e743997255df18bf351b151b8bebc0e117110e",
+              "sha": "f952016946f3",
+              "shaFull": "f952016946f3e5eead247a44aee36be730566a23",
+              "date": "2026-06-08",
+              "subject": "Stop forcing dev lane into mobile mode",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f952016946f3e5eead247a44aee36be730566a23",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Fix quote sync and render full Luminary wall on all showcase pages.. Vibe-coded, beret-approved, monastery-sanctioned."
-            },
-            {
-              "sha": "fc43e126179f",
-              "shaFull": "fc43e126179f9f7dbbe2a4d3098e2e632dd40fc9",
-              "date": "2026-06-02",
-              "subject": "Theatrical artsnob showcase with curtains, rig, and followspot.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fc43e126179f9f7dbbe2a4d3098e2e632dd40fc9",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "official",
-              "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Theatrical artsnob showcase with curtains, rig, and followspot.. Not for the faint of PAR."
+              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Stop forcing dev lane into mobile mode. TCP/IP carries what wind once did."
             }
           ]
         },
         {
-          "id": "candles",
-          "label": "Ordre des bougies",
+          "id": "workbench",
+          "label": "Emprunt Macroverse",
           "items": [
             {
-              "sha": "b5ed77617fbc",
-              "shaFull": "b5ed77617fbcbff941e317c5b1d208480034ecb9",
-              "date": "2026-06-02",
-              "subject": "Showcase-first hub with artsnob candle theme and live CTA.",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b5ed77617fbcbff941e317c5b1d208480034ecb9",
+              "sha": "9ddf4bee561d",
+              "shaFull": "9ddf4bee561db1db46409a326440756dac7975c8",
+              "date": "2026-06-08",
+              "subject": "Use beta rack chrome on beta hosts",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9ddf4bee561db1db46409a326440756dac7975c8",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "candles",
-              "phaseLabel": "Ordre des bougies",
-              "narrative": "Before Art-Net, the elite French art-candle monks conducted stages with breath and beeswax: Showcase-first hub with artsnob candle theme and live CTA.. The photons remember the candles."
+              "phaseId": "workbench",
+              "phaseLabel": "Emprunt Macroverse",
+              "narrative": "A stolen glance at Macroverse's envelope cathedral: Use beta rack chrome on beta hosts. The photons remember the candles."
+            },
+            {
+              "sha": "0362e82485f3",
+              "shaFull": "0362e82485f3f96cf2a28863bca5bd1bcd7a048a",
+              "date": "2026-06-08",
+              "subject": "Fix beta rack tint cascade",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0362e82485f3f96cf2a28863bca5bd1bcd7a048a",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "workbench",
+              "phaseLabel": "Emprunt Macroverse",
+              "narrative": "A stolen glance at Macroverse's envelope cathedral: Fix beta rack tint cascade. Vibe-coded, beret-approved, monastery-sanctioned."
             }
           ]
         }
