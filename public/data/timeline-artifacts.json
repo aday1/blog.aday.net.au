@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-18T02:54:19.862Z",
-  "count": 330,
+  "generated_at": "2026-06-18T03:04:01.833Z",
+  "count": 331,
   "entries": [
     {
       "date": "2005-04-28",
@@ -3060,6 +3060,13 @@
       "title": "Macroverse showcase — Fringe origin, Nick's audio, VR videos soon",
       "desc": "Origin story under the showcase banner; Nick Wilson live set on YouTube; edited Melbourne Fringe VR captures coming.",
       "url": "/posts/2026-06-18-macroverse-showcase-origin-media.html",
+      "source": "post"
+    },
+    {
+      "date": "2026-06-18",
+      "title": "MacroVerse Origin shaders on live — six chapters, showcase hero demos",
+      "desc": "Six universe-evolution ISF shaders ship on macroverse.aday.net.au; showcase hero stacks Pipeline, Expose, and Fix chain clips under the sliders.",
+      "url": "/posts/2026-06-18-macroverse-origin-shaders-live.html",
       "source": "post"
     }
   ]

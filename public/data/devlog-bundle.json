@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T02:54:19.461Z",
+  "generated_at": "2026-06-18T03:03:59.781Z",
   "trains": [
     {
       "id": "macroverse",
@@ -20,6 +20,18 @@
           "id": "official",
           "label": "Stable 42.1",
           "items": [
+            {
+              "sha": "2fb4235dec5b",
+              "shaFull": "2fb4235dec5bdf19821d14eb945914a696de8fc0",
+              "date": "2026-06-18",
+              "subject": "Changelog and about: MacroVerse Origin set on live",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/2fb4235dec5bdf19821d14eb945914a696de8fc0",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Changelog and about: MacroVerse Origin set on live. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
             {
               "sha": "b164d7dd0be6",
               "shaFull": "b164d7dd0be6733a457b05e3fea17ec3ed7f90ba",
@@ -83,27 +95,33 @@
           ]
         },
         {
-          "id": "fortytwo-two",
-          "label": "42.2 — VR, mobile & audience",
-          "items": [
-            {
-              "sha": "f6bc5acbeac8",
-              "shaFull": "f6bc5acbeac8bb19d3e0c96fa5d57ccb432948ca",
-              "date": "2026-06-18",
-              "subject": "Add VR SUPPORT UNDER DEVELOPMENT notice",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f6bc5acbeac8bb19d3e0c96fa5d57ccb432948ca",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "fortytwo-two",
-              "phaseLabel": "42.2 — VR, mobile & audience",
-              "narrative": "WebXR and touch tiers ship together: Add VR SUPPORT UNDER DEVELOPMENT notice. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            }
-          ]
-        },
-        {
           "id": "showcase",
           "label": "Wired Atelier showcase",
           "items": [
+            {
+              "sha": "db388bec42f3",
+              "shaFull": "db388bec42f39fb09f9eef68a631acea1885fa2e",
+              "date": "2026-06-18",
+              "subject": "Showcase hero: add Expose and Fix chain demo videos under sliders",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/db388bec42f39fb09f9eef68a631acea1885fa2e",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Docs and GH Pages carry the psychonaut palette: Showcase hero: add Expose and Fix chain demo videos under sliders. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "12073695cc1e",
+              "shaFull": "12073695cc1ebaab2b4bd08a931fdf014ff000ce",
+              "date": "2026-06-18",
+              "subject": "Add MacroVerse Origin shader set and showcase pipeline video",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/12073695cc1ebaab2b4bd08a931fdf014ff000ce",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Showcase pages glow like the free 12–4pm exhibition hours: Add MacroVerse Origin shader set and showcase pipeline video. Feeds the master timeline on blog.aday.net.au."
+            },
             {
               "sha": "ecd583d98ced",
               "shaFull": "ecd583d98ced45ad6578e2ebbc85213ea6b1f4a2",
@@ -139,42 +157,24 @@
               "phaseId": "showcase",
               "phaseLabel": "Wired Atelier showcase",
               "narrative": "Binary releases join the festival poster wall: Showcase: sliders and origin in first viewport, deep content on scroll. Feeds the master timeline on blog.aday.net.au."
-            },
+            }
+          ]
+        },
+        {
+          "id": "fortytwo-two",
+          "label": "42.2 — VR, mobile & audience",
+          "items": [
             {
-              "sha": "58b07582794d",
-              "shaFull": "58b07582794d0894cac4b0b4f71703417cc59dc1",
+              "sha": "f6bc5acbeac8",
+              "shaFull": "f6bc5acbeac8bb19d3e0c96fa5d57ccb432948ca",
               "date": "2026-06-18",
-              "subject": "Showcase banner: custom domain label",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/58b07582794d0894cac4b0b4f71703417cc59dc1",
+              "subject": "Add VR SUPPORT UNDER DEVELOPMENT notice",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f6bc5acbeac8bb19d3e0c96fa5d57ccb432948ca",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "showcase",
-              "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Binary releases join the festival poster wall: Showcase banner: custom domain label. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "7a05c3671c32",
-              "shaFull": "7a05c3671c327941c4c24e446288dee24365c095",
-              "date": "2026-06-18",
-              "subject": "Showcase CNAME: DNS-only for GitHub Pages TLS",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/7a05c3671c327941c4c24e446288dee24365c095",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "showcase",
-              "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Binary releases join the festival poster wall: Showcase CNAME: DNS-only for GitHub Pages TLS. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "90e1961da720",
-              "shaFull": "90e1961da720266ced37d60dd8aeaf92d74e1dfe",
-              "date": "2026-06-18",
-              "subject": "Add showcase.macroverse.aday.net.au GitHub Pages alias",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/90e1961da720266ced37d60dd8aeaf92d74e1dfe",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "showcase",
-              "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Docs and GH Pages carry the psychonaut palette: Add showcase.macroverse.aday.net.au GitHub Pages alias. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+              "phaseId": "fortytwo-two",
+              "phaseLabel": "42.2 — VR, mobile & audience",
+              "narrative": "WebXR and touch tiers ship together: Add VR SUPPORT UNDER DEVELOPMENT notice. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
             }
           ]
         }

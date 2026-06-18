@@ -21,6 +21,28 @@
       }
     ]
   },
+  "2026-06-18-macroverse-origin-shaders-live": {
+    "hero": {
+      "src": "https://aday1.github.io/macroverse.aday.net.au/videos/pipeline-flow-poster.webp",
+      "alt": "Macroverse GLSL to Wire pipeline",
+      "caption": "showcase.macroverse.aday.net.au // Pipeline demo under hero sliders",
+      "fallbacks": [
+        "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp"
+      ]
+    },
+    "gallery": [
+      {
+        "src": "https://aday1.github.io/macroverse.aday.net.au/videos/expose-params-poster.webp",
+        "alt": "Expose magic numbers as ISF sliders",
+        "caption": "Expose // one click to Wire-ready params"
+      },
+      {
+        "src": "https://aday1.github.io/macroverse.aday.net.au/videos/fix-chain-poster.webp",
+        "alt": "Shader fix chain",
+        "caption": "Fix chain // regex, Ollama, AI"
+      }
+    ]
+  },
   "2026-05-14-media-deck-and-timelog": {
     "hero": {
       "src": "https://raw.githubusercontent.com/aday1/acid-banger/main/preview.png",

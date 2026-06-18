@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MacroVerse Origin shaders on live — six chapters, showcase hero demos // blog.aday.net.au</title>
+  <meta name="theme-color" content="#071224">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/crt-cuton.css">
+  <link rel="me" href="https://mastodon.social/@aday_net_au">
+  <link rel="alternate" type="application/rss+xml" title="@aday_net_au@mastodon.social on Mastodon" href="https://mastodon.social/@aday_net_au.rss">
+  <link rel="stylesheet" href="/blog-film.css">
+  <link rel="stylesheet" href="/timeline-spread.css">
+  <link rel="stylesheet" href="/devlog.css">
+  <link rel="stylesheet" href="/blog-shell.css">
+  <link rel="stylesheet" href="/blog-aesthetic.css">
+</head>
+<body class="boot-seq film-on blog-no-scanlines vfx-off">
+  <div id="pageTransition" class="page-transition" aria-hidden="true">
+    <div class="page-transition-inner">
+      <span class="cuton-label" aria-hidden="true"></span>
+      <span class="cuton-line"></span>
+    </div>
+  </div>
+  <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <main>
+    <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://mastodon.social/@aday_net_au" target="_blank" rel="me noopener noreferrer">mastodon</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+    <h1 class="decrypt">MacroVerse Origin shaders on live — six chapters, showcase hero demos</h1>
+    <p class="date">2026-06-18</p>
+    <figure class="film-frame">
+  <div class="film-frame-stack">
+    <img class="film-photo" src="https://aday1.github.io/macroverse.aday.net.au/videos/pipeline-flow-poster.webp" alt="Macroverse GLSL to Wire pipeline" data-fallbacks="https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp" loading="lazy" decoding="async">
+    <span class="film-phosphor" aria-hidden="true"></span>
+    <span class="film-grain" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-outer" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-inner" aria-hidden="true"></span>
+  </div>
+  
+  <figcaption>showcase.macroverse.aday.net.au // Pipeline demo under hero sliders</figcaption>
+</figure>
+<div class="film-gallery">
+<figure class="film-frame">
+  <div class="film-frame-stack">
+    <img class="film-photo" src="https://aday1.github.io/macroverse.aday.net.au/videos/expose-params-poster.webp" alt="Expose magic numbers as ISF sliders" loading="lazy" decoding="async">
+    <span class="film-phosphor" aria-hidden="true"></span>
+    <span class="film-grain" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-outer" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-inner" aria-hidden="true"></span>
+  </div>
+  
+  <figcaption>Expose // one click to Wire-ready params</figcaption>
+</figure>
+<figure class="film-frame">
+  <div class="film-frame-stack">
+    <img class="film-photo" src="https://aday1.github.io/macroverse.aday.net.au/videos/fix-chain-poster.webp" alt="Shader fix chain" loading="lazy" decoding="async">
+    <span class="film-phosphor" aria-hidden="true"></span>
+    <span class="film-grain" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-outer" aria-hidden="true"></span>
+    <span class="film-scratch film-scratch-inner" aria-hidden="true"></span>
+  </div>
+  
+  <figcaption>Fix chain // regex, Ollama, AI</figcaption>
+</figure>
+</div>
+    <p>Promoted to **live** (`main` → `:live`): the **MacroVerse Origin** shader set — six compiling ISF chapters from the Fringe cosmology arc, now in the public starter-pack.</p>
+
+<h2>Live library (`macroverse-origin`)</h2>
+
+<p>Filter set **`macroverse-origin`** on <a href="https://macroverse.aday.net.au" target="_blank" rel="noopener noreferrer">macroverse.aday.net.au</a> for exactly six shaders:</p>
+
+<p>1. Energy Field</p>
+<p>2. Particles</p>
+<p>3. Blue Giants</p>
+<p>4. Orbits</p>
+<p>5. Life As We Know It</p>
+<p>6. Living Our Best Life</p>
+
+<p>Each has VJ sliders, chapter tags, and Wire-ready ISF headers. Gallery **Seed VJ Sets** (or factory index on fresh containers) assigns `macroverse-origin`, `vj-cosmic`, `vj-ambient`, and `vj-wire-ready`.</p>
+
+<h2>Showcase hero</h2>
+
+<p>The <a href="https://showcase.macroverse.aday.net.au/" target="_blank" rel="noopener noreferrer">GitHub showcase</a> left column now stacks three demo loops under the live shader sliders — no dead space:</p>
+
+<ul>
+<li>**Pipeline** — GLSL → ISF JSON → `.wire` → Resolume. One binary, no installer.</li>
+<li>**Expose** — magic-number literals → ISF sliders for Wire, one click.</li>
+<li>**Fix chain** — regex → Ollama → AI; stop at first success.</li>
+</ul>
+
+<p>Sliders got larger glowing thumbs with a sparkle pulse on drag.</p>
+
+<h2>Links</h2>
+
+<ul>
+<li><a href="https://macroverse.aday.net.au/" target="_blank" rel="noopener noreferrer">Live app</a></li>
+<li><a href="https://macroverse.aday.net.au/about.html" target="_blank" rel="noopener noreferrer">About</a></li>
+<li><a href="/posts/2026-06-18-macroverse-showcase-origin-media.html" target="_blank" rel="noopener noreferrer">Earlier showcase origin post</a></li>
+<li><a href="/posts/2025-10-07-macroverse-fringe-origin.html" target="_blank" rel="noopener noreferrer">Fringe origin myth</a></li>
+</ul>
+    <footer class="blog-footer">
+      <div class="footer-wave" aria-hidden="true"></div>
+      <p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="https://mastodon.social/@aday_net_au" target="_blank" rel="me noopener noreferrer">mastodon</a></p>
+    </footer>
+  </main>
+  <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
+  <script src="/app.js" defer></script>
+  <script src="/blog-film.js" defer></script>
+  <script src="/blog-bg-shader.js" defer></script>
+  <script type="module" src="/blog-vfx.js"></script>
+  <script src="/blog-shell.js" defer></script>
+  <script src="/blog-range.js" defer></script>
+  <script src="/github-presence.js" defer></script>
+  <script src="/blog-presence.js" defer></script>
+  <div id="deployMetaDock" style="position:fixed;right:10px;bottom:10px;z-index:9999;max-width:min(420px,calc(100vw - 20px));font:11px/1.45 ui-monospace,Consolas,monospace;">
+  <div id="deployMetaRestore" hidden style="margin-bottom:6px;text-align:right;">
+    <button type="button" id="deployMetaShowBtn" style="font:inherit;cursor:pointer;padding:4px 10px;border:1px solid #4cff8a;background:rgba(0,0,0,.88);color:#b8ffd1;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.45);">build info</button>
+  </div>
+  <div id="deployMetaPanel" role="region" aria-label="Build metadata" style="border:1px solid #4cff8a;background:rgba(0,0,0,.92);color:#b8ffd1;box-sizing:border-box;border-radius:3px;box-shadow:0 4px 18px rgba(0,0,0,.55);">
+    <div id="deployMetaBar" tabindex="0" role="button" aria-expanded="false" style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 8px;cursor:pointer;user-select:none;">
+      <span id="deployMetaSummary" style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Loading...</span>
+      <span id="deployMetaExpandGlyph" style="opacity:.85;flex-shrink:0;font-weight:700;">[+]</span>
+      <button type="button" id="deployMetaHideBtn" style="flex-shrink:0;font:inherit;cursor:pointer;padding:2px 6px;margin:0;border:1px solid rgba(76,255,138,.55);background:transparent;color:#b8ffd1;border-radius:2px;">hide</button>
+    </div>
+    <div id="deployMetaDetail" hidden style="padding:0 12px 10px;">
+      <div id="deployMetaTitle" style="font-weight:700;color:#fff;margin:0 0 6px;padding-bottom:4px;border-bottom:1px solid rgba(76,255,138,.35);letter-spacing:.06em;text-transform:uppercase;">build info</div>
+      <div id="deployMetaBody">Loading deploy metadata...</div>
+      <div style="margin-top:8px;">
+        <button type="button" id="deployMetaCollapseBtn" style="font:inherit;cursor:pointer;padding:3px 8px;border:1px solid rgba(76,255,138,.55);background:transparent;color:#b8ffd1;border-radius:2px;">collapse</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    (function () {
+      var LS_KEY = "deployMetaDock:" + (typeof location !== "undefined" ? location.hostname : "");
+      var bodyEl = document.getElementById("deployMetaBody");
+      var panel = document.getElementById("deployMetaPanel");
+      var dock = document.getElementById("deployMetaDock");
+      var bar = document.getElementById("deployMetaBar");
+      var summaryEl = document.getElementById("deployMetaSummary");
+      var detailEl = document.getElementById("deployMetaDetail");
+      var expandGlyph = document.getElementById("deployMetaExpandGlyph");
+      var hideBtn = document.getElementById("deployMetaHideBtn");
+      var collapseBtn = document.getElementById("deployMetaCollapseBtn");
+      var restoreWrap = document.getElementById("deployMetaRestore");
+      var showBtn = document.getElementById("deployMetaShowBtn");
+      if (!bodyEl || !panel || !dock || !bar || !summaryEl || !detailEl || !expandGlyph || !hideBtn || !collapseBtn || !restoreWrap || !showBtn) return;
+      function uiLoad() {
+        try {
+          var v = localStorage.getItem(LS_KEY);
+          if (v === "hidden") return "hidden";
+          if (v === "expanded") return "expanded";
+        } catch (eU) {}
+        return "collapsed";
+      }
+      function uiSave(mode) {
+        try { localStorage.setItem(LS_KEY, mode); } catch (eS) {}
+      }
+      function syncUi(mode) {
+        if (mode === "hidden") {
+          restoreWrap.hidden = false;
+          panel.hidden = true;
+        } else {
+          restoreWrap.hidden = true;
+          panel.hidden = false;
+          if (mode === "expanded") {
+            detailEl.hidden = false;
+            bar.setAttribute("aria-expanded", "true");
+            expandGlyph.textContent = "[-]";
+          } else {
+            detailEl.hidden = true;
+            bar.setAttribute("aria-expanded", "false");
+            expandGlyph.textContent = "[+]";
+          }
+        }
+      }
+      function expand() {
+        uiSave("expanded");
+        syncUi("expanded");
+      }
+      function collapse() {
+        uiSave("collapsed");
+        syncUi("collapsed");
+      }
+      function hideDock() {
+        uiSave("hidden");
+        syncUi("hidden");
+      }
+      function showDock() {
+        uiSave("collapsed");
+        syncUi("collapsed");
+      }
+      bar.addEventListener("click", function (ev) {
+        if (ev.target && ev.target.closest && ev.target.closest("#deployMetaHideBtn")) return;
+        if (detailEl.hidden) expand(); else collapse();
+      });
+      bar.addEventListener("keydown", function (ev) {
+        if (ev.key !== "Enter" && ev.key !== " ") return;
+        if (ev.target && ev.target.closest && ev.target.closest("#deployMetaHideBtn")) return;
+        ev.preventDefault();
+        if (detailEl.hidden) expand(); else collapse();
+      });
+      hideBtn.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        hideDock();
+      });
+      collapseBtn.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        collapse();
+      });
+      showBtn.addEventListener("click", showDock);
+      syncUi(uiLoad());
+      function esc(s) {
+        return String(s === null || s === undefined ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+      }
+      function tzName() {
+        try {
+          return Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+        } catch (eTz) {
+          return "";
+        }
+      }
+      function fmt(iso) {
+        if (!iso) return "(unknown)";
+        try {
+          var d = new Date(iso);
+          if (Number.isNaN(d.getTime())) return String(iso);
+          var main = d.toLocaleString(undefined, {
+            dateStyle: "medium",
+            timeStyle: "short",
+            timeZoneName: "short",
+          });
+          var iana = tzName();
+          if (iana) return main + " (" + iana + ")";
+          return main;
+        } catch (err) {
+          return String(iso);
+        }
+      }
+      function age(iso, kind) {
+        if (!iso) return "";
+        var tag = kind === "deploy" ? "deploy" : "build";
+        var t = new Date(iso).getTime();
+        if (Number.isNaN(t)) return "";
+        var sec = Math.round((Date.now() - t) / 1000);
+        if (sec < -120) return "";
+        if (sec < 45) return "now";
+        if (sec < 3600) return Math.round(sec / 60) + "m since " + tag;
+        if (sec < 86400) return Math.round(sec / 3600) + "h since " + tag;
+        if (sec < 604800) return Math.round(sec / 86400) + "d since " + tag;
+        if (sec < 4233600) return Math.round(sec / 604800) + "wk since " + tag;
+        var mo = Math.round(sec / (30.4375 * 86400));
+        if (mo < 24) return mo + "mo since " + tag;
+        return Math.round(sec / (365.2425 * 86400)) + "yr since " + tag;
+      }
+      function render(m) {
+        var shaRaw = m.last_git_sha_short || m.version || "?";
+        var buildIso = m.last_build_at || m.build_date || "";
+        var depIso = m.last_deployed_at || m.last_build_at || m.build_date || "";
+        var ageB = age(buildIso, "build");
+        var ageD = age(depIso, "deploy");
+        var siteLab = (m.site ? String(m.site) : "").toUpperCase().replace(/\s+/g, "") || "SITE";
+        var sumParts = [siteLab, String(shaRaw)];
+        if (ageB) sumParts.push(ageB);
+        summaryEl.textContent = sumParts.join(" | ");
+        var sha = esc(shaRaw);
+        var gitHref = esc(m.last_git_url || m.changelog_url || "#");
+        var ch = m.changelog_url || "";
+        var hist = m.commits_history_url || "";
+        var md = m.changelog_md_url || "";
+        var run = m.workflow_run_url || "";
+        var branch = esc(m.track || m.branch || "");
+        var note = m.deploy_note ? "<div style=\"opacity:.82;margin-top:6px;font-size:10px;\">" + esc(m.deploy_note) + "</div>" : "";
+        var title = document.getElementById("deployMetaTitle");
+        if (title) title.textContent = (m.site ? String(m.site).toUpperCase() : "SITE") + " // build info";
+        var html = "";
+        html += "<div style=\"margin:4px 0\"><strong>Last git:</strong> <a href=\"" + gitHref + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + sha + "</a>";
+        if (branch) html += " <span style=\"opacity:.75\">(" + branch + ")</span>";
+        html += "</div>";
+        var localTz = tzName();
+        if (localTz) html += "<div style=\"opacity:.78;margin:0 0 4px;font-size:10px\"><strong>Your timezone:</strong> " + esc(localTz) + "</div>";
+        html += "<div style=\"margin:4px 0\"><strong>Last build (CI):</strong> " + esc(fmt(buildIso));
+        if (ageB) html += " <span style=\"opacity:.82\">" + esc(ageB) + "</span>";
+        html += "</div>";
+        html += "<div style=\"margin:4px 0\"><strong>Last deployed (CI push):</strong> " + esc(fmt(depIso));
+        if (ageD) html += " <span style=\"opacity:.82\">" + esc(ageD) + "</span>";
+        if (run) html += " <a href=\"" + esc(run) + "\" target=\"_blank\" rel=\"noopener noreferrer\">workflow</a>";
+        html += "</div>";
+        var rel = m.releases_url || "";
+        var links = [];
+        if (ch) links.push("<a href=\"" + esc(ch) + "\" target=\"_blank\" rel=\"noopener noreferrer\">This commit</a>");
+        if (hist) links.push("<a href=\"" + esc(hist) + "\" target=\"_blank\" rel=\"noopener noreferrer\">Branch history</a>");
+        if (md) links.push("<a href=\"" + esc(md) + "\" target=\"_blank\" rel=\"noopener noreferrer\">CHANGELOG.md</a>");
+        if (rel) links.push("<a href=\"" + esc(rel) + "\" target=\"_blank\" rel=\"noopener noreferrer\">Releases</a>");
+        if (links.length) {
+          html += "<div style=\"margin:8px 0 0;padding-top:6px;border-top:1px solid rgba(76,255,138,.35)\"><strong>Changelog / history:</strong> " + links.join(' <span aria-hidden="true">|</span> ') + "</div>";
+        }
+        html += note;
+        bodyEl.innerHTML = html;
+      }
+      if (typeof window.__DEPLOY_META__ !== "undefined" && window.__DEPLOY_META__) {
+        render(window.__DEPLOY_META__);
+      }
+      fetch("/data/deploy-meta.json", { cache: "no-store" })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error("missing")); })
+        .catch(function () {
+          return fetch("data/deploy-meta.json", { cache: "no-store" }).then(function (r2) {
+            return r2.ok ? r2.json() : Promise.reject(new Error("missing"));
+          });
+        })
+        .then(render)
+        .catch(function () {
+          summaryEl.textContent = "build meta unavailable";
+          if (!window.__DEPLOY_META__) bodyEl.textContent = "Deploy metadata unavailable.";
+        });
+    })();
+  </script>
+</body>
+</html>
