@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T02:23:32.911Z",
+  "generated_at": "2026-06-18T02:54:19.461Z",
   "trains": [
     {
       "id": "macroverse",
@@ -9,7 +9,7 @@
       "github": "aday1/macroverse.aday.net.au",
       "previewImage": "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp",
       "timelineSource": "devlog-macroverse",
-      "commitCount": 4,
+      "commitCount": 12,
       "prologue": [
         "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
         "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au. Stable **42.1** consolidated hosted lanes; **42.2** adds WebXR VR, touch-first mobile shell, and audience participation on the flat stream.",
@@ -17,20 +17,86 @@
       ],
       "phases": [
         {
+          "id": "official",
+          "label": "Stable 42.1",
+          "items": [
+            {
+              "sha": "b164d7dd0be6",
+              "shaFull": "b164d7dd0be6733a457b05e3fea17ec3ed7f90ba",
+              "date": "2026-06-18",
+              "subject": "Fix deploy gate: starter-pack cap 60; changelog and lane features for macroverse-set",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/b164d7dd0be6733a457b05e3fea17ec3ed7f90ba",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Fix deploy gate: starter-pack cap 60; changelog and lane features for macroverse-set. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "2a5600db5215",
+              "shaFull": "2a5600db5215526bd8b9965784fadec558b69036",
+              "date": "2026-06-18",
+              "subject": "Fix Macroverse set: 6 compiling ISF shaders, macroverse-set preset",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/2a5600db5215526bd8b9965784fadec558b69036",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Official orbit achieved: Fix Macroverse set: 6 compiling ISF shaders, macroverse-set preset. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "86260c0a752d",
+              "shaFull": "86260c0a752d580d8f4ca557c41fa12795e20800",
+              "date": "2026-06-18",
+              "subject": "Origin copy: week of hour-long sessions, audio/AV recording notes",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/86260c0a752d580d8f4ca557c41fa12795e20800",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Origin copy: week of hour-long sessions, audio/AV recording notes. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "20a45df9b7ad",
+              "shaFull": "20a45df9b7addc581a94adaefb2bf3edfa2cfc9f",
+              "date": "2026-06-18",
+              "subject": "Create CNAME",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/20a45df9b7addc581a94adaefb2bf3edfa2cfc9f",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Create CNAME. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "004e974ab1a2",
+              "shaFull": "004e974ab1a2517482a1ba474cc987d6a65e8b86",
+              "date": "2026-06-18",
+              "subject": "Delete CNAME",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/004e974ab1a2517482a1ba474cc987d6a65e8b86",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Official orbit achieved: Delete CNAME. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            }
+          ]
+        },
+        {
           "id": "fortytwo-two",
           "label": "42.2 — VR, mobile & audience",
           "items": [
             {
-              "sha": "3dc60b11b758",
-              "shaFull": "3dc60b11b758fa2c8c6a080d09e73a549c72b829",
+              "sha": "f6bc5acbeac8",
+              "shaFull": "f6bc5acbeac8bb19d3e0c96fa5d57ccb432948ca",
               "date": "2026-06-18",
-              "subject": "Showcase origin media: Nick audio link, UX tidy, Fringe VR placeholder",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3dc60b11b758fa2c8c6a080d09e73a549c72b829",
+              "subject": "Add VR SUPPORT UNDER DEVELOPMENT notice",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f6bc5acbeac8bb19d3e0c96fa5d57ccb432948ca",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
               "phaseId": "fortytwo-two",
               "phaseLabel": "42.2 — VR, mobile & audience",
-              "narrative": "WebXR and touch tiers ship together: Showcase origin media: Nick audio link, UX tidy, Fringe VR placeholder. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+              "narrative": "WebXR and touch tiers ship together: Add VR SUPPORT UNDER DEVELOPMENT notice. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
             }
           ]
         },
@@ -39,46 +105,76 @@
           "label": "Wired Atelier showcase",
           "items": [
             {
-              "sha": "93091c678927",
-              "shaFull": "93091c678927f7c401429c83a5e917d9d6c637e4",
+              "sha": "ecd583d98ced",
+              "shaFull": "ecd583d98ced45ad6578e2ebbc85213ea6b1f4a2",
               "date": "2026-06-18",
-              "subject": "Move Origin story under showcase banner with Fringe and Nick Wilson links",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/93091c678927f7c401429c83a5e917d9d6c637e4",
+              "subject": "Showcase: Three ways in hero; about page showcase styling",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ecd583d98ced45ad6578e2ebbc85213ea6b1f4a2",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
               "phaseId": "showcase",
               "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Showcase pages glow like the free 12–4pm exhibition hours: Move Origin story under showcase banner with Fringe and Nick Wilson links. Feeds the master timeline on blog.aday.net.au."
-            }
-          ]
-        },
-        {
-          "id": "official",
-          "label": "Stable 42.1",
-          "items": [
-            {
-              "sha": "08bd102143ec",
-              "shaFull": "08bd102143ec930f60d136826b6ec1be4e312442",
-              "date": "2026-06-18",
-              "subject": "Keep legacy private hostname until macroverse-private DNS exists",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/08bd102143ec930f60d136826b6ec1be4e312442",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Hosted Forty-Two: Keep legacy private hostname until macroverse-private DNS exists. Feeds the master timeline on blog.aday.net.au."
+              "narrative": "Showcase pages glow like the free 12–4pm exhibition hours: Showcase: Three ways in hero; about page showcase styling. Feeds the master timeline on blog.aday.net.au."
             },
             {
-              "sha": "c3b94aac1c9c",
-              "shaFull": "c3b94aac1c9c9434746252e9923d39ad8aaccd10",
+              "sha": "041e2d9bc135",
+              "shaFull": "041e2d9bc1355550715bfa7dfce9acd30e1fbd1b",
               "date": "2026-06-18",
-              "subject": "Macroverse 42.2: hosted lanes, mobile VJ, private-lane security",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/c3b94aac1c9c9434746252e9923d39ad8aaccd10",
+              "subject": "Showcase: wider splash hero, fix empty title card",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/041e2d9bc1355550715bfa7dfce9acd30e1fbd1b",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "v42.0 on the manifest: Macroverse 42.2: hosted lanes, mobile VJ, private-lane security. Feeds the master timeline on blog.aday.net.au."
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Showcase pages glow like the free 12–4pm exhibition hours: Showcase: wider splash hero, fix empty title card. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "e406906d530d",
+              "shaFull": "e406906d530d93bb0f1e6f10f19fe1ba4789fc62",
+              "date": "2026-06-18",
+              "subject": "Showcase: sliders and origin in first viewport, deep content on scroll",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e406906d530d93bb0f1e6f10f19fe1ba4789fc62",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Binary releases join the festival poster wall: Showcase: sliders and origin in first viewport, deep content on scroll. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "58b07582794d",
+              "shaFull": "58b07582794d0894cac4b0b4f71703417cc59dc1",
+              "date": "2026-06-18",
+              "subject": "Showcase banner: custom domain label",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/58b07582794d0894cac4b0b4f71703417cc59dc1",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Binary releases join the festival poster wall: Showcase banner: custom domain label. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "7a05c3671c32",
+              "shaFull": "7a05c3671c327941c4c24e446288dee24365c095",
+              "date": "2026-06-18",
+              "subject": "Showcase CNAME: DNS-only for GitHub Pages TLS",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/7a05c3671c327941c4c24e446288dee24365c095",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Binary releases join the festival poster wall: Showcase CNAME: DNS-only for GitHub Pages TLS. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "90e1961da720",
+              "shaFull": "90e1961da720266ced37d60dd8aeaf92d74e1dfe",
+              "date": "2026-06-18",
+              "subject": "Add showcase.macroverse.aday.net.au GitHub Pages alias",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/90e1961da720266ced37d60dd8aeaf92d74e1dfe",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Docs and GH Pages carry the psychonaut palette: Add showcase.macroverse.aday.net.au GitHub Pages alias. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
             }
           ]
         }
@@ -104,100 +200,100 @@
           "label": "Stable 5.1.2.0",
           "items": [
             {
-              "sha": "f9081d7ab62c",
-              "shaFull": "f9081d7ab62c8639fbdecd6e99e105314c1b2706",
+              "sha": "46d9ece41e92",
+              "shaFull": "46d9ece41e92284d44f113799618616a7837eb2a",
               "date": "2026-06-14",
-              "subject": "fix(minibeam): map color wheel controls",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f9081d7ab62c8639fbdecd6e99e105314c1b2706",
+              "subject": "fix: limit website deploy trigger",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/46d9ece41e92284d44f113799618616a7837eb2a",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: fix(minibeam): map color wheel controls. The photons remember the candles."
+              "narrative": "DMX512 nod enshrined: fix: limit website deploy trigger. TCP/IP carries what wind once did."
             },
             {
-              "sha": "535e907bc290",
-              "shaFull": "535e907bc290909c4cc7d28090fd30c4364571e1",
+              "sha": "dbb211bbc031",
+              "shaFull": "dbb211bbc03160a5a40eddc100372ab0cfc84ea5",
               "date": "2026-06-14",
-              "subject": "feat(ui): polish clock theme and APC workflows",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/535e907bc290909c4cc7d28090fd30c4364571e1",
+              "subject": "release: bump v5.2.13.0",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/dbb211bbc03160a5a40eddc100372ab0cfc84ea5",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "DMX512 nod enshrined: feat(ui): polish clock theme and APC workflows. React components are the new bamboo tubes."
+              "narrative": "Official sacrament: release: bump v5.2.13.0. React components are the new bamboo tubes."
             },
             {
-              "sha": "f5f5a20cb4d3",
-              "shaFull": "f5f5a20cb4d3e554d4f3aa26b8e136a4e8a87e8e",
+              "sha": "b33ebabbb40d",
+              "shaFull": "b33ebabbb40de4a77fa4316e9f411195cc70805d",
               "date": "2026-06-14",
-              "subject": "fix(ui): unify tempo and deck quick recall",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f5f5a20cb4d3e554d4f3aa26b8e136a4e8a87e8e",
+              "subject": "Guard ROLI LED send failures",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/b33ebabbb40de4a77fa4316e9f411195cc70805d",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "DMX512 nod enshrined: fix(ui): unify tempo and deck quick recall. TCP/IP carries what wind once did."
+              "narrative": "DMX512 nod enshrined: Guard ROLI LED send failures. React components are the new bamboo tubes."
             },
             {
-              "sha": "5077ac4e4329",
-              "shaFull": "5077ac4e432998dd70a1698e883e91044d480ee1",
-              "date": "2026-06-13",
-              "subject": "fix(apc40): disambiguate master freeze cc burst",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/5077ac4e432998dd70a1698e883e91044d480ee1",
+              "sha": "360e3ac5f78a",
+              "shaFull": "360e3ac5f78ac2431e0f61c34e8ac6972e3d76f1",
+              "date": "2026-06-14",
+              "subject": "Log browser and server MIDI lifecycle in console",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/360e3ac5f78ac2431e0f61c34e8ac6972e3d76f1",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: fix(apc40): disambiguate master freeze cc burst. TCP/IP carries what wind once did."
+              "narrative": "DMX512 nod enshrined: Log browser and server MIDI lifecycle in console. The photons remember the candles."
             },
             {
-              "sha": "646593ab9d50",
-              "shaFull": "646593ab9d5043006833c57329fd5a31b3346ddc",
-              "date": "2026-06-13",
-              "subject": "fix(apc40): align freeze monitors and led feedback",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/646593ab9d5043006833c57329fd5a31b3346ddc",
+              "sha": "f0137a0c3005",
+              "shaFull": "f0137a0c3005605c6459791f01addd98a768a984",
+              "date": "2026-06-14",
+              "subject": "Prioritize server ROLI drawing and touch feedback",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f0137a0c3005605c6459791f01addd98a768a984",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: fix(apc40): align freeze monitors and led feedback. React components are the new bamboo tubes."
+              "narrative": "DMX512 nod enshrined: Prioritize server ROLI drawing and touch feedback. Vibe-coded, beret-approved, monastery-sanctioned."
             },
             {
-              "sha": "cc2f46e43e9d",
-              "shaFull": "cc2f46e43e9de3fe9d904cab47820b9633137428",
-              "date": "2026-06-13",
-              "subject": "release: hard bump v5.2.12.0",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cc2f46e43e9de3fe9d904cab47820b9633137428",
+              "sha": "627c49e0df47",
+              "shaFull": "627c49e0df4782ad3b960043da7b54a5ad2d138b",
+              "date": "2026-06-14",
+              "subject": "Enhance Roli touch handling and server communication with touch trail support",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/627c49e0df4782ad3b960043da7b54a5ad2d138b",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: release: hard bump v5.2.12.0. React components are the new bamboo tubes."
+              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Enhance Roli touch handling and server communication with touch trail support. Not for the faint of PAR."
             },
             {
-              "sha": "ca50d7ff03a7",
-              "shaFull": "ca50d7ff03a729a2a4fa28b5a169451b8a7cdc4c",
-              "date": "2026-06-13",
-              "subject": "fix(ui): scope artnet graph svg styles",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/ca50d7ff03a729a2a4fa28b5a169451b8a7cdc4c",
+              "sha": "d47f75bff69c",
+              "shaFull": "d47f75bff69c46638b4ca610d510b8af041c4c2d",
+              "date": "2026-06-14",
+              "subject": "Add factory reset and four-pane rig console",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/d47f75bff69c46638b4ca610d510b8af041c4c2d",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "DMX512 nod enshrined: fix(ui): scope artnet graph svg styles. TCP/IP carries what wind once did."
+              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Add factory reset and four-pane rig console. The photons remember the candles."
             },
             {
-              "sha": "58fde0c6e189",
-              "shaFull": "58fde0c6e1895ca4ce2cc4bb2069a3d92978c1c5",
-              "date": "2026-06-13",
-              "subject": "fix(ux): tighten apc40 drive and network status",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/58fde0c6e1895ca4ce2cc4bb2069a3d92978c1c5",
+              "sha": "82cb68ebc2c4",
+              "shaFull": "82cb68ebc2c4aa0d9e0445c332e34a389772a6c5",
+              "date": "2026-06-14",
+              "subject": "Add rig console layout and quick scene TUI",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/82cb68ebc2c4aa0d9e0445c332e34a389772a6c5",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: fix(ux): tighten apc40 drive and network status. TCP/IP carries what wind once did."
+              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Add rig console layout and quick scene TUI. TCP/IP carries what wind once did."
             }
           ]
         }
