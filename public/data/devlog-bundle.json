@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T07:18:11.358Z",
+  "generated_at": "2026-06-18T02:23:32.911Z",
   "trains": [
     {
       "id": "macroverse",
@@ -9,7 +9,7 @@
       "github": "aday1/macroverse.aday.net.au",
       "previewImage": "https://aday1.github.io/macroverse.aday.net.au/screenshots/full-ui-layout.webp",
       "timelineSource": "devlog-macroverse",
-      "commitCount": 12,
+      "commitCount": 4,
       "prologue": [
         "At [Melbourne Fringe](https://www.melbournefringe.com.au/whats-on/events/macroverse), MacroVerse was live sonic and visual cosmology: Reductionist (Nick Wilson) on battery-powered micro-instruments, Aday (Adrian Richardson) on projection improv — universe from energy stasis to heat-death, Clan Analogue ingenuity, Abbotsford Convent's experimental program.",
         "Behind the 7pm hour-long sessions was a toolchain: GLSL shaders converted to ISF, piped into Resolume Wire, driven by FFT and live parameters — the same spine now in macroverse.aday.net.au. Stable **42.1** consolidated hosted lanes; **42.2** adds WebXR VR, touch-first mobile shell, and audience participation on the flat stream.",
@@ -17,164 +17,68 @@
       ],
       "phases": [
         {
-          "id": "official",
-          "label": "Stable 42.1",
-          "items": [
-            {
-              "sha": "f6084afb7284",
-              "shaFull": "f6084afb7284d9b40a58e0de71a34f18c399f60f",
-              "date": "2026-06-07",
-              "subject": "Retire ArtBastard beta hostname",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f6084afb7284d9b40a58e0de71a34f18c399f60f",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Hosted Forty-Two: Retire ArtBastard beta hostname. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "6923e8ebfa80",
-              "shaFull": "6923e8ebfa80973569c7f41d361342031dc5fe69",
-              "date": "2026-06-05",
-              "subject": "Add ArtBastard beta edge hostname",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/6923e8ebfa80973569c7f41d361342031dc5fe69",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Official orbit achieved: Add ArtBastard beta edge hostname. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "834fa7dd17de",
-              "shaFull": "834fa7dd17debc3fdfcd3f574c1e037a432bed46",
-              "date": "2026-06-02",
-              "subject": "Add Voice and aesthetics section to AGENT-REBUILD",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/834fa7dd17debc3fdfcd3f574c1e037a432bed46",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Official orbit achieved: Add Voice and aesthetics section to AGENT-REBUILD. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "45b0df56438f",
-              "shaFull": "45b0df56438f1313da87888306433c9eb13de343",
-              "date": "2026-06-02",
-              "subject": "Expand AGENT-REBUILD with from-scratch phased runbook",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/45b0df56438f1313da87888306433c9eb13de343",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "v42.0 on the manifest: Expand AGENT-REBUILD with from-scratch phased runbook. Feeds the master timeline on blog.aday.net.au."
-            },
-            {
-              "sha": "ebc6e8096b5e",
-              "shaFull": "ebc6e8096b5e3e9b306b4f7e5322362fdffd59f1",
-              "date": "2026-06-02",
-              "subject": "Add AGENT-REBUILD.md for agent-from-scratch regeneration",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/ebc6e8096b5e3e9b306b4f7e5322362fdffd59f1",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Hosted Forty-Two: Add AGENT-REBUILD.md for agent-from-scratch regeneration. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "0e814c0cd0a1",
-              "shaFull": "0e814c0cd0a1a4abc9b45135b29fafed82ef498e",
-              "date": "2026-06-02",
-              "subject": "Fix deploy switcher links blocked by capture stopPropagation.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/0e814c0cd0a1a4abc9b45135b29fafed82ef498e",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Official orbit achieved: Fix deploy switcher links blocked by capture stopPropagation.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "5ed50aac60ef",
-              "shaFull": "5ed50aac60ef1d514c3fc79b52d1b89cc5d4ee99",
-              "date": "2026-06-02",
-              "subject": "Harden splash dismiss: bind early, pass-through QR blocks.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/5ed50aac60ef1d514c3fc79b52d1b89cc5d4ee99",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "Hosted Forty-Two: Harden splash dismiss: bind early, pass-through QR blocks.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "e6a5f4686310",
-              "shaFull": "e6a5f4686310b5b6e55a1da35e844785c0936023",
-              "date": "2026-06-02",
-              "subject": "Fix VJ carousel deck load on touch and reject bogus thumbnail URLs.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/e6a5f4686310b5b6e55a1da35e844785c0936023",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "v42.0 on the manifest: Fix VJ carousel deck load on touch and reject bogus thumbnail URLs.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            }
-          ]
-        },
-        {
           "id": "fortytwo-two",
           "label": "42.2 — VR, mobile & audience",
           "items": [
             {
-              "sha": "00efb06af429",
-              "shaFull": "00efb06af429772d2e9db1f110e2ebe785b9a1d8",
-              "date": "2026-06-02",
-              "subject": "Fix splash QR screen tap-to-dismiss on desktop.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/00efb06af429772d2e9db1f110e2ebe785b9a1d8",
+              "sha": "3dc60b11b758",
+              "shaFull": "3dc60b11b758fa2c8c6a080d09e73a549c72b829",
+              "date": "2026-06-18",
+              "subject": "Showcase origin media: Nick audio link, UX tidy, Fringe VR placeholder",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3dc60b11b758fa2c8c6a080d09e73a549c72b829",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
               "phaseId": "fortytwo-two",
               "phaseLabel": "42.2 — VR, mobile & audience",
-              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Fix splash QR screen tap-to-dismiss on desktop.. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "cd52925ace4c",
-              "shaFull": "cd52925ace4c2e4830cba141dc594532d8757d0b",
-              "date": "2026-06-02",
-              "subject": "Fix VJ shader carousel A/B taps being swallowed by card drag.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/cd52925ace4c2e4830cba141dc594532d8757d0b",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "fortytwo-two",
-              "phaseLabel": "42.2 — VR, mobile & audience",
-              "narrative": "42.2 gig stack — phones, headsets, and salted QRs in the room: Fix VJ shader carousel A/B taps being swallowed by card drag.. Feeds the master timeline on blog.aday.net.au."
-            },
-            {
-              "sha": "f2effe9b7d51",
-              "shaFull": "f2effe9b7d51b56b90b8e005ebe797e80e8ed62c",
-              "date": "2026-06-02",
-              "subject": "Add splash QR copy links, Jump into VR chooser, and VR page UI polish.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f2effe9b7d51b56b90b8e005ebe797e80e8ed62c",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "fortytwo-two",
-              "phaseLabel": "42.2 — VR, mobile & audience",
-              "narrative": "Audience in the pocket, VJ in the dome — Add splash QR copy links, Jump into VR chooser, and VR page UI polish.. Feeds the master timeline on blog.aday.net.au."
+              "narrative": "WebXR and touch tiers ship together: Showcase origin media: Nick audio link, UX tidy, Fringe VR placeholder. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
             }
           ]
         },
         {
-          "id": "vj",
-          "label": "VJ & Fringe body",
+          "id": "showcase",
+          "label": "Wired Atelier showcase",
           "items": [
             {
-              "sha": "23a7a2a43165",
-              "shaFull": "23a7a2a43165432f00b67c49a4af0ea8b69681b0",
-              "date": "2026-06-02",
-              "subject": "Fix frozen VJ deck and restore carousel A/B on desktop.",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/23a7a2a43165432f00b67c49a4af0ea8b69681b0",
+              "sha": "93091c678927",
+              "shaFull": "93091c678927f7c401429c83a5e917d9d6c637e4",
+              "date": "2026-06-18",
+              "subject": "Move Origin story under showcase banner with Fringe and Nick Wilson links",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/93091c678927f7c401429c83a5e917d9d6c637e4",
               "repo": "aday1/macroverse.aday.net.au",
               "trainId": "macroverse",
-              "phaseId": "vj",
-              "phaseLabel": "VJ & Fringe body",
-              "narrative": "7pm session energy — deck sync and audience QR: Fix frozen VJ deck and restore carousel A/B on desktop.. Feeds the master timeline on blog.aday.net.au."
+              "phaseId": "showcase",
+              "phaseLabel": "Wired Atelier showcase",
+              "narrative": "Showcase pages glow like the free 12–4pm exhibition hours: Move Origin story under showcase banner with Fringe and Nick Wilson links. Feeds the master timeline on blog.aday.net.au."
+            }
+          ]
+        },
+        {
+          "id": "official",
+          "label": "Stable 42.1",
+          "items": [
+            {
+              "sha": "08bd102143ec",
+              "shaFull": "08bd102143ec930f60d136826b6ec1be4e312442",
+              "date": "2026-06-18",
+              "subject": "Keep legacy private hostname until macroverse-private DNS exists",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/08bd102143ec930f60d136826b6ec1be4e312442",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Keep legacy private hostname until macroverse-private DNS exists. Feeds the master timeline on blog.aday.net.au."
+            },
+            {
+              "sha": "c3b94aac1c9c",
+              "shaFull": "c3b94aac1c9c9434746252e9923d39ad8aaccd10",
+              "date": "2026-06-18",
+              "subject": "Macroverse 42.2: hosted lanes, mobile VJ, private-lane security",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/c3b94aac1c9c9434746252e9923d39ad8aaccd10",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Macroverse 42.2: hosted lanes, mobile VJ, private-lane security. Feeds the master timeline on blog.aday.net.au."
             }
           ]
         }
@@ -200,106 +104,100 @@
           "label": "Stable 5.1.2.0",
           "items": [
             {
-              "sha": "548e59ce67e3",
-              "shaFull": "548e59ce67e3dd06eb4c5931dd6f206ef941081a",
-              "date": "2026-06-08",
-              "subject": "Add ArtBastard light mode",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/548e59ce67e3dd06eb4c5931dd6f206ef941081a",
+              "sha": "f9081d7ab62c",
+              "shaFull": "f9081d7ab62c8639fbdecd6e99e105314c1b2706",
+              "date": "2026-06-14",
+              "subject": "fix(minibeam): map color wheel controls",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f9081d7ab62c8639fbdecd6e99e105314c1b2706",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: Add ArtBastard light mode. The photons remember the candles."
+              "narrative": "Official sacrament: fix(minibeam): map color wheel controls. The photons remember the candles."
             },
             {
-              "sha": "33aa49e0b518",
-              "shaFull": "33aa49e0b5187b08f518b8720630fa0dcd17a980",
-              "date": "2026-06-08",
-              "subject": "Update ArtBastard rebuild runbook",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/33aa49e0b5187b08f518b8720630fa0dcd17a980",
+              "sha": "535e907bc290",
+              "shaFull": "535e907bc290909c4cc7d28090fd30c4364571e1",
+              "date": "2026-06-14",
+              "subject": "feat(ui): polish clock theme and APC workflows",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/535e907bc290909c4cc7d28090fd30c4364571e1",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "DMX512 nod enshrined: Update ArtBastard rebuild runbook. TCP/IP carries what wind once did."
+              "narrative": "DMX512 nod enshrined: feat(ui): polish clock theme and APC workflows. React components are the new bamboo tubes."
             },
             {
-              "sha": "58a3401c0a28",
-              "shaFull": "58a3401c0a283c9a7b3ba33db4db31a8e5fb9245",
-              "date": "2026-06-08",
-              "subject": "Promote refreshed ArtBastard lane labels",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/58a3401c0a283c9a7b3ba33db4db31a8e5fb9245",
+              "sha": "f5f5a20cb4d3",
+              "shaFull": "f5f5a20cb4d3e554d4f3aa26b8e136a4e8a87e8e",
+              "date": "2026-06-14",
+              "subject": "fix(ui): unify tempo and deck quick recall",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f5f5a20cb4d3e554d4f3aa26b8e136a4e8a87e8e",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "DMX512 nod enshrined: Promote refreshed ArtBastard lane labels. Not for the faint of PAR."
+              "narrative": "DMX512 nod enshrined: fix(ui): unify tempo and deck quick recall. TCP/IP carries what wind once did."
             },
             {
-              "sha": "fc7e05ae857f",
-              "shaFull": "fc7e05ae857f5373a62e864dddda0ef04d9e08cb",
-              "date": "2026-06-08",
-              "subject": "Apply beta tint after theme variables",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/fc7e05ae857f5373a62e864dddda0ef04d9e08cb",
+              "sha": "5077ac4e4329",
+              "shaFull": "5077ac4e432998dd70a1698e883e91044d480ee1",
+              "date": "2026-06-13",
+              "subject": "fix(apc40): disambiguate master freeze cc burst",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/5077ac4e432998dd70a1698e883e91044d480ee1",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "DMX512 nod enshrined: Apply beta tint after theme variables. React components are the new bamboo tubes."
+              "narrative": "Official sacrament: fix(apc40): disambiguate master freeze cc burst. TCP/IP carries what wind once did."
             },
             {
-              "sha": "0a628e29b30f",
-              "shaFull": "0a628e29b30f212de054caa8008ce3db572ae5d2",
-              "date": "2026-06-08",
-              "subject": "Make beta lane visually distinct",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0a628e29b30f212de054caa8008ce3db572ae5d2",
+              "sha": "646593ab9d50",
+              "shaFull": "646593ab9d5043006833c57329fd5a31b3346ddc",
+              "date": "2026-06-13",
+              "subject": "fix(apc40): align freeze monitors and led feedback",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/646593ab9d5043006833c57329fd5a31b3346ddc",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Official sacrament: Make beta lane visually distinct. React components are the new bamboo tubes."
+              "narrative": "Official sacrament: fix(apc40): align freeze monitors and led feedback. React components are the new bamboo tubes."
             },
             {
-              "sha": "f952016946f3",
-              "shaFull": "f952016946f3e5eead247a44aee36be730566a23",
-              "date": "2026-06-08",
-              "subject": "Stop forcing dev lane into mobile mode",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/f952016946f3e5eead247a44aee36be730566a23",
+              "sha": "cc2f46e43e9d",
+              "shaFull": "cc2f46e43e9de3fe9d904cab47820b9633137428",
+              "date": "2026-06-13",
+              "subject": "release: hard bump v5.2.12.0",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/cc2f46e43e9de3fe9d904cab47820b9633137428",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: Stop forcing dev lane into mobile mode. TCP/IP carries what wind once did."
-            }
-          ]
-        },
-        {
-          "id": "workbench",
-          "label": "Emprunt Macroverse",
-          "items": [
-            {
-              "sha": "9ddf4bee561d",
-              "shaFull": "9ddf4bee561db1db46409a326440756dac7975c8",
-              "date": "2026-06-08",
-              "subject": "Use beta rack chrome on beta hosts",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/9ddf4bee561db1db46409a326440756dac7975c8",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "workbench",
-              "phaseLabel": "Emprunt Macroverse",
-              "narrative": "A stolen glance at Macroverse's envelope cathedral: Use beta rack chrome on beta hosts. The photons remember the candles."
+              "narrative": "Official sacrament: release: hard bump v5.2.12.0. React components are the new bamboo tubes."
             },
             {
-              "sha": "0362e82485f3",
-              "shaFull": "0362e82485f3f96cf2a28863bca5bd1bcd7a048a",
-              "date": "2026-06-08",
-              "subject": "Fix beta rack tint cascade",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/0362e82485f3f96cf2a28863bca5bd1bcd7a048a",
+              "sha": "ca50d7ff03a7",
+              "shaFull": "ca50d7ff03a729a2a4fa28b5a169451b8a7cdc4c",
+              "date": "2026-06-13",
+              "subject": "fix(ui): scope artnet graph svg styles",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/ca50d7ff03a729a2a4fa28b5a169451b8a7cdc4c",
               "repo": "aday1/artbastard.aday.net.au",
               "trainId": "artbastard",
-              "phaseId": "workbench",
-              "phaseLabel": "Emprunt Macroverse",
-              "narrative": "A stolen glance at Macroverse's envelope cathedral: Fix beta rack tint cascade. Vibe-coded, beret-approved, monastery-sanctioned."
+              "phaseId": "official",
+              "phaseLabel": "Stable 5.1.2.0",
+              "narrative": "DMX512 nod enshrined: fix(ui): scope artnet graph svg styles. TCP/IP carries what wind once did."
+            },
+            {
+              "sha": "58fde0c6e189",
+              "shaFull": "58fde0c6e1895ca4ce2cc4bb2069a3d92978c1c5",
+              "date": "2026-06-13",
+              "subject": "fix(ux): tighten apc40 drive and network status",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/58fde0c6e1895ca4ce2cc4bb2069a3d92978c1c5",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "official",
+              "phaseLabel": "Stable 5.1.2.0",
+              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: fix(ux): tighten apc40 drive and network status. TCP/IP carries what wind once did."
             }
           ]
         }

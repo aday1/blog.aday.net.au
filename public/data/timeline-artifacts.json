@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-08T07:18:14.836Z",
-  "count": 329,
+  "generated_at": "2026-06-18T02:23:34.887Z",
+  "count": 330,
   "entries": [
     {
       "date": "2005-04-28",
@@ -3053,6 +3053,13 @@
       "title": "ArtBastard 5.2.0.0 - canonical live/dev desk",
       "desc": "ArtBastard's refreshed Reason-rack build is now the confirmed live/dev line, with the old beta identity retired and cleaner DMX strip visibility controls.",
       "url": "/posts/2026-06-08-artbastard-5-2-canonical-live-dev.html",
+      "source": "post"
+    },
+    {
+      "date": "2026-06-18",
+      "title": "Macroverse showcase — Fringe origin, Nick's audio, VR videos soon",
+      "desc": "Origin story under the showcase banner; Nick Wilson live set on YouTube; edited Melbourne Fringe VR captures coming.",
+      "url": "/posts/2026-06-18-macroverse-showcase-origin-media.html",
       "source": "post"
     }
   ]

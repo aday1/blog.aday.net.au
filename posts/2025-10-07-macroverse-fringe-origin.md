@@ -12,6 +12,8 @@ Reductionist (Nick Wilson) performed with battery-powered micro-instruments and 
 
 Both of us are longtime members of Australia's [Clan Analogue](https://clananalogue.org/) collective. The exhibition ran **free daily 12pm–4pm**; ticketed performance sessions ran **from 7pm each night for about an hour**, alongside related contemporary works (including bodies no bodies and The Shore Remembers on the same program). Bar from 6pm.
 
+**Audio:** [Nick Wilson — live set on YouTube](https://www.youtube.com/watch?v=4tfKNUwVZw0). **Video:** edited Melbourne Fringe VR captures coming to the [Macroverse showcase](https://aday1.github.io/macroverse.aday.net.au/#origin) when they're ready.
+
 ## The tool behind the visuals
 
 MacroVerse on stage was not only performance — it was a working pipeline:
