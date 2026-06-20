@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-18T03:04:01.833Z",
-  "count": 331,
+  "generated_at": "2026-06-20T02:30:06.767Z",
+  "count": 332,
   "entries": [
     {
       "date": "2005-04-28",
@@ -3067,6 +3067,13 @@
       "title": "MacroVerse Origin shaders on live — six chapters, showcase hero demos",
       "desc": "Six universe-evolution ISF shaders ship on macroverse.aday.net.au; showcase hero stacks Pipeline, Expose, and Fix chain clips under the sliders.",
       "url": "/posts/2026-06-18-macroverse-origin-shaders-live.html",
+      "source": "post"
+    },
+    {
+      "date": "2026-06-20",
+      "title": "ArtBastard 5.2.14.0 - Essential 14+14 scene desk polish",
+      "desc": "Default APC seeds are now 14 clips per deck with explained pack UI, scene loads settle without stale automation, and SuperControl scene navigation matches fixture rows.",
+      "url": "/posts/2026-06-20-artbastard-5-2-14-scene-desk-polish.html",
       "source": "post"
     }
   ]
