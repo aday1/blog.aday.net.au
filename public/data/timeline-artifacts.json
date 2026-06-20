@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-20T02:30:06.767Z",
-  "count": 332,
+  "generated_at": "2026-06-20T03:08:38.678Z",
+  "count": 333,
   "entries": [
     {
       "date": "2005-04-28",
@@ -3067,6 +3067,13 @@
       "title": "MacroVerse Origin shaders on live — six chapters, showcase hero demos",
       "desc": "Six universe-evolution ISF shaders ship on macroverse.aday.net.au; showcase hero stacks Pipeline, Expose, and Fix chain clips under the sliders.",
       "url": "/posts/2026-06-18-macroverse-origin-shaders-live.html",
+      "source": "post"
+    },
+    {
+      "date": "2026-06-20",
+      "title": "ArtBastard 5.2.15.0 - Operator rows 3-5 layered seeds",
+      "desc": "Layer pan/tilt, color, and color+pan/tilt APC clips on slots 17-40 without touching dimmer, gobo, or strobe. Pair with Essential 14+14 on rows 1-2.",
+      "url": "/posts/2026-06-20-artbastard-5-2-15-operator-rows-layer.html",
       "source": "post"
     },
     {

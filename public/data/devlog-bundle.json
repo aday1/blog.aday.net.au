@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T02:30:01.336Z",
+  "generated_at": "2026-06-20T03:08:36.296Z",
   "trains": [
     {
       "id": "macroverse",
@@ -183,7 +183,7 @@
     {
       "id": "artbastard",
       "title": "ArtBastard",
-      "tagline": "French art-candle monks → TCP/IP → React — DMX512 stable line 5.2.14.0.",
+      "tagline": "French art-candle monks → TCP/IP → React — DMX512 stable line 5.2.15.0.",
       "liveUrl": "https://artbastard.aday.net.au",
       "github": "aday1/artbastard.aday.net.au",
       "previewImage": "/assets/card-dmx-console.jpg",
@@ -195,6 +195,48 @@
         "ArtBastard **5.1.2.0** (5 · 1 · 2 → DMX512) is the stable hosted line — relic commits plus one release tip. Below: real git history, draped in the same canon as DOCS/HISTORY.md."
       ],
       "phases": [
+        {
+          "id": "supercontrol",
+          "label": "SuperControl salon",
+          "items": [
+            {
+              "sha": "af2ce5469a13",
+              "shaFull": "af2ce5469a135d6c5fc197d13ad1de27877b2def",
+              "date": "2026-06-20",
+              "subject": "feat: Operator rows 3-5 layered seeds and SuperControl scene scroll",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/af2ce5469a135d6c5fc197d13ad1de27877b2def",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "supercontrol",
+              "phaseLabel": "SuperControl salon",
+              "narrative": "The Société adopts metallic faders — still lit by metaphorical flame: feat: Operator rows 3-5 layered seeds and SuperControl scene scroll. The photons remember the candles."
+            },
+            {
+              "sha": "294123abfb3b",
+              "shaFull": "294123abfb3b8184c6f1c51f8b2d0e2e5362ce71",
+              "date": "2026-06-20",
+              "subject": "feat: SuperControl output card, path simplify, opt-in strobe safety",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/294123abfb3b8184c6f1c51f8b2d0e2e5362ce71",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "supercontrol",
+              "phaseLabel": "SuperControl salon",
+              "narrative": "TouchOSC scrolls replace silk fan gestures, non?: feat: SuperControl output card, path simplify, opt-in strobe safety. The photons remember the candles."
+            },
+            {
+              "sha": "129bacac447c",
+              "shaFull": "129bacac447c50bef0a624ecb02b4b6d51c14ae4",
+              "date": "2026-06-19",
+              "subject": "fix: RGB wash SuperControl sync, APC server screensaver, and local HTTPS lane",
+              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/129bacac447c50bef0a624ecb02b4b6d51c14ae4",
+              "repo": "aday1/artbastard.aday.net.au",
+              "trainId": "artbastard",
+              "phaseId": "supercontrol",
+              "phaseLabel": "SuperControl salon",
+              "narrative": "SuperControl: skeuomorphic heresy the monks would have adored: fix: RGB wash SuperControl sync, APC server screensaver, and local HTTPS lane. TCP/IP carries what wind once did."
+            }
+          ]
+        },
         {
           "id": "official",
           "label": "Stable 5.1.2.0",
@@ -258,48 +300,6 @@
               "phaseId": "official",
               "phaseLabel": "Stable 5.1.2.0",
               "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: feat: add freeze and dimmer fade controls. React components are the new bamboo tubes."
-            },
-            {
-              "sha": "64b4870036a3",
-              "shaFull": "64b4870036a38efcb51490d18214f47a8a7936f4",
-              "date": "2026-06-19",
-              "subject": "fix: blackout dmx on factory reset",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/64b4870036a38efcb51490d18214f47a8a7936f4",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "official",
-              "phaseLabel": "Stable 5.1.2.0",
-              "narrative": "Hosted ArtBastard, bastard of art, legitimate at last: fix: blackout dmx on factory reset. The photons remember the candles."
-            }
-          ]
-        },
-        {
-          "id": "supercontrol",
-          "label": "SuperControl salon",
-          "items": [
-            {
-              "sha": "294123abfb3b",
-              "shaFull": "294123abfb3b8184c6f1c51f8b2d0e2e5362ce71",
-              "date": "2026-06-20",
-              "subject": "feat: SuperControl output card, path simplify, opt-in strobe safety",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/294123abfb3b8184c6f1c51f8b2d0e2e5362ce71",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "supercontrol",
-              "phaseLabel": "SuperControl salon",
-              "narrative": "TouchOSC scrolls replace silk fan gestures, non?: feat: SuperControl output card, path simplify, opt-in strobe safety. The photons remember the candles."
-            },
-            {
-              "sha": "129bacac447c",
-              "shaFull": "129bacac447c50bef0a624ecb02b4b6d51c14ae4",
-              "date": "2026-06-19",
-              "subject": "fix: RGB wash SuperControl sync, APC server screensaver, and local HTTPS lane",
-              "url": "https://github.com/aday1/artbastard.aday.net.au/commit/129bacac447c50bef0a624ecb02b4b6d51c14ae4",
-              "repo": "aday1/artbastard.aday.net.au",
-              "trainId": "artbastard",
-              "phaseId": "supercontrol",
-              "phaseLabel": "SuperControl salon",
-              "narrative": "SuperControl: skeuomorphic heresy the monks would have adored: fix: RGB wash SuperControl sync, APC server screensaver, and local HTTPS lane. TCP/IP carries what wind once did."
             }
           ]
         }
