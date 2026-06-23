@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T03:08:36.296Z",
+  "generated_at": "2026-06-23T07:20:46.171Z",
   "trains": [
     {
       "id": "macroverse",
@@ -20,6 +20,66 @@
           "id": "official",
           "label": "Stable 42.1",
           "items": [
+            {
+              "sha": "b7642cdf263a",
+              "shaFull": "b7642cdf263ac8972d4ac1bb94bdb7a639abea3e",
+              "date": "2026-06-21",
+              "subject": "Prefer LAN URLs for local gig links",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/b7642cdf263ac8972d4ac1bb94bdb7a639abea3e",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Prefer LAN URLs for local gig links. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "17ddcbc1cd05",
+              "shaFull": "17ddcbc1cd058e78c50e95ee141bd1d2fbb4d95b",
+              "date": "2026-06-21",
+              "subject": "Expose manual VJ stream URLs",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/17ddcbc1cd058e78c50e95ee141bd1d2fbb4d95b",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Expose manual VJ stream URLs. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "6c782e652a89",
+              "shaFull": "6c782e652a896f982a3177d8fa6f130660226490",
+              "date": "2026-06-21",
+              "subject": "Refresh Macroverse launcher branding",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/6c782e652a896f982a3177d8fa6f130660226490",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Refresh Macroverse launcher branding. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
+            },
+            {
+              "sha": "6a504e6d296d",
+              "shaFull": "6a504e6d296d4771fa913f262a6d752505f5baf7",
+              "date": "2026-06-21",
+              "subject": "Prompt for launcher lane and auto-map controllers",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/6a504e6d296d4771fa913f262a6d752505f5baf7",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "v42.0 on the manifest: Prompt for launcher lane and auto-map controllers. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
+            {
+              "sha": "12ccabc56fe7",
+              "shaFull": "12ccabc56fe787cd5fefbe901866af263bd986cf",
+              "date": "2026-06-21",
+              "subject": "Add private local launcher and backend viewer",
+              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/12ccabc56fe787cd5fefbe901866af263bd986cf",
+              "repo": "aday1/macroverse.aday.net.au",
+              "trainId": "macroverse",
+              "phaseId": "official",
+              "phaseLabel": "Stable 42.1",
+              "narrative": "Hosted Forty-Two: Add private local launcher and backend viewer. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
+            },
             {
               "sha": "631d8aab6120",
               "shaFull": "631d8aab61207d14d1674ae1c5c6ef42b1ced6a2",
@@ -91,18 +151,6 @@
               "phaseId": "official",
               "phaseLabel": "Stable 42.1",
               "narrative": "Official orbit achieved: Ship full public ISF library on live and test lanes. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "2fb4235dec5b",
-              "shaFull": "2fb4235dec5bdf19821d14eb945914a696de8fc0",
-              "date": "2026-06-18",
-              "subject": "Changelog and about: MacroVerse Origin set on live",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/2fb4235dec5bdf19821d14eb945914a696de8fc0",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "official",
-              "phaseLabel": "Stable 42.1",
-              "narrative": "v42.0 on the manifest: Changelog and about: MacroVerse Origin set on live. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
             }
           ]
         },
@@ -121,60 +169,6 @@
               "phaseId": "wire",
               "phaseLabel": "Wire Atelier",
               "narrative": "In the Wired Atelier, a shader becomes a Wire patch: Serve baked thumbnails and dedupe shader index. Feeds the master timeline on blog.aday.net.au."
-            }
-          ]
-        },
-        {
-          "id": "showcase",
-          "label": "Wired Atelier showcase",
-          "items": [
-            {
-              "sha": "3f752b8b5a8c",
-              "shaFull": "3f752b8b5a8c536727d90cce00e213f438cf2f76",
-              "date": "2026-06-18",
-              "subject": "fix(showcase): hero pipeline demos at 4:3 aspect ratio",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/3f752b8b5a8c536727d90cce00e213f438cf2f76",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "showcase",
-              "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Docs and GH Pages carry the psychonaut palette: fix(showcase): hero pipeline demos at 4:3 aspect ratio. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "c0f61c03e352",
-              "shaFull": "c0f61c03e352a8f523c5800034098a7f715905c0",
-              "date": "2026-06-18",
-              "subject": "fix(showcase): show full pipeline demo frames in hero strip",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/c0f61c03e352a8f523c5800034098a7f715905c0",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "showcase",
-              "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Binary releases join the festival poster wall: fix(showcase): show full pipeline demo frames in hero strip. Still chasing the same perceptual stretch MacroVerse sold on the Fringe program — energy read as motion, time read as colour."
-            },
-            {
-              "sha": "f016a794901e",
-              "shaFull": "f016a794901e0ff230d1a8fe84095bb3b7886717",
-              "date": "2026-06-18",
-              "subject": "fix(showcase): 3-column wide hero and deployments grid",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/f016a794901e0ff230d1a8fe84095bb3b7886717",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "showcase",
-              "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Binary releases join the festival poster wall: fix(showcase): 3-column wide hero and deployments grid. The Melbourne Fringe MacroVerse listing remains the origin myth; the repo is the instrument."
-            },
-            {
-              "sha": "9738676a4c3c",
-              "shaFull": "9738676a4c3ce00baafaeb4893908f6b264a2aee",
-              "date": "2026-06-18",
-              "subject": "fix(showcase): balance hero columns — demos in full-width strip",
-              "url": "https://github.com/aday1/macroverse.aday.net.au/commit/9738676a4c3ce00baafaeb4893908f6b264a2aee",
-              "repo": "aday1/macroverse.aday.net.au",
-              "trainId": "macroverse",
-              "phaseId": "showcase",
-              "phaseLabel": "Wired Atelier showcase",
-              "narrative": "Binary releases join the festival poster wall: fix(showcase): balance hero columns — demos in full-width strip. Feeds the master timeline on blog.aday.net.au."
             }
           ]
         }

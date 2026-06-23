@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-20T03:08:38.678Z",
-  "count": 333,
+  "generated_at": "2026-06-23T07:20:49.755Z",
+  "count": 334,
   "entries": [
     {
       "date": "2005-04-28",
@@ -3081,6 +3081,13 @@
       "title": "ArtBastard 5.2.14.0 - Essential 14+14 scene desk polish",
       "desc": "Default APC seeds are now 14 clips per deck with explained pack UI, scene loads settle without stale automation, and SuperControl scene navigation matches fixture rows.",
       "url": "/posts/2026-06-20-artbastard-5-2-14-scene-desk-polish.html",
+      "source": "post"
+    },
+    {
+      "date": "2026-06-23",
+      "title": "breakcore.com.au — first archive version live",
+      "desc": "Recovered phpBB export is browseable on the live site; beta rebuild lane still under slow construction.",
+      "url": "/posts/2026-06-23-breakcore-archive-v1.html",
       "source": "post"
     }
   ]
