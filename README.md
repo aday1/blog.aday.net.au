@@ -24,3 +24,12 @@ Use simple front matter:
 Raw HTML charts / widgets: open a fenced block with language `html`
 (triple backtick + html), put markup inside, then close with a bare
 triple-backtick line. The builder passes that markup through unescaped.
+
+Optional front matter for chip posts:
+
+    github: https://github.com/aday1/AdLibitum
+    nav: chip
+    shader: fm
+
+`nav: chip` (or any `github:` URL) drops mastodon/codepen and links GitHub.
+`shader: fm` loads `/blog-fm-shader.js` + `/blog-fm.css` (subtle FM phosphor backdrop).

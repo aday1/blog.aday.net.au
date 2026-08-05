@@ -663,6 +663,54 @@ const parsePost = (raw) => {
   return { meta, body };
 };
 
+const postNavHtml = (meta) => {
+  const github = meta.github || "";
+  const chipNav = String(meta.nav || "").toLowerCase() === "chip" || Boolean(github);
+  if (chipNav) {
+    const git = github
+      ? ` | <a href="${escapeHtml(github)}" target="_blank" rel="noopener noreferrer">github</a>`
+      : ` | <a href="https://github.com/aday1" target="_blank" rel="noopener noreferrer">github</a>`;
+    return `<p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a>${git}</p>`;
+  }
+  return `<p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>`;
+};
+
+const postFooterHtml = (meta) => {
+  const github = meta.github || "";
+  const chipNav = String(meta.nav || "").toLowerCase() === "chip" || Boolean(github);
+  if (chipNav) {
+    const git = github
+      ? ` | <a href="${escapeHtml(github)}" target="_blank" rel="noopener noreferrer">github</a>`
+      : ` | <a href="https://github.com/aday1" target="_blank" rel="noopener noreferrer">github</a>`;
+    return `<p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a>${git}</p>`;
+  }
+  return `<p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a></p>`;
+};
+
+const postBodyClass = (meta) => {
+  const shader = String(meta.shader || "").toLowerCase();
+  if (shader === "fm" || shader === "chip") {
+    return "boot-seq film-on blog-no-scanlines vfx-off blog-fm-shader";
+  }
+  return "boot-seq film-on blog-no-scanlines vfx-off";
+};
+
+const postExtraHead = (meta) => {
+  const shader = String(meta.shader || "").toLowerCase();
+  if (shader === "fm" || shader === "chip") {
+    return `  <link rel="stylesheet" href="/blog-fm.css">\n`;
+  }
+  return "";
+};
+
+const postBgScript = (meta) => {
+  const shader = String(meta.shader || "").toLowerCase();
+  if (shader === "fm" || shader === "chip") {
+    return `  <script src="/blog-fm-shader.js" defer></script>`;
+  }
+  return `  <script src="/blog-bg-shader.js" defer></script>`;
+};
+
 const files = fs
   .readdirSync(postsDir)
   .filter((name) => name.endsWith(".md"))
@@ -689,8 +737,8 @@ const posts = files.map((file) => {
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/crt-cuton.css">
 ${filmHeadLinks}
-</head>
-<body class="boot-seq film-on blog-no-scanlines vfx-off">
+${postExtraHead(meta)}</head>
+<body class="${postBodyClass(meta)}">
   <div id="pageTransition" class="page-transition" aria-hidden="true">
     <div class="page-transition-inner">
       <span class="cuton-label" aria-hidden="true"></span>
@@ -700,19 +748,25 @@ ${filmHeadLinks}
   <canvas id="blogBgShader" class="bg-shader" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <main>
-    <p><a href="/">back to blog index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a> | <a href="https://codepen.io/aday_net_au/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+    ${postNavHtml(meta)}
     <h1 class="decrypt">${escapeHtml(meta.title)}</h1>
     <p class="date">${escapeHtml(meta.date)}</p>
     ${assetsHtml}
     ${htmlBody}
     <footer class="blog-footer">
       <div class="footer-wave" aria-hidden="true"></div>
-      <p><a href="/">back to index</a> | <a href="https://aday.net.au">aday.net.au</a> | <a href="${MASTODON_PROFILE_URL}" target="_blank" rel="me noopener noreferrer">mastodon</a></p>
+      ${postFooterHtml(meta)}
     </footer>
   </main>
   <div id="retroCursor" class="retro-cursor" aria-hidden="true"></div>
   <script src="/app.js" defer></script>
-${filmBodyScripts}
+  <script src="/blog-film.js" defer></script>
+${postBgScript(meta)}
+  <script type="module" src="/blog-vfx.js"></script>
+  <script src="/blog-shell.js" defer></script>
+  <script src="/blog-range.js" defer></script>
+  <script src="/github-presence.js" defer></script>
+  <script src="/blog-presence.js" defer></script>
   ${deployMetaHtml}
 </body>
 </html>

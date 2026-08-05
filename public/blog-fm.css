@@ -1,0 +1,35 @@
+/* FM3 / chiptune post — soft phosphor wash over the default blog chrome */
+body.blog-fm-shader {
+  background:
+    radial-gradient(circle at 12% -10%, rgba(62, 207, 142, 0.16), transparent 42%),
+    radial-gradient(circle at 88% 110%, rgba(232, 168, 56, 0.1), transparent 40%),
+    linear-gradient(180deg, #0a120c 0%, #070a08 100%) !important;
+  color: #d8e6d0;
+}
+
+body.blog-fm-shader.blog-bg-on .bg-shader {
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+body.blog-fm-shader main {
+  position: relative;
+  z-index: 1;
+}
+
+body.blog-fm-shader h1.decrypt {
+  color: #c8f060;
+  text-shadow: 0 0 24px rgba(200, 240, 96, 0.28);
+}
+
+body.blog-fm-shader .date {
+  color: #7a9170;
+}
+
+body.blog-fm-shader a {
+  color: #5ad4ff;
+}
+
+body.blog-fm-shader a:hover {
+  color: #e8a838;
+}

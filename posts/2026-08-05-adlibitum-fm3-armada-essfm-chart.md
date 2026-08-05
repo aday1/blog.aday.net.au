@@ -1,9 +1,14 @@
 ---
 title: AdLibitum FM3 — Armada 1750 ESS FM (the long way round)
 date: 2026-08-05
-summary: I forked ijsf/at2, drove the only FM hardware I had laying around — a Compaq Armada 1750 ESS ES1869 — gave up on serial, put Windows 98 on the network, wrote VSTs for the modulators and an X-Touch, and brought Game Boy mGB + SammichSID along for the ride.
-tags: adlibitum, fm3, essfm, armada, opl3, xtouch
+summary: Chiptune FM synth gig notes — forked ijsf/at2, drove a Compaq Armada 1750 ESS ES1869, gave up on serial, Win98 + NIC, VSTs + X-Touch, Game Boy mGB + SammichSID. AT2-derived bits out under GPL v3.
+tags: adlibitum, fm3, essfm, armada, opl3, xtouch, chiptune
+github: https://github.com/aday1/AdLibitum
+nav: chip
+shader: fm
 ---
+
+This is a **chiptune FM synth gig** write-up for FM3 / Clan Analogue — not a softsynth nostalgia deck. Real operators on real silicon, plus Game Boy and SID for company.
 
 I forked [ijsf/at2](https://github.com/ijsf/at2) and wrote a VST to drive the only piece of FM hardware I actually have laying around: my **Compaq Armada 1750**, with an integrated **ESS AudioDrive ES1869** (or ES1869S).
 
@@ -12,6 +17,8 @@ Then I needed a way to drive it. So I wasted a few weeks on a serial cable imple
 After that I spent ages figuring out AdLib Tracker files — `.a2m`, `.a2i`, and the instrument formats — and wrote a VST to handle the modulators so I could wire it up to more modern MIDI controllers. In this case a **Behringer X-Touch**. It sounds remarkably pleasant to listen to (and I hope the venue does too). So I've now got a powerful FM synth in the studio without hunting down a DX7 or finding a Sound Blaster… if anyone's got spare Sound Blasters kicking around, I'm interested.
 
 I also really went back to roots on this. The instruments, patches, and sounds will be accompanied by other chiptune: my **Game Boy** running **mGB**, and a **SammichSID** (6581).
+
+**Licensing:** the AT2-derived fork path (at2net and related replay bits) will be released under **GPL v3**, same as AdLib Tracker II. AdLibitum's own upstream code stays under its existing licence (beerware / CC BY 4.0). Third-party pieces (Nuked-OPL3, mGB, etc.) keep their own. Repo: [aday1/AdLibitum](https://github.com/aday1/AdLibitum).
 
 Chart below is the short version of how the desk talks to the laptop.
 
@@ -129,15 +136,16 @@ Chart below is the short version of how the desk talks to the laptop.
   }
 
   .fm3-ascii {
-    font-size: 0.72rem;
-    line-height: 1.35;
+    font-size: 0.68rem;
+    line-height: 1.28;
     color: var(--c-chip);
     background: #080a08;
     border: 1px solid var(--c-line);
     padding: 0.85rem 0.9rem;
     overflow-x: auto;
     white-space: pre;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.1rem;
+    text-shadow: 0 0 8px rgba(62, 207, 142, 0.25);
   }
 
   .fm3-sec {
@@ -233,7 +241,7 @@ Chart below is the short version of how the desk talks to the laptop.
 </style>
 
 <section class="fm3-chart" aria-label="Armada ESS FM drive and sound design chart">
-  <p class="eyebrow">AdLibitum · FM3 · Clan Analogue</p>
+  <p class="eyebrow">AdLibitum · FM3 · chiptune FM synth gig</p>
   <h2 class="chart-title">ARMADA 1750 · ESS FM</h2>
   <p class="lede">
     <strong>1999 Compaq Armada 1750.</strong> ESS ES1869 at <code>388h</code>. Sixteen megs of RAM.
@@ -241,11 +249,16 @@ Chart below is the short version of how the desk talks to the laptop.
     feedback, envelopes, and an 18-voice channel budget.
   </p>
 
+  <pre class="fm3-ascii" aria-hidden="true">.-.   .-.   .-.   .-.   .-.   .-.   .-.   .-.
+|A|---|D|---|L|---|I|---|B|---|I|---|T|---|U|
+'-'   '-'   '-'   '-'   '-'   '-'   '-'   '-'
+        CHIPTUNE FM SYNTH  //  FM3</pre>
+
   <div class="fm3-flow" role="list">
     <div class="fm3-node" role="listitem">
       <div class="lbl">host</div>
       <div class="ttl">Modern box</div>
-      <div class="sub">REAPER FM Kit + Drivers · Studio · at2net. Notes and envelopes become register intent.</div>
+      <div class="sub">REAPER FM Kit + Drivers · X-Touch · at2net. Notes and envelopes become register intent.</div>
     </div>
     <div class="fm3-node wire" role="listitem">
       <div class="lbl">wire</div>
@@ -264,17 +277,31 @@ Chart below is the short version of how the desk talks to the laptop.
     </div>
   </div>
 
-  <pre class="fm3-ascii">REAPER / Studio / at2net                 Armada 1750 (Win98)
----------------------------------        ---------------------------
-MIDI notes  or  .a2m ticks
-      |
-FM Driver / FM Kit / at2net
-  -&gt; OPL register writes
-      |
-[0xAA bank reg val]  TCP :3819  -------&gt;  FM31NET / FM31LEAN
-F0 probe, wait F1                          parse + desk
-TCP_NODELAY                                OUT 388h
-                                           ESS ES1869 sings</pre>
+  <pre class="fm3-ascii">╔══════════════════════════════════════════════════════════════════════╗
+║  ░▒▓█  CHIPTUNE FM DESK  →  ARMADA 1750 / ESS ES1869 @ 388h  █▓▒░  ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+  ┌──────────────────────────┐         TCP :3819          ┌──────────────────────────┐
+  │  ░ MODERN BOX ░          │      F0 ──▶ F1 ACK         │  ░ ARMADA 1750 ░         │
+  │                          │    ┌───────────────┐       │                          │
+  │  REAPER + X-TOUCH        │    │ [AA bk rg vl] │       │  Win98 · FM31LEAN        │
+  │  FM Kit / FM Drivers     ├───▶│  FM31NET wire │──────▶│  parse · mute/solo desk  │
+  │  at2net (.a2m path)      │    │  TCP_NODELAY  │       │  OUT 388h / 38Ah         │
+  │  Studio / modulators     │    └───────────────┘       │  ESS AudioDrive sings    │
+  └────────────┬─────────────┘                            └────────────┬─────────────┘
+               │                                                       │
+               ▼                                                       ▼
+        ┌─────────────┐                                         ┌─────────────┐
+        │ NUKE soft   │  A/B fan-out optional                   │ 18 VOICES   │
+        │ Nuked-OPL3  │◀───────────────────────────────────────▶│ mod + car   │
+        └─────────────┘                                         └─────────────┘
+
+  ┌──── GB mGB ────┐   ┌── SammichSID 6581 ──┐   ┌── GPL v3 AT2 fork (soon) ──┐
+  │ Teensy / cart  │   │ chiptune bed        │   │ at2net + ijsf/at2 lineage │
+  └────────────────┘   └─────────────────────┘   └───────────────────────────┘
+
+     serial weeks: suck  ················  ethernet: go
+     PLAY DIODE fixes most sound issues (Armada wallpaper law)</pre>
 
   <h3 class="fm3-sec">Sound design for ESS FM</h3>
   <p class="lede" style="margin-bottom:0.85rem">Limits are the instrument. No free sample pad. Kick and hat are FM patches that measure like drums — or they scream white.</p>
@@ -360,10 +387,10 @@ TCP_NODELAY                                OUT 388h
   <p class="fm3-sting">We don’t stream audio to the Armada — we stream register writes. The ES1869 is the instrument.</p>
 
   <p class="fm3-foot">
-    Forked from <a href="https://github.com/ijsf/at2">ijsf/at2</a> (AdLib Tracker II / subz3ro lineage).
+    Forked from <a href="https://github.com/ijsf/at2">ijsf/at2</a> (AdLib Tracker II / subz3ro lineage) — releasing AT2-derived bits under <strong>GPL v3</strong>.
     Soft rehearsal: <strong>Nuke.YKT</strong> / Nuked-OPL3.
-    GB lane: <strong>trash80</strong> / mGB. SID: SammichSID 6581.
-    More: <a href="https://github.com/aday1/AdLibitum">github.com/aday1/AdLibitum</a> · <a href="https://aday.net.au">aday.net.au</a>
+    GB: <strong>trash80</strong> / mGB · SID: SammichSID 6581.
+    <a href="https://github.com/aday1/AdLibitum">github.com/aday1/AdLibitum</a> · <a href="https://aday.net.au">aday.net.au</a>
   </p>
 </section>
 ```
@@ -371,7 +398,7 @@ TCP_NODELAY                                OUT 388h
 ## What ended up on the desk
 
 - **REAPER** — FM Kit + Drivers, modulators on the X-Touch, `OUT = ARMADA` when the laptop is live.
-- **at2net** — AT2's own replay, pointed at the network instead of DOS ports, so `.a2m` effects stay honest.
+- **at2net** — AT2's own replay, pointed at the network instead of DOS ports, so `.a2m` effects stay honest (GPL v3 when it ships).
 - **Game Boy + mGB** and **SammichSID** — chiptune bed next to the ESS lead story.
 
 See you on the FM3 desk. Bring a Sound Blaster if you've got a spare.
