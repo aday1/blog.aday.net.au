@@ -19,9 +19,9 @@ Clan Analogue presents **FM3** — featuring artists from *Sublime Wavelengths* 
 
 - **Where:** Brunswick Artists Bar, 316 Sydney Road
 - **When:** Saturday 8th August, 8pm onwards
-- **Entry:** Free (Moshtix is just the RSVP / ticket desk — no charge)
-- **Lineup:** Acidalius · Sussiguala · Aday · Reductionist · DJ Koshowko
-- **Also launching:** Reductionist — *Energy Field* (CAO63E)
+- **Entry:** Free (Moshtix is just the RSVP)
+- **Lineup:** [Acidalius](https://www.clananalogue.org/artists/acidalius/) · [Sussiguala](https://www.clananalogue.org/artists/sussiguala/) · [Aday](https://www.clananalogue.org/artists/aday/) · [Reductionist](https://www.clananalogue.org/artists/reductionist/) · [DJ Koshowko](https://www.clananalogue.org/artists/koshowko/)
+- **Also launching:** [Reductionist](https://www.clananalogue.org/artists/reductionist/) — [*Energy Field*](https://www.clananalogue.org/featured/ca063e-reductionist-energy-field/) (CAO63E)
 - **Tickets:** [free via Moshtix](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758) — Clan Analogue presents FM3
 - **More:** [clananalogue.org](https://www.clananalogue.org)
 
