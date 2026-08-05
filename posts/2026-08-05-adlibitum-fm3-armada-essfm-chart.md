@@ -463,7 +463,7 @@ chiptune FM  //  FM3</pre>
   <div class="fm3-grid2">
     <div class="fm3-box">
       <h3>Port truth</h3>
-      <p>ESFM sounds like “Sound Blaster base 228.” We chased 228 for ages. <strong>FM index was always 388 hex.</strong> Bank 0: 388/389. Bank 1: 38A/38B.</p>
+      <p>ESFM sounds like “Sound Blaster base 228.” I chased 228 for ages — also had AUTOEXEC.BAT wrong for a while there, and honestly forgot how CONFIG.SYS works. <strong>FM index was always 388 hex.</strong> Bank 0: 388/389. Bank 1: 38A/38B. Wonder if I should try this on FreeDOS next time…</p>
     </div>
     <div class="fm3-box">
       <h3>VxD trap → FM METAL</h3>
