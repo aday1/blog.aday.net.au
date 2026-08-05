@@ -39,6 +39,8 @@ I also really went back to roots on this. The instruments, patches, and sounds w
 
 I was also listening to a lot of **Bobby Prince**, who passed away in June, and listening / reading about the musical limitations and software he would have worked with back in the early days around the Doom era. Huge respect. Amazing composer.
 
+Shoutouts to internet stars: **OxygenStar** for igniting my todo list (I subscribed!) and planting a seed to get into AdLib Tracker II yonks ago. Also loved listening to some **Diode Milliampere** during some late nights of splicing serial cables. Go look those 2 up :)
+
 **Licensing:** the AT2-derived fork path (at2net and related replay bits) will be released under **GPL v3**, same as AdLib Tracker II. AdLibitum's own upstream code stays under its existing licence (beerware / CC BY 4.0). Third-party pieces (Nuked-OPL3, mGB, etc.) keep their own. Repo: [aday1/AdLibitum](https://github.com/aday1/AdLibitum).
 
 Chart below is how the AdLibitum desk talks to the Armada laptop.
@@ -436,27 +438,15 @@ chiptune FM  //  FM3</pre>
   </table>
   </div>
 
-  <div class="fm3-grid2">
-    <div class="fm3-box">
-      <h3>Bank ethics (SAFE PASS)</h3>
-      <ul>
-        <li>Harvest AdLib / AT2 / archive voices into oplbank</li>
-        <li>Render + measure spectral flatness</li>
-        <li>Fix drone release; walk feedback until not noise</li>
-        <li>Keep waveform / mult / attack identity</li>
-        <li>Drums get a graded noise licence</li>
-      </ul>
-    </div>
-    <div class="fm3-box">
-      <h3>Live desk moves</h3>
-      <ul>
-        <li>One FM Kit + six FM Drivers on REAPER</li>
-        <li>OUT = ARMADA (NUKE = laptop soft rehearse)</li>
-        <li>Mod Mult / Level / Attack envelopes = real OPL units</li>
-        <li>at2net for authentic .a2m effects (subz3ro / AT2)</li>
-        <li>Fan-out A/B: same stream → Nuked + Armada</li>
-      </ul>
-    </div>
+  <div class="fm3-box">
+    <h3>Live desk moves</h3>
+    <ul>
+      <li>One FM Kit + six FM Drivers on REAPER</li>
+      <li>OUT = ARMADA (NUKE = laptop soft rehearse)</li>
+      <li>Mod Mult / Level / Attack envelopes = real OPL units</li>
+      <li>at2net for authentic .a2m effects (subz3ro / AT2)</li>
+      <li>Fan-out A/B: same stream → Nuked + Armada</li>
+    </ul>
   </div>
 
   <h3 class="fm3-sec">Why the laptop boots this way</h3>
