@@ -467,7 +467,7 @@ chiptune FM  //  FM3</pre>
     </div>
     <div class="fm3-box">
       <h3>VxD trap → FM METAL</h3>
-      <p>ESS driver traps 388h and steals your writes. Fix: disable ES1869 in Device Manager, keep the NIC, run FM METAL (ESSCFG + ESSVOL + FM31NET). Wallpaper wisdom: PLAY DIODE fixes most sound issues.</p>
+      <p>ESS driver traps 388h and steals your writes. Fix: disable ES1869 in Device Manager, keep the NIC, run FM METAL (ESSCFG + ESSVOL + FM31NET).</p>
     </div>
   </div>
 
@@ -486,6 +486,6 @@ chiptune FM  //  FM3</pre>
 
 - **AdLibitum** in REAPER — FM Kit + Drivers, modulators on the X-Touch, `OUT = ARMADA` when the laptop is live.
 - **at2net** — AT2's own replay, pointed at the network instead of DOS ports, so `.a2m` effects stay honest (GPL v3 when it ships).
-- **Game Boy + mGB** and **SammichSID** — chiptune bed next to the ESS lead story.
+- **Game Boy + mGB** and **SammichSID** — chiptune hardware to share the mixer.
 
 See you at **FM3** — [free tickets on Moshtix](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758). Bring a Sound Blaster if you've got a spare.
