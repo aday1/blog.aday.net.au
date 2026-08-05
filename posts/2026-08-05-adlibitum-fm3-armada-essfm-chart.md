@@ -33,9 +33,11 @@ I forked [ijsf/at2](https://github.com/ijsf/at2) and wrote a VST to drive the on
 
 Then I needed a way to drive it. So I wasted a few weeks on a serial cable implementation. It sucked. I gave up, rewrote a network receiver (**at2net** / FM31NET), installed Windows 98, and found an old network card. That turned out OK.
 
-After that I spent ages figuring out AdLib Tracker files — `.a2m`, `.a2i`, and the instrument formats — and wrote a VST to handle the modulators so I could wire it up to more modern MIDI controllers. In this case a **Behringer X-Touch**. It sounds remarkably pleasant to listen to (and I hope the venue does too). So I've now got a powerful FM synth in the studio without hunting down a DX7 or finding a Sound Blaster… if anyone's got spare Sound Blasters kicking around, I'm interested.
+After that I spent ages figuring out AdLib Tracker files — `.a2m`, `.a2i`, and the instrument formats — and wrote a VST to handle the modulators so I could wire it up to more modern MIDI controllers. In this case a **Behringer X-Touch**. It sounds remarkably pleasant to listen to (and I hope the venue does too). So I've now got a powerful FM synth in the studio without hunting down a DX7 and learning how on earth you even work with that interface, or looking far and wide for a second-hand Sound Blaster… speaking of which, if anyone's got spare Sound Blasters kicking around and a motherboard with ISA ports and 8MB to 16MB of RAM on it, I'm interested ;)
 
 I also really went back to roots on this. The instruments, patches, and sounds will be accompanied by other chiptune: my **Game Boy** running **mGB**, and a **SammichSID** (6581).
+
+I was also listening to a lot of **Bobby Prince**, who passed away in June, and listening / reading about the musical limitations and software he would have worked with back in the early days around the Doom era. Huge respect. Amazing composer.
 
 **Licensing:** the AT2-derived fork path (at2net and related replay bits) will be released under **GPL v3**, same as AdLib Tracker II. AdLibitum's own upstream code stays under its existing licence (beerware / CC BY 4.0). Third-party pieces (Nuked-OPL3, mGB, etc.) keep their own. Repo: [aday1/AdLibitum](https://github.com/aday1/AdLibitum).
 
