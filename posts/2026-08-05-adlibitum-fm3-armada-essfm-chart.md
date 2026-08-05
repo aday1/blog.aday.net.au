@@ -1,7 +1,7 @@
 ---
 title: AdLibitum at FM3 — Armada 1750 ESS FM (the long way round)
 date: 2026-08-05
-summary: Clan Analogue's FM3 gig (Brunswick Artists Bar, Sat 8 Aug) — AdLibitum is the VST stack driving my Armada 1750 ESS ES1869, plus Game Boy mGB and SammichSID. Tickets on Moshtix.
+summary: Clan Analogue's FM3 gig (Brunswick Artists Bar, Sat 8 Aug, free entry) — AdLibitum is the VST stack driving my Armada 1750 ESS ES1869, plus Game Boy mGB and SammichSID. Free tickets on Moshtix.
 tags: adlibitum, fm3, clan-analogue, essfm, armada, chiptune
 github: https://github.com/aday1/AdLibitum
 nav: chip
@@ -19,10 +19,10 @@ Clan Analogue presents **FM3** — featuring artists from *Sublime Wavelengths* 
 
 - **Where:** Brunswick Artists Bar, 316 Sydney Road
 - **When:** Saturday 8th August, 8pm onwards
-- **Entry:** Free
+- **Entry:** Free (Moshtix is just the RSVP / ticket desk — no charge)
 - **Lineup:** Acidalius · Sussiguala · Aday · Reductionist · DJ Koshowko
 - **Also launching:** Reductionist — *Energy Field* (CAO63E)
-- **Tickets / event:** [Moshtix — Clan Analogue presents FM3](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758)
+- **Tickets:** [free via Moshtix](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758) — Clan Analogue presents FM3
 - **More:** [clananalogue.org](https://www.clananalogue.org)
 
 What I'm bringing to that room is the AdLibitum stack into real ESS FM silicon — not a softsynth nostalgia deck. Game Boy (mGB) and SammichSID ride along.
@@ -420,4 +420,4 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
 - **at2net** — AT2's own replay, pointed at the network instead of DOS ports, so `.a2m` effects stay honest (GPL v3 when it ships).
 - **Game Boy + mGB** and **SammichSID** — chiptune bed next to the ESS lead story.
 
-See you at **FM3** — [tickets on Moshtix](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758). Bring a Sound Blaster if you've got a spare.
+See you at **FM3** — [free tickets on Moshtix](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758). Bring a Sound Blaster if you've got a spare.
