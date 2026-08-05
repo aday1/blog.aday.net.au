@@ -10,7 +10,7 @@ shader: fm
 
 **Names, quick:**
 
-- **AdLibitum** = the VST stack (FM Driver / FM Kit / jam tools / at2net path — the software I built).
+- **AdLibitum** = a rewrite and deconstruction to reimagine some registers.
 - **FM3** = the Clan Analogue gig. Live frequency modulation night. I'm on the bill as **Aday**.
 
 ## FM3 — Clan Analogue
