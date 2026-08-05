@@ -13,12 +13,14 @@ Commit-driven static blog for `blog.aday.net.au`.
 
 Use simple front matter:
 
-```txt
----
-title: Your post title
-date: 2026-05-14
-summary: One line summary
----
+    ---
+    title: Your post title
+    date: 2026-05-14
+    summary: One line summary
+    ---
 
-Post body in markdown.
-```
+    Post body in markdown.
+
+Raw HTML charts / widgets: open a fenced block with language `html`
+(triple backtick + html), put markup inside, then close with a bare
+triple-backtick line. The builder passes that markup through unescaped.

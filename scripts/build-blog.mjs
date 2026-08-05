@@ -160,6 +160,7 @@ const mdToHtml = (md) => {
   const lines = md.split("\n");
   const out = [];
   let listOpen = false;
+  let rawHtml = null; // "html" | "htm" when inside fenced raw block
 
   const closeList = () => {
     if (listOpen) {
@@ -169,6 +170,23 @@ const mdToHtml = (md) => {
   };
 
   for (const line of lines) {
+    const fence = line.trim().match(/^```(html|htm)?\s*$/i);
+    if (fence) {
+      if (rawHtml) {
+        rawHtml = null;
+      } else if (fence[1]) {
+        closeList();
+        rawHtml = fence[1].toLowerCase();
+      } else {
+        // plain ``` without lang — ignore as unknown fence open/close
+        closeList();
+      }
+      continue;
+    }
+    if (rawHtml) {
+      out.push(line);
+      continue;
+    }
     const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)\s*$/);
     if (imgMatch) {
       closeList();

@@ -1,0 +1,370 @@
+---
+title: AdLibitum FM3 — Armada 1750 ESS FM sound design + drive chart
+date: 2026-08-05
+summary: How the Clan Analogue FM3 desk writes OPL registers to a 1999 Compaq Armada 1750 ESS ES1869 — sound design for two operators, and the wire that makes silicon sing.
+tags: adlibitum, fm3, essfm, armada, opl3
+---
+
+Upcoming **FM3** gig material: the live FM amp is not a softsynth plugin pretending to be retro. It is a **Compaq Armada 1750** laptop with an **ESS ES1869** (ESFM) at port **388h**. The modern box streams **register writes**. The laptop pokes the chip. Soft Nuked-OPL3 rehearses; ESS performs.
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Orbitron:wght@600;800&display=swap">
+<style>
+  .fm3-chart {
+    --c-bg: #0a0c0a;
+    --c-panel: #121812;
+    --c-line: #2a3a28;
+    --c-ink: #d8e6d0;
+    --c-dim: #7a9170;
+    --c-hot: #c8f060;
+    --c-amber: #e8a838;
+    --c-wire: #5ad4ff;
+    --c-chip: #3ecf8e;
+    --c-warn: #ff6b3d;
+    font-family: "IBM Plex Mono", Consolas, monospace;
+    color: var(--c-ink);
+    background:
+      radial-gradient(ellipse 70% 50% at 10% 0%, rgba(62,207,142,0.14), transparent 55%),
+      radial-gradient(ellipse 50% 40% at 90% 100%, rgba(232,168,56,0.08), transparent 50%),
+      linear-gradient(180deg, #0e140e 0%, var(--c-bg) 100%);
+    border: 1px solid var(--c-line);
+    padding: 1.25rem 1.1rem 1.5rem;
+    margin: 1.25rem 0 2rem;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .fm3-chart * { box-sizing: border-box; }
+  .fm3-chart .eyebrow {
+    font-family: "Orbitron", "IBM Plex Mono", sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    color: var(--c-amber);
+    margin: 0 0 0.6rem;
+  }
+  .fm3-chart h2.chart-title {
+    font-family: "Orbitron", "IBM Plex Mono", sans-serif;
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    letter-spacing: 0.05em;
+    color: var(--c-hot);
+    margin: 0 0 0.4rem;
+    text-shadow: 0 0 28px rgba(200,240,96,0.22);
+  }
+  .fm3-chart .lede {
+    color: var(--c-dim);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    max-width: 42rem;
+    margin: 0 0 1.4rem;
+  }
+  .fm3-chart .lede strong { color: var(--c-ink); font-weight: 600; }
+
+  .fm3-flow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.55rem;
+    margin: 0 0 0.75rem;
+  }
+  @media (max-width: 900px) {
+    .fm3-flow { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .fm3-flow { grid-template-columns: 1fr; }
+  }
+  .fm3-node {
+    background: var(--c-panel);
+    border: 1px solid var(--c-line);
+    padding: 0.85rem 0.75rem;
+    min-height: 7.5rem;
+    position: relative;
+  }
+  .fm3-node::after {
+    content: "";
+    position: absolute;
+    right: -0.35rem;
+    top: 50%;
+    width: 0.55rem;
+    height: 1px;
+    background: var(--c-wire);
+    opacity: 0.7;
+  }
+  .fm3-flow .fm3-node:nth-child(4n)::after,
+  .fm3-flow .fm3-node:last-child::after { display: none; }
+  @media (max-width: 900px) {
+    .fm3-flow .fm3-node:nth-child(2n)::after { display: none; }
+    .fm3-flow .fm3-node:nth-child(odd)::after { display: block; }
+  }
+  @media (max-width: 520px) {
+    .fm3-node::after { display: none !important; }
+  }
+  .fm3-node .lbl {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-dim);
+    margin: 0 0 0.35rem;
+  }
+  .fm3-node .ttl {
+    font-family: "Orbitron", "IBM Plex Mono", sans-serif;
+    font-size: 0.95rem;
+    color: var(--c-hot);
+    margin: 0 0 0.35rem;
+  }
+  .fm3-node.wire .ttl { color: var(--c-wire); }
+  .fm3-node.chip .ttl { color: var(--c-chip); }
+  .fm3-node.amber .ttl { color: var(--c-amber); }
+  .fm3-node .sub {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--c-ink);
+    opacity: 0.9;
+  }
+
+  .fm3-ascii {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: var(--c-chip);
+    background: #080a08;
+    border: 1px solid var(--c-line);
+    padding: 0.85rem 0.9rem;
+    overflow-x: auto;
+    white-space: pre;
+    margin: 0 0 1.5rem;
+  }
+
+  .fm3-sec {
+    font-family: "Orbitron", "IBM Plex Mono", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-chip);
+    margin: 1.6rem 0 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .fm3-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin: 0 0 0.5rem;
+  }
+  .fm3-table th,
+  .fm3-table td {
+    border: 1px solid var(--c-line);
+    padding: 0.55rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .fm3-table th {
+    background: #0e160e;
+    color: var(--c-amber);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+  }
+  .fm3-table td { background: rgba(18,24,18,0.85); }
+  .fm3-table tr:hover td { background: #182218; }
+  .fm3-table code {
+    font-family: inherit;
+    color: var(--c-wire);
+    font-size: 0.9em;
+  }
+
+  .fm3-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+    margin: 0.75rem 0 1rem;
+  }
+  @media (max-width: 700px) {
+    .fm3-grid2 { grid-template-columns: 1fr; }
+  }
+  .fm3-box {
+    border: 1px solid var(--c-line);
+    background: var(--c-panel);
+    padding: 0.85rem 0.9rem;
+  }
+  .fm3-box h3 {
+    font-family: "Orbitron", "IBM Plex Mono", sans-serif;
+    font-size: 0.85rem;
+    color: var(--c-hot);
+    margin: 0 0 0.45rem;
+    letter-spacing: 0.04em;
+  }
+  .fm3-box p,
+  .fm3-box li {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--c-ink);
+    margin: 0;
+  }
+  .fm3-box ul { margin: 0; padding-left: 1.1rem; }
+  .fm3-box li { margin: 0.25rem 0; }
+
+  .fm3-sting {
+    margin: 1.25rem 0 0;
+    padding: 0.9rem 1rem;
+    border-left: 3px solid var(--c-warn);
+    background: #141010;
+    border-top: 1px solid var(--c-line);
+    border-right: 1px solid var(--c-line);
+    border-bottom: 1px solid var(--c-line);
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: var(--c-hot);
+  }
+  .fm3-foot {
+    margin: 1rem 0 0;
+    font-size: 0.75rem;
+    color: var(--c-dim);
+    line-height: 1.45;
+  }
+  .fm3-foot a { color: var(--c-wire); }
+</style>
+
+<section class="fm3-chart" aria-label="Armada ESS FM drive and sound design chart">
+  <p class="eyebrow">AdLibitum · FM3 · Clan Analogue</p>
+  <h2 class="chart-title">ARMADA 1750 · ESS FM</h2>
+  <p class="lede">
+    <strong>1999 Compaq Armada 1750.</strong> ESS ES1869 at <code>388h</code>. Sixteen megs of RAM.
+    We do not stream audio to this laptop — we stream OPL register frames. Sound design is two operators,
+    feedback, envelopes, and an 18-voice channel budget.
+  </p>
+
+  <div class="fm3-flow" role="list">
+    <div class="fm3-node" role="listitem">
+      <div class="lbl">host</div>
+      <div class="ttl">Modern box</div>
+      <div class="sub">REAPER FM Kit + Drivers · Studio · at2net. Notes and envelopes become register intent.</div>
+    </div>
+    <div class="fm3-node wire" role="listitem">
+      <div class="lbl">wire</div>
+      <div class="ttl">FM31NET</div>
+      <div class="sub">F0→F1 handshake · AA bank reg val · TCP :3819 · TCP_NODELAY (or death by Nagle).</div>
+    </div>
+    <div class="fm3-node amber" role="listitem">
+      <div class="lbl">guest</div>
+      <div class="ttl">FM31LEAN</div>
+      <div class="sub">Win98 receiver on the Armada. Mute/solo bend the stream. PANIC = chip reset.</div>
+    </div>
+    <div class="fm3-node chip" role="listitem">
+      <div class="lbl">silicon</div>
+      <div class="ttl">ES1869</div>
+      <div class="sub">Direct OUT to 388h / 38Ah. Operators key on. Soft Nuked only rehearses.</div>
+    </div>
+  </div>
+
+  <pre class="fm3-ascii">REAPER / Studio / at2net                 Armada 1750 (Win98)
+---------------------------------        ---------------------------
+MIDI notes  or  .a2m ticks
+      |
+FM Driver / FM Kit / at2net
+  -&gt; OPL register writes
+      |
+[0xAA bank reg val]  TCP :3819  -------&gt;  FM31NET / FM31LEAN
+F0 probe, wait F1                          parse + desk
+TCP_NODELAY                                OUT 388h
+                                           ESS ES1869 sings</pre>
+
+  <h3 class="fm3-sec">Sound design for ESS FM</h3>
+  <p class="lede" style="margin-bottom:0.85rem">Limits are the instrument. No free sample pad. Kick and hat are FM patches that measure like drums — or they scream white.</p>
+
+  <table class="fm3-table">
+    <thead>
+      <tr><th>Knob</th><th>On the ES1869</th><th>Why it matters live</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Algorithm</td>
+        <td>FM (mod bends carrier) vs additive (both heard)</td>
+        <td>Bite vs organ/pad stack — the first decision</td>
+      </tr>
+      <tr>
+        <td>Feedback 0–7</td>
+        <td>Modulator self-mod</td>
+        <td>≥6 often noise; SAFE PASS walks melodic voices down</td>
+      </tr>
+      <tr>
+        <td>Mult ratio</td>
+        <td>Mod:car frequency multiplier</td>
+        <td>Bass gravity vs bell / metal harmonics</td>
+      </tr>
+      <tr>
+        <td>Waveform</td>
+        <td>8 OPL3 waves (sine → square / log-saw)</td>
+        <td>Timbre palette — not Serum wavetables</td>
+      </tr>
+      <tr>
+        <td>ADSR + EG hold</td>
+        <td>Per-operator envelopes</td>
+        <td>Release ≤1 = drones that outlive the set</td>
+      </tr>
+      <tr>
+        <td>Carrier TL</td>
+        <td>Attenuation 0–63 (0 = loud)</td>
+        <td>Velocity / CC7 / CC11 dynamics live here</td>
+      </tr>
+      <tr>
+        <td>18 voices</td>
+        <td>Channels 0–8 bank0, 9–17 bank1</td>
+        <td>Arrangement = who owns a channel this bar</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="fm3-grid2">
+    <div class="fm3-box">
+      <h3>Bank ethics (SAFE PASS)</h3>
+      <ul>
+        <li>Harvest AdLib / AT2 / archive voices into oplbank</li>
+        <li>Render + measure spectral flatness</li>
+        <li>Fix drone release; walk feedback until not noise</li>
+        <li>Keep waveform / mult / attack identity</li>
+        <li>Drums get a graded noise licence</li>
+      </ul>
+    </div>
+    <div class="fm3-box">
+      <h3>Live desk moves</h3>
+      <ul>
+        <li>One FM Kit + six FM Drivers on REAPER</li>
+        <li>OUT = ARMADA (NUKE = laptop soft rehearse)</li>
+        <li>Mod Mult / Level / Attack envelopes = real OPL units</li>
+        <li>at2net for authentic .a2m effects (subz3ro / AT2)</li>
+        <li>Fan-out A/B: same stream → Nuked + Armada</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="fm3-sec">Why the laptop boots this way</h3>
+  <div class="fm3-grid2">
+    <div class="fm3-box">
+      <h3>Port truth</h3>
+      <p>ESFM sounds like “Sound Blaster base 228.” We chased 228 for ages. <strong>FM index was always 388 hex.</strong> Bank 0: 388/389. Bank 1: 38A/38B.</p>
+    </div>
+    <div class="fm3-box">
+      <h3>VxD trap → FM METAL</h3>
+      <p>ESS driver traps 388h and steals your writes. Fix: disable ES1869 in Device Manager, keep the NIC, run FM METAL (ESSCFG + ESSVOL + FM31NET). Wallpaper wisdom: PLAY DIODE fixes most sound issues.</p>
+    </div>
+  </div>
+
+  <p class="fm3-sting">We don’t stream audio to the Armada — we stream register writes. The ES1869 is the instrument.</p>
+
+  <p class="fm3-foot">
+    Credits for the path: <strong>subz3ro</strong> / AdLib Tracker II (at2net) · <strong>Nuke.YKT</strong> / Nuked-OPL3 (rehearsal) ·
+    AdLib / Yamaha OPL / ESS silicon · module writers in the banks.
+    More: <a href="https://github.com/aday1/AdLibitum">github.com/aday1/AdLibitum</a> · <a href="https://aday.net.au">aday.net.au</a>
+  </p>
+</section>
+```
+
+## Three send paths (same chip language)
+
+- **REAPER live set** — FM Kit + Drivers, `OUT = ARMADA`, MIDI + envelopes as the editable score on silicon.
+- **at2net** — AdLib Tracker II’s own GPL replay engine, redirected to TCP so any `.a2m` keeps authentic effects without stuffing the full tracker UI into 16 MB.
+- **Verbatim SysEx** — captured register timeline through REAPER when you need bit-true replay.
+
+## One breath for the gig
+
+Soft chip rehearses. ESS FM performs. Provenance stays on every phrase. See you on the FM3 desk.
