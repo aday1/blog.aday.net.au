@@ -25,7 +25,7 @@ Clan Analogue presents **FM3** — featuring artists from *Sublime Wavelengths* 
 - **Tickets:** [free via Moshtix](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758) — Clan Analogue presents FM3
 - **More:** [clananalogue.org](https://www.clananalogue.org)
 
-What I'm bringing to that room is the AdLibitum stack into real ESS FM silicon — not a softsynth nostalgia deck. Game Boy (mGB) and SammichSID ride along.
+Arriving to the room is my messy unchecked-code of the 'AdLibitum' stack into real ESS FM silicon — this isn't some softsynth nostalgia VST. Tagging along is the Game Boy (mGB) and a SammichSID.
 
 ## How AdLibitum got to the Armada
 
