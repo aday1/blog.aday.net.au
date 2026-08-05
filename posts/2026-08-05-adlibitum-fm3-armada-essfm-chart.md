@@ -1,11 +1,19 @@
 ---
-title: AdLibitum FM3 — Armada 1750 ESS FM sound design + drive chart
+title: AdLibitum FM3 — Armada 1750 ESS FM (the long way round)
 date: 2026-08-05
-summary: How the Clan Analogue FM3 desk writes OPL registers to a 1999 Compaq Armada 1750 ESS ES1869 — sound design for two operators, and the wire that makes silicon sing.
-tags: adlibitum, fm3, essfm, armada, opl3
+summary: I forked ijsf/at2, drove the only FM hardware I had laying around — a Compaq Armada 1750 ESS ES1869 — gave up on serial, put Windows 98 on the network, wrote VSTs for the modulators and an X-Touch, and brought Game Boy mGB + SammichSID along for the ride.
+tags: adlibitum, fm3, essfm, armada, opl3, xtouch
 ---
 
-Upcoming **FM3** gig material: the live FM amp is not a softsynth plugin pretending to be retro. It is a **Compaq Armada 1750** laptop with an **ESS ES1869** (ESFM) at port **388h**. The modern box streams **register writes**. The laptop pokes the chip. Soft Nuked-OPL3 rehearses; ESS performs.
+I forked [ijsf/at2](https://github.com/ijsf/at2) and wrote a VST to drive the only piece of FM hardware I actually have laying around: my **Compaq Armada 1750**, with an integrated **ESS AudioDrive ES1869** (or ES1869S).
+
+Then I needed a way to drive it. So I wasted a few weeks on a serial cable implementation. It sucked. I gave up, rewrote a network receiver (**at2net** / FM31NET), installed Windows 98, and found an old network card. That turned out OK.
+
+After that I spent ages figuring out AdLib Tracker files — `.a2m`, `.a2i`, and the instrument formats — and wrote a VST to handle the modulators so I could wire it up to more modern MIDI controllers. In this case a **Behringer X-Touch**. It sounds remarkably pleasant to listen to (and I hope the venue does too). So I've now got a powerful FM synth in the studio without hunting down a DX7 or finding a Sound Blaster… if anyone's got spare Sound Blasters kicking around, I'm interested.
+
+I also really went back to roots on this. The instruments, patches, and sounds will be accompanied by other chiptune: my **Game Boy** running **mGB**, and a **SammichSID** (6581).
+
+Chart below is the short version of how the desk talks to the laptop.
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Orbitron:wght@600;800&display=swap">
@@ -352,19 +360,18 @@ TCP_NODELAY                                OUT 388h
   <p class="fm3-sting">We don’t stream audio to the Armada — we stream register writes. The ES1869 is the instrument.</p>
 
   <p class="fm3-foot">
-    Credits for the path: <strong>subz3ro</strong> / AdLib Tracker II (at2net) · <strong>Nuke.YKT</strong> / Nuked-OPL3 (rehearsal) ·
-    AdLib / Yamaha OPL / ESS silicon · module writers in the banks.
+    Forked from <a href="https://github.com/ijsf/at2">ijsf/at2</a> (AdLib Tracker II / subz3ro lineage).
+    Soft rehearsal: <strong>Nuke.YKT</strong> / Nuked-OPL3.
+    GB lane: <strong>trash80</strong> / mGB. SID: SammichSID 6581.
     More: <a href="https://github.com/aday1/AdLibitum">github.com/aday1/AdLibitum</a> · <a href="https://aday.net.au">aday.net.au</a>
   </p>
 </section>
 ```
 
-## Three send paths (same chip language)
+## What ended up on the desk
 
-- **REAPER live set** — FM Kit + Drivers, `OUT = ARMADA`, MIDI + envelopes as the editable score on silicon.
-- **at2net** — AdLib Tracker II’s own GPL replay engine, redirected to TCP so any `.a2m` keeps authentic effects without stuffing the full tracker UI into 16 MB.
-- **Verbatim SysEx** — captured register timeline through REAPER when you need bit-true replay.
+- **REAPER** — FM Kit + Drivers, modulators on the X-Touch, `OUT = ARMADA` when the laptop is live.
+- **at2net** — AT2's own replay, pointed at the network instead of DOS ports, so `.a2m` effects stay honest.
+- **Game Boy + mGB** and **SammichSID** — chiptune bed next to the ESS lead story.
 
-## One breath for the gig
-
-Soft chip rehearses. ESS FM performs. Provenance stays on every phrase. See you on the FM3 desk.
+See you on the FM3 desk. Bring a Sound Blaster if you've got a spare.
