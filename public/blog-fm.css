@@ -54,6 +54,35 @@ body.blog-fm-shader .film-photo {
   display: block;
 }
 
+/* Compact gig strip — wide flyer only, not a full-bleed header poster */
+body.blog-fm-shader main > .film-frame {
+  max-width: min(100%, 18rem);
+  margin: 0.45rem 0 0.85rem;
+}
+
+body.blog-fm-shader main > .film-frame .film-frame-stack {
+  display: block;
+  line-height: 0;
+}
+
+body.blog-fm-shader main > .film-frame .film-photo {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+body.blog-fm-shader main > .film-frame .film-credit,
+body.blog-fm-shader main > .film-frame figcaption {
+  font-size: 0.68rem;
+  line-height: 1.3;
+  margin-top: 0.3rem;
+}
+
+body.blog-fm-shader .film-gallery {
+  display: none;
+}
+
 body.blog-fm-shader img,
 body.blog-fm-shader video {
   max-width: 100%;
