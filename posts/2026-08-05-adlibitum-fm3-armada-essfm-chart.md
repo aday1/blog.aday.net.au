@@ -10,7 +10,7 @@ shader: fm
 
 **Names, quick:**
 
-- **AdLibitum** = a rewrite and deconstruction to reimagine some registers.
+- **AdLibitum** = a rewrite and deconstruction to reimagine some registers — some software I forked and mutated on.
 - **FM3** = the Clan Analogue gig. Live frequency modulation night. I'm on the bill as **Aday**.
 
 ## FM3 — Clan Analogue
