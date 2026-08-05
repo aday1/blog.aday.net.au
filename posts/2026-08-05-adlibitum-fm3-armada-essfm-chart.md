@@ -1,14 +1,33 @@
 ---
-title: AdLibitum FM3 — Armada 1750 ESS FM (the long way round)
+title: AdLibitum at FM3 — Armada 1750 ESS FM (the long way round)
 date: 2026-08-05
-summary: Chiptune FM synth gig notes — forked ijsf/at2, drove a Compaq Armada 1750 ESS ES1869, gave up on serial, Win98 + NIC, VSTs + X-Touch, Game Boy mGB + SammichSID. AT2-derived bits out under GPL v3.
-tags: adlibitum, fm3, essfm, armada, opl3, xtouch, chiptune
+summary: Clan Analogue's FM3 gig (Brunswick Artists Bar, Sat 8 Aug) — AdLibitum is the VST stack driving my Armada 1750 ESS ES1869, plus Game Boy mGB and SammichSID. Tickets on Moshtix.
+tags: adlibitum, fm3, clan-analogue, essfm, armada, chiptune
 github: https://github.com/aday1/AdLibitum
 nav: chip
 shader: fm
 ---
 
-This is a **chiptune FM synth gig** write-up for FM3 / Clan Analogue — not a softsynth nostalgia deck. Real operators on real silicon, plus Game Boy and SID for company.
+**Names, quick:**
+
+- **AdLibitum** = the VST stack (FM Driver / FM Kit / jam tools / at2net path — the software I built).
+- **FM3** = the Clan Analogue gig. Live frequency modulation night. I'm on the bill as **Aday**.
+
+## FM3 — Clan Analogue
+
+Clan Analogue presents **FM3** — featuring artists from *Sublime Wavelengths* ("the cosmic bliss of FM synthesis").
+
+- **Where:** Brunswick Artists Bar, 316 Sydney Road
+- **When:** Saturday 8th August, 8pm onwards
+- **Entry:** Free
+- **Lineup:** Acidalius · Sussiguala · Aday · Reductionist · DJ Koshowko
+- **Also launching:** Reductionist — *Energy Field* (CAO63E)
+- **Tickets / event:** [Moshtix — Clan Analogue presents FM3](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758)
+- **More:** [clananalogue.org](https://www.clananalogue.org)
+
+What I'm bringing to that room is the AdLibitum stack into real ESS FM silicon — not a softsynth nostalgia deck. Game Boy (mGB) and SammichSID ride along.
+
+## How AdLibitum got to the Armada
 
 I forked [ijsf/at2](https://github.com/ijsf/at2) and wrote a VST to drive the only piece of FM hardware I actually have laying around: my **Compaq Armada 1750**, with an integrated **ESS AudioDrive ES1869** (or ES1869S).
 
@@ -20,7 +39,7 @@ I also really went back to roots on this. The instruments, patches, and sounds w
 
 **Licensing:** the AT2-derived fork path (at2net and related replay bits) will be released under **GPL v3**, same as AdLib Tracker II. AdLibitum's own upstream code stays under its existing licence (beerware / CC BY 4.0). Third-party pieces (Nuked-OPL3, mGB, etc.) keep their own. Repo: [aday1/AdLibitum](https://github.com/aday1/AdLibitum).
 
-Chart below is the short version of how the desk talks to the laptop.
+Chart below is how the AdLibitum desk talks to the Armada laptop.
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Orbitron:wght@600;800&display=swap">
@@ -241,7 +260,7 @@ Chart below is the short version of how the desk talks to the laptop.
 </style>
 
 <section class="fm3-chart" aria-label="Armada ESS FM drive and sound design chart">
-  <p class="eyebrow">AdLibitum · FM3 · chiptune FM synth gig</p>
+  <p class="eyebrow">AdLibitum VST stack · Clan Analogue FM3 gig</p>
   <h2 class="chart-title">ARMADA 1750 · ESS FM</h2>
   <p class="lede">
     <strong>1999 Compaq Armada 1750.</strong> ESS ES1869 at <code>388h</code>. Sixteen megs of RAM.
@@ -278,7 +297,7 @@ Chart below is the short version of how the desk talks to the laptop.
   </div>
 
   <pre class="fm3-ascii">╔══════════════════════════════════════════════════════════════════════╗
-║  ░▒▓█  CHIPTUNE FM DESK  →  ARMADA 1750 / ESS ES1869 @ 388h  █▓▒░  ║
+║  ░▒▓█  ADLIBITUM VST  →  ARMADA / ESS   ·   GIG: CLAN ANALOGUE FM3  █▓▒░  ║
 ╚══════════════════════════════════════════════════════════════════════╝
 
   ┌──────────────────────────┐         TCP :3819          ┌──────────────────────────┐
@@ -397,8 +416,8 @@ Chart below is the short version of how the desk talks to the laptop.
 
 ## What ended up on the desk
 
-- **REAPER** — FM Kit + Drivers, modulators on the X-Touch, `OUT = ARMADA` when the laptop is live.
+- **AdLibitum** in REAPER — FM Kit + Drivers, modulators on the X-Touch, `OUT = ARMADA` when the laptop is live.
 - **at2net** — AT2's own replay, pointed at the network instead of DOS ports, so `.a2m` effects stay honest (GPL v3 when it ships).
 - **Game Boy + mGB** and **SammichSID** — chiptune bed next to the ESS lead story.
 
-See you on the FM3 desk. Bring a Sound Blaster if you've got a spare.
+See you at **FM3** — [tickets on Moshtix](https://www.moshtix.com.au/v2/event/clan-analogue-presents-fm3/197758). Bring a Sound Blaster if you've got a spare.
