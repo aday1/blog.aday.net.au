@@ -90,19 +90,19 @@
   },
   "2026-08-05-adlibitum-fm3-armada-essfm-chart": {
     "hero": {
-      "src": "/assets/fm3/flyer-wide.png",
-      "alt": "Clan Analogue presents FM3 flyer",
-      "caption": "Clan Analogue presents FM3 — Sublime Wavelengths / cosmic bliss of FM synthesis",
+      "src": "/assets/fm3/flyer-detail.png",
+      "alt": "Clan Analogue presents FM3 — venue, lineup, free entry",
+      "caption": "Brunswick Artists Bar · Sat 8 Aug · 8pm · FREE ENTRY (Moshtix RSVP)",
       "credit": "Flyer via Clan Analogue",
       "fallbacks": [
-        "/assets/fm3/flyer-detail.png"
+        "/assets/fm3/flyer-wide.png"
       ]
     },
     "gallery": [
       {
-        "src": "/assets/fm3/flyer-detail.png",
-        "alt": "FM3 gig flyer with venue and tickets detail",
-        "caption": "Brunswick Artists Bar · Sat 8 Aug · 8pm · FREE ENTRY",
+        "src": "/assets/fm3/flyer-wide.png",
+        "alt": "Clan Analogue presents FM3 flyer (wide)",
+        "caption": "Clan Analogue presents FM3 — Sublime Wavelengths / cosmic bliss of FM synthesis",
         "credit": "Flyer via Clan Analogue",
         "fallbacks": []
       }

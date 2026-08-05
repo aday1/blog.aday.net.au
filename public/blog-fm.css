@@ -5,6 +5,7 @@ body.blog-fm-shader {
     radial-gradient(circle at 88% 110%, rgba(232, 168, 56, 0.1), transparent 40%),
     linear-gradient(180deg, #0a120c 0%, #070a08 100%) !important;
   color: #d8e6d0;
+  overflow-x: clip;
 }
 
 body.blog-fm-shader.blog-bg-on .bg-shader {
@@ -15,11 +16,17 @@ body.blog-fm-shader.blog-bg-on .bg-shader {
 body.blog-fm-shader main {
   position: relative;
   z-index: 1;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body.blog-fm-shader h1.decrypt {
   color: #c8f060;
   text-shadow: 0 0 24px rgba(200, 240, 96, 0.28);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.15;
+  font-size: clamp(1.35rem, 5.2vw, 2.4rem);
 }
 
 body.blog-fm-shader .date {
@@ -32,4 +39,77 @@ body.blog-fm-shader a {
 
 body.blog-fm-shader a:hover {
   color: #e8a838;
+}
+
+body.blog-fm-shader .film-frame,
+body.blog-fm-shader .film-frame-stack,
+body.blog-fm-shader .film-gallery {
+  max-width: 100%;
+}
+
+body.blog-fm-shader .film-photo {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+body.blog-fm-shader img,
+body.blog-fm-shader video {
+  max-width: 100%;
+  height: auto;
+}
+
+body.blog-fm-shader pre:not(.fm3-ascii) {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.blog-fm-shader .chip-nav,
+body.blog-fm-shader nav,
+body.blog-fm-shader .blog-section-nav {
+  flex-wrap: wrap;
+  gap: 0.45rem 0.75rem;
+}
+
+@media (max-width: 720px) {
+  body.blog-fm-shader {
+    padding-left: max(0.55rem, env(safe-area-inset-left));
+    padding-right: max(0.55rem, env(safe-area-inset-right));
+  }
+
+  body.blog-fm-shader main {
+    padding: 0.7rem 0.55rem 1.4rem;
+  }
+
+  body.blog-fm-shader main section {
+    padding: 0.55rem 0.45rem 0.75rem;
+  }
+
+  body.blog-fm-shader h1.decrypt {
+    font-size: clamp(1.2rem, 7.2vw, 1.75rem);
+    letter-spacing: 0.02em;
+  }
+
+  body.blog-fm-shader .film-gallery {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  body.blog-fm-shader .film-credit,
+  body.blog-fm-shader .film-frame figcaption {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  body.blog-fm-shader p,
+  body.blog-fm-shader li {
+    overflow-wrap: anywhere;
+  }
+
+  body.blog-fm-shader ul {
+    padding-left: 1.15rem;
+  }
 }

@@ -67,7 +67,8 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
     padding: 1.25rem 1.1rem 1.5rem;
     margin: 1.25rem 0 2rem;
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
   }
   .fm3-chart * { box-sizing: border-box; }
   .fm3-chart .eyebrow {
@@ -164,11 +165,13 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
     border: 1px solid var(--c-line);
     padding: 0.85rem 0.9rem;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     white-space: pre;
     margin: 0 0 1.1rem;
     text-shadow: 0 0 8px rgba(62, 207, 142, 0.25);
+    max-width: 100%;
   }
-
+  .fm3-ascii-phone { display: none; }
   .fm3-sec {
     font-family: "Orbitron", "IBM Plex Mono", sans-serif;
     font-size: 0.78rem;
@@ -179,12 +182,19 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
     padding-bottom: 0.35rem;
     border-bottom: 1px solid var(--c-line);
   }
-
+  .fm3-table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 0 0.5rem;
+  }
   .fm3-table {
     width: 100%;
+    min-width: 28rem;
     border-collapse: collapse;
     font-size: 0.82rem;
-    margin: 0 0 0.5rem;
+    margin: 0;
   }
   .fm3-table th,
   .fm3-table td {
@@ -257,8 +267,42 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
     font-size: 0.75rem;
     color: var(--c-dim);
     line-height: 1.45;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
   .fm3-foot a { color: var(--c-wire); }
+
+  @media (max-width: 720px) {
+    .fm3-chart {
+      padding: 0.9rem 0.7rem 1.1rem;
+      margin: 1rem -0.15rem 1.5rem;
+      border-radius: 0;
+    }
+    .fm3-chart .eyebrow {
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      line-height: 1.35;
+    }
+    .fm3-chart .lede { font-size: 0.86rem; }
+    .fm3-node { min-height: 0; padding: 0.75rem 0.7rem; }
+    .fm3-node .ttl { font-size: 0.9rem; }
+    .fm3-node .sub { font-size: 0.76rem; }
+    .fm3-ascii-wide { display: none; }
+    .fm3-ascii-phone {
+      display: block;
+      font-size: 0.72rem;
+      line-height: 1.32;
+      padding: 0.75rem 0.65rem;
+    }
+    .fm3-table { min-width: 22rem; font-size: 0.76rem; }
+    .fm3-table th, .fm3-table td { padding: 0.45rem 0.5rem; }
+    .fm3-sting { font-size: 0.95rem; padding: 0.75rem 0.8rem; }
+    .fm3-sec { font-size: 0.72rem; letter-spacing: 0.1em; }
+  }
+  @media (max-width: 380px) {
+    .fm3-ascii-phone { font-size: 0.64rem; }
+    .fm3-chart .eyebrow { letter-spacing: 0.06em; }
+  }
 </style>
 
 <section class="fm3-chart" aria-label="Armada ESS FM drive and sound design chart">
@@ -270,10 +314,12 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
     feedback, envelopes, and an 18-voice channel budget.
   </p>
 
-  <pre class="fm3-ascii" aria-hidden="true">.-.   .-.   .-.   .-.   .-.   .-.   .-.   .-.
+  <pre class="fm3-ascii fm3-ascii-wide" aria-hidden="true">.-.   .-.   .-.   .-.   .-.   .-.   .-.   .-.
 |A|---|D|---|L|---|I|---|B|---|I|---|T|---|U|
 '-'   '-'   '-'   '-'   '-'   '-'   '-'   '-'
         CHIPTUNE FM SYNTH  //  FM3</pre>
+  <pre class="fm3-ascii fm3-ascii-phone" aria-hidden="true">ADLIBITUM
+chiptune FM  //  FM3</pre>
 
   <div class="fm3-flow" role="list">
     <div class="fm3-node" role="listitem">
@@ -298,7 +344,7 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
     </div>
   </div>
 
-  <pre class="fm3-ascii">╔══════════════════════════════════════════════════════════════════════╗
+  <pre class="fm3-ascii fm3-ascii-wide">╔══════════════════════════════════════════════════════════════════════╗
 ║  ░▒▓█  ADLIBITUM VST  →  ARMADA / ESS   ·   GIG: CLAN ANALOGUE FM3  █▓▒░  ║
 ╚══════════════════════════════════════════════════════════════════════╝
 
@@ -323,10 +369,29 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
 
      serial weeks: suck  ················  ethernet: go
      PLAY DIODE fixes most sound issues (Armada wallpaper law)</pre>
+  <pre class="fm3-ascii fm3-ascii-phone">ADLIBITUM VST
+      |
+      v
+ FM31NET :3819
+ [AA bk rg vl]
+      |
+      v
+ ARMADA 1750
+ Win98 FM31LEAN
+ OUT 388h / 38Ah
+      |
+      v
+ ES1869 · 18 voices
+ (+ NUKE soft A/B)
+
+ GB mGB · SID 6581
+ serial sucked · ethernet go
+ PLAY DIODE wallpaper law</pre>
 
   <h3 class="fm3-sec">Sound design for ESS FM</h3>
   <p class="lede" style="margin-bottom:0.85rem">Limits are the instrument. No free sample pad. Kick and hat are FM patches that measure like drums — or they scream white.</p>
 
+  <div class="fm3-table-wrap">
   <table class="fm3-table">
     <thead>
       <tr><th>Knob</th><th>On the ES1869</th><th>Why it matters live</th></tr>
@@ -369,6 +434,7 @@ Chart below is how the AdLibitum desk talks to the Armada laptop.
       </tr>
     </tbody>
   </table>
+  </div>
 
   <div class="fm3-grid2">
     <div class="fm3-box">
